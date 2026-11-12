@@ -52,7 +52,7 @@ jobs:
             **/vendor/**
 
           # Không xóa toàn bộ thư mục hosting
-          dangerous-clean-slate: true
+          dangerous-clean-slate: false
 
           # Thời gian chờ kết nối
           timeout: 60000000
