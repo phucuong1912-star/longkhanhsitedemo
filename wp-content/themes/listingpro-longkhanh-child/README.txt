@@ -47,5 +47,19 @@ muon sua noi dung mot dia diem, mo Nhap du lieu dia diem, khong sua
 ten/anh/dia chi tinh trong template. Noi dung danh sach va bieu mau
 duoc cap boi plugin long-khanh-directory; can giu plugin nay kich hoat.
 
-Luu y: cac bai Blog, uu dai lich su va chinh sach trong ban local la noi
-dung minh hoa. Gia/lich uu dai khong duoc trinh bay nhu uu dai dang chay.
+CAC TRANG THONG TIN VA REVIEW
+
+Gioi thieu, Bao mat, Dieu khoan va Tai ung dung sua bang widget goc
+Elementor. Trang Viet Review dung widget Bieu mau Long Khanh, chon loai
+Viet review day du. Tieu de cac khu vuc, nut gui, font, mau va bo goc
+co dieu khien Elementor. Bai review luu vao binh luan lk_review.
+Anh va ten an danh duoc luu cung danh gia; danh gia an danh khong len
+bang tin cong khai/nguoi theo doi. Xem va duyet trong Binh luan.
+
+Khoi tai app trang chu: anh dien thoai va hai nut store la widget Anh
+goc; thay anh trong Elementor. Cot QR an tren tablet/mobile va hai nut
+nam ngang, anh mobile nam duoi. Khong doi lai thanh anh nen phu nut.
+
+Blog co noi dung bien soan rieng va thong tin tham khao tu bai goc.
+Dia chi/gia co the thay doi; cac uu dai lich su duoc ghi da ket thuc.
+Chu website can chot noi dung chinh sach truoc khi cong khai website.

@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   deploy:
-    name: Deploy to FPT Linux Hosting
+    name: Deploy to FTP Hosting
     runs-on: ubuntu-latest
 
     steps:
@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v6
 
       # 2. Deploy qua FTP
-      - name: Deploy to FPT Hosting
+      - name: Deploy to FTP Hosting
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -45,6 +45,8 @@ jobs:
             **/.env
             **/.env.*
             **/node_modules/**
+            **/.htaccess
+            **/wp-config.php
 
           # Không xóa toàn bộ thư mục hosting
           dangerous-clean-slate: false

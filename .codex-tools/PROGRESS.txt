@@ -68,3 +68,43 @@ remain in debug.log; display disabled. Do not claim all logged warnings fixed,
 pixel-perfect match, or full production readiness. No PHP/WP/theme upgrades.
 Do not blindly rerun build-site.php or shared-listing-template.php: they may
 overwrite edits. Use wp-admin > Long Khanh for content/shared template links.
+CURRENT PHASE 2026-11-12 (supersedes earlier demo-content handoff)
+Completed native Elementor About with reference SVG/gradient, Privacy (9 main
+sections), Terms (15 sections), Download QR/store layout, full New Review page.
+Four articles now have unique concise summaries, location/contact facts and27
+section photos, source links and historical-price caveat. No full source article
+prose copied. Removed visible demo labels and fake feed fallback; Explore uses
+real public approved reviews or a configurable invitation empty state.
+
+Mobile app defect reproduced: hidden QR image left an occupied column; badges
+stacked on right over the background. Rebuilt as native images, hidden QR column,
+horizontal badges and separate mobile art. At375 frame (body360), both badges160px
+share one Y position; panel462.89px vs reference462.81px. Native headings/image
+controls retained. Contribution width/line-height/padding tuned; back-top button
+moves above contribution area while it would obscure the CTA. Safe-area offset.
+Widget default spacing uses Elementor's --kit-widget-spacing variable so native
+Advanced margin controls can override defaults.
+
+Actual About H1 changed/saved with Elementor, then restored/saved; DB confirmed.
+New Review has native radio star groups, live count, required place selector,
+photo previews/validation, anonymous setting, configurable headings/button/styles.
+Real UI submission on own fixture27039: scores5/4/3/4/4, average4, title, one
+uploadedPNG and anonymous mask all pass; anonymous excluded from feed/authors.
+Fixture post/comment/photo recoverably trashed.15 legitimate listings remain,
+including user-added Toa Nha Mapletree. Preserve it; never reset to old14 seed.
+
+content-phase-result.json:13 modified/key URLs200, no visible PHP diagnostics or
+demo placeholders; no missing widgets. composer-test.json: all7 checks true,
+cleanup post trash and15 listings. About original title verified after UI restore.
+PHP/JS lint and icon audit pass. No PHP/WP/parent theme upgrades. Versions remain
+PHP8.5.12/WP7.1.4. Policies describe implemented behavior; owner should approve
+final policy wording before public launch. No outbound messaging configured.
+
+Development-only refine-mobile-app.php recursion fixed by exact class-token
+match, after new copy class shared a prefix with section class. Frontend PHP did
+not use that CLI migration. Do not rerun legacy seed/build scripts blindly.
+Mobile final QA: also reproduced bottom fixed-menu overlap at end of page.
+Reserved60px + safe-area in body on mobile/tablet; hid empty desktop footer
+wrapper so no black strip remains. Floating back-top avoids full contribution
+section. Responsive checks use Tab.screenshot + Playwright consistently; native
+getScreenshot/AX can lag behind the DOM renderer's current viewport in IAB.

@@ -1,0 +1,60 @@
+{
+ "about": {
+  "title": "Hệ thống Địa Điểm Long Khánh",
+  "paragraphs": [
+   "Địa Điểm Long Khánh giúp bạn tìm nơi ăn uống, lưu trú, mua sắm và vui chơi tại Long Khánh. Từ một cuộc hẹn cà phê đến chuyến đi cuối tuần, bạn có thể bắt đầu bằng việc tìm địa điểm theo tên, danh mục hoặc khu vực.",
+   "Hình ảnh, thông tin địa điểm và những đánh giá của cộng đồng mang đến nhiều góc nhìn trước khi bạn quyết định ghé thăm. Giá, giờ mở cửa và dịch vụ có thể thay đổi; hãy liên hệ địa điểm để xác nhận khi lên kế hoạch.",
+   "Bạn có thể lưu nơi yêu thích, chia sẻ trải nghiệm và đóng góp những địa chỉ chưa có trên hệ thống. Mỗi thông tin chính xác, mỗi nhận xét cụ thể đều giúp người đến sau lựa chọn dễ dàng hơn.",
+   "Chúng tôi mong cùng bạn xây dựng một cộng đồng Long Khánh thân thiện: tôn trọng trải nghiệm khác biệt, chia sẻ có trách nhiệm và khám phá thêm những điều thú vị ngay quanh mình. ♥"
+  ]
+ },
+ "privacy": {
+  "title": "Chính sách bảo mật",
+  "intro": "Chính sách này giải thích việc sử dụng thông tin khi bạn tạo tài khoản, gửi đánh giá, đóng góp địa điểm hoặc liên hệ trên website Địa Điểm Long Khánh. Vui lòng chỉ cung cấp thông tin cần thiết cho hoạt động bạn thực hiện.",
+  "sections": [
+   {"title":"Thu thập thông tin của bạn","body":"Thông tin được cung cấp qua các biểu mẫu hoặc phát sinh khi bạn sử dụng chức năng của website.","children":[
+    {"title":"Dữ liệu cá nhân","body":"Tài khoản gồm tên đăng nhập, email và thông tin xác thực. Biểu mẫu liên hệ tiếp nhận tên, email, số điện thoại nếu bạn cung cấp và nội dung lời nhắn. Website không yêu cầu số căn cước, ngày sinh hay thông tin thanh toán trong các biểu mẫu này."},
+    {"title":"Nội dung bạn đóng góp","body":"Đánh giá có thể bao gồm nội dung trải nghiệm, điểm cho năm tiêu chí và hình ảnh bạn chọn tải lên. Khi đóng góp địa điểm, bạn có thể cung cấp tên, địa chỉ, danh mục, khu vực, giờ hoạt động và thông tin liên hệ của địa điểm."},
+    {"title":"Dữ liệu thiết bị và vị trí","body":"Máy chủ có thể ghi nhận thông tin kỹ thuật của lượt truy cập để vận hành và xử lý lỗi. Chức năng tìm quanh đây chỉ sử dụng tọa độ khi bạn chủ động yêu cầu và cho phép trình duyệt truy cập vị trí."}
+   ]},
+   {"title":"Cách sử dụng thông tin của bạn","items":["Đăng nhập, quản lý tài khoản và ghi nhận những người bạn theo dõi.","Hiển thị đánh giá, tính điểm trung bình và cung cấp thông tin địa điểm cho cộng đồng.","Tiếp nhận, kiểm tra nội dung đóng góp và xử lý yêu cầu liên hệ.","Duy trì hoạt động, kiểm tra lỗi và ngăn việc sử dụng các biểu mẫu sai mục đích."]},
+   {"title":"Quyền sử dụng thông tin","children":[
+    {"title":"Thông tin công khai","body":"Tên hiển thị và nội dung đánh giá đã công bố có thể xuất hiện trên trang địa điểm và bảng tin. Thông tin của địa điểm sau khi được duyệt cũng có thể được xem công khai. Email đăng nhập, mật khẩu và lời nhắn liên hệ không được hiển thị trong các khu vực cộng đồng."},
+    {"title":"Đánh giá ẩn danh","body":"Nếu chọn ẩn danh khi gửi đánh giá, tên hiển thị được che trên trang địa điểm và đánh giá đó không được đưa lên bảng tin theo dõi. Tài khoản gửi vẫn được lưu trong hệ thống để quản lý nội dung và hỗ trợ khi cần."},
+    {"title":"Dịch vụ bên ngoài","body":"Bản đồ, cửa hàng ứng dụng và các liên kết mạng xã hội do những bên cung cấp tương ứng vận hành. Khi bạn mở hoặc sử dụng dịch vụ đó, việc xử lý dữ liệu còn phụ thuộc vào chính sách của bên cung cấp."}
+   ]},
+   {"title":"Công nghệ theo dõi","children":[
+    {"title":"Cookie đăng nhập","body":"Cookie giúp duy trì phiên đăng nhập. Bạn có thể quản lý cookie trong trình duyệt; việc chặn hoặc xóa cookie có thể làm bạn cần đăng nhập lại."},
+    {"title":"Dữ liệu lưu trên trình duyệt","body":"Danh sách địa điểm đã lưu và các địa điểm vừa xem được giữ trong bộ nhớ của trình duyệt đang dùng. Chúng có thể khác nhau giữa các thiết bị và sẽ mất khi bạn xóa dữ liệu website. Thao tác thích trên bảng tin cũng được ghi nhớ tại trình duyệt."}
+   ]},
+   {"title":"Trang web bên thứ ba","body":"Một liên kết ra ngoài không có nghĩa toàn bộ nội dung hoặc chính sách của trang đích thuộc sự quản lý của Địa Điểm Long Khánh. Hãy kiểm tra địa chỉ và chính sách tại trang đích trước khi cung cấp thông tin."},
+   {"title":"Bảo mật thông tin của bạn","body":"Chỉ chia sẻ thông tin phù hợp trong khu vực công khai. Giữ riêng mật khẩu, đăng xuất khi dùng máy chung và liên hệ nếu nghi ngờ tài khoản bị sử dụng trái phép. Không có phương thức truyền hoặc lưu trữ dữ liệu nào bảo đảm loại bỏ hoàn toàn mọi rủi ro."},
+   {"title":"Những lựa chọn về thông tin của bạn","children":[
+    {"title":"Thông tin tài khoản và nội dung đóng góp","body":"Bạn có thể gửi yêu cầu kiểm tra, điều chỉnh hoặc xóa thông tin qua trang Liên hệ. Vui lòng nêu tài khoản, địa điểm hoặc liên kết nội dung liên quan để quản trị viên có thể xác minh và xử lý đúng dữ liệu."},
+    {"title":"Quyền của trình duyệt","body":"Bạn có thể tắt quyền vị trí, xóa danh sách địa điểm đã lưu hoặc xóa cookie trong cài đặt trình duyệt. Việc tắt các quyền này không ngăn bạn xem thông tin địa điểm thông thường."}
+   ]},
+   {"title":"Cập nhật chính sách","body":"Khi cách vận hành hoặc các chức năng xử lý thông tin thay đổi, nội dung chính sách sẽ được cập nhật tại trang này. Hãy đọc lại trước khi sử dụng một chức năng mới có yêu cầu cung cấp thêm dữ liệu."},
+   {"title":"Liên hệ với chúng tôi","body":"Nếu có câu hỏi về dữ liệu của mình, hãy gửi lời nhắn qua trang Liên hệ - Góp ý. Không đưa mật khẩu hoặc giấy tờ cá nhân vào nội dung lời nhắn."}
+  ]
+ },
+ "termsofuse": {
+  "title": "Điều khoản sử dụng",
+  "sections": [
+   {"title":"Điều 1: Quy định về việc sử dụng dịch vụ","items":["Địa Điểm Long Khánh cung cấp công cụ tìm kiếm, tham khảo và chia sẻ trải nghiệm về các địa điểm. Hãy đọc các điều khoản và chính sách bảo mật trước khi sử dụng tính năng tài khoản hoặc gửi nội dung.","Bạn chịu trách nhiệm về những thông tin mình cung cấp. Nếu chưa rõ cách sử dụng hoặc cần hỗ trợ, hãy gửi câu hỏi qua trang Liên hệ - Góp ý."]},
+   {"title":"Điều 2: Đăng ký tài khoản","items":["Sử dụng email và tên đăng nhập mà bạn có quyền sử dụng. Không mạo danh người khác, tổ chức khác hoặc tạo tên gây nhầm lẫn với ban quản trị.","Giữ riêng thông tin đăng nhập. Không cho người khác sử dụng tài khoản để đăng nội dung mà bạn không kiểm soát. Khi nghi ngờ có truy cập trái phép, hãy đổi thông tin xác thực và liên hệ hỗ trợ.","Tên hiển thị và hình ảnh bạn sử dụng cần tôn trọng người khác, không chứa nội dung xúc phạm hoặc xâm phạm quyền sử dụng của bên khác."]},
+   {"title":"Điều 3: Nội dung cung cấp và trao đổi thông tin","items":["Chia sẻ trải nghiệm của chính bạn, mô tả cụ thể điều đã quan sát và phân biệt nhận xét cá nhân với thông tin có thể kiểm chứng.","Đăng nội dung đúng địa điểm, đúng danh mục. Chỉ tải lên hình ảnh và tài liệu mà bạn có quyền sử dụng; tránh đưa số điện thoại riêng, giấy tờ hoặc thông tin cá nhân của người khác vào bài viết.","Nếu một thông tin thay đổi hoặc chưa chính xác, bạn có thể liên hệ để đề nghị kiểm tra. Nội dung được cộng đồng cung cấp có thể cần thời gian để xác minh."]},
+   {"title":"Điều 4: Các nội dung không được chia sẻ","items":["Không đăng nội dung đe dọa, quấy rối, kích động bạo lực, phân biệt đối xử hoặc xúc phạm danh dự người khác.","Không phát tán thông tin giả mạo, hình ảnh riêng tư khi chưa được phép, nội dung vi phạm bản quyền hoặc đường dẫn có mục đích lừa đảo.","Không sử dụng khu vực đánh giá để quảng cáo tràn lan, trao đổi hàng hóa bị cấm hoặc đăng nội dung không liên quan tới địa điểm."]},
+   {"title":"Điều 5: Các hành vi gây ảnh hưởng tới hệ thống","items":["Không cố truy cập tài khoản, dữ liệu hoặc khu vực quản trị khi chưa được cấp quyền.","Không gửi yêu cầu tự động với mục đích làm gián đoạn dịch vụ, phát tán phần mềm độc hại hoặc thao túng điểm đánh giá.","Không sử dụng nhiều tài khoản để tạo trải nghiệm giả, làm sai lệch xếp hạng hoặc gây khó khăn cho thành viên khác."]},
+   {"title":"Điều 6: Quyền và trách nhiệm của người sử dụng","items":["Bạn có thể xem địa điểm, lưu nơi yêu thích và dùng các tính năng cộng đồng được cung cấp cho tài khoản của mình.","Bạn có thể phản hồi về thông tin sai hoặc đề nghị hỗ trợ đối với dữ liệu của mình qua trang Liên hệ.","Hãy bảo vệ tài khoản, cung cấp thông tin trung thực và tôn trọng các thành viên. Cân nhắc trước khi công khai thông tin nhận diện, lịch trình hoặc vị trí riêng của bạn."]},
+   {"title":"Điều 7: Vai trò của ban quản trị","items":["Ban quản trị tiếp nhận đóng góp, kiểm tra thông tin được báo cáo và quản lý nội dung trên website. Một địa điểm do thành viên gửi có thể ở trạng thái chờ duyệt trước khi được công khai.","Nội dung không phù hợp có thể được ẩn, chỉnh sửa hoặc yêu cầu bổ sung thông tin. Trong trường hợp cần xác minh, ban quản trị có thể liên hệ theo thông tin bạn đã cung cấp."]},
+   {"title":"Điều 8: Quyền sở hữu trí tuệ","items":["Tôn trọng quyền đối với tên thương hiệu, hình ảnh, bài viết và các tài liệu của người khác. Việc một nội dung xuất hiện trên website không đồng nghĩa bạn được phép sử dụng lại cho mọi mục đích.","Nếu cho rằng một nội dung xâm phạm quyền của mình, hãy gửi liên kết, mô tả và căn cứ liên quan qua trang Liên hệ để được kiểm tra."]},
+   {"title":"Điều 9: Xử lý nội dung và tài khoản vi phạm","items":["Tùy mức độ và tính chất của nội dung, quản trị viên có thể yêu cầu điều chỉnh, ẩn bài hoặc hạn chế tài khoản. Các thông tin báo cáo sẽ được kiểm tra trong phạm vi dữ liệu có thể xác minh.","Nếu cần phản hồi về một quyết định quản lý nội dung, hãy nêu tài khoản, liên kết bài viết và lý do đề nghị xem xét. Không tạo thêm nội dung công kích để thay thế việc gửi yêu cầu hỗ trợ."]},
+   {"title":"Điều 10: Lưu ý khi chia sẻ thông tin trên mạng","items":["Đánh giá công khai có thể được người khác đọc, chụp lại hoặc chia sẻ ra ngoài website. Hãy kiểm tra hình ảnh và nội dung trước khi gửi.","Chế độ ẩn danh che tên trên giao diện cộng đồng, nhưng không làm mất mọi dấu hiệu nhận diện trong nội dung hoặc hình ảnh bạn tự đăng."]},
+   {"title":"Điều 11: Thông tin cá nhân và quyền riêng tư","items":["Việc tiếp nhận và sử dụng thông tin tài khoản, liên hệ, đánh giá và vị trí được mô tả tại Chính sách bảo mật.","Không gửi mật khẩu, dữ liệu thanh toán hay giấy tờ cá nhân trong đánh giá. Khi cần yêu cầu xử lý dữ liệu, hãy sử dụng trang Liên hệ thay vì đăng công khai."]},
+   {"title":"Điều 12: Thông tin địa điểm và dịch vụ bên ngoài","items":["Giá, giờ hoạt động, menu và ưu đãi có thể thay đổi theo thời gian. Hãy xác nhận trực tiếp với địa điểm trước khi đặt chỗ, di chuyển hoặc sử dụng dịch vụ.","Website hỗ trợ bạn tìm thông tin; việc mua bán, đặt dịch vụ hoặc thanh toán tại địa điểm được thực hiện với bên cung cấp tương ứng. Liên kết bản đồ, cửa hàng ứng dụng và mạng xã hội có chính sách riêng."]},
+   {"title":"Điều 13: Nguyên tắc giải quyết bất đồng","items":["Khi có bất đồng về một đánh giá hoặc thông tin địa điểm, các bên nên cung cấp nội dung cụ thể, thời điểm và căn cứ có thể kiểm tra.","Ban quản trị có thể hỗ trợ trong phạm vi nội dung trên website; việc xử lý giữa khách hàng và đơn vị cung cấp dịch vụ cần có sự trao đổi trực tiếp của các bên liên quan."]},
+   {"title":"Điều 14: Gửi phản hồi và yêu cầu hỗ trợ","items":["Mở trang Liên hệ - Góp ý, điền thông tin liên hệ và mô tả vấn đề. Với một bài viết hoặc địa điểm cụ thể, vui lòng kèm liên kết để tránh nhầm lẫn.","Không đưa thông tin nhạy cảm của người khác vào phản hồi. Nếu cần bổ sung bằng chứng, quản trị viên sẽ trao đổi về cách tiếp nhận phù hợp."]},
+   {"title":"Điều 15: Cập nhật điều khoản","items":["Các điều khoản được cập nhật tại trang này khi chức năng hoặc cách vận hành thay đổi. Hãy đọc lại trước khi sử dụng tính năng mới.","Nếu có câu hỏi về phạm vi sử dụng website, vui lòng liên hệ ban quản trị trước khi gửi nội dung hoặc cung cấp thêm thông tin cá nhân."]}
+  ]
+ }
+}

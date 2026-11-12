@@ -5,11 +5,12 @@ wp-content/ai1wm-backups/
 
 # WordPress cache
 wp-content/cache/
-
+.htaccess
+wp-config.php
 # Environment
 .env
 .env.*
-
+debug.log
 # Dependencies
 node_modules/
 vendor/

@@ -1,0 +1,60 @@
+{
+    "checks": {
+        "home": {
+            "status": 200,
+            "ok": true
+        },
+        "about": {
+            "status": 200,
+            "ok": true
+        },
+        "privacy": {
+            "status": 200,
+            "ok": true
+        },
+        "termsofuse": {
+            "status": 200,
+            "ok": true
+        },
+        "download": {
+            "status": 200,
+            "ok": true
+        },
+        "new-review": {
+            "status": 200,
+            "ok": true
+        },
+        "explore": {
+            "status": 200,
+            "ok": true
+        },
+        "promo": {
+            "status": 200,
+            "ok": true
+        },
+        "contact": {
+            "status": 200,
+            "ok": true
+        },
+        "top-nha-xe-tai-long-khanh-dong-nai": {
+            "status": 200,
+            "ok": true
+        },
+        "top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai": {
+            "status": 200,
+            "ok": true
+        },
+        "top-nhung-quan-nuong-o-long-khanh": {
+            "status": 200,
+            "ok": true
+        },
+        "top-10-dia-diem-chup-hinh-dep-tai-long-khanh": {
+            "status": 200,
+            "ok": true
+        }
+    },
+    "failures": [],
+    "missing_widgets": [],
+    "docs": 26,
+    "ok": true
+}

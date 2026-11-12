@@ -1,0 +1,19 @@
+{
+    "post_id": 27039,
+    "baseline_listing_count": 15,
+    "compose_url": "http:\/\/localhost:180\/longkhanhsite\/new-review\/?place_id=27039",
+    "checks": {
+        "review_saved": true,
+        "title_saved": true,
+        "criteria": true,
+        "rating": true,
+        "photo": true,
+        "anonymous": true,
+        "anonymous_not_in_feed": true
+    },
+    "ok": true,
+    "cleanup": {
+        "post_status": "trash",
+        "remaining_listings": 15
+    }
+}

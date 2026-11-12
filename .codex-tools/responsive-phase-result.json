@@ -1,0 +1,59 @@
+{
+  "home": [
+    {
+      "size": 320,
+      "badgeWidths": [
+        135.5,
+        135.5
+      ],
+      "badgesSameRow": true,
+      "bodyWidth": 305,
+      "bottomSpace": "60px",
+      "footerHidden": true,
+      "overflow": 0
+    },
+    {
+      "size": 414,
+      "badgeWidths": [
+        160,
+        160
+      ],
+      "badgesSameRow": true,
+      "bodyWidth": 399,
+      "bottomSpace": "60px",
+      "footerHidden": true,
+      "overflow": 0
+    },
+    {
+      "size": 375,
+      "badgeWidths": [
+        160,
+        160
+      ],
+      "badgesSameRow": true,
+      "bodyWidth": 360,
+      "bottomSpace": "60px",
+      "footerHidden": true,
+      "overflow": 0
+    }
+  ],
+  "review320": {
+    "bodyWidth": 305,
+    "criteriaGroups": 5,
+    "overflow": 0,
+    "placeRequired": true,
+    "starsFit": true
+  },
+  "reviewBottom": {
+    "buttonBottom": 737.75,
+    "clearOfBottomNav": true,
+    "navTop": 752
+  },
+  "finalGuest375": {
+    "arrowClearOfCta": true,
+    "badgesSameRow": true,
+    "ctaAboveMenu": true,
+    "overflow": 0,
+    "width": 360
+  }
+}

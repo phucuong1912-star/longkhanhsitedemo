@@ -2,6 +2,7 @@
 if(!defined('ABSPATH'))exit;
 function lk_form($s){
  $kind=$s['kind']??'contact';$error=isset($_GET['lk_error'])?sanitize_key($_GET['lk_error']):'';
+ if($kind==='review'){lk_review_composer($s);return;}
  if(isset($_GET['lk_success']))echo '<div class="lk-notice" role="status">'.($kind==='contact'?'Đã nhận lời nhắn của bạn. Cảm ơn bạn đã góp ý.':'Đã nhận địa điểm. Nội dung đang chờ duyệt.').'</div>';
  if($error)echo '<div class="lk-error" role="alert">Vui lòng kiểm tra các trường bắt buộc và thử lại. Thông tin chưa được gửi.</div>';
  if($kind==='add-place'&&!is_user_logged_in()){echo '<div class="lk-notice">Bạn có thể xem trước biểu mẫu bên dưới. <button class="lk-login-open lk-text-button">Đăng nhập</button> để gửi địa điểm.</div>';}
@@ -67,9 +68,10 @@ function lk_handle_review(){
  $criteria=array();foreach(lk_criteria_labels() as $key=>$label){$score=absint($_POST['criteria'][$key]??0);if($score>=1&&$score<=5)$criteria[$key]=$score;}
  if(count($criteria)===5)$rating=round(array_sum($criteria)/5,1);
  elseif(isset($_POST['criteria']))wp_die('Vui lòng chọn điểm cho cả năm tiêu chí.','Không thể gửi',array('response'=>400));
- if(!is_user_logged_in()||get_post_type($id)!=='listing'||get_post_status($id)!=='publish'||get_post_field('post_password',$id)||$rating<1||$rating>5||mb_strlen($content)<10)wp_die('Vui lòng đăng nhập và nhập đầy đủ nội dung đánh giá.','Không thể gửi',array('response'=>400));
- $u=wp_get_current_user();$comment=wp_insert_comment(array('comment_post_ID'=>$id,'comment_author'=>$u->display_name,'comment_author_email'=>$u->user_email,'user_id'=>$u->ID,'comment_content'=>$content,'comment_type'=>'lk_review','comment_approved'=>1));
- if($comment){if($criteria)update_comment_meta($comment,'lk_criteria',$criteria);update_comment_meta($comment,'lk_rating',$rating);}wp_safe_redirect(get_permalink($id).'#reviews');exit;
+ if(!is_user_logged_in()||get_post_type($id)!=='listing'||!lk_is_directory_listing($id)||get_post_status($id)!=='publish'||get_post_field('post_password',$id)||$rating<1||$rating>5||mb_strlen($content)<10||mb_strlen($content)>10000)wp_die('Vui lòng đăng nhập và nhập đầy đủ nội dung đánh giá.','Không thể gửi',array('response'=>400));
+ lk_validate_review_uploads();$photos=lk_save_review_uploads($id);
+ $u=wp_get_current_user();$comment=wp_insert_comment(array('comment_post_ID'=>$id,'comment_author'=>$u->display_name,'comment_author_email'=>$u->user_email,'user_id'=>$u->ID,'comment_content'=>$content,'comment_type'=>'lk_review','comment_approved'=>0));
+ if($comment){if($criteria)update_comment_meta($comment,'lk_criteria',$criteria);update_comment_meta($comment,'lk_rating',$rating);update_comment_meta($comment,'lk_review_title',mb_substr(lk_post_value('review_title'),0,120));update_comment_meta($comment,'lk_anonymous',empty($_POST['anonymous'])?0:1);if($photos)update_comment_meta($comment,'lk_photo_ids',$photos);wp_set_comment_status($comment,'approve');}wp_safe_redirect(get_permalink($id).'#reviews');exit;
 }
 add_action('admin_post_lk_review','lk_handle_review');
 function lk_handle_add_place(){

@@ -101,6 +101,21 @@
   measure();
  });
 
+ const backTop=document.querySelector('.lk-top'),contribute=document.querySelector('.lk-contribute .elementor-button');
+ if(backTop&&contribute){
+  let pending=false;
+  function clearCta(){
+   pending=false;
+   if(innerWidth>767){backTop.classList.remove('lk-top-clear-cta');return;}
+   const cta=contribute.closest('.lk-contribute').getBoundingClientRect(),button=backTop.getBoundingClientRect();
+   const bottom=innerHeight-parseFloat(getComputedStyle(backTop).bottom),top=bottom-backTop.offsetHeight;
+   const overlaps=cta.right+12>button.left&&cta.left-12<button.right&&cta.bottom+12>top&&cta.top-12<bottom;
+   backTop.style.setProperty('--lk-top-cta-shift',Math.max(48,bottom-cta.top+12)+'px');
+   backTop.classList.toggle('lk-top-clear-cta',overlaps);
+  }
+  function scheduleCta(){if(!pending){pending=true;requestAnimationFrame(clearCta);}}
+  window.addEventListener('scroll',scheduleCta,{passive:true});window.addEventListener('resize',scheduleCta);clearCta();
+ }
  const tabs=document.querySelector('.lk-detail-tabs');
  if(tabs){
   const update=()=>{tabs.classList.toggle('is-visible',scrollY>200);};

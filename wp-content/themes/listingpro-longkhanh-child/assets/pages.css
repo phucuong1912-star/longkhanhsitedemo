@@ -1,0 +1,109 @@
+/* Remaining content pages and the review composer. Native Elementor settings
+   can override these defaults; fields remain WordPress-backed data widgets. */
+body.lk-site .lk-legal{max-width:928px;margin:20px auto 60px;padding:0}
+body.lk-site .lk-legal h1{font-size:28px;margin-bottom:24px}
+body.lk-site .lk-legal h2{font-size:24px;margin:24px 0 16px}
+body.lk-site .lk-legal h3{font-size:20px;margin:20px 0 12px}
+body.lk-site .lk-legal .elementor-widget-text-editor{font-size:16px;line-height:1.65;margin-bottom:16px}
+body.lk-site .lk-legal ul{padding-left:24px;margin:0}
+body.lk-site .lk-legal li{margin-bottom:10px}
+body.lk-site .lk-legal a{color:var(--lk-accent)}
+body.lk-site .lk-about{padding:40px 20px 70px;background:linear-gradient(#cbe6ce,rgba(250,250,250,0) 48%)}
+body.lk-site .lk-about>:where(.elementor-container){align-items:center;gap:30px;max-width:1000px}
+body.lk-site .lk-about-art{flex:0 1 37%}
+body.lk-site .lk-about-copy{flex:1;min-width:0}
+body.lk-site :where(.lk-about-art) .elementor-widget-image img{width:100%}
+body.lk-site .lk-about h1{font-size:28px;margin-bottom:24px}
+body.lk-site .lk-about .elementor-widget-text-editor{font-size:16px;line-height:1.6;margin-bottom:24px}
+body.lk-site .lk-download-page{padding:22px 12px 40px;min-height:410px;text-align:center}
+body.lk-site .lk-download-page h1{font-size:28px;margin-bottom:18px}
+body.lk-site :where(.lk-download-qr) img{width:180px;height:auto}
+body.lk-site .lk-download-stores{max-width:380px;margin:18px auto 0}
+body.lk-site .lk-download-stores>:where(.elementor-container){gap:20px;flex-wrap:nowrap}
+body.lk-site .lk-download-stores .elementor-column{flex:1;min-width:0}
+body.lk-site :where(.lk-download-stores) img{width:180px;height:auto}
+body.lk-site .lk-compose-page{max-width:1200px;margin:10px auto 30px;padding:16px 20px 24px;background:white;box-shadow:0 1px 8px #00000012;border-radius:10px}
+body.lk-site .lk-compose-page h1{font-size:28px;text-align:center;border-bottom:1px solid #eee;padding-bottom:14px;margin-bottom:24px}
+body.lk-site .lk-review-composer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px}
+body.lk-site .lk-review-composer h3{font-size:18px;font-weight:500;line-height:1.6;color:#999;margin:0 0 12px}
+body.lk-site .lk-compose-ratings{margin-bottom:22px}
+body.lk-site .lk-star-row{border:0;padding:0 10px;margin:0 0 12px;display:grid;grid-template-columns:120px minmax(0,1fr) 96px;align-items:center;gap:12px;min-width:0;font-size:14px}
+body.lk-site .lk-stars-input{display:flex;gap:8px;min-width:0}
+body.lk-site .lk-stars-input label{position:relative;cursor:pointer;color:var(--lk-accent);font-size:30px;line-height:1.25}
+body.lk-site .lk-stars-input input{position:absolute;width:1px;height:1px;opacity:0;inset:0}
+body.lk-site .lk-stars-input label:has(input:checked)~label{color:#ddd}
+body.lk-site .lk-stars-input label:focus-within{outline:2px solid #2b7134;outline-offset:3px;border-radius:3px}
+body.lk-site .lk-score-word{font-size:14px;text-align:center;background:var(--lk-accent);color:white;border-radius:3px;padding:5px 8px;clip-path:polygon(12px 0,100% 0,100% 100%,12px 100%,0 50%)}
+body.lk-site .lk-review-composer input[type=text],body.lk-site .lk-review-composer textarea{display:block;width:100%;border:1px solid #ddd;border-radius:var(--lk-radius,10px);padding:10px 12px;font-size:14px;background:white;color:var(--lk-text);box-shadow:inset 0 1px 2px #00000008}
+body.lk-site .lk-review-composer textarea{resize:vertical;margin-top:10px;min-height:112px}
+body.lk-site .lk-review-counter{font-size:12px;font-style:italic;text-align:right;color:#999;margin:0 0 12px}
+body.lk-site .lk-review-upload{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:104px;min-height:74px;border:1px solid #ddd;border-radius:var(--lk-radius,10px);font-size:13px;cursor:pointer;gap:4px}
+body.lk-site .lk-review-upload i{font-size:22px}
+body.lk-site .lk-review-upload input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer}
+body.lk-site .lk-review-upload:focus-within{outline:2px solid #2b7134;outline-offset:3px}
+body.lk-site .lk-upload-help,body.lk-site .lk-anonymous-help,body.lk-site .lk-recent-empty{font-size:13px;line-height:1.6;color:#999;margin:8px 0 16px}
+body.lk-site .lk-review-preview,body.lk-site .lk-review-photos{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+body.lk-site .lk-review-preview img,body.lk-site .lk-review-photos img{width:84px;height:84px;object-fit:cover;border-radius:6px}
+body.lk-site .lk-review-composer .lk-compose-error{color:#ae2929;font-size:14px}
+body.lk-site .lk-anonymous-row{display:flex;align-items:center;justify-content:space-between;margin-top:24px}
+body.lk-site .lk-anonymous-row h3{margin:0}
+body.lk-site .lk-switch{position:relative;display:inline-flex;align-items:center;width:38px;height:22px}
+body.lk-site .lk-switch input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;z-index:1;cursor:pointer}
+body.lk-site .lk-switch span{width:100%;height:100%;border-radius:20px;background:#bbb;transition:background .2s}
+body.lk-site .lk-switch span:before{content:'';position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:white;transition:transform .2s}
+body.lk-site .lk-switch input:checked+span{background:var(--lk-accent)}
+body.lk-site .lk-switch input:checked+span:before{transform:translateX(16px)}
+body.lk-site .lk-switch:focus-within{outline:2px solid #2b7134;outline-offset:3px;border-radius:20px}
+body.lk-site #lk-review-place{width:100%;min-height:86px;background:white;border:1px dashed #ddd;border-radius:10px;font:inherit;font-size:14px;text-align:center;color:#888;padding:14px 10px;cursor:pointer;appearance:none;margin-bottom:18px}
+body.lk-site .lk-review-chosen{display:flex;gap:12px;align-items:center;margin:0 0 24px}
+body.lk-site .lk-review-chosen img{width:80px;height:80px;object-fit:cover;border-radius:6px}
+body.lk-site .lk-review-chosen p{font-size:13px;color:#888;margin:4px 0 0}
+body.lk-site .lk-compose-recent{padding:12px 0;border-bottom:1px solid #eee}
+body.lk-site .lk-compose-recent a{color:var(--lk-accent);font-weight:600}
+body.lk-site .lk-compose-recent p{font-size:14px;margin:4px 0 0}
+body.lk-site .lk-feed-welcome{text-align:center;padding:32px 24px}
+body.lk-site .lk-feed-welcome img{display:block;width:210px;max-width:70%;height:auto;margin:0 auto 22px}
+body.lk-site .lk-feed-welcome h2{font-size:22px;margin-bottom:12px}
+body.lk-site .lk-feed-welcome p{font-size:15px;line-height:1.7}
+body.lk-site .lk-article-facts{padding-left:22px;margin:12px 0 24px;font-size:15px;line-height:1.7}
+body.lk-site .lk-article-source{font-size:13px;color:#888;border-top:1px solid #eee;padding-top:16px}
+body.lk-site .lk-review>h4{font-size:17px;margin:10px 0 8px}
+@media(hover:hover){body.lk-site .lk-stars-input:has(label:hover) label{color:#ddd}body.lk-site .lk-stars-input label:hover,body.lk-site .lk-stars-input label:has(~label:hover){color:var(--lk-accent)}}
+@media(max-width:991px){
+ body.lk-site{padding-bottom:calc(60px + env(safe-area-inset-bottom,0px))}
+ body.lk-site .lk-site-footer{display:none}
+ body.lk-site .lk-legal{margin:14px 12px 32px}
+ body.lk-site .lk-about{padding:24px 12px 32px}
+ body.lk-site .lk-about>:where(.elementor-container){flex-direction:column;gap:24px}
+ body.lk-site .lk-about-art{width:70%;max-width:330px;flex:auto}
+ body.lk-site .lk-about-copy{width:100%;flex:auto}
+ body.lk-site .lk-compose-page{margin:10px 8px 24px}
+ body.lk-site .lk-star-row{grid-template-columns:90px minmax(0,1fr) 80px;gap:6px;padding:0}
+ body.lk-site .lk-stars-input{gap:4px}
+ body.lk-site .lk-stars-input label{font-size:25px}
+}
+@media(max-width:767px){
+ body.lk-site .lk-legal h1,body.lk-site .lk-about h1{font-size:26px}
+ body.lk-site .lk-legal h2{font-size:21px}
+ body.lk-site .lk-legal h3{font-size:18px}
+ body.lk-site .lk-download-page h1{font-size:24px}
+ body.lk-site .lk-compose-page{padding:14px 12px;box-shadow:none;margin:0;border-radius:0}
+ body.lk-site .lk-review-composer{display:flex;flex-direction:column;gap:18px}
+ body.lk-site .lk-compose-aside{order:-1}
+ body.lk-site .lk-compose-aside>h3:last-of-type,body.lk-site .lk-compose-recent,body.lk-site .lk-recent-empty{display:none}
+ body.lk-site .lk-star-row{grid-template-columns:78px minmax(0,1fr) 74px;gap:6px}
+ body.lk-site .lk-stars-input{gap:4px}
+ body.lk-site .lk-stars-input label{font-size:clamp(18px,6vw,26px)}
+ body.lk-site .lk-score-word{font-size:12px;padding:5px 4px 5px 10px}
+ body.lk-site .lk-compose-page h1{font-size:24px}
+ body.lk-site .lk-contribute{padding:0 10px;margin:10px 0}
+ body.lk-site .lk-contribute>:where(.elementor-container){gap:0;align-items:center}
+ body.lk-site .lk-contribute :where(.elementor-column:first-child){width:36.5%;flex:0 0 36.5%}
+ body.lk-site .lk-contribute :where(.elementor-column:last-child){width:auto;flex:1;min-width:0}
+ body.lk-site .lk-contribute :where(.elementor-column:last-child)>.elementor-element-populated{padding:20px 10px 20px 0}
+ body.lk-site .lk-contribute h3{line-height:1.5715}
+ body.lk-site .lk-contribute .elementor-widget-button{margin-top:10px}
+ body.lk-site .lk-contribute .elementor-button{padding:0 14px;line-height:30px;border-radius:5px;font-weight:500}
+ body.lk-site .lk-top{bottom:calc(84px + env(safe-area-inset-bottom,0px));transition:transform .2s ease}
+ body.lk-site .lk-top-clear-cta{transform:translateY(calc(-1 * var(--lk-top-cta-shift,48px)))}
+}

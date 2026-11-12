@@ -1,4 +1,24 @@
 /* Timing and easing measured from the public reference. */
+/* App artwork is native Elementor imagery, with its own space below the badges. */
+body.lk-site .lk-app-panel{max-width:1160px;margin:32px auto 0;border-radius:10px;overflow:hidden;padding:0;min-height:0}
+body.lk-site .lk-app-panel>:where(.elementor-container){align-items:center;min-height:0}
+body.lk-site .lk-app-panel h2{font-size:26px;line-height:1.57}
+body.lk-site :where(.lk-app-panel-copy) .elementor-widget-text-editor{color:#6f8a75;font-size:14px;margin:12px 0 20px}
+body.lk-site .lk-store-links>:where(.elementor-container){align-items:center;gap:12px}
+body.lk-site :where(.lk-qr-column) .elementor-widget-image img{width:100px}
+body.lk-site .lk-badges>:where(.elementor-widget-wrap){display:flex;flex-direction:column;align-content:flex-start;gap:8px}
+body.lk-site :where(.lk-badges) .elementor-widget-image{width:auto;min-width:0}
+body.lk-site :where(.lk-badges) .elementor-widget-image img{width:160px;height:auto}
+body.lk-site :where(.lk-app-art) .elementor-widget-image img{display:block;width:100%;height:auto}
+body.lk-site :where(.lk-app-art) .elementor-widget-container{line-height:0}
+@media(max-width:1024px){
+ body.lk-site .lk-app-panel{margin:24px 2px 0;max-width:calc(100% - 4px)}
+ body.lk-site .lk-app-panel h2{font-size:18px;text-align:center}
+ body.lk-site :where(.lk-app-panel-copy) .elementor-widget-text-editor{text-align:center;font-size:14px;margin:12px 0 20px}
+ body.lk-site .lk-badges>:where(.elementor-widget-wrap){flex-direction:row;flex-wrap:nowrap;gap:10px;justify-content:center}
+ body.lk-site :where(.lk-badges) .elementor-widget-image{flex:0 1 160px}
+ body.lk-site :where(.lk-badges) .elementor-widget-image img{width:100%;max-width:160px}
+}
 body.lk-site{--lk-dark:#428a4b}
 body.lk-site main p,body.lk-site footer p,body.lk-site dialog p{color:inherit}
 body.lk-site .lk-hero:before{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.6))}

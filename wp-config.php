@@ -95,6 +95,7 @@ define( 'WP_AUTO_UPDATE_CORE', false );
 
 define( 'WP_HOME', 'http://localhost:180/longkhanhsite' );
 define( 'WP_SITEURL', 'http://localhost:180/longkhanhsite' );
+
 /* Add any custom values between this line and the "stop editing" line. */
 
 

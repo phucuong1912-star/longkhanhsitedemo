@@ -65,8 +65,9 @@ class LK_Widget_Form extends LK_Widget {
  public function get_icon(){return 'eicon-form-horizontal';}
  protected function register_controls(){
   $this->start_controls_section('content',array('label'=>'Biểu mẫu'));
-  $this->add_control('kind',array('label'=>'Loại biểu mẫu','type'=>'select','options'=>array('contact'=>'Liên hệ','add-place'=>'Thêm địa điểm'),'default'=>'contact'));
+  $this->add_control('kind',array('label'=>'Loại biểu mẫu','type'=>'select','options'=>array('contact'=>'Liên hệ','add-place'=>'Thêm địa điểm','review'=>'Viết review đầy đủ'),'default'=>'contact'));
   $this->add_control('button',array('label'=>'Chữ nút gửi','type'=>'text','default'=>'Gửi'));
+  foreach(array('rating_title'=>array('Tiêu đề xếp hạng','Xếp hạng của bạn'),'review_heading'=>array('Tiêu đề nội dung đánh giá','Đánh giá của bạn'),'place_title'=>array('Tiêu đề chọn địa điểm','Địa điểm'),'recent_title'=>array('Tiêu đề lịch sử','Đánh giá gần đây'),'anonymous_title'=>array('Tiêu đề ẩn danh','Đánh giá ẩn danh')) as $key=>$label)$this->add_control($key,array('label'=>$label[0],'type'=>'text','default'=>$label[1],'condition'=>array('kind'=>'review')));
   $this->end_controls_section();$this->appearance();
  }
  protected function render(){lk_form($this->get_settings_for_display());}
@@ -78,6 +79,6 @@ class LK_Widget_Account extends LK_Widget {
 }
 class LK_Widget_Feed extends LK_Widget {
  public function get_name(){return 'lk-feed';} public function get_title(){return 'Bảng tin khám phá';}
- protected function register_controls(){$this->start_controls_section('content',array('label'=>'Bảng tin'));$this->add_control('mode',array('label'=>'Nội dung','type'=>'select','options'=>array('feed'=>'Bảng tin đánh giá','authors'=>'Thành viên đóng góp'),'default'=>'feed'));$this->add_control('limit',array('label'=>'Số bài hiển thị','type'=>'number','default'=>5));$this->end_controls_section();$this->appearance();}
+ protected function register_controls(){$this->start_controls_section('content',array('label'=>'Bảng tin'));$this->add_control('mode',array('label'=>'Nội dung','type'=>'select','options'=>array('feed'=>'Bảng tin đánh giá','authors'=>'Thành viên đóng góp'),'default'=>'feed'));$this->add_control('limit',array('label'=>'Số bài hiển thị','type'=>'number','default'=>5));$this->add_control('empty_title',array('label'=>'Tiêu đề khi chưa có bài','type'=>'text','default'=>'Chia sẻ trải nghiệm đầu tiên','condition'=>array('mode'=>'feed')));$this->add_control('empty_copy',array('label'=>'Lời mời khi chưa có bài','type'=>'textarea','default'=>'Bạn vừa ghé một địa điểm thú vị ở Long Khánh? Viết đánh giá để mọi người cùng khám phá.','condition'=>array('mode'=>'feed')));$this->add_control('empty_image',array('label'=>'Hình khi chưa có bài','type'=>'media','default'=>array('id'=>0,'url'=>lk_asset('review-illustration')),'condition'=>array('mode'=>'feed')));$this->end_controls_section();$this->appearance();}
  protected function render(){$settings=$this->get_settings_for_display();if(($settings['mode']??'feed')==='authors')lk_community_authors();else lk_feed($settings);}
 }
