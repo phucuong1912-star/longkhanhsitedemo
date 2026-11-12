@@ -1,0 +1,11 @@
+{
+    "checks": {
+        "new_post_is_first": true,
+        "cache_invalidates_after_edit": true,
+        "new_category_in_filter": true,
+        "unfollow_saved": true
+    },
+    "url_failures": [],
+    "ok": true,
+    "remaining_listings": 14
+}

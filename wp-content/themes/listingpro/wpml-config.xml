@@ -1,0 +1,376 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1" display-as-translated="1">listing</custom-type>
+        <custom-type translate="1" display-as-translated="1">form-fields</custom-type>
+        <custom-type translate="1" display-as-translated="1">lp-ads</custom-type>
+        <custom-type translate="1" display-as-translated="1">price_plan</custom-type>
+        <custom-type translate="1" display-as-translated="1">events</custom-type>
+        <custom-type translate="1" display-as-translated="1">lp-reviews</custom-type>
+        <custom-type translate="1" display-as-translated="1">lp-claims</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1" display-as-translated="1">listing-category</taxonomy>
+        <taxonomy translate="1" display-as-translated="1">features</taxonomy>
+        <taxonomy translate="1" display-as-translated="1">list-tags</taxonomy>
+        <taxonomy translate="1" display-as-translated="1">location</taxonomy>
+    </taxonomies>
+    <custom-fields>
+        <custom-field action="copy">claimed</custom-field>
+        <custom-field action="copy">listing_plan_data</custom-field>
+        <custom-field action="translate">lp_listingpro_options</custom-field>
+        <custom-field action="copy">post_views_count</custom-field>
+        <custom-field action="copy">gallery_image_ids</custom-field>
+        <custom-field action="copy">_thumbnail_id</custom-field>
+        <custom-field action="copy">lp_listingpro_options_fields</custom-field>
+        <custom-field action="copy">plan_id</custom-field>
+        <custom-field action="copy">listing_rate</custom-field>
+        <custom-field action="copy">listing_reviewed</custom-field>
+        <custom-field action="copy">campaign_status</custom-field>
+        <custom-field action="copy">lp_random_ads</custom-field>
+        <custom-field action="copy">lp_detail_page_ads</custom-field>
+        <custom-field action="copy">lp_top_in_search_page_ads</custom-field>
+        <custom-field action="copy">plan_package_type</custom-field>
+        <custom-field action="copy">plan_desc_content</custom-field>
+        <custom-field action="copy">plan_text</custom-field>
+        <custom-field action="copy">plan_title_color</custom-field>
+        <custom-field action="copy">plan_no_of_img</custom-field>
+        <custom-field action="copy">plan_img_lmt</custom-field>
+        <custom-field action="copy">plan_price</custom-field>
+        <custom-field action="copy">plan_time</custom-field>
+        <custom-field action="copy">f_plan_continue</custom-field>
+        <custom-field action="copy">plan_hot</custom-field>
+        <custom-field action="copy">lp_ads_wih_plan</custom-field>
+        <custom-field action="copy">lp_hidegooglead</custom-field>
+        <custom-field action="copy">lp_eventsplan</custom-field>
+        <custom-field action="copy">lp_featured_imageplan</custom-field>
+        <custom-field action="copy">listingproc_plan_campaigns</custom-field>
+        <custom-field action="copy">listingproc_plan_deals</custom-field>
+        <custom-field action="copy">listingproc_plan_timekit</custom-field>
+        <custom-field action="copy">listingproc_plan_announcment</custom-field>
+        <custom-field action="copy">listingproc_plan_menu</custom-field>
+        <custom-field action="copy">listingproc_plan_reservera</custom-field>
+        <custom-field action="copy">contact_show</custom-field>
+        <custom-field action="copy">map_show</custom-field>
+        <custom-field action="copy">video_show</custom-field>
+        <custom-field action="copy">gallery_show</custom-field>
+        <custom-field action="copy">listingproc_tagline</custom-field>
+        <custom-field action="copy">listingproc_location</custom-field>
+        <custom-field action="copy">listingproc_website</custom-field>
+        <custom-field action="copy">listingproc_social</custom-field>
+        <custom-field action="copy">listingproc_leadform</custom-field>
+        <custom-field action="copy">listingproc_bookings</custom-field>
+        <custom-field action="copy">listingproc_faq</custom-field>
+        <custom-field action="copy">listingproc_price</custom-field>
+        <custom-field action="copy">listingproc_tag_key</custom-field>
+        <custom-field action="copy">listingproc_bhours</custom-field>
+        <custom-field action="copy">contact_show_hide</custom-field>
+        <custom-field action="copy">map_show_hide</custom-field>
+        <custom-field action="copy">video_show_hide</custom-field>
+        <custom-field action="copy">gall_show_hide</custom-field>
+        <custom-field action="copy">tagline_show_hide</custom-field>
+        <custom-field action="copy">location_show_hide</custom-field>
+        <custom-field action="copy">website_show_hide</custom-field>
+        <custom-field action="copy">social_show_hide</custom-field>
+        <custom-field action="copy">leadform_show_hide</custom-field>
+        <custom-field action="copy">faqs_show_hide</custom-field>
+        <custom-field action="copy">bookings_show_hide</custom-field>
+        <custom-field action="copy">price_show_hide</custom-field>
+        <custom-field action="copy">tags_show_hide</custom-field>
+        <custom-field action="copy">bhours_show_hide</custom-field>
+        <custom-field action="copy">reserva_show_hide</custom-field>
+        <custom-field action="copy">timekit_show_hide</custom-field>
+        <custom-field action="copy">menu_show_hide</custom-field>
+        <custom-field action="copy">announcment_show_hide</custom-field>
+        <custom-field action="copy">deals_show_hide</custom-field>
+        <custom-field action="copy">metacampaign_show_hide</custom-field>
+        <custom-field action="copy">featimg_show_hide</custom-field>
+        <custom-field action="copy">events_show_hide</custom-field>
+        <custom-field action="copy">googlead_show_hide</custom-field>
+    </custom-fields>
+    <custom-fields-texts>
+        <key name="lp_listingpro_options">
+            <key name="tagline_text"/>
+            <key name="gAddress"/>
+            <key name="video"/>
+            <key name="faqs">
+                <key name="faq">
+                    <key name="*"/>
+                </key>
+                <key name="faqans">
+                    <key name="*"/>
+                </key>
+            </key>
+            <!-- PostType Form Fields Keys -->
+            <key name="multicheck-options"/>
+            <key name="select-options"/>
+            <key name="radio-options"/>
+        </key>
+    </custom-fields-texts>
+    <admin-texts>
+        <key name="listingpro_options">
+            <!-- Section General -->
+            <key name="theme_color"/>
+            <key name="sec_theme_color"/>
+            <key name="listing_pricerange_symbol"/>
+            <!-- Section User Dashboard -->
+            <!-- Section Typography -->
+            <!-- Section Header -->
+            <key name="header_bgcolor"/>
+            <key name="header_bgcolor_inner_pages"/>
+            <key name="header_textcolor"/>
+            <key name="primary_logo">
+                <key name="url"/>
+            </key>
+            <key name="seconday_logo">
+                <key name="url"/>
+            </key>
+            <key name="theme_favicon">
+                <key name="url"/>
+            </key>
+            <key name="page_header">
+                <key name="url"/>
+            </key>
+            <!-- Section Banner -->
+            <key name="categories_color"/>
+            <key name="categories_hover_color"/>
+            <key name="categories_text_color"/>
+            <key name="banner_height"/>
+            <key name="home_banner">
+                <key name="url"/>
+            </key>
+            <key name="courtesy_listing"/>
+            <key name="home_banner_cats"/>
+            <key name="home_banner_locs"/>
+            <key name="home_banner_feats"/>
+            <key name="default_search_cats"/>
+            <key name="search_placeholder"/>
+            <key name="location_default_text"/>
+            <key name="top_title"/>
+            <key name="top_main_title"/>
+            <key name="main_text"/>
+            <key name="search_small_title"/>
+            <key name="lp-sidebar-search-location_text"/>
+            <!-- Section Map -->
+            <!-- Section Blog -->
+            <!-- Section Listing[General] -->
+            <key name="app_view_menu_header_img">
+                <key name="url"/>
+            </key>
+            <key name="contact_support"/>
+            <key name="listing_per_page"/>
+            <key name="lp_def_featured_image">
+                <key name="url"/>
+            </key>
+            <key name="lp_map_pin">
+                <key name="url"/>
+            </key>
+            <key name="slider_height"/>
+            <!-- Section Listing[Listing Detail] -->
+            <key name="lp_detail_page_styles4_bg">
+                <key name="url"/>
+            </key>
+            <key name="lp_detail_page_styles4_bg_color"/>
+            <!-- Section Listing[Listing Archive] -->
+            <key name="lp_archive_bg">
+                <key name="url"/>
+            </key>
+            <key name="lp_archive_bg_color"/>
+            <!-- Section Listing[Listing Submit & Edit] -->
+            <key name="submit_ad_img">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img1">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img2">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img3">
+                <key name="url"/>
+            </key>
+            <key name="business_logo_default">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_b_logo">
+                <key name="url"/>
+            </key>
+            <key name="quick_tip_title"/>
+            <key name="quick_tip_text"/>
+            <key name="listing_title_text"/>
+            <key name="listing_city_text"/>
+            <key name="listing_gadd_text"/>
+            <key name="listing_custom_cordn"/>
+            <key name="listing_ph_text"/>
+            <key name="listing_web_text"/>
+            <key name="listing_cat_text"/>
+            <key name="listing_features_text"/>
+            <key name="listing_curr_text"/>
+            <key name="listing_digit_text"/>
+            <key name="listing_price_text"/>
+            <key name="listing_desc_text"/>
+            <key name="listing_faq_text"/>
+            <key name="listing_faq_tabs_text"/>
+            <key name="listing_tags_text"/>
+            <key name="listing_vdo_text"/>
+            <key name="listing_username_text"/>
+            <key name="listing_email_text"/>
+            <key name="listing_btn_text"/>
+            <key name="listing_edit_btn_text"/>
+            <key name="submit_ad_img_title">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_faddress">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_city">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_phone">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_website">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_categories">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_pricerange">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_busincesshours">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_socialmedia">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_faq">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_desc">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_video">
+                <key name="url"/>
+            </key>
+            <key name="submit_ad_img_gallery">
+                <key name="url"/>
+            </key>
+            <!-- Section Listing[Location] -->
+            <key name="lp_listing_locations_range"/>
+            <!-- Section Listing[Reviews] -->
+            <key name="lp_multi_ratiing1_label_switch"/>
+            <key name="lp_multi_ratiing2_label_switch"/>
+            <key name="lp_multi_ratiing3_label_switch"/>
+            <key name="lp_multi_ratiing4_label_switch"/>
+            <!-- Section Listing[Leads Form] -->
+            <!-- Section Listing[Listing Claim] -->
+            <key name="lp_listing_form_top_image">
+                <key name="url"/>
+            </key>
+            <key name="lp_listing_claim_image">
+                <key name="url"/>
+            </key>
+            <!-- Section Listing[Listing Nearby] -->
+            <key name="listingpro_nearby_dest"/>
+            <key name="listingpro_nearby_noposts"/>
+            <!-- Section Listing[Google AdSense] -->
+            <key name="lp-gads-editor"/>
+            <key name="lp-archive-gads-editor"/>
+            <!-- Section Author Archive[] -->
+            <key name="author_banner">
+                <key name="url"/>
+            </key>
+            <!-- Section Author Archive[My Listings] -->
+            <key name="my_listing_per_page"/>
+            <!-- Section Author Archive[About Me] -->
+            <key name="about_activities_title"/>
+            <!-- Section Author Archive[Photos] -->
+            <key name="my_photos_per_page"/>
+            <!-- Section Author Archive[Contact] -->
+            <!-- Section Author Archive[Counters] -->
+            <!-- Section Pricing Plan -->
+            <!-- Section Advanced Filter -->
+            <key name="enable_readious_search_filter_default"/>
+            <key name="enable_readious_search_filter_min"/>
+            <key name="enable_readious_search_filter_max"/>
+            <!-- Section Search -->
+            <key name="lp_listing_search_locations_range"/>
+            <!-- Section Payment[General] -->
+            <!-- Section Payment[Paypal] -->
+            <!-- Section Payment[Stripe] -->
+            <!-- Section Payment[Direct Payment / Wire Payment] -->
+            <key name="direct_payment_instruction"/>
+            <!-- Section Payment[2Checkout] -->
+            <!-- Section Payment[Tax] -->
+            <key name="lp_tax_label"/>
+            <!-- Section Email Management -->
+            <!-- Section Privacy -->
+            <!-- Section Invoice -->
+            <key name="invoice_logo">
+                <key name="url"/>
+            </key>
+            <key name="invoice_company_name"/>
+            <key name="invoice_address"/>
+            <key name="invoice_phone"/>
+            <key name="invoice_additional_info"/>
+            <key name="invoice_thankyou"/>
+            <!-- Section Ads -->
+            <key name="lp_pro_title_offer"/>
+            <!-- Section Form reCaptcha -->
+            <!-- Section URL Config -->
+            <key name="listing_slug"/>
+            <key name="listing_cat_slug"/>
+            <key name="listing_loc_slug"/>
+            <key name="listing_features_slug"/>
+            <key name="events_slug"/>
+            <key name="listing-author"/>
+            <key name="submit-listing"/>
+            <key name="edit-listing"/>
+            <key name="pricing-plan"/>
+            <!-- Section Contact Page[Contact Information] -->
+            <key name="Address"/>
+            <key name="cp-address"/>
+            <key name="cp-number"/>
+            <key name="cp-email"/>
+            <key name="fb_co"/>
+            <key name="tw_co"/>
+            <key name="insta_co"/>
+            <key name="tumb_co"/>
+            <key name="f_yout_co"/>
+            <key name="f_linked_co"/>
+            <key name="f_pintereset_co"/>
+            <key name="f_vk_co"/>
+            <!-- Section Contact Page[Form] -->
+            <key name="form-title"/>
+            <key name="cp-success-message"/>
+            <key name="cp-failed-message"/>
+            <!-- Section Contact Page[Contact Map] -->
+            <key name="cp-lat"/>
+            <key name="cp-lan"/>
+            <!-- Section Footer -->
+            <key name="footer_top_bgcolor"/>
+            <key name="footer_bgcolor"/>
+            <key name="footer_top_text_color"/>
+            <key name="footer_bottom_text_color"/>
+            <key name="fb"/>
+            <key name="tw"/>
+            <key name="insta"/>
+            <key name="tumb"/>
+            <key name="f-yout"/>
+            <key name="f-linked"/>
+            <key name="f-pintereset"/>
+            <key name="f-vk"/>
+            <key name="copy_right"/>
+            <key name="footer_address"/>
+            <key name="phone_number"/>
+            <key name="author_info"/>
+            <key name="footer_logo">
+                <key name="url"/>
+            </key>
+            <key name="about_heading"/>
+            <key name="about_description"/>
+            <key name="footer_contact_us"/>
+            <key name="footer_contact_us_url"/>
+        </key>
+    </admin-texts>
+</wpml-config>

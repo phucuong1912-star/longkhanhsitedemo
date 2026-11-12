@@ -1,0 +1,106 @@
+{
+    "trace": [
+        {
+            "phase": "mu-loaded",
+            "elapsed": 0.0291,
+            "queries": 1
+        },
+        {
+            "phase": "muplugins_loaded-first",
+            "elapsed": 0.0292,
+            "queries": 1
+        },
+        {
+            "phase": "muplugins_loaded-last",
+            "elapsed": 0.0292,
+            "queries": 1
+        },
+        {
+            "phase": "plugins_loaded-first",
+            "elapsed": 0.0822,
+            "queries": 6
+        },
+        {
+            "phase": "plugins_loaded-last",
+            "elapsed": 0.1321,
+            "queries": 26
+        },
+        {
+            "phase": "after_setup_theme-first",
+            "elapsed": 0.1382,
+            "queries": 26
+        },
+        {
+            "phase": "after_setup_theme-last",
+            "elapsed": 0.1479,
+            "queries": 26
+        },
+        {
+            "phase": "init-first",
+            "elapsed": 0.148,
+            "queries": 26
+        },
+        {
+            "phase": "init-last",
+            "elapsed": 0.6296,
+            "queries": 75
+        },
+        {
+            "phase": "wp_loaded-first",
+            "elapsed": 0.6296,
+            "queries": 75
+        },
+        {
+            "phase": "wp_loaded-last",
+            "elapsed": 0.6297,
+            "queries": 75
+        },
+        {
+            "phase": "wp-first",
+            "elapsed": 0.6354,
+            "queries": 79
+        },
+        {
+            "phase": "wp-last",
+            "elapsed": 0.6519,
+            "queries": 89
+        },
+        {
+            "phase": "template_redirect-first",
+            "elapsed": 0.6519,
+            "queries": 89
+        },
+        {
+            "phase": "template_redirect-last",
+            "elapsed": 0.6666,
+            "queries": 90
+        },
+        {
+            "phase": "wp_head-first",
+            "elapsed": 1.3906,
+            "queries": 124
+        },
+        {
+            "phase": "wp_head-last",
+            "elapsed": 1.6578,
+            "queries": 142
+        },
+        {
+            "phase": "wp_footer-first",
+            "elapsed": 2.1355,
+            "queries": 164
+        },
+        {
+            "phase": "wp_footer-last",
+            "elapsed": 2.2612,
+            "queries": 182
+        },
+        {
+            "phase": "shutdown",
+            "elapsed": 2.2722,
+            "queries": 182
+        }
+    ],
+    "http": [],
+    "memory_mb": 26
+}

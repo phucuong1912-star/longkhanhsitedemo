@@ -1,0 +1,1028 @@
+{
+    "logo": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/logo.png",
+        "filename": "logo.png",
+        "key": "logo",
+        "bytes": 64155,
+        "width": 1200,
+        "height": 330
+    },
+    "hero": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/ddlk-cover.jpeg",
+        "filename": "hero.jpeg",
+        "key": "hero",
+        "bytes": 819929,
+        "width": 5796,
+        "height": 3864
+    },
+    "qrcode": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/qrcode.png",
+        "filename": "qrcode.png",
+        "key": "qrcode",
+        "bytes": 119847,
+        "width": 1500,
+        "height": 1500
+    },
+    "appstore": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/appstore.png",
+        "filename": "appstore.png",
+        "key": "appstore",
+        "bytes": 1783,
+        "width": 268,
+        "height": 80
+    },
+    "playstore": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/playstore.png",
+        "filename": "playstore.png",
+        "key": "playstore",
+        "bytes": 2525,
+        "width": 268,
+        "height": 80
+    },
+    "app-desktop": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/app-lg.png",
+        "filename": "app-desktop.png",
+        "key": "app-desktop",
+        "bytes": 757115,
+        "width": 1263,
+        "height": 634
+    },
+    "app-mobile": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/app-md.png",
+        "filename": "app-mobile.png",
+        "key": "app-mobile",
+        "bytes": 591225,
+        "width": 865,
+        "height": 760
+    },
+    "suggest-place": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/ddlk-suggest-place.svg",
+        "filename": "suggest-place.svg",
+        "key": "suggest-place",
+        "bytes": 10962
+    },
+    "cooperate": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/cooperate-with-us.webp",
+        "filename": "cooperate.webp",
+        "key": "cooperate",
+        "bytes": 618,
+        "width": 48,
+        "height": 48
+    },
+    "blog-hero": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/ddlk-blog-hero.webp",
+        "filename": "blog-hero.webp",
+        "key": "blog-hero",
+        "bytes": 1554626,
+        "width": 1920,
+        "height": 700
+    },
+    "blog-hero-overlay": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/ddlk-blog-hero-01.png",
+        "filename": "blog-hero-overlay.png",
+        "key": "blog-hero-overlay",
+        "bytes": 9397,
+        "width": 1920,
+        "height": 139
+    },
+    "blog-hero-wave": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/ddlk-blog-hero-02.svg",
+        "filename": "blog-hero-wave.svg",
+        "key": "blog-hero-wave",
+        "bytes": 10603
+    },
+    "blog-slogan": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/ddlk-blog-hero-slogan.svg",
+        "filename": "blog-slogan.svg",
+        "key": "blog-slogan",
+        "bytes": 66706
+    },
+    "ads": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/ads.png",
+        "filename": "ads.png",
+        "key": "ads",
+        "bytes": 36907,
+        "width": 300,
+        "height": 250
+    },
+    "favicon": {
+        "sourceURL": "https://diadiemlongkhanh.com/favicons/favicon-32x32.png",
+        "filename": "favicon.png",
+        "key": "favicon",
+        "bytes": 1660,
+        "width": 32,
+        "height": 32
+    },
+    "banner-r7az1g": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/22/5d5ae56d-65fd-4d33-a8ff-cca147fc166b-app-v2-banner-2jpg.jpeg",
+        "filename": "banner-r7az1g.jpeg",
+        "key": "banner-r7az1g",
+        "bytes": 22740,
+        "width": 640,
+        "height": 269
+    },
+    "banner-dxfrjg": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/03/a64a96d0-ddad-4237-b95b-e2f1bf4ae963-banner-quet-majpg.jpeg",
+        "filename": "banner-dxfrjg.jpeg",
+        "key": "banner-dxfrjg",
+        "bytes": 24564,
+        "width": 640,
+        "height": 269
+    },
+    "banner-tv26i0": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/03/e367c943-424f-433e-ab69-162d8bbef47d-banner-review-hotjpg.jpeg",
+        "filename": "banner-tv26i0.jpeg",
+        "key": "banner-tv26i0",
+        "bytes": 28601,
+        "width": 640,
+        "height": 269
+    },
+    "category-an-uong": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/29/a765e2f8-8768-442c-a46d-35d1f86517ec-285190686283810485966843666906.jpeg",
+        "filename": "category-an-uong.jpeg",
+        "key": "category-an-uong",
+        "bytes": 705705,
+        "width": 1666,
+        "height": 2048
+    },
+    "category-mua-sam": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/29/320dac2e-505d-4998-8c16-a887a513238b-285985753284216262592932627058.jpeg",
+        "filename": "category-mua-sam.jpeg",
+        "key": "category-mua-sam",
+        "bytes": 419067,
+        "width": 2048,
+        "height": 1365
+    },
+    "category-giai-tri": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/29/87f9bea0-04b5-40dd-abb8-57a441fa9700-277219454277429021271656884745.jpeg",
+        "filename": "category-giai-tri.jpeg",
+        "key": "category-giai-tri",
+        "bytes": 861714,
+        "width": 2048,
+        "height": 2048
+    },
+    "category-du-lich": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/29/50617ad9-aade-40a6-8b08-62009f8a5f40-150202663241060717241820917118.jpeg",
+        "filename": "category-du-lich.jpeg",
+        "key": "category-du-lich",
+        "bytes": 822827,
+        "width": 2048,
+        "height": 1536
+    },
+    "region-phuong-xuan-trung": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/02/4776babc-dd54-4778-b8c6-3c7ff914c929-p-xuan-trung-web-701x1024jpg.jpeg",
+        "filename": "region-phuong-xuan-trung.jpeg",
+        "key": "region-phuong-xuan-trung",
+        "bytes": 135490,
+        "width": 701,
+        "height": 1024
+    },
+    "region-phuong-xuan-thanh": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/02/88f9b7da-79e3-4334-865f-bc4256ebf7c3-p-xuan-an-web-653x1024jpg.jpeg",
+        "filename": "region-phuong-xuan-thanh.jpeg",
+        "key": "region-phuong-xuan-thanh",
+        "bytes": 143465,
+        "width": 653,
+        "height": 1024
+    },
+    "region-phuong-xuan-hoa": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/02/ac5e534f-0b61-4143-b2d0-932d5bd1dfb8-p-xuan-hoa-web-677x1024jpg.jpeg",
+        "filename": "region-phuong-xuan-hoa.jpeg",
+        "key": "region-phuong-xuan-hoa",
+        "bytes": 101712,
+        "width": 677,
+        "height": 1024
+    },
+    "region-phuong-xuan-binh": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/02/0ee4abc2-7304-4346-975d-39781f120bb3-p-xuan-binh-web-778x1024jpg.jpeg",
+        "filename": "region-phuong-xuan-binh.jpeg",
+        "key": "region-phuong-xuan-binh",
+        "bytes": 85530,
+        "width": 778,
+        "height": 1024
+    },
+    "region-phuong-xuan-an": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/10/08/64b77461-e153-4d89-a3c3-1b9d1fbc11ca-4374dad0-e5f1-4672-9ef7-659958.jpeg",
+        "filename": "region-phuong-xuan-an.jpeg",
+        "key": "region-phuong-xuan-an",
+        "bytes": 143483,
+        "width": 653,
+        "height": 1024
+    },
+    "place-lau-bo-bao-bao": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/11/11/47a7186b-333d-4d43-b1fd-208d0cde0a07-dsc02642jpg.jpeg",
+        "filename": "place-lau-bo-bao-bao.jpeg",
+        "key": "place-lau-bo-bao-bao",
+        "bytes": 725056,
+        "width": 3355,
+        "height": 2272
+    },
+    "gallery-lau-bo-bao-bao-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/11/11/eaf67eb5-4693-4cb0-9a7f-9c0bcf7aec96-dsc02522jpg.jpeg",
+        "filename": "gallery-lau-bo-bao-bao-1.jpeg",
+        "key": "gallery-lau-bo-bao-bao-1",
+        "bytes": 663733,
+        "width": 4003,
+        "height": 2403
+    },
+    "gallery-lau-bo-bao-bao-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/11/11/c918ae78-f8c2-4d37-a9cd-f215e5dd8ba6-dsc02529jpg.jpeg",
+        "filename": "gallery-lau-bo-bao-bao-2.jpeg",
+        "key": "gallery-lau-bo-bao-bao-2",
+        "bytes": 457777,
+        "width": 2633,
+        "height": 2633
+    },
+    "gallery-lau-bo-bao-bao-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/11/11/1759bb64-dec1-45fe-b801-1a0036923db7-dsc02549jpg.jpeg",
+        "filename": "gallery-lau-bo-bao-bao-3.jpeg",
+        "key": "gallery-lau-bo-bao-bao-3",
+        "bytes": 505447,
+        "width": 2346,
+        "height": 2346
+    },
+    "menu-lau-bo-bao-bao-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/11/11/c45037f9-7ddd-4da4-a331-5141f6b2f9bb-dsc02506jpg.jpeg",
+        "filename": "menu-lau-bo-bao-bao-1.jpeg",
+        "key": "menu-lau-bo-bao-bao-1",
+        "bytes": 461116,
+        "width": 2262,
+        "height": 2997
+    },
+    "menu-lau-bo-bao-bao-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/11/11/2c36de94-b1c2-4f1e-ade9-8e642d4f0b7c-dsc02509jpg.jpeg",
+        "filename": "menu-lau-bo-bao-bao-2.jpeg",
+        "key": "menu-lau-bo-bao-bao-2",
+        "bytes": 474476,
+        "width": 2258,
+        "height": 2922
+    },
+    "place-de-dai-phat": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/11/01/f41335ba-e24f-45d4-adff-c05889cd1b78-dsc01036jpg.jpeg",
+        "filename": "place-de-dai-phat.jpeg",
+        "key": "place-de-dai-phat",
+        "bytes": 1105250,
+        "width": 3904,
+        "height": 2334
+    },
+    "gallery-de-dai-phat-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/11/01/16ec48bd-73f4-4b2d-8c9b-498df0493d32-dsc00965jpg.jpeg",
+        "filename": "gallery-de-dai-phat-1.jpeg",
+        "key": "gallery-de-dai-phat-1",
+        "bytes": 1258520,
+        "width": 4594,
+        "height": 2621
+    },
+    "gallery-de-dai-phat-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/11/01/321b0439-6fdc-457f-befa-89485e41dc63-dsc01192jpg.jpeg",
+        "filename": "gallery-de-dai-phat-2.jpeg",
+        "key": "gallery-de-dai-phat-2",
+        "bytes": 624527,
+        "width": 2539,
+        "height": 2539
+    },
+    "gallery-de-dai-phat-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/11/01/56648566-8655-45da-842e-68756c4ae682-dsc01233jpg.jpeg",
+        "filename": "gallery-de-dai-phat-3.jpeg",
+        "key": "gallery-de-dai-phat-3",
+        "bytes": 492523,
+        "width": 2071,
+        "height": 2071
+    },
+    "place-hu-quan": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/21/8d236f02-9e92-46c1-95bc-4094aaa41b4c-179256674258511703743976518443.jpeg",
+        "filename": "place-hu-quan.jpeg",
+        "key": "place-hu-quan",
+        "bytes": 245456,
+        "width": 1355,
+        "height": 915
+    },
+    "gallery-hu-quan-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/21/ef55db8c-e85a-497c-9b82-b87ca8abb779-dsc00716jpg.jpeg",
+        "filename": "gallery-hu-quan-1.jpeg",
+        "key": "gallery-hu-quan-1",
+        "bytes": 540149,
+        "width": 2090,
+        "height": 2090
+    },
+    "gallery-hu-quan-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/21/35633cd4-688f-4e42-890d-1164c4263613-dsc00739jpg.jpeg",
+        "filename": "gallery-hu-quan-2.jpeg",
+        "key": "gallery-hu-quan-2",
+        "bytes": 518295,
+        "width": 2541,
+        "height": 3166
+    },
+    "gallery-hu-quan-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/21/42404942-e839-444c-ba61-f6de2ae13b7d-dsc00751jpg.jpeg",
+        "filename": "gallery-hu-quan-3.jpeg",
+        "key": "gallery-hu-quan-3",
+        "bytes": 550925,
+        "width": 1841,
+        "height": 1841
+    },
+    "menu-hu-quan-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/21/badf969b-3a97-4449-a9cd-2b6cfaf1276e-dsc00687jpg.jpeg",
+        "filename": "menu-hu-quan-1.jpeg",
+        "key": "menu-hu-quan-1",
+        "bytes": 969950,
+        "width": 2677,
+        "height": 3474
+    },
+    "menu-hu-quan-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/21/b78beaa1-0b8a-47cb-b6d0-29fd80464299-dsc00688jpg.jpeg",
+        "filename": "menu-hu-quan-2.jpeg",
+        "key": "menu-hu-quan-2",
+        "bytes": 854189,
+        "width": 2518,
+        "height": 3219
+    },
+    "place-de-nhat-mi-keo": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/21/b954cfcf-ff9f-41de-b239-7a7b42a9a6f1-dsc00115jpg.jpeg",
+        "filename": "place-de-nhat-mi-keo.jpeg",
+        "key": "place-de-nhat-mi-keo",
+        "bytes": 940596,
+        "width": 4022,
+        "height": 2501
+    },
+    "gallery-de-nhat-mi-keo-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/21/6889c47a-1f55-41d6-bc66-ee4acc4613e4-dsc09957jpg.jpeg",
+        "filename": "gallery-de-nhat-mi-keo-1.jpeg",
+        "key": "gallery-de-nhat-mi-keo-1",
+        "bytes": 605861,
+        "width": 2099,
+        "height": 2099
+    },
+    "gallery-de-nhat-mi-keo-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/21/5dedecd5-ccb3-418e-9e5a-02dc753a2760-dsc00088jpg.jpeg",
+        "filename": "gallery-de-nhat-mi-keo-2.jpeg",
+        "key": "gallery-de-nhat-mi-keo-2",
+        "bytes": 461080,
+        "width": 2158,
+        "height": 2158
+    },
+    "gallery-de-nhat-mi-keo-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/21/13746ae2-1cc9-4c6a-a17a-ec5944e505b9-dsc09946jpg.jpeg",
+        "filename": "gallery-de-nhat-mi-keo-3.jpeg",
+        "key": "gallery-de-nhat-mi-keo-3",
+        "bytes": 578662,
+        "width": 2285,
+        "height": 2285
+    },
+    "place-lo-quay-dung-ky-2-vit-quay-da-gion": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/17/7ac7992e-08e8-4461-9131-1b5ed9997111-dsc00515jpg.jpeg",
+        "filename": "place-lo-quay-dung-ky-2-vit-quay-da-gion.jpeg",
+        "key": "place-lo-quay-dung-ky-2-vit-quay-da-gion",
+        "bytes": 697794,
+        "width": 2193,
+        "height": 2405
+    },
+    "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/17/1c6af160-f4ac-485e-afff-099b134c0dd6-dsc00542jpg.jpeg",
+        "filename": "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-1.jpeg",
+        "key": "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-1",
+        "bytes": 442174,
+        "width": 2211,
+        "height": 2211
+    },
+    "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/17/5068e236-919d-4ef5-bcc1-9eaae17b2b79-dsc00549jpg.jpeg",
+        "filename": "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-2.jpeg",
+        "key": "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-2",
+        "bytes": 514361,
+        "width": 2374,
+        "height": 2374
+    },
+    "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/17/e1b42bae-677c-41f5-aedf-ee3c4b38e861-dsc00555jpg.jpeg",
+        "filename": "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-3.jpeg",
+        "key": "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-3",
+        "bytes": 537408,
+        "width": 1919,
+        "height": 1919
+    },
+    "place-shop-hoa-ai-sam": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/09/90921734-df33-47ba-b7f5-c83556752d7c-dsc09749jpg.jpeg",
+        "filename": "place-shop-hoa-ai-sam.jpeg",
+        "key": "place-shop-hoa-ai-sam",
+        "bytes": 780924,
+        "width": 3032,
+        "height": 2370
+    },
+    "gallery-shop-hoa-ai-sam-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/09/aadb2b27-5c32-47da-ba7c-1e465c80e7f0-dsc09578jpg.jpeg",
+        "filename": "gallery-shop-hoa-ai-sam-1.jpeg",
+        "key": "gallery-shop-hoa-ai-sam-1",
+        "bytes": 467943,
+        "width": 1855,
+        "height": 1855
+    },
+    "gallery-shop-hoa-ai-sam-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/09/06a5a657-9845-40f1-8638-d485a3971052-dsc09664jpg.jpeg",
+        "filename": "gallery-shop-hoa-ai-sam-2.jpeg",
+        "key": "gallery-shop-hoa-ai-sam-2",
+        "bytes": 462804,
+        "width": 2368,
+        "height": 3038
+    },
+    "gallery-shop-hoa-ai-sam-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/10/09/a21cb5f8-7bae-4a73-acef-8766f91055af-dsc09687jpg.jpeg",
+        "filename": "gallery-shop-hoa-ai-sam-3.jpeg",
+        "key": "gallery-shop-hoa-ai-sam-3",
+        "bytes": 655924,
+        "width": 2573,
+        "height": 3032
+    },
+    "place-gu-oc-ho-thi-huong": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/09/30/8642ad78-c137-4268-86c8-47d100d224f1-dsc09274jpg.jpeg",
+        "filename": "place-gu-oc-ho-thi-huong.jpeg",
+        "key": "place-gu-oc-ho-thi-huong",
+        "bytes": 1155332,
+        "width": 4578,
+        "height": 2398
+    },
+    "gallery-gu-oc-ho-thi-huong-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/09/30/d9a4465c-6ba9-4e32-a3df-8cd9a56fdaee-dsc09354jpg.jpeg",
+        "filename": "gallery-gu-oc-ho-thi-huong-1.jpeg",
+        "key": "gallery-gu-oc-ho-thi-huong-1",
+        "bytes": 623829,
+        "width": 2007,
+        "height": 2007
+    },
+    "gallery-gu-oc-ho-thi-huong-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/09/30/d0d7e0fd-0f55-4a3a-8f6a-ac87a9445179-dsc09341jpg.jpeg",
+        "filename": "gallery-gu-oc-ho-thi-huong-2.jpeg",
+        "key": "gallery-gu-oc-ho-thi-huong-2",
+        "bytes": 582902,
+        "width": 2021,
+        "height": 2021
+    },
+    "gallery-gu-oc-ho-thi-huong-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/09/30/27d3b9d9-c932-44c6-a934-0423a4746202-dsc09307jpg.jpeg",
+        "filename": "gallery-gu-oc-ho-thi-huong-3.jpeg",
+        "key": "gallery-gu-oc-ho-thi-huong-3",
+        "bytes": 1380955,
+        "width": 4201,
+        "height": 2551
+    },
+    "menu-gu-oc-ho-thi-huong-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/09/30/fc5b5c52-200e-4fca-b067-2dd42a01974b-820459011122314064654141244703.jpeg",
+        "filename": "menu-gu-oc-ho-thi-huong-1.jpeg",
+        "key": "menu-gu-oc-ho-thi-huong-1",
+        "bytes": 231575,
+        "width": 1341,
+        "height": 1079
+    },
+    "menu-gu-oc-ho-thi-huong-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/09/30/d72bc156-fc36-4565-997a-d485c731dd91-820568724122314064660141244848.jpeg",
+        "filename": "menu-gu-oc-ho-thi-huong-2.jpeg",
+        "key": "menu-gu-oc-ho-thi-huong-2",
+        "bytes": 253553,
+        "width": 1335,
+        "height": 1079
+    },
+    "place-nha-sach-bach-dang-gia-kiem": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/09/30/2f23ec60-48a2-4524-a539-7a74db069b36-img1087jpg.jpeg",
+        "filename": "place-nha-sach-bach-dang-gia-kiem.jpeg",
+        "key": "place-nha-sach-bach-dang-gia-kiem",
+        "bytes": 1319892,
+        "width": 4476,
+        "height": 2716
+    },
+    "gallery-nha-sach-bach-dang-gia-kiem-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/09/30/6234f93d-be4f-4cbc-bbf0-b30fc7d379cd-dsc08757jpg.jpeg",
+        "filename": "gallery-nha-sach-bach-dang-gia-kiem-1.jpeg",
+        "key": "gallery-nha-sach-bach-dang-gia-kiem-1",
+        "bytes": 1780852,
+        "width": 4608,
+        "height": 2725
+    },
+    "gallery-nha-sach-bach-dang-gia-kiem-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/09/30/90bbe7d4-5935-4f88-a1b6-802c4c88e967-dsc08758jpg.jpeg",
+        "filename": "gallery-nha-sach-bach-dang-gia-kiem-2.jpeg",
+        "key": "gallery-nha-sach-bach-dang-gia-kiem-2",
+        "bytes": 1485930,
+        "width": 4591,
+        "height": 2927
+    },
+    "gallery-nha-sach-bach-dang-gia-kiem-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/09/30/4fed3904-c4da-4530-99ff-7c699b2fb067-dsc08765jpg.jpeg",
+        "filename": "gallery-nha-sach-bach-dang-gia-kiem-3.jpeg",
+        "key": "gallery-nha-sach-bach-dang-gia-kiem-3",
+        "bytes": 816273,
+        "width": 1641,
+        "height": 2364
+    },
+    "place-ca-phe-me-bap": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/3f054b56-7a53-4c1e-a065-4f642977fdf7-img1821jpg.jpeg",
+        "filename": "place-ca-phe-me-bap.jpeg",
+        "key": "place-ca-phe-me-bap",
+        "bytes": 1765181,
+        "width": 3578,
+        "height": 3578
+    },
+    "gallery-ca-phe-me-bap-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/ac1fb216-2bd3-4c45-a366-c1edf05d7750-dsc00133jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-1.jpeg",
+        "key": "gallery-ca-phe-me-bap-1",
+        "bytes": 511611,
+        "width": 2406,
+        "height": 2406
+    },
+    "gallery-ca-phe-me-bap-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/54f42f51-c944-48df-9ee7-e187af45b55b-dsc00146jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-2.jpeg",
+        "key": "gallery-ca-phe-me-bap-2",
+        "bytes": 638926,
+        "width": 2272,
+        "height": 2272
+    },
+    "gallery-ca-phe-me-bap-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/d7f5cc46-7efb-4697-9459-ee64a8a35945-dsc00154jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-3.jpeg",
+        "key": "gallery-ca-phe-me-bap-3",
+        "bytes": 587729,
+        "width": 2067,
+        "height": 2067
+    },
+    "gallery-ca-phe-me-bap-4": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/a96505aa-c5b8-4b81-9449-caaefaf5a4f8-dsc00183jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-4.jpeg",
+        "key": "gallery-ca-phe-me-bap-4",
+        "bytes": 410902,
+        "width": 2094,
+        "height": 2094
+    },
+    "gallery-ca-phe-me-bap-5": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/79b21aa5-c4d2-40e4-aef6-1eed2b606867-dsc00156jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-5.jpeg",
+        "key": "gallery-ca-phe-me-bap-5",
+        "bytes": 571296,
+        "width": 2325,
+        "height": 2325
+    },
+    "gallery-ca-phe-me-bap-6": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/1de300c2-5459-4997-a3ad-e0d7178ff506-dsc00160jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-6.jpeg",
+        "key": "gallery-ca-phe-me-bap-6",
+        "bytes": 497868,
+        "width": 2216,
+        "height": 2216
+    },
+    "gallery-ca-phe-me-bap-7": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/6514c43f-37f1-463e-a005-6ab344cd305c-dsc00166jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-7.jpeg",
+        "key": "gallery-ca-phe-me-bap-7",
+        "bytes": 409721,
+        "width": 1987,
+        "height": 1987
+    },
+    "gallery-ca-phe-me-bap-8": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/1fb41fa9-4a0c-4a7c-8680-8c8b1602bece-dsc00187jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-8.jpeg",
+        "key": "gallery-ca-phe-me-bap-8",
+        "bytes": 387333,
+        "width": 2772,
+        "height": 2772
+    },
+    "gallery-ca-phe-me-bap-9": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/a1ba0239-8595-427f-9905-effb8c4f56cc-dsc00252jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-9.jpeg",
+        "key": "gallery-ca-phe-me-bap-9",
+        "bytes": 634950,
+        "width": 2567,
+        "height": 2567
+    },
+    "gallery-ca-phe-me-bap-10": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/5d2bb5c1-bef3-43bf-b0d5-373ec5d8e085-img1826jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-10.jpeg",
+        "key": "gallery-ca-phe-me-bap-10",
+        "bytes": 1809780,
+        "width": 4032,
+        "height": 2458
+    },
+    "gallery-ca-phe-me-bap-11": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/5312e185-f6db-437d-b6f5-72a49440e1ec-img1833jpg.jpeg",
+        "filename": "gallery-ca-phe-me-bap-11.jpeg",
+        "key": "gallery-ca-phe-me-bap-11",
+        "bytes": 540197,
+        "width": 2518,
+        "height": 2518
+    },
+    "menu-ca-phe-me-bap-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/31/2ad75efb-d851-48d1-87cb-0724386bfb9c-img1821jpg.jpeg",
+        "filename": "menu-ca-phe-me-bap-1.jpeg",
+        "key": "menu-ca-phe-me-bap-1",
+        "bytes": 1765181,
+        "width": 3578,
+        "height": 3578
+    },
+    "place-tram-channel-coffee-and-food": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/04/08/1a5b785c-e7dc-473e-af94-45b24e0cf86f-img2013jpg.jpeg",
+        "filename": "place-tram-channel-coffee-and-food.jpeg",
+        "key": "place-tram-channel-coffee-and-food",
+        "bytes": 1540400,
+        "width": 4032,
+        "height": 2432
+    },
+    "gallery-tram-channel-coffee-and-food-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/04/08/ebc81686-3eed-4ded-b668-b01bd46daaec-dsc00531jpg.jpeg",
+        "filename": "gallery-tram-channel-coffee-and-food-1.jpeg",
+        "key": "gallery-tram-channel-coffee-and-food-1",
+        "bytes": 516029,
+        "width": 2000,
+        "height": 2000
+    },
+    "gallery-tram-channel-coffee-and-food-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/04/08/6ba4f6ef-5bc1-4fe7-a94a-bc7c8b67b32d-dsc00567jpg.jpeg",
+        "filename": "gallery-tram-channel-coffee-and-food-2.jpeg",
+        "key": "gallery-tram-channel-coffee-and-food-2",
+        "bytes": 330272,
+        "width": 2448,
+        "height": 2448
+    },
+    "gallery-tram-channel-coffee-and-food-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/04/08/6dd00737-151e-43d2-b7e4-70d73edf4eaa-dsc00552jpg.jpeg",
+        "filename": "gallery-tram-channel-coffee-and-food-3.jpeg",
+        "key": "gallery-tram-channel-coffee-and-food-3",
+        "bytes": 471104,
+        "width": 2656,
+        "height": 2656
+    },
+    "menu-tram-channel-coffee-and-food-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/04/08/8f757793-5b5c-4c6c-852c-21117fd08619-655814902122107949511279054910.jpeg",
+        "filename": "menu-tram-channel-coffee-and-food-1.jpeg",
+        "key": "menu-tram-channel-coffee-and-food-1",
+        "bytes": 428720,
+        "width": 2048,
+        "height": 1448
+    },
+    "place-tiem-tra-ti-tach": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/24/76511185-c248-4a62-9d08-0cc6388472e4-hhjpg.jpeg",
+        "filename": "place-tiem-tra-ti-tach.jpeg",
+        "key": "place-tiem-tra-ti-tach",
+        "bytes": 1112257,
+        "width": 4476,
+        "height": 2601
+    },
+    "gallery-tiem-tra-ti-tach-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/24/9621112f-eb5c-4a73-93e3-68361edccd5d-dsc09918jpg.jpeg",
+        "filename": "gallery-tiem-tra-ti-tach-1.jpeg",
+        "key": "gallery-tiem-tra-ti-tach-1",
+        "bytes": 1569959,
+        "width": 2745,
+        "height": 3612
+    },
+    "gallery-tiem-tra-ti-tach-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/24/558d9343-a4ed-47ea-b8e7-d62626493867-dsc09913jpg.jpeg",
+        "filename": "gallery-tiem-tra-ti-tach-2.jpeg",
+        "key": "gallery-tiem-tra-ti-tach-2",
+        "bytes": 1444900,
+        "width": 2549,
+        "height": 3536
+    },
+    "gallery-tiem-tra-ti-tach-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/24/88fd037d-97c4-4acf-afc8-e4b0837f4c7c-dsc09978jpg.jpeg",
+        "filename": "gallery-tiem-tra-ti-tach-3.jpeg",
+        "key": "gallery-tiem-tra-ti-tach-3",
+        "bytes": 627660,
+        "width": 2207,
+        "height": 2207
+    },
+    "menu-tiem-tra-ti-tach-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/24/0931cbd4-0575-4cb1-8cba-758c8d7ec31d-648449423122103568491280781860.jpeg",
+        "filename": "menu-tiem-tra-ti-tach-1.jpeg",
+        "key": "menu-tiem-tra-ti-tach-1",
+        "bytes": 242068,
+        "width": 1414,
+        "height": 2000
+    },
+    "place-cui-ca-phe": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/10/b7229eda-8f44-4f1b-b083-52558dac5868-629708645122188643690341844757.jpeg",
+        "filename": "place-cui-ca-phe.jpeg",
+        "key": "place-cui-ca-phe",
+        "bytes": 359377,
+        "width": 2048,
+        "height": 1536
+    },
+    "gallery-cui-ca-phe-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/10/b79a9f60-0c3e-48b4-a2c6-15e5343ea1b9-629708645122188643690341844757.jpeg",
+        "filename": "gallery-cui-ca-phe-1.jpeg",
+        "key": "gallery-cui-ca-phe-1",
+        "bytes": 359377,
+        "width": 2048,
+        "height": 1536
+    },
+    "gallery-cui-ca-phe-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/10/29e8abd6-6e56-4f1f-b831-8f292c42b630-dsc01936jpg.jpeg",
+        "filename": "gallery-cui-ca-phe-2.jpeg",
+        "key": "gallery-cui-ca-phe-2",
+        "bytes": 584405,
+        "width": 2495,
+        "height": 2495
+    },
+    "gallery-cui-ca-phe-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/10/3125a858-7193-44dc-aaab-4ff20cd6411d-dsc01811jpg.jpeg",
+        "filename": "gallery-cui-ca-phe-3.jpeg",
+        "key": "gallery-cui-ca-phe-3",
+        "bytes": 1163684,
+        "width": 2974,
+        "height": 3981
+    },
+    "menu-cui-ca-phe-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2026/03/10/1742e1aa-452a-43bd-b971-655788234fb1-dsc01885jpg.jpeg",
+        "filename": "menu-cui-ca-phe-1.jpeg",
+        "key": "menu-cui-ca-phe-1",
+        "bytes": 1704390,
+        "width": 4156,
+        "height": 2826
+    },
+    "place-khach-san-quoc-thanh-long-khanh": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/08/0599d345-cf3f-4a30-9bb9-60e1f17cb1b6-image.jpeg",
+        "filename": "place-khach-san-quoc-thanh-long-khanh.jpeg",
+        "key": "place-khach-san-quoc-thanh-long-khanh",
+        "bytes": 76989,
+        "width": 960,
+        "height": 960
+    },
+    "gallery-khach-san-quoc-thanh-long-khanh-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/08/555c1e77-5b26-4048-9e10-76d8e98be936-image.jpeg",
+        "filename": "gallery-khach-san-quoc-thanh-long-khanh-1.jpeg",
+        "key": "gallery-khach-san-quoc-thanh-long-khanh-1",
+        "bytes": 81497,
+        "width": 960,
+        "height": 720
+    },
+    "gallery-khach-san-quoc-thanh-long-khanh-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/08/2f34359c-3c27-4e5c-a7c7-af1f4333b5c6-image.jpeg",
+        "filename": "gallery-khach-san-quoc-thanh-long-khanh-2.jpeg",
+        "key": "gallery-khach-san-quoc-thanh-long-khanh-2",
+        "bytes": 64541,
+        "width": 576,
+        "height": 768
+    },
+    "gallery-khach-san-quoc-thanh-long-khanh-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/08/4b12650d-5667-477f-bb27-6773fc0527cd-image.jpeg",
+        "filename": "gallery-khach-san-quoc-thanh-long-khanh-3.jpeg",
+        "key": "gallery-khach-san-quoc-thanh-long-khanh-3",
+        "bytes": 50352,
+        "width": 960,
+        "height": 720
+    },
+    "place-rap-chieu-phim-bhd-star-long-khanh": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/07/20df71db-fb55-43b5-a344-a24cf0c59083-dsc02112-copy-mediumjpg.jpeg",
+        "filename": "place-rap-chieu-phim-bhd-star-long-khanh.jpeg",
+        "key": "place-rap-chieu-phim-bhd-star-long-khanh",
+        "bytes": 184959,
+        "width": 1108,
+        "height": 768
+    },
+    "gallery-rap-chieu-phim-bhd-star-long-khanh-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/07/f8af1f6d-4fe4-4073-aebf-344bd32882f4-dsc02102-copy-mediumjpg.jpeg",
+        "filename": "gallery-rap-chieu-phim-bhd-star-long-khanh-1.jpeg",
+        "key": "gallery-rap-chieu-phim-bhd-star-long-khanh-1",
+        "bytes": 161127,
+        "width": 768,
+        "height": 768
+    },
+    "gallery-rap-chieu-phim-bhd-star-long-khanh-2": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/07/8815156a-5fe2-4050-b26a-b5976095b4d3-dsc02104-mediumjpg.jpeg",
+        "filename": "gallery-rap-chieu-phim-bhd-star-long-khanh-2.jpeg",
+        "key": "gallery-rap-chieu-phim-bhd-star-long-khanh-2",
+        "bytes": 202802,
+        "width": 768,
+        "height": 1152
+    },
+    "gallery-rap-chieu-phim-bhd-star-long-khanh-3": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/07/aa6cbc6e-895b-4ad2-b5e1-c82ad963630c-dsc02112-copy-mediumjpg.jpeg",
+        "filename": "gallery-rap-chieu-phim-bhd-star-long-khanh-3.jpeg",
+        "key": "gallery-rap-chieu-phim-bhd-star-long-khanh-3",
+        "bytes": 184959,
+        "width": 1108,
+        "height": 768
+    },
+    "menu-rap-chieu-phim-bhd-star-long-khanh-1": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/06/07/72ea86a2-0271-42df-afc7-8349021d58f4-dsc02210-copy-mediumjpg.jpeg",
+        "filename": "menu-rap-chieu-phim-bhd-star-long-khanh-1.jpeg",
+        "key": "menu-rap-chieu-phim-bhd-star-long-khanh-1",
+        "bytes": 124248,
+        "width": 885,
+        "height": 768
+    },
+    "blog-top-nha-xe-tai-long-khanh-dong-nai": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/0ac2d305-a157-4ef6-987d-9e0642ea0d1d-4png.jpeg",
+        "filename": "blog-top-nha-xe-tai-long-khanh-dong-nai.jpeg",
+        "key": "blog-top-nha-xe-tai-long-khanh-dong-nai",
+        "bytes": 185915,
+        "width": 1080,
+        "height": 1080
+    },
+    "blog-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/84e58f54-d710-41e5-a416-67d00bf1b4a2-5png.jpeg",
+        "filename": "blog-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai.jpeg",
+        "key": "blog-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai",
+        "bytes": 130899,
+        "width": 1080,
+        "height": 1080
+    },
+    "blog-top-nhung-quan-nuong-o-long-khanh": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/056d897a-946d-47a8-aae4-482a6434e615-top-10-nhung-dia-diem-chup-anh.jpeg",
+        "filename": "blog-top-nhung-quan-nuong-o-long-khanh.jpeg",
+        "key": "blog-top-nhung-quan-nuong-o-long-khanh",
+        "bytes": 215928,
+        "width": 940,
+        "height": 788
+    },
+    "blog-top-10-dia-diem-chup-hinh-dep-tai-long-khanh": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/03/8141e716-27dd-434a-8c16-0d845aa1259b-top-10-nhung-dia-diem-chup-anh.jpeg",
+        "filename": "blog-top-10-dia-diem-chup-hinh-dep-tai-long-khanh.jpeg",
+        "key": "blog-top-10-dia-diem-chup-hinh-dep-tai-long-khanh",
+        "bytes": 149263,
+        "width": 940,
+        "height": 788
+    },
+    "promo-r7az1g": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/22/5d5ae56d-65fd-4d33-a8ff-cca147fc166b-app-v2-banner-2jpg.jpeg",
+        "filename": "promo-r7az1g.jpeg",
+        "key": "promo-r7az1g",
+        "bytes": 22740,
+        "width": 640,
+        "height": 269
+    },
+    "promo-deyi76": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/01/f8447e6e-e38c-432a-a8e4-395c0e864ccc-2e8f35d0-cdfd-45f5-9289-8ae4aa.jpeg",
+        "filename": "promo-deyi76.jpeg",
+        "key": "promo-deyi76",
+        "bytes": 30175,
+        "width": 640,
+        "height": 270
+    },
+    "promo-dxfrjg": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/03/a64a96d0-ddad-4237-b95b-e2f1bf4ae963-banner-quet-majpg.jpeg",
+        "filename": "promo-dxfrjg.jpeg",
+        "key": "promo-dxfrjg",
+        "bytes": 24564,
+        "width": 640,
+        "height": 269
+    },
+    "promo-tv26i0": {
+        "sourceURL": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2022/07/03/e367c943-424f-433e-ab69-162d8bbef47d-banner-review-hotjpg.jpeg",
+        "filename": "promo-tv26i0.jpeg",
+        "key": "promo-tv26i0",
+        "bytes": 28601,
+        "width": 640,
+        "height": 269
+    },
+    "login-illustration": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/ddlk-location.svg",
+        "filename": "login-illustration.svg",
+        "key": "login-illustration",
+        "bytes": 56879
+    },
+    "app-icon": {
+        "sourceURL": "https://diadiemlongkhanh.com/favicons/apple-touch-icon.png",
+        "filename": "app-icon.png",
+        "key": "app-icon",
+        "bytes": 13013,
+        "width": 180,
+        "height": 180
+    },
+    "no-image": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/no-image.png",
+        "filename": "no-image.png",
+        "key": "no-image",
+        "bytes": 20839,
+        "width": 800,
+        "height": 600
+    },
+    "menu-icon": {
+        "sourceURL": "https://diadiemlongkhanh.com/images/icons/menu.svg",
+        "filename": "menu-icon.svg",
+        "key": "menu-icon",
+        "bytes": 1063
+    },
+    "contact-illustration": {
+        "filename": "contact-illustration.svg",
+        "source": "https://diadiemlongkhanh.com/images/ddlk-contact-us.svg"
+    },
+    "footer-texture": {
+        "filename": "footer-texture.jpg",
+        "source": "https://ik.imagekit.io/reviewcafe/bg-dark_XOhLpLNAe0S.jpg"
+    },
+    "promo-illustration": {
+        "filename": "promo-illustration.svg",
+        "source": "https://diadiemlongkhanh.com/images/ddlk-discount.svg"
+    },
+    "blog-section-top-nha-xe-tai-long-khanh-dong-nai-2": {
+        "filename": "blog-section-top-nha-xe-tai-long-khanh-dong-nai-2.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/ead6e84e-cb04-4f9e-9084-f78965d5f7d8-3png.jpeg"
+    },
+    "blog-section-top-nha-xe-tai-long-khanh-dong-nai-1": {
+        "filename": "blog-section-top-nha-xe-tai-long-khanh-dong-nai-1.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/b67e75c0-e3c3-4e62-b826-b9c55a6ff26c-1png.jpeg"
+    },
+    "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-1": {
+        "filename": "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-1.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/e7fa539b-ba1f-44f7-be54-bd96cb6fbc57-2png.jpeg"
+    },
+    "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-2": {
+        "filename": "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-2.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/85d41b98-b74d-4623-bc95-0135b3a7afcd-1png.jpeg"
+    },
+    "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-4": {
+        "filename": "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-4.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/c560bd64-d453-4fa8-b481-9e7041603015-4png.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-2": {
+        "filename": "blog-section-top-nhung-quan-nuong-o-long-khanh-2.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/9282841c-4f69-461d-af15-ea7e822facaa-3png.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-3": {
+        "filename": "blog-section-top-nhung-quan-nuong-o-long-khanh-3.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/cd644ad9-2029-420d-b63c-832776259116-4png.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-4": {
+        "filename": "blog-section-top-nhung-quan-nuong-o-long-khanh-4.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/596e0988-123e-44c5-872c-d18bf1b6424b-anh-collectionpng.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-5": {
+        "filename": "blog-section-top-nhung-quan-nuong-o-long-khanh-5.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/4c0b8c4e-15e6-4ca4-afb0-3fd90061cf98-2png.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-6": {
+        "filename": "blog-section-top-nhung-quan-nuong-o-long-khanh-6.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/db5b2bf9-06f4-4e8a-86f0-65978f9ec096-6png.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-7": {
+        "filename": "blog-section-top-nhung-quan-nuong-o-long-khanh-7.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/f8fd8007-7ff8-4b5b-adf0-dda987ddc939-5png.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-9": {
+        "filename": "blog-section-top-nhung-quan-nuong-o-long-khanh-9.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/df60445f-7762-4503-a184-9b4d0c1acc5a-7png.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-10": {
+        "filename": "blog-section-top-nhung-quan-nuong-o-long-khanh-10.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/15/a0f1dc90-3d41-4758-ae59-aaba082197f8-358652684134213083038880743511.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-1": {
+        "filename": "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-1.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/9b809e61-f927-44ad-a9d4-91d5e658071e-355286188122497990870886911922.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-2": {
+        "filename": "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-2.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/6d0dae64-03c2-48f3-8f1a-799573d32f96-355679385122498940870791860621.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-5": {
+        "filename": "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-5.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/334b53f0-1915-42da-a782-013669c47f4c-355491617122498270870858843209.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-6": {
+        "filename": "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-6.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/c5d1e8e7-8819-4afb-aef1-59e7fee7b8ef-355471004122498570870828672535.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-7": {
+        "filename": "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-7.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/82a3053f-19a8-4340-b65c-e6d081e2fb71-355286095122498634204155732932.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-9": {
+        "filename": "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-9.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/887124ab-1282-4863-b039-3b219e208f87-z44755466968380a3ac26ba9c63258.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-10": {
+        "filename": "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-10.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/0a54f4cb-c605-4676-8d15-87b0e7a33df7-355119725122257987561553365007.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-8": {
+        "filename": "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-8.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/65ddbbd3-fd29-453d-9018-2ed04020a6d2-355164303122498047537547333135.jpeg"
+    },
+    "blog-section-top-nha-xe-tai-long-khanh-dong-nai-3": {
+        "filename": "blog-section-top-nha-xe-tai-long-khanh-dong-nai-3.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/467054df-8691-450d-aefd-8421c0f68251-2png.jpeg"
+    },
+    "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-3": {
+        "filename": "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-3.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/0f5a12ac-e2b4-4c7c-b682-12be9e8a08f9-3png.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-8": {
+        "filename": "blog-section-top-nhung-quan-nuong-o-long-khanh-8.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/15/ce5524eb-6e49-4cbd-b11c-9a0f595358be-anh-collectionpng.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-1": {
+        "filename": "blog-section-top-nhung-quan-nuong-o-long-khanh-1.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/5af1ca32-2b2b-44be-a944-d9b69c4c8fb1-9png.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-4": {
+        "filename": "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-4.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/395db837-39ee-4f58-b2c0-9a26c2592502-355644007122498247537527821158.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-3": {
+        "filename": "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-3.jpeg",
+        "source": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/01b31b92-7957-4a18-aebc-5444965fd70a-355481207122498367537515552494.jpeg"
+    },
+    "review-illustration": {
+        "filename": "review-illustration.svg",
+        "source": "https://diadiemlongkhanh.com/images/ddlk-review.svg"
+    }
+}

@@ -1,0 +1,3427 @@
+{
+  "source": "https://diadiemlongkhanh.com",
+  "home": {
+    "vouchers": [
+      {
+        "_id": "62bebfeb248aa67c22a45dd8",
+        "code": "R7AZ1G",
+        "thumbnail": {
+          "_id": "62d9fc04dd326c646cff7888",
+          "path": "uploads/images/2022/07/22/5d5ae56d-65fd-4d33-a8ff-cca147fc166b-app-v2-banner-2jpg.jpeg"
+        }
+      },
+      {
+        "_id": "62bebf79248aa67c22a45daf",
+        "code": "DXFRJG",
+        "thumbnail": {
+          "_id": "62c154621bf0c34d796891b6",
+          "path": "uploads/images/2022/07/03/a64a96d0-ddad-4237-b95b-e2f1bf4ae963-banner-quet-majpg.jpeg"
+        }
+      },
+      {
+        "_id": "62bebf15248aa67c22a45da1",
+        "code": "TV26I0",
+        "thumbnail": {
+          "_id": "62c160681bf0c34d796892ff",
+          "path": "uploads/images/2022/07/03/e367c943-424f-433e-ab69-162d8bbef47d-banner-review-hotjpg.jpeg"
+        }
+      }
+    ],
+    "regions": [
+      {
+        "_id": "629cbc1f17dd741c0c5b5db9",
+        "isHot": true,
+        "order": 10,
+        "deleted": false,
+        "name": "phường Xuân Trung",
+        "slug": "phuong-xuan-trung",
+        "createdBy": "629589bbda89f7a0259e262d",
+        "createdAt": "2022-06-05T14:22:23.840Z",
+        "updatedAt": "2022-07-02T09:39:47.431Z",
+        "__v": 0,
+        "updatedBy": "629589bbda89f7a0259e262d",
+        "thumbnail": {
+          "_id": "62c012631bf0c34d79688352",
+          "width": 701,
+          "path": "uploads/images/2022/07/02/4776babc-dd54-4778-b8c6-3c7ff914c929-p-xuan-trung-web-701x1024jpg.jpeg"
+        },
+        "placeCount": 78
+      },
+      {
+        "_id": "629cbc2617dd741c0c5b5dbd",
+        "isHot": true,
+        "order": 10,
+        "deleted": false,
+        "name": "phường Xuân Thanh",
+        "slug": "phuong-xuan-thanh",
+        "createdBy": "629589bbda89f7a0259e262d",
+        "createdAt": "2022-06-05T14:22:30.980Z",
+        "updatedAt": "2022-07-02T09:40:43.172Z",
+        "__v": 0,
+        "thumbnail": {
+          "_id": "62c0129b1bf0c34d79688366",
+          "width": 653,
+          "path": "uploads/images/2022/07/02/88f9b7da-79e3-4334-865f-bc4256ebf7c3-p-xuan-an-web-653x1024jpg.jpeg"
+        },
+        "updatedBy": "629589bbda89f7a0259e262d",
+        "placeCount": 120
+      },
+      {
+        "_id": "629cbc3e17dd741c0c5b5dc9",
+        "isHot": true,
+        "order": 10,
+        "deleted": false,
+        "name": "phường Xuân Hòa",
+        "slug": "phuong-xuan-hoa",
+        "createdBy": "629589bbda89f7a0259e262d",
+        "createdAt": "2022-06-05T14:22:54.301Z",
+        "updatedAt": "2022-07-02T09:39:01.358Z",
+        "__v": 0,
+        "thumbnail": {
+          "_id": "62c012351bf0c34d79688344",
+          "width": 677,
+          "path": "uploads/images/2022/07/02/ac5e534f-0b61-4143-b2d0-932d5bd1dfb8-p-xuan-hoa-web-677x1024jpg.jpeg"
+        },
+        "updatedBy": "629589bbda89f7a0259e262d",
+        "placeCount": 208
+      },
+      {
+        "_id": "629cbc4617dd741c0c5b5dcd",
+        "isHot": true,
+        "order": 10,
+        "deleted": false,
+        "name": "phường Xuân Bình",
+        "slug": "phuong-xuan-binh",
+        "createdBy": "629589bbda89f7a0259e262d",
+        "createdAt": "2022-06-05T14:23:02.027Z",
+        "updatedAt": "2022-07-02T09:39:22.122Z",
+        "__v": 0,
+        "thumbnail": {
+          "_id": "62c0124a1bf0c34d7968834b",
+          "width": 778,
+          "path": "uploads/images/2022/07/02/0ee4abc2-7304-4346-975d-39781f120bb3-p-xuan-binh-web-778x1024jpg.jpeg"
+        },
+        "updatedBy": "629589bbda89f7a0259e262d",
+        "placeCount": 51
+      },
+      {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "isHot": true,
+        "order": 10,
+        "deleted": false,
+        "name": "phường Xuân An",
+        "slug": "phuong-xuan-an",
+        "createdBy": "629589bbda89f7a0259e262d",
+        "createdAt": "2022-06-05T14:23:08.962Z",
+        "updatedAt": "2022-10-08T08:14:46.653Z",
+        "__v": 0,
+        "updatedBy": "629589bbda89f7a0259e262d",
+        "thumbnail": {
+          "_id": "63413176cd89990c2e47f052",
+          "width": 653,
+          "path": "uploads/images/2022/10/08/64b77461-e153-4d89-a3c3-1b9d1fbc11ca-4374dad0-e5f1-4672-9ef7-659958.jpeg"
+        },
+        "placeCount": 450
+      }
+    ],
+    "categories": [
+      {
+        "isHot": true,
+        "order": 1,
+        "deleted": false,
+        "_id": "629c9f6617dd741c0c5b5cf8",
+        "name": "Ăn Uống",
+        "slug": "an-uong",
+        "createdBy": "629589bbda89f7a0259e262d",
+        "createdAt": "2022-06-05T12:19:50.629Z",
+        "updatedAt": "2022-06-29T04:00:32.308Z",
+        "__v": 0,
+        "thumbnail": {
+          "_id": "62bbce601a63aa27288d02be",
+          "width": 1666,
+          "path": "uploads/images/2022/06/29/a765e2f8-8768-442c-a46d-35d1f86517ec-285190686283810485966843666906.jpeg"
+        }
+      },
+      {
+        "isHot": true,
+        "order": 2,
+        "deleted": false,
+        "_id": "629c9f7817dd741c0c5b5cfc",
+        "name": "Mua Sắm",
+        "slug": "mua-sam",
+        "createdBy": "629589bbda89f7a0259e262d",
+        "createdAt": "2022-06-05T12:20:08.915Z",
+        "updatedAt": "2022-06-29T03:56:56.989Z",
+        "__v": 0,
+        "thumbnail": {
+          "_id": "62bbcd881a63aa27288d01b0",
+          "width": 2048,
+          "path": "uploads/images/2022/06/29/320dac2e-505d-4998-8c16-a887a513238b-285985753284216262592932627058.jpeg"
+        }
+      },
+      {
+        "isHot": true,
+        "order": 3,
+        "deleted": false,
+        "_id": "629c9f8817dd741c0c5b5d00",
+        "name": "Giải Trí",
+        "slug": "giai-tri",
+        "createdBy": "629589bbda89f7a0259e262d",
+        "createdAt": "2022-06-05T12:20:24.411Z",
+        "updatedAt": "2022-06-29T03:33:53.878Z",
+        "__v": 0,
+        "thumbnail": {
+          "_id": "62bbc8211a63aa27288d01a2",
+          "width": 2048,
+          "path": "uploads/images/2022/06/29/87f9bea0-04b5-40dd-abb8-57a441fa9700-277219454277429021271656884745.jpeg"
+        }
+      },
+      {
+        "isHot": true,
+        "order": 4,
+        "deleted": false,
+        "_id": "629c9fac17dd741c0c5b5d08",
+        "name": "Du Lịch",
+        "slug": "du-lich",
+        "createdBy": "629589bbda89f7a0259e262d",
+        "createdAt": "2022-06-05T12:21:00.732Z",
+        "updatedAt": "2022-06-29T03:30:30.843Z",
+        "__v": 0,
+        "thumbnail": {
+          "_id": "62bbc7561a63aa27288d019b",
+          "width": 2048,
+          "path": "uploads/images/2022/06/29/50617ad9-aade-40a6-8b08-62009f8a5f40-150202663241060717241820917118.jpeg"
+        }
+      }
+    ]
+  },
+  "hot": [
+    {
+      "_id": "6af4301dd48f66422a0acdf4",
+      "address": {
+        "specific": "78 Trần Phú. Long Khánh"
+      },
+      "order": 100,
+      "view": 41,
+      "name": "Lẩu Bò Bảo Bảo",
+      "slug": "lau-bo-bao-bao",
+      "region": {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "name": "phường Xuân An"
+      },
+      "createdAt": "2026-11-11T09:06:37.114Z",
+      "avatar": {
+        "_id": "6af430ced48f66422a0ace2d",
+        "width": 3355,
+        "path": "uploads/images/2026/11/11/47a7186b-333d-4d43-b1fd-208d0cde0a07-dsc02642jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "openingStatus": "is_closed",
+      "id": "6af4301dd48f66422a0acdf4",
+      "avgRate": 0
+    },
+    {
+      "_id": "6ae6b257d48f66422a052621",
+      "address": {
+        "specific": "213 Thích Quảng Đức Nối Dài, Long Khánh"
+      },
+      "order": 100,
+      "view": 135,
+      "name": "Dê Đại Phát",
+      "slug": "de-dai-phat",
+      "region": {
+        "_id": "629cbc3e17dd741c0c5b5dc9",
+        "name": "phường Xuân Hòa"
+      },
+      "createdAt": "2026-11-01T03:30:31.719Z",
+      "avatar": {
+        "_id": "6ae6b294d48f66422a052649",
+        "width": 3904,
+        "path": "uploads/images/2026/11/01/f41335ba-e24f-45d4-adff-c05889cd1b78-dsc01036jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "openingStatus": "is_closed",
+      "id": "6ae6b257d48f66422a052621",
+      "avgRate": 0
+    },
+    {
+      "_id": "6ad86fe8d48f66422a003b31",
+      "address": {
+        "specific": "252A Thích Quảng Đức (nối Dài), Long Khánh, Đồng Nai"
+      },
+      "order": 100,
+      "view": 235,
+      "name": "Hu Quán",
+      "slug": "hu-quan",
+      "region": {
+        "_id": "629cbc3e17dd741c0c5b5dc9",
+        "name": "phường Xuân Hòa"
+      },
+      "createdAt": "2026-10-21T07:55:20.055Z",
+      "avatar": {
+        "_id": "6ad87112d48f66422a003c3e",
+        "width": 1355,
+        "path": "uploads/images/2026/10/21/8d236f02-9e92-46c1-95bc-4094aaa41b4c-179256674258511703743976518443.jpeg"
+      },
+      "reviewCount": 0,
+      "openingStatus": "is_closed",
+      "id": "6ad86fe8d48f66422a003b31",
+      "avgRate": 0
+    },
+    {
+      "_id": "6ad83b86d48f66422a002e40",
+      "address": {
+        "specific": "411 Hồ Thị Hương, Long Khánh, Đồng Nai"
+      },
+      "order": 100,
+      "view": 228,
+      "name": "Đệ Nhất Mì Kéo",
+      "slug": "de-nhat-mi-keo",
+      "region": {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "name": "phường Xuân An"
+      },
+      "createdAt": "2026-10-21T04:11:50.757Z",
+      "avatar": {
+        "_id": "6ad83e40d48f66422a002ed9",
+        "width": 4022,
+        "path": "uploads/images/2026/10/21/b954cfcf-ff9f-41de-b239-7a7b42a9a6f1-dsc00115jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "openingStatus": "is_closed",
+      "id": "6ad83b86d48f66422a002e40",
+      "avgRate": 0
+    },
+    {
+      "_id": "6ad3248dd48f66422afec87f",
+      "address": {
+        "specific": "63 Suối Tre, P Bình Lộc"
+      },
+      "order": 100,
+      "view": 170,
+      "name": "Lò Quay Dũng Ký 2 - Vịt Quay Da Giòn",
+      "slug": "lo-quay-dung-ky-2-vit-quay-da-gion",
+      "region": {
+        "_id": "629cbc0a17dd741c0c5b5dad",
+        "name": "xã Bình Lộc"
+      },
+      "createdAt": "2026-10-17T07:32:29.424Z",
+      "avatar": {
+        "_id": "6ad324d6d48f66422afec8b7",
+        "width": 2193,
+        "path": "uploads/images/2026/10/17/7ac7992e-08e8-4461-9131-1b5ed9997111-dsc00515jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "openingStatus": "is_closed",
+      "id": "6ad3248dd48f66422afec87f",
+      "avgRate": 0
+    },
+    {
+      "_id": "6ac851fbd48f66422afc264d",
+      "address": {
+        "specific": "11 Phan Chu Trinh, Long Khánh, Đồng Nai"
+      },
+      "order": 100,
+      "view": 123,
+      "name": "Shop hoa Ái Sâm",
+      "slug": "shop-hoa-ai-sam",
+      "region": {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "name": "phường Xuân An"
+      },
+      "createdAt": "2026-10-09T02:31:23.220Z",
+      "avatar": {
+        "_id": "6ac85257d48f66422afc2683",
+        "width": 3032,
+        "path": "uploads/images/2026/10/09/90921734-df33-47ba-b7f5-c83556752d7c-dsc09749jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "openingStatus": "is_closed",
+      "id": "6ac851fbd48f66422afc264d",
+      "avgRate": 0
+    },
+    {
+      "_id": "6abc86a0d48f66422af979a0",
+      "address": {
+        "specific": "451 Hồ Thị Hương, Long Khánh, Đồng Nai"
+      },
+      "order": 100,
+      "view": 178,
+      "name": "Gu Ốc - Hồ Thị Hương",
+      "slug": "gu-oc-ho-thi-huong",
+      "region": {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "name": "phường Xuân An"
+      },
+      "createdAt": "2026-09-30T03:48:48.751Z",
+      "avatar": {
+        "_id": "6abc8998d48f66422af97af1",
+        "width": 4578,
+        "path": "uploads/images/2026/09/30/8642ad78-c137-4268-86c8-47d100d224f1-dsc09274jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "openingStatus": "is_closed",
+      "id": "6abc86a0d48f66422af979a0",
+      "avgRate": 0
+    },
+    {
+      "_id": "6abc7a84d48f66422af9761c",
+      "address": {
+        "specific": "315 ấp Bạch Lâm, Xã Thống Nhất, TP. Đồng Nai (đối Diện Xéo Nhà Thờ Đức Tâm)"
+      },
+      "order": 100,
+      "view": 197,
+      "name": "Nhà Sách Bạch Đằng - Gia Kiệm",
+      "slug": "nha-sach-bach-dang-gia-kiem",
+      "region": {
+        "_id": "629cbc7917dd741c0c5b5de9",
+        "name": "Khu vực Khác"
+      },
+      "createdAt": "2026-09-30T02:57:08.399Z",
+      "avatar": {
+        "_id": "6abc7ac5d48f66422af97684",
+        "width": 4476,
+        "path": "uploads/images/2026/09/30/2f23ec60-48a2-4524-a539-7a74db069b36-img1087jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "openingStatus": "is_closed",
+      "id": "6abc7a84d48f66422af9761c",
+      "avgRate": 0
+    }
+  ],
+  "places": {
+    "lau-bo-bao-bao": {
+      "_id": "6af4301dd48f66422a0acdf4",
+      "address": {
+        "specific": "78 Trần Phú. Long Khánh",
+        "geo": {
+          "lat": 10.933425,
+          "long": 107.247471
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.247471,
+          10.933425
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "62ab66c3a0926f24fe75727a",
+        "62a2ea9b78fb310c95f4db6d",
+        "629cb86c17dd741c0c5b5d5b",
+        "629cb7fb17dd741c0c5b5d43",
+        "629cb7f217dd741c0c5b5d3f"
+      ],
+      "benefits": [
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cba4517dd741c0c5b5d76",
+          "name": "Giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cb8e217dd741c0c5b5d66",
+          "name": "Có giao hàng",
+          "icon": "far fa-shipping-fast"
+        }
+      ],
+      "images": [
+        {
+          "_id": "6af430d8d48f66422a0ace3a",
+          "width": 4003,
+          "path": "uploads/images/2026/11/11/eaf67eb5-4693-4cb0-9a7f-9c0bcf7aec96-dsc02522jpg.jpeg"
+        },
+        {
+          "_id": "6af430d8d48f66422a0ace3b",
+          "width": 2633,
+          "path": "uploads/images/2026/11/11/c918ae78-f8c2-4d37-a9cd-f215e5dd8ba6-dsc02529jpg.jpeg"
+        },
+        {
+          "_id": "6af430e9d48f66422a0ace49",
+          "width": 2346,
+          "path": "uploads/images/2026/11/11/1759bb64-dec1-45fe-b801-1a0036923db7-dsc02549jpg.jpeg"
+        },
+        {
+          "_id": "6af430e9d48f66422a0ace4a",
+          "width": 2397,
+          "path": "uploads/images/2026/11/11/956cbc7f-0a46-40af-9f9f-eb750979c57d-dsc02559jpg.jpeg"
+        },
+        {
+          "_id": "6af430e9d48f66422a0ace4b",
+          "width": 2145,
+          "path": "uploads/images/2026/11/11/b74cd3e4-7168-4a0d-b288-b235c6e588f2-dsc02573jpg.jpeg"
+        },
+        {
+          "_id": "6af430e9d48f66422a0ace4c",
+          "width": 2066,
+          "path": "uploads/images/2026/11/11/5b757202-b98d-486f-8006-08e7c615a7dd-dsc02579jpg.jpeg"
+        },
+        {
+          "_id": "6af430e9d48f66422a0ace4d",
+          "width": 2042,
+          "path": "uploads/images/2026/11/11/8a1c2b94-eab7-4a30-8392-cc55dfeca40b-dsc02586jpg.jpeg"
+        },
+        {
+          "_id": "6af430e9d48f66422a0ace4e",
+          "width": 1966,
+          "path": "uploads/images/2026/11/11/78abba5c-cb3d-470f-9b88-6880ede051a9-dsc02596jpg.jpeg"
+        },
+        {
+          "_id": "6af430f5d48f66422a0ace60",
+          "width": 1208,
+          "path": "uploads/images/2026/11/11/4a716bfe-8a7b-47b5-8974-39bc274a258b-dsc02612jpg.jpeg"
+        },
+        {
+          "_id": "6af430f5d48f66422a0ace61",
+          "width": 2547,
+          "path": "uploads/images/2026/11/11/00196269-8530-4a61-b659-698689390f5f-dsc02629jpg.jpeg"
+        },
+        {
+          "_id": "6af430f5d48f66422a0ace62",
+          "width": 2652,
+          "path": "uploads/images/2026/11/11/0a5e61af-9751-4224-9035-73d6a5687196-dsc02635jpg.jpeg"
+        },
+        {
+          "_id": "6af43101d48f66422a0ace70",
+          "width": 3355,
+          "path": "uploads/images/2026/11/11/81b4edc9-4fe5-4d3a-ae77-c958a9403a1e-dsc02642jpg.jpeg"
+        },
+        {
+          "_id": "6af43101d48f66422a0ace71",
+          "width": 4244,
+          "path": "uploads/images/2026/11/11/722f336e-a8e9-42bf-8e1a-6e6a41237eba-dsc02644jpg.jpeg"
+        },
+        {
+          "_id": "6af43101d48f66422a0ace72",
+          "width": 2751,
+          "path": "uploads/images/2026/11/11/5df69e57-e826-4316-908d-d74007f9da26-dsc02651jpg.jpeg"
+        }
+      ],
+      "menu": [
+        {
+          "_id": "6af4310fd48f66422a0ace80",
+          "width": 2262,
+          "path": "uploads/images/2026/11/11/c45037f9-7ddd-4da4-a331-5141f6b2f9bb-dsc02506jpg.jpeg"
+        },
+        {
+          "_id": "6af4310fd48f66422a0ace81",
+          "width": 2258,
+          "path": "uploads/images/2026/11/11/2c36de94-b1c2-4f1e-ade9-8e642d4f0b7c-dsc02509jpg.jpeg"
+        }
+      ],
+      "employee": [],
+      "view": 41,
+      "deleted": false,
+      "name": "Lẩu Bò Bảo Bảo",
+      "slug": "lau-bo-bao-bao",
+      "category": "629c9f6617dd741c0c5b5cf8",
+      "region": {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "name": "phường Xuân An",
+        "slug": "phuong-xuan-an"
+      },
+      "price": {
+        "min": 30000,
+        "max": 50000
+      },
+      "metaKeywordsES": "",
+      "facebook": {},
+      "metaKeywords": "Lẩu Bò Bảo Bảo, Lẩu Bò, lẩu, mẹt, bò mẹt, ",
+      "phone": "0963799229",
+      "wifi": {},
+      "avatar": {
+        "_id": "6af430ced48f66422a0ace2d",
+        "width": 3355,
+        "path": "uploads/images/2026/11/11/47a7186b-333d-4d43-b1fd-208d0cde0a07-dsc02642jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 14,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "12:00 - 22:00",
+        "1": "12:00 - 22:00",
+        "2": "12:00 - 22:00",
+        "3": "12:00 - 22:00",
+        "4": "12:00 - 22:00",
+        "5": "12:00 - 22:00",
+        "6": "12:00 - 22:00",
+        "now": "12:00 - 22:00"
+      },
+      "id": "6af4301dd48f66422a0acdf4",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "de-dai-phat": {
+      "_id": "6ae6b257d48f66422a052621",
+      "address": {
+        "specific": "213 Thích Quảng Đức Nối Dài, Long Khánh",
+        "geo": {
+          "lat": 10.926038,
+          "long": 107.252508
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.252508,
+          10.926038
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "62ff4014df989834a29c7c8b",
+        "62ab66c3a0926f24fe75727a",
+        "62a2ea9b78fb310c95f4db6d",
+        "629cb86c17dd741c0c5b5d5b"
+      ],
+      "benefits": [
+        {
+          "_id": "629cba5217dd741c0c5b5d7a",
+          "name": "Chỗ đậu ôtô",
+          "icon": "far fa-cars"
+        },
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cb91a17dd741c0c5b5d6e",
+          "name": "Máy lạnh & điều hòa",
+          "icon": "far fa-air-conditioner"
+        },
+        {
+          "_id": "629cba6f17dd741c0c5b5d82",
+          "name": "Bàn ngoài trời",
+          "icon": "far fa-sun-cloud"
+        },
+        {
+          "_id": "629cba3a17dd741c0c5b5d72",
+          "name": "Giữ xe máy",
+          "icon": "far fa-motorcycle"
+        }
+      ],
+      "images": [
+        {
+          "_id": "6ae6b2a6d48f66422a052656",
+          "width": 4594,
+          "path": "uploads/images/2026/11/01/16ec48bd-73f4-4b2d-8c9b-498df0493d32-dsc00965jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2a6d48f66422a052657",
+          "width": 2539,
+          "path": "uploads/images/2026/11/01/321b0439-6fdc-457f-befa-89485e41dc63-dsc01192jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2a6d48f66422a052658",
+          "width": 2071,
+          "path": "uploads/images/2026/11/01/56648566-8655-45da-842e-68756c4ae682-dsc01233jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2b4d48f66422a05266d",
+          "width": 4134,
+          "path": "uploads/images/2026/11/01/f532b34a-bada-41e0-b783-e568d5eee281-dsc01143jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2b4d48f66422a05266e",
+          "width": 1516,
+          "path": "uploads/images/2026/11/01/126e4e66-2433-492e-bd67-6b79fe124fcf-dsc01145jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2b4d48f66422a05266f",
+          "width": 1840,
+          "path": "uploads/images/2026/11/01/ce1ddcfb-cc99-4448-b672-3236f44446ba-dsc01153jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2b4d48f66422a052670",
+          "width": 1974,
+          "path": "uploads/images/2026/11/01/c22d5ded-6ce7-4ace-b531-9265b35ec932-dsc01158jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2c2d48f66422a05267e",
+          "width": 2050,
+          "path": "uploads/images/2026/11/01/34f87ff9-484a-4493-b94d-df127b0edb26-dsc01163jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2c2d48f66422a05267f",
+          "width": 2196,
+          "path": "uploads/images/2026/11/01/25013bfa-2b80-4cde-86d4-1ff79902253c-dsc01171jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2c2d48f66422a052680",
+          "width": 2423,
+          "path": "uploads/images/2026/11/01/34861570-bbf7-412e-9ceb-66060a234fa8-dsc01186jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2c2d48f66422a052681",
+          "width": 2367,
+          "path": "uploads/images/2026/11/01/f2cca716-3407-43cf-afdb-4fe4a6ecd4f6-dsc01190jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2c2d48f66422a052682",
+          "width": 2551,
+          "path": "uploads/images/2026/11/01/f1be2199-c43f-4eff-854d-b6859e52dad6-dsc01201jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2d3d48f66422a052690",
+          "width": 2115,
+          "path": "uploads/images/2026/11/01/2001d62d-519e-40ae-bde1-eb3807f474df-dsc01213jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2d3d48f66422a052691",
+          "width": 2303,
+          "path": "uploads/images/2026/11/01/7779dd60-3b94-48ff-a625-c2d9614f341c-dsc01227jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2d3d48f66422a052692",
+          "width": 2266,
+          "path": "uploads/images/2026/11/01/40f489dd-8efc-485b-b990-2b878cef468b-dsc01244jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2d3d48f66422a052693",
+          "width": 2066,
+          "path": "uploads/images/2026/11/01/79f4c0f3-f614-4fd8-8bfe-fcc715dffa6e-dsc01259jpg.jpeg"
+        },
+        {
+          "_id": "6ae6b2d3d48f66422a052694",
+          "width": 2084,
+          "path": "uploads/images/2026/11/01/62b2b972-e9b3-4f81-b4a4-4ea445bceb64-dsc01289jpg.jpeg"
+        }
+      ],
+      "menu": [],
+      "employee": [],
+      "view": 135,
+      "deleted": false,
+      "name": "Dê Đại Phát",
+      "slug": "de-dai-phat",
+      "category": "629c9f6617dd741c0c5b5cf8",
+      "region": {
+        "_id": "629cbc3e17dd741c0c5b5dc9",
+        "name": "phường Xuân Hòa",
+        "slug": "phuong-xuan-hoa"
+      },
+      "price": {
+        "min": 30000,
+        "max": 50000
+      },
+      "metaKeywordsES": "",
+      "facebook": {},
+      "metaKeywords": "Dê Đại Phát, Dê, Nướng, Dê nướng, nhậu, quán nhậu, ",
+      "phone": "094 6677 776",
+      "wifi": {},
+      "avatar": {
+        "_id": "6ae6b294d48f66422a052649",
+        "width": 3904,
+        "path": "uploads/images/2026/11/01/f41335ba-e24f-45d4-adff-c05889cd1b78-dsc01036jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 17,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "10:00 - 23:00",
+        "1": "10:00 - 23:00",
+        "2": "10:00 - 23:00",
+        "3": "10:00 - 23:00",
+        "4": "10:00 - 23:00",
+        "5": "10:00 - 23:00",
+        "6": "10:00 - 23:00",
+        "now": "10:00 - 23:00"
+      },
+      "id": "6ae6b257d48f66422a052621",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "hu-quan": {
+      "_id": "6ad86fe8d48f66422a003b31",
+      "address": {
+        "specific": "252A Thích Quảng Đức (nối Dài), Long Khánh, Đồng Nai",
+        "geo": {
+          "lat": 10.926083,
+          "long": 107.25572
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.25572,
+          10.926083
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "641aa6a405b9ac281a11b709",
+        "641aa69b05b9ac281a11b705",
+        "62ff4014df989834a29c7c8b",
+        "62ab66c3a0926f24fe75727a",
+        "62a2ea9b78fb310c95f4db6d",
+        "629cb86c17dd741c0c5b5d5b",
+        "629cb7fb17dd741c0c5b5d43"
+      ],
+      "benefits": [
+        {
+          "_id": "629cba5217dd741c0c5b5d7a",
+          "name": "Chỗ đậu ôtô",
+          "icon": "far fa-cars"
+        },
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cba4517dd741c0c5b5d76",
+          "name": "Giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cba6f17dd741c0c5b5d82",
+          "name": "Bàn ngoài trời",
+          "icon": "far fa-sun-cloud"
+        },
+        {
+          "_id": "629cb8e217dd741c0c5b5d66",
+          "name": "Có giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cba3a17dd741c0c5b5d72",
+          "name": "Giữ xe máy",
+          "icon": "far fa-motorcycle"
+        }
+      ],
+      "images": [
+        {
+          "_id": "6ad87152d48f66422a003c68",
+          "width": 2090,
+          "path": "uploads/images/2026/10/21/ef55db8c-e85a-497c-9b82-b87ca8abb779-dsc00716jpg.jpeg"
+        },
+        {
+          "_id": "6ad87152d48f66422a003c69",
+          "width": 2541,
+          "path": "uploads/images/2026/10/21/35633cd4-688f-4e42-890d-1164c4263613-dsc00739jpg.jpeg"
+        },
+        {
+          "_id": "6ad87152d48f66422a003c6a",
+          "width": 1841,
+          "path": "uploads/images/2026/10/21/42404942-e839-444c-ba61-f6de2ae13b7d-dsc00751jpg.jpeg"
+        },
+        {
+          "_id": "6ad87152d48f66422a003c6b",
+          "width": 1716,
+          "path": "uploads/images/2026/10/21/9dd6a1e1-917a-4c68-8328-acb427834637-dsc00781jpg.jpeg"
+        },
+        {
+          "_id": "6ad8716fd48f66422a003c93",
+          "width": 3743,
+          "path": "uploads/images/2026/10/21/5c047562-7e10-4230-8d84-c9ea74a27b27-dsc00691jpg.jpeg"
+        },
+        {
+          "_id": "6ad8716fd48f66422a003c94",
+          "width": 1809,
+          "path": "uploads/images/2026/10/21/751449a1-4fad-46a3-a772-a51a1e000d87-dsc00705jpg.jpeg"
+        },
+        {
+          "_id": "6ad8716fd48f66422a003c95",
+          "width": 2089,
+          "path": "uploads/images/2026/10/21/f8431f0e-e78e-4393-b45b-c1246ada1668-dsc00708jpg.jpeg"
+        },
+        {
+          "_id": "6ad8716fd48f66422a003c96",
+          "width": 2492,
+          "path": "uploads/images/2026/10/21/18e7a0b2-9be0-4b95-aca1-19ac5d78f42a-dsc00713jpg.jpeg"
+        },
+        {
+          "_id": "6ad8716fd48f66422a003c97",
+          "width": 2115,
+          "path": "uploads/images/2026/10/21/341b0899-d4a6-4750-bc9d-55e633251767-dsc00725jpg.jpeg"
+        },
+        {
+          "_id": "6ad87188d48f66422a003cb1",
+          "width": 2069,
+          "path": "uploads/images/2026/10/21/6d31f7f9-fac0-4901-b283-87a1a12fb0f4-dsc00754jpg.jpeg"
+        },
+        {
+          "_id": "6ad87188d48f66422a003cb2",
+          "width": 2299,
+          "path": "uploads/images/2026/10/21/3bba4130-06e3-4c31-ba54-1305379b9363-dsc00759jpg.jpeg"
+        },
+        {
+          "_id": "6ad87188d48f66422a003cb3",
+          "width": 2436,
+          "path": "uploads/images/2026/10/21/e05e893d-5731-4589-843c-850f600f123c-dsc00766jpg.jpeg"
+        },
+        {
+          "_id": "6ad87188d48f66422a003cb4",
+          "width": 2129,
+          "path": "uploads/images/2026/10/21/0a0936df-29fc-46ba-bd77-9795adea563c-dsc00773jpg.jpeg"
+        },
+        {
+          "_id": "6ad87188d48f66422a003cb5",
+          "width": 2244,
+          "path": "uploads/images/2026/10/21/8cd159e1-1fd8-4272-b91b-3e7945fbf84a-dsc00787jpg.jpeg"
+        },
+        {
+          "_id": "6ad8718fd48f66422a003cc3",
+          "width": 1914,
+          "path": "uploads/images/2026/10/21/bf00d673-cfdb-4d10-9599-684b3927b863-dsc00790jpg.jpeg"
+        }
+      ],
+      "menu": [
+        {
+          "_id": "6ad871ced48f66422a003ce4",
+          "width": 2677,
+          "path": "uploads/images/2026/10/21/badf969b-3a97-4449-a9cd-2b6cfaf1276e-dsc00687jpg.jpeg"
+        },
+        {
+          "_id": "6ad871ced48f66422a003ce5",
+          "width": 2518,
+          "path": "uploads/images/2026/10/21/b78beaa1-0b8a-47cb-b6d0-29fd80464299-dsc00688jpg.jpeg"
+        }
+      ],
+      "employee": [],
+      "view": 235,
+      "deleted": false,
+      "name": "Hu Quán",
+      "slug": "hu-quan",
+      "category": "629c9f6617dd741c0c5b5cf8",
+      "region": {
+        "_id": "629cbc3e17dd741c0c5b5dc9",
+        "name": "phường Xuân Hòa",
+        "slug": "phuong-xuan-hoa"
+      },
+      "price": {
+        "min": 40000,
+        "max": 259000
+      },
+      "metaKeywordsES": "",
+      "facebook": {},
+      "metaKeywords": "Hu Quán, Quán nhậu, mồi, bia,",
+      "phone": "0394139447 - 0333669352",
+      "wifi": {},
+      "avatar": {
+        "_id": "6ad87112d48f66422a003c3e",
+        "width": 1355,
+        "path": "uploads/images/2026/10/21/8d236f02-9e92-46c1-95bc-4094aaa41b4c-179256674258511703743976518443.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 15,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "16:00 - 00:00",
+        "1": "16:00 - 00:00",
+        "2": "16:00 - 00:00",
+        "3": "16:00 - 00:00",
+        "4": "16:00 - 00:00",
+        "5": "16:00 - 00:00",
+        "6": "16:00 - 00:00",
+        "now": "16:00 - 00:00"
+      },
+      "id": "6ad86fe8d48f66422a003b31",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "de-nhat-mi-keo": {
+      "_id": "6ad83b86d48f66422a002e40",
+      "address": {
+        "specific": "411 Hồ Thị Hương, Long Khánh, Đồng Nai",
+        "geo": {
+          "lat": 10.9317,
+          "long": 107.254498
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.254498,
+          10.9317
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "62ab66c3a0926f24fe75727a",
+        "62a2ea9b78fb310c95f4db6d",
+        "629f78959e58837f05e2963f",
+        "629f788b9e58837f05e2963b",
+        "629cb86317dd741c0c5b5d57",
+        "629cb85317dd741c0c5b5d53",
+        "629cb84817dd741c0c5b5d4f",
+        "629cb81917dd741c0c5b5d47",
+        "629cb7fb17dd741c0c5b5d43"
+      ],
+      "benefits": [
+        {
+          "_id": "629cba5217dd741c0c5b5d7a",
+          "name": "Chỗ đậu ôtô",
+          "icon": "far fa-cars"
+        },
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cb91a17dd741c0c5b5d6e",
+          "name": "Máy lạnh & điều hòa",
+          "icon": "far fa-air-conditioner"
+        },
+        {
+          "_id": "629cba4517dd741c0c5b5d76",
+          "name": "Giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cb8e217dd741c0c5b5d66",
+          "name": "Có giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cba3a17dd741c0c5b5d72",
+          "name": "Giữ xe máy",
+          "icon": "far fa-motorcycle"
+        }
+      ],
+      "images": [
+        {
+          "_id": "6ad86165d48f66422a003649",
+          "width": 2099,
+          "path": "uploads/images/2026/10/21/6889c47a-1f55-41d6-bc66-ee4acc4613e4-dsc09957jpg.jpeg"
+        },
+        {
+          "_id": "6ad86120d48f66422a0035ff",
+          "width": 2158,
+          "path": "uploads/images/2026/10/21/5dedecd5-ccb3-418e-9e5a-02dc753a2760-dsc00088jpg.jpeg"
+        },
+        {
+          "_id": "6ad86165d48f66422a003648",
+          "width": 2285,
+          "path": "uploads/images/2026/10/21/13746ae2-1cc9-4c6a-a17a-ec5944e505b9-dsc09946jpg.jpeg"
+        },
+        {
+          "_id": "6ad86103d48f66422a0035e3",
+          "width": 2357,
+          "path": "uploads/images/2026/10/21/af0f22a3-114c-4e51-90dd-1f5ad6646beb-dsc00033jpg.jpeg"
+        },
+        {
+          "_id": "6ad86103d48f66422a0035e4",
+          "width": 2000,
+          "path": "uploads/images/2026/10/21/dc73a838-71b1-4d7d-8693-33b7f3a1c8df-dsc00038jpg.jpeg"
+        },
+        {
+          "_id": "6ad86103d48f66422a0035e5",
+          "width": 2548,
+          "path": "uploads/images/2026/10/21/f5142561-9a32-495d-9722-56df4b05c86d-dsc00044jpg.jpeg"
+        },
+        {
+          "_id": "6ad86103d48f66422a0035e6",
+          "width": 2150,
+          "path": "uploads/images/2026/10/21/391ce7ea-b601-481a-a40a-9b45d3f844ed-dsc00049jpg.jpeg"
+        },
+        {
+          "_id": "6ad86120d48f66422a0035fb",
+          "width": 2094,
+          "path": "uploads/images/2026/10/21/21c0f933-bbe5-405f-9880-a9f35e571f99-dsc00061jpg.jpeg"
+        },
+        {
+          "_id": "6ad86120d48f66422a0035fc",
+          "width": 2079,
+          "path": "uploads/images/2026/10/21/abbe3354-a135-4a46-93a6-f7a27aa2f61d-dsc00069jpg.jpeg"
+        },
+        {
+          "_id": "6ad86120d48f66422a0035fd",
+          "width": 2615,
+          "path": "uploads/images/2026/10/21/e6815c70-d3a6-4317-aa6c-ef6fbebae7af-dsc00076jpg.jpeg"
+        },
+        {
+          "_id": "6ad86120d48f66422a0035fe",
+          "width": 2122,
+          "path": "uploads/images/2026/10/21/4422d1a2-3d2a-4ee1-a28e-e8da14d9cb5b-dsc00079jpg.jpeg"
+        },
+        {
+          "_id": "6ad86135d48f66422a003614",
+          "width": 1680,
+          "path": "uploads/images/2026/10/21/622286c0-49b7-479a-801b-70e6404fe091-dsc00097jpg.jpeg"
+        },
+        {
+          "_id": "6ad86135d48f66422a003615",
+          "width": 4608,
+          "path": "uploads/images/2026/10/21/a402293a-7030-48db-b992-37e7c6b85a62-dsc09753jpg.jpeg"
+        },
+        {
+          "_id": "6ad86135d48f66422a003616",
+          "width": 4298,
+          "path": "uploads/images/2026/10/21/ce237b08-c181-4d45-b18e-1ae87b67b192-dsc09755jpg.jpeg"
+        },
+        {
+          "_id": "6ad86151d48f66422a003632",
+          "width": 1891,
+          "path": "uploads/images/2026/10/21/89a65596-7c9b-4a4e-8f01-b2e4c7956cf6-dsc09821jpg.jpeg"
+        },
+        {
+          "_id": "6ad86151d48f66422a003633",
+          "width": 2542,
+          "path": "uploads/images/2026/10/21/d0e373d9-0b10-4c0c-9de4-a77b2d78ac22-dsc09871jpg.jpeg"
+        },
+        {
+          "_id": "6ad86165d48f66422a00364a",
+          "width": 2161,
+          "path": "uploads/images/2026/10/21/e1fe0418-7865-4a3e-adae-b45087b1428b-dsc09978jpg.jpeg"
+        },
+        {
+          "_id": "6ad86165d48f66422a00364b",
+          "width": 1778,
+          "path": "uploads/images/2026/10/21/30dcec3d-bd0e-42af-be89-2a07e3e2239b-dsc09983jpg.jpeg"
+        }
+      ],
+      "menu": [],
+      "employee": [],
+      "view": 228,
+      "deleted": false,
+      "name": "Đệ Nhất Mì Kéo",
+      "slug": "de-nhat-mi-keo",
+      "category": "629c9f6617dd741c0c5b5cf8",
+      "region": {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "name": "phường Xuân An",
+        "slug": "phuong-xuan-an"
+      },
+      "price": {
+        "min": 30000,
+        "max": 50000
+      },
+      "metaKeywordsES": "",
+      "facebook": {},
+      "metaKeywords": "Đệ Nhất Mì Kéo, Món Hoa, Mì, hủ tiếu, bánh bao, vịt tiềm,",
+      "phone": "0916 371 879",
+      "wifi": {},
+      "avatar": {
+        "_id": "6ad83e40d48f66422a002ed9",
+        "width": 4022,
+        "path": "uploads/images/2026/10/21/b954cfcf-ff9f-41de-b239-7a7b42a9a6f1-dsc00115jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 18,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "06:00 - 14:00, 15:00 - 21:30",
+        "1": "06:00 - 13:00, 15:00 - 21:30",
+        "2": "06:00 - 13:00, 15:00 - 21:30",
+        "3": "06:00 - 13:00, 15:00 - 21:30",
+        "4": "06:00 - 13:00, 15:00 - 21:30",
+        "5": "06:00 - 13:00, 15:00 - 21:30",
+        "6": "06:00 - 14:00, 15:00 - 21:30",
+        "now": "06:00 - 13:00"
+      },
+      "id": "6ad83b86d48f66422a002e40",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "lo-quay-dung-ky-2-vit-quay-da-gion": {
+      "_id": "6ad3248dd48f66422afec87f",
+      "address": {
+        "specific": "63 Suối Tre, P Bình Lộc",
+        "geo": {
+          "lat": 10.951057,
+          "long": 107.219947
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.219947,
+          10.951057
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "62ab66c3a0926f24fe75727a",
+        "62a2ea9b78fb310c95f4db6d",
+        "629f78959e58837f05e2963f",
+        "629f788b9e58837f05e2963b"
+      ],
+      "benefits": [
+        {
+          "_id": "629cbe9317dd741c0c5b5e4c",
+          "name": "Chỉ Bán Mang Đi",
+          "icon": "fas fa-hand-holding-box"
+        },
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        }
+      ],
+      "images": [
+        {
+          "_id": "6ad330b7d48f66422afecff2",
+          "width": 2211,
+          "path": "uploads/images/2026/10/17/1c6af160-f4ac-485e-afff-099b134c0dd6-dsc00542jpg.jpeg"
+        },
+        {
+          "_id": "6ad330b7d48f66422afecff3",
+          "width": 2374,
+          "path": "uploads/images/2026/10/17/5068e236-919d-4ef5-bcc1-9eaae17b2b79-dsc00549jpg.jpeg"
+        },
+        {
+          "_id": "6ad330b7d48f66422afecff4",
+          "width": 1919,
+          "path": "uploads/images/2026/10/17/e1b42bae-677c-41f5-aedf-ee3c4b38e861-dsc00555jpg.jpeg"
+        },
+        {
+          "_id": "6ad330b7d48f66422afecff5",
+          "width": 2245,
+          "path": "uploads/images/2026/10/17/779130e9-f653-4df1-b53a-9cbeba414b47-dsc00568jpg.jpeg"
+        },
+        {
+          "_id": "6ad330b7d48f66422afecff6",
+          "width": 2019,
+          "path": "uploads/images/2026/10/17/a0492810-58e2-464e-8965-d7a43bb21c30-dsc00570jpg.jpeg"
+        },
+        {
+          "_id": "6ad330b7d48f66422afecff7",
+          "width": 1996,
+          "path": "uploads/images/2026/10/17/d6ee740b-8dc8-424c-af4c-5900912d925f-dsc00576jpg.jpeg"
+        },
+        {
+          "_id": "6ad330c6d48f66422afed019",
+          "width": 2192,
+          "path": "uploads/images/2026/10/17/cdabe9b9-c43f-4b2c-99e1-f258f4ee8136-dsc00583jpg.jpeg"
+        },
+        {
+          "_id": "6ad330c6d48f66422afed01a",
+          "width": 2316,
+          "path": "uploads/images/2026/10/17/6a5e7210-b5a9-4b97-baa5-470cfa222dba-dsc00611jpg.jpeg"
+        },
+        {
+          "_id": "6ad330c6d48f66422afed01b",
+          "width": 2113,
+          "path": "uploads/images/2026/10/17/9be6e0e8-1bcc-4275-9063-1a6c7216a962-dsc00655jpg.jpeg"
+        },
+        {
+          "_id": "6ad330c6d48f66422afed01c",
+          "width": 2168,
+          "path": "uploads/images/2026/10/17/478d275b-d880-4f50-9c0e-ff986ce08020-dsc00670jpg.jpeg"
+        }
+      ],
+      "menu": [],
+      "employee": [],
+      "view": 170,
+      "deleted": false,
+      "name": "Lò Quay Dũng Ký 2 - Vịt Quay Da Giòn",
+      "slug": "lo-quay-dung-ky-2-vit-quay-da-gion",
+      "category": "629c9f6617dd741c0c5b5cf8",
+      "region": {
+        "_id": "629cbc0a17dd741c0c5b5dad",
+        "name": "xã Bình Lộc",
+        "slug": "xa-binh-loc"
+      },
+      "price": {
+        "min": 30000,
+        "max": 50000
+      },
+      "metaKeywordsES": "",
+      "facebook": {},
+      "metaKeywords": "Lò Quay Dũng Ký 2 - Vịt Quay Da Giòn, Lò Quay Dũng Ký 2, Vịt Quay Da Giòn, Vịt Quay, heo quay. gà quay, ",
+      "phone": "0378 877 421 - 0966 694 233",
+      "wifi": {},
+      "avatar": {
+        "_id": "6ad324d6d48f66422afec8b7",
+        "width": 2193,
+        "path": "uploads/images/2026/10/17/7ac7992e-08e8-4461-9131-1b5ed9997111-dsc00515jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 10,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "07:00 - 19:00",
+        "1": "07:00 - 19:00",
+        "2": "07:00 - 19:00",
+        "3": "07:00 - 19:00",
+        "4": "07:00 - 19:00",
+        "5": "07:00 - 19:00",
+        "6": "07:00 - 19:00",
+        "now": "07:00 - 19:00"
+      },
+      "id": "6ad3248dd48f66422afec87f",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "shop-hoa-ai-sam": {
+      "_id": "6ac851fbd48f66422afc264d",
+      "address": {
+        "specific": "11 Phan Chu Trinh, Long Khánh, Đồng Nai",
+        "geo": {
+          "lat": 10.931871,
+          "long": 107.247653
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.247653,
+          10.931871
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "6325836acd89990c2e3ea920"
+      ],
+      "benefits": [
+        {
+          "_id": "629cbe9317dd741c0c5b5e4c",
+          "name": "Chỉ Bán Mang Đi",
+          "icon": "fas fa-hand-holding-box"
+        },
+        {
+          "_id": "629cb91a17dd741c0c5b5d6e",
+          "name": "Máy lạnh & điều hòa",
+          "icon": "far fa-air-conditioner"
+        },
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cba4517dd741c0c5b5d76",
+          "name": "Giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cb8e217dd741c0c5b5d66",
+          "name": "Có giao hàng",
+          "icon": "far fa-shipping-fast"
+        }
+      ],
+      "images": [
+        {
+          "_id": "6ac85275d48f66422afc26c4",
+          "width": 1855,
+          "path": "uploads/images/2026/10/09/aadb2b27-5c32-47da-ba7c-1e465c80e7f0-dsc09578jpg.jpeg"
+        },
+        {
+          "_id": "6ac85275d48f66422afc26c5",
+          "width": 2368,
+          "path": "uploads/images/2026/10/09/06a5a657-9845-40f1-8638-d485a3971052-dsc09664jpg.jpeg"
+        },
+        {
+          "_id": "6ac85275d48f66422afc26c6",
+          "width": 2573,
+          "path": "uploads/images/2026/10/09/a21cb5f8-7bae-4a73-acef-8766f91055af-dsc09687jpg.jpeg"
+        },
+        {
+          "_id": "6ac85282d48f66422afc26d4",
+          "width": 2299,
+          "path": "uploads/images/2026/10/09/a2710ab7-1ee9-4200-b127-9f23ec26619f-dsc09690jpg.jpeg"
+        },
+        {
+          "_id": "6ac85282d48f66422afc26d5",
+          "width": 2333,
+          "path": "uploads/images/2026/10/09/b833b1a2-3787-4ee0-acb0-a20d09a0713c-dsc09723jpg.jpeg"
+        },
+        {
+          "_id": "6ac85298d48f66422afc26e7",
+          "width": 2399,
+          "path": "uploads/images/2026/10/09/6ad398d2-7b05-40fd-babf-459a999c0a55-dsc09560jpg.jpeg"
+        },
+        {
+          "_id": "6ac85298d48f66422afc26e8",
+          "width": 2284,
+          "path": "uploads/images/2026/10/09/30ff13c6-0e3b-474a-a8c0-bf28c08e5645-dsc09561jpg.jpeg"
+        },
+        {
+          "_id": "6ac85298d48f66422afc26e9",
+          "width": 2247,
+          "path": "uploads/images/2026/10/09/6945d28d-167b-4bf7-9fd8-c34027b670f5-dsc09569jpg.jpeg"
+        },
+        {
+          "_id": "6ac852b8d48f66422afc2700",
+          "width": 2698,
+          "path": "uploads/images/2026/10/09/09474272-407f-4313-8f7e-62d2c82fb3ed-dsc09596jpg.jpeg"
+        },
+        {
+          "_id": "6ac852b8d48f66422afc2701",
+          "width": 2827,
+          "path": "uploads/images/2026/10/09/8ce9ce15-8d86-4206-8632-3e13fbf4d2fd-dsc09608jpg.jpeg"
+        },
+        {
+          "_id": "6ac852b8d48f66422afc2702",
+          "width": 4608,
+          "path": "uploads/images/2026/10/09/ff9ee32b-f0c2-4792-9415-5964a5e8c832-dsc09615jpg.jpeg"
+        },
+        {
+          "_id": "6ac852d2d48f66422afc2710",
+          "width": 2141,
+          "path": "uploads/images/2026/10/09/bcfa943c-0f5b-459d-bba9-d5ea76a11b99-dsc09632jpg.jpeg"
+        },
+        {
+          "_id": "6ac852d2d48f66422afc2711",
+          "width": 2283,
+          "path": "uploads/images/2026/10/09/69493298-6d68-4b0c-ba4e-04d53b799d14-dsc09623jpg.jpeg"
+        },
+        {
+          "_id": "6ac852d2d48f66422afc2712",
+          "width": 2356,
+          "path": "uploads/images/2026/10/09/f20d8e37-1b0a-4477-a7cd-239c6e50cf98-dsc09704jpg.jpeg"
+        },
+        {
+          "_id": "6ac852e2d48f66422afc2727",
+          "width": 2626,
+          "path": "uploads/images/2026/10/09/b413f97b-8cb9-43b0-8ad2-54aa89ff0376-dsc09681jpg.jpeg"
+        },
+        {
+          "_id": "6ac852e2d48f66422afc2728",
+          "width": 2154,
+          "path": "uploads/images/2026/10/09/ba1b21ca-8701-4040-b890-805b92ef02f7-dsc09682jpg.jpeg"
+        },
+        {
+          "_id": "6ac852e2d48f66422afc2729",
+          "width": 2396,
+          "path": "uploads/images/2026/10/09/f0d42570-7e14-4538-ae77-1e6cbdf6c96f-dsc09685jpg.jpeg"
+        },
+        {
+          "_id": "6ac852e2d48f66422afc272a",
+          "width": 2535,
+          "path": "uploads/images/2026/10/09/7158ab48-3e00-43aa-bda9-89d355b0423e-dsc09697jpg.jpeg"
+        },
+        {
+          "_id": "6ac852eed48f66422afc2746",
+          "width": 1969,
+          "path": "uploads/images/2026/10/09/46a3b802-9149-4c8c-be54-1ee429e2d492-dsc09693jpg.jpeg"
+        },
+        {
+          "_id": "6ac852eed48f66422afc2747",
+          "width": 2493,
+          "path": "uploads/images/2026/10/09/95a62e0f-67b7-4480-ba53-2bc1d1426276-dsc09706jpg.jpeg"
+        },
+        {
+          "_id": "6ac852eed48f66422afc2748",
+          "width": 2643,
+          "path": "uploads/images/2026/10/09/36b9cf7d-ab4a-4968-870d-465392e6a4b6-dsc09708jpg.jpeg"
+        },
+        {
+          "_id": "6ac852eed48f66422afc2749",
+          "width": 2648,
+          "path": "uploads/images/2026/10/09/891fabe5-8d28-42ac-beb3-7fb59ff45d5c-dsc09713jpg.jpeg"
+        },
+        {
+          "_id": "6ac852f7d48f66422afc2758",
+          "width": 4073,
+          "path": "uploads/images/2026/10/09/4db7828b-71ec-43e4-99ea-533b266c48df-dsc09739jpg.jpeg"
+        },
+        {
+          "_id": "6ac852f7d48f66422afc2759",
+          "width": 3927,
+          "path": "uploads/images/2026/10/09/fb4409e1-15cf-43d7-9979-f2090125516d-dsc09744jpg.jpeg"
+        }
+      ],
+      "menu": [],
+      "employee": [],
+      "view": 123,
+      "deleted": false,
+      "name": "Shop hoa Ái Sâm",
+      "slug": "shop-hoa-ai-sam",
+      "category": "629c9f7817dd741c0c5b5cfc",
+      "region": {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "name": "phường Xuân An",
+        "slug": "phuong-xuan-an"
+      },
+      "price": {
+        "min": 30000,
+        "max": 50000
+      },
+      "metaKeywordsES": "",
+      "facebook": {},
+      "metaKeywords": "Tiệm Hoa Ái Sâm, Shop hoa Ái Sâm, Ái Sâm, shop hoa, hoa, hoa sáp, hoa len, hoa lụa,,",
+      "phone": "038 38 78 990",
+      "wifi": {},
+      "avatar": {
+        "_id": "6ac85257d48f66422afc2683",
+        "width": 3032,
+        "path": "uploads/images/2026/10/09/90921734-df33-47ba-b7f5-c83556752d7c-dsc09749jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 24,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "09:00 - 21:00",
+        "1": "09:00 - 21:00",
+        "2": "09:00 - 21:00",
+        "3": "09:00 - 21:00",
+        "4": "09:00 - 21:00",
+        "5": "09:00 - 21:00",
+        "6": "09:00 - 21:00",
+        "now": "09:00 - 21:00"
+      },
+      "id": "6ac851fbd48f66422afc264d",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "gu-oc-ho-thi-huong": {
+      "_id": "6abc86a0d48f66422af979a0",
+      "address": {
+        "specific": "451 Hồ Thị Hương, Long Khánh, Đồng Nai",
+        "geo": {
+          "lat": 10.928164,
+          "long": 107.256716
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.256716,
+          10.928164
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "641aa6a405b9ac281a11b709",
+        "641aa69b05b9ac281a11b705",
+        "62ff4014df989834a29c7c8b",
+        "62ab66c3a0926f24fe75727a",
+        "62a2ea9b78fb310c95f4db6d",
+        "629cb7fb17dd741c0c5b5d43",
+        "629cb7e517dd741c0c5b5d3b"
+      ],
+      "benefits": [
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cba4517dd741c0c5b5d76",
+          "name": "Giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cba6f17dd741c0c5b5d82",
+          "name": "Bàn ngoài trời",
+          "icon": "far fa-sun-cloud"
+        },
+        {
+          "_id": "629cb8e217dd741c0c5b5d66",
+          "name": "Có giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cba3a17dd741c0c5b5d72",
+          "name": "Giữ xe máy",
+          "icon": "far fa-motorcycle"
+        }
+      ],
+      "images": [
+        {
+          "_id": "6abc89bbd48f66422af97b06",
+          "width": 2007,
+          "path": "uploads/images/2026/09/30/d9a4465c-6ba9-4e32-a3df-8cd9a56fdaee-dsc09354jpg.jpeg"
+        },
+        {
+          "_id": "6abc89bbd48f66422af97b05",
+          "width": 2021,
+          "path": "uploads/images/2026/09/30/d0d7e0fd-0f55-4a3a-8f6a-ac87a9445179-dsc09341jpg.jpeg"
+        },
+        {
+          "_id": "6abc89f8d48f66422af97b48",
+          "width": 4201,
+          "path": "uploads/images/2026/09/30/27d3b9d9-c932-44c6-a934-0423a4746202-dsc09307jpg.jpeg"
+        },
+        {
+          "_id": "6abc89bbd48f66422af97b07",
+          "width": 2179,
+          "path": "uploads/images/2026/09/30/4d60d48e-70d7-4ddd-bd89-68b9f8083ae7-dsc09389jpg.jpeg"
+        },
+        {
+          "_id": "6abc89bbd48f66422af97b08",
+          "width": 1598,
+          "path": "uploads/images/2026/09/30/abe7d440-0ee8-4b59-bacb-9872b7721a02-dsc09402jpg.jpeg"
+        },
+        {
+          "_id": "6abc89bbd48f66422af97b09",
+          "width": 1576,
+          "path": "uploads/images/2026/09/30/0b9b3b75-dd36-46bc-a867-869aab53c7f8-dsc09410jpg.jpeg"
+        },
+        {
+          "_id": "6abc89bbd48f66422af97b0a",
+          "width": 1694,
+          "path": "uploads/images/2026/09/30/9a741cfd-7f8e-457f-86a9-ca16dffa2eb6-dsc09418jpg.jpeg"
+        },
+        {
+          "_id": "6abc89bbd48f66422af97b0b",
+          "width": 2188,
+          "path": "uploads/images/2026/09/30/780e1c05-df33-4106-a626-a8fb6219d8ee-dsc09448jpg.jpeg"
+        },
+        {
+          "_id": "6abc89dad48f66422af97b19",
+          "width": 2051,
+          "path": "uploads/images/2026/09/30/b2b9b3e8-b8f2-46c8-95e4-11ec6a625b9f-dsc09428jpg.jpeg"
+        },
+        {
+          "_id": "6abc89dad48f66422af97b1a",
+          "width": 2158,
+          "path": "uploads/images/2026/09/30/48b70df0-c4c3-491d-b675-aa36205aa5c1-dsc09458jpg.jpeg"
+        },
+        {
+          "_id": "6abc89dad48f66422af97b1b",
+          "width": 2129,
+          "path": "uploads/images/2026/09/30/4f221836-fd6a-48d0-88c5-4ff9ebaef322-dsc09469jpg.jpeg"
+        },
+        {
+          "_id": "6abc89f8d48f66422af97b47",
+          "width": 4584,
+          "path": "uploads/images/2026/09/30/7e420b71-da0d-4fba-ad77-9c5ea647ff5a-dsc09301jpg.jpeg"
+        },
+        {
+          "_id": "6abc89dad48f66422af97b1c",
+          "width": 2149,
+          "path": "uploads/images/2026/09/30/2f9dd3fe-703a-46e1-82cf-aacd8ac950fe-dsc09473jpg.jpeg"
+        },
+        {
+          "_id": "6abc89e7d48f66422af97b38",
+          "width": 4450,
+          "path": "uploads/images/2026/09/30/0fb28284-6699-4ffb-8c31-edbe5719e14b-dsc09543jpg.jpeg"
+        },
+        {
+          "_id": "6abc89dad48f66422af97b1d",
+          "width": 2116,
+          "path": "uploads/images/2026/09/30/653ec61d-cbaf-49a9-bc2b-fcd21cbf2b2c-dsc09501jpg.jpeg"
+        },
+        {
+          "_id": "6abc89dad48f66422af97b1e",
+          "width": 2445,
+          "path": "uploads/images/2026/09/30/3d4b0bed-793f-4055-9823-c3809547e997-dsc09512jpg.jpeg"
+        },
+        {
+          "_id": "6abc89dad48f66422af97b1f",
+          "width": 2061,
+          "path": "uploads/images/2026/09/30/b4480c85-24f6-4041-8849-688ba9aa54f2-dsc09519jpg.jpeg"
+        },
+        {
+          "_id": "6abc89e7d48f66422af97b37",
+          "width": 1587,
+          "path": "uploads/images/2026/09/30/871c00df-92d7-4f24-b892-84887c7bdcaa-dsc09540jpg.jpeg"
+        },
+        {
+          "_id": "6abc89f8d48f66422af97b46",
+          "width": 2587,
+          "path": "uploads/images/2026/09/30/1ca27ed5-9d61-43e5-9c39-9d94835e5e03-dsc09299jpg.jpeg"
+        },
+        {
+          "_id": "6abc8a06d48f66422af97b56",
+          "width": 4411,
+          "path": "uploads/images/2026/09/30/30ca15bf-b340-4264-9ce6-59b489e79c80-dsc09314jpg.jpeg"
+        },
+        {
+          "_id": "6abc8a06d48f66422af97b57",
+          "width": 4135,
+          "path": "uploads/images/2026/09/30/972a8cee-4223-470e-8603-64f4cfd05133-dsc09332jpg.jpeg"
+        },
+        {
+          "_id": "6abc8a17d48f66422af97b65",
+          "width": 5500,
+          "path": "uploads/images/2026/09/30/93b79f91-affb-4e7f-9016-2e7db4881728-img1383jpg.jpeg"
+        }
+      ],
+      "menu": [
+        {
+          "_id": "6abc8a31d48f66422af97b7f",
+          "width": 1341,
+          "path": "uploads/images/2026/09/30/fc5b5c52-200e-4fca-b067-2dd42a01974b-820459011122314064654141244703.jpeg"
+        },
+        {
+          "_id": "6abc8a31d48f66422af97b80",
+          "width": 1335,
+          "path": "uploads/images/2026/09/30/d72bc156-fc36-4565-997a-d485c731dd91-820568724122314064660141244848.jpeg"
+        }
+      ],
+      "employee": [],
+      "view": 178,
+      "deleted": false,
+      "name": "Gu Ốc - Hồ Thị Hương",
+      "slug": "gu-oc-ho-thi-huong",
+      "category": "629c9f6617dd741c0c5b5cf8",
+      "region": {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "name": "phường Xuân An",
+        "slug": "phuong-xuan-an"
+      },
+      "price": {
+        "min": 25000,
+        "max": 299000
+      },
+      "metaKeywordsES": "gu oc - ho thi huong, gu oc, oc, hai san, lau, an vat, bo,",
+      "facebook": {
+        "name": "Gu Ốc ",
+        "link": "https://www.facebook.com/252thichquangduc"
+      },
+      "metaKeywords": "Gu Ốc - Hồ Thị Hương, Gu Ốc, Ốc, Hải sản, lẩu, ăn vặt, bò,",
+      "phone": "0901233567",
+      "wifi": {},
+      "avatar": {
+        "_id": "6abc8998d48f66422af97af1",
+        "width": 4578,
+        "path": "uploads/images/2026/09/30/8642ad78-c137-4268-86c8-47d100d224f1-dsc09274jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 22,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "14:00 - 23:00",
+        "1": "14:00 - 23:00",
+        "2": "14:00 - 23:00",
+        "3": "14:00 - 23:00",
+        "4": "14:00 - 23:00",
+        "5": "14:00 - 23:00",
+        "6": "14:00 - 23:00",
+        "now": "14:00 - 23:00"
+      },
+      "id": "6abc86a0d48f66422af979a0",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "nha-sach-bach-dang-gia-kiem": {
+      "_id": "6abc7a84d48f66422af9761c",
+      "address": {
+        "specific": "315 ấp Bạch Lâm, Xã Thống Nhất, TP. Đồng Nai (đối Diện Xéo Nhà Thờ Đức Tâm)",
+        "geo": {
+          "lat": 11.053775,
+          "long": 107.170729
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.170729,
+          11.053775
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "6300c6cbdf989834a29d21a1",
+        "62cd1ef667b427373e04ff7c"
+      ],
+      "benefits": [
+        {
+          "_id": "629cba5217dd741c0c5b5d7a",
+          "name": "Chỗ đậu ôtô",
+          "icon": "far fa-cars"
+        },
+        {
+          "_id": "629cb91a17dd741c0c5b5d6e",
+          "name": "Máy lạnh & điều hòa",
+          "icon": "far fa-air-conditioner"
+        },
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cba3a17dd741c0c5b5d72",
+          "name": "Giữ xe máy",
+          "icon": "far fa-motorcycle"
+        },
+        {
+          "_id": "629cba5d17dd741c0c5b5d7e",
+          "name": "Chỗ chơi cho trẻ em",
+          "icon": "far fa-baby"
+        }
+      ],
+      "images": [
+        {
+          "_id": "6abc7ae4d48f66422af97697",
+          "width": 4608,
+          "path": "uploads/images/2026/09/30/6234f93d-be4f-4cbc-bbf0-b30fc7d379cd-dsc08757jpg.jpeg"
+        },
+        {
+          "_id": "6abc7ae4d48f66422af97698",
+          "width": 4591,
+          "path": "uploads/images/2026/09/30/90bbe7d4-5935-4f88-a1b6-802c4c88e967-dsc08758jpg.jpeg"
+        },
+        {
+          "_id": "6abc7ae4d48f66422af97699",
+          "width": 1641,
+          "path": "uploads/images/2026/09/30/4fed3904-c4da-4530-99ff-7c699b2fb067-dsc08765jpg.jpeg"
+        },
+        {
+          "_id": "6abc7af5d48f66422af976ae",
+          "width": 4348,
+          "path": "uploads/images/2026/09/30/7853aca2-807e-4106-806d-63b6efff57c2-dsc09027jpg.jpeg"
+        },
+        {
+          "_id": "6abc7af5d48f66422af976af",
+          "width": 4564,
+          "path": "uploads/images/2026/09/30/40dd1fc7-3813-4beb-a0cc-c9462d844545-dsc09032jpg.jpeg"
+        },
+        {
+          "_id": "6abc7af5d48f66422af976b0",
+          "width": 2548,
+          "path": "uploads/images/2026/09/30/018c0cd9-bb6f-4c0a-bcde-dd65d5521193-dsc09040jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b01d48f66422af976be",
+          "width": 4437,
+          "path": "uploads/images/2026/09/30/3313410c-b7b6-4f53-9e9c-4a6d4f734b97-dsc09042jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b01d48f66422af976bf",
+          "width": 5216,
+          "path": "uploads/images/2026/09/30/5554884a-7d8e-4279-a688-c76908d7695c-img1089jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b15d48f66422af976cd",
+          "width": 4537,
+          "path": "uploads/images/2026/09/30/d752a704-88a1-4dfd-bb90-2f93a8ff1d77-dsc08990jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b15d48f66422af976ce",
+          "width": 2704,
+          "path": "uploads/images/2026/09/30/b90835a7-fbc0-4517-8ee8-30109ef17a7e-dsc08931jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b15d48f66422af976cf",
+          "width": 4608,
+          "path": "uploads/images/2026/09/30/a66fe3fe-c972-453e-a2d3-8578b61a6d97-dsc08910jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b24d48f66422af976dd",
+          "width": 4588,
+          "path": "uploads/images/2026/09/30/ed4fc8d6-ad1a-4d4c-b83d-399e47eb70fc-dsc08795jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b24d48f66422af976de",
+          "width": 4608,
+          "path": "uploads/images/2026/09/30/84a1c607-bde9-445b-868b-5c16d7692fb6-dsc08805jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b24d48f66422af976df",
+          "width": 4334,
+          "path": "uploads/images/2026/09/30/a1c727e4-b7cc-4f0a-ad9a-fc5dbe5225a3-dsc08818jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b31d48f66422af97749",
+          "width": 1371,
+          "path": "uploads/images/2026/09/30/9b2787c3-50f8-4537-b207-cff72b10c898-dsc08835jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b31d48f66422af9774a",
+          "width": 2840,
+          "path": "uploads/images/2026/09/30/4eb9119c-8e27-4fc9-9816-a6cca7036d62-dsc08845jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b31d48f66422af9774b",
+          "width": 1479,
+          "path": "uploads/images/2026/09/30/18ae09a3-2385-4237-bed7-cfcad76deb48-dsc08858jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b43d48f66422af97759",
+          "width": 1634,
+          "path": "uploads/images/2026/09/30/c115d39a-e79d-4652-8ae5-ecf7f68bafee-dsc08923jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b43d48f66422af9775a",
+          "width": 1628,
+          "path": "uploads/images/2026/09/30/c54bb05c-1900-42a0-ba3b-31d74699c77c-dsc09024jpg.jpeg"
+        },
+        {
+          "_id": "6abc7b43d48f66422af9775b",
+          "width": 3072,
+          "path": "uploads/images/2026/09/30/d6871162-39e5-412a-a14d-a32fb546afcc-dsc08926jpg.jpeg"
+        }
+      ],
+      "menu": [],
+      "employee": [],
+      "view": 197,
+      "deleted": false,
+      "name": "Nhà Sách Bạch Đằng - Gia Kiệm",
+      "slug": "nha-sach-bach-dang-gia-kiem",
+      "category": "629c9f7817dd741c0c5b5cfc",
+      "region": {
+        "_id": "629cbc7917dd741c0c5b5de9",
+        "name": "Khu vực Khác",
+        "slug": "khu-vuc-khac"
+      },
+      "price": {
+        "min": 30000,
+        "max": 50000
+      },
+      "metaKeywordsES": "",
+      "facebook": {},
+      "metaKeywords": "Nhà Sách Bạch Đằng - Gia Kiệm, Nhà Sách Bạch Đằng, Bạch Đằng - Gia Kiệm, Nhà Sách, Khu vui chơi, ",
+      "phone": "091 860 0817",
+      "wifi": {},
+      "avatar": {
+        "_id": "6abc7ac5d48f66422af97684",
+        "width": 4476,
+        "path": "uploads/images/2026/09/30/2f23ec60-48a2-4524-a539-7a74db069b36-img1087jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 20,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "07:00 - 22:00",
+        "1": "07:00 - 22:00",
+        "2": "07:00 - 22:00",
+        "3": "07:00 - 22:00",
+        "4": "07:00 - 22:00",
+        "5": "07:00 - 22:00",
+        "6": "07:00 - 22:00",
+        "now": "07:00 - 22:00"
+      },
+      "id": "6abc7a84d48f66422af9761c",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "ca-phe-me-bap": {
+      "_id": "69cb77bf05a04540c45b3ffc",
+      "address": {
+        "specific": "13 Trần Phú, Long Khánh, Đồng Nai",
+        "geo": {
+          "lat": 10.933436,
+          "long": 107.243968
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.243968,
+          10.933436
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "629cb77317dd741c0c5b5d1b"
+      ],
+      "benefits": [
+        {
+          "_id": "629cbe9317dd741c0c5b5e4c",
+          "name": "Chỉ Bán Mang Đi",
+          "icon": "fas fa-hand-holding-box"
+        },
+        {
+          "_id": "629cba4517dd741c0c5b5d76",
+          "name": "Giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cb8e217dd741c0c5b5d66",
+          "name": "Có giao hàng",
+          "icon": "far fa-shipping-fast"
+        }
+      ],
+      "images": [
+        {
+          "_id": "69cb786705a04540c45b4036",
+          "width": 2406,
+          "path": "uploads/images/2026/03/31/ac1fb216-2bd3-4c45-a366-c1edf05d7750-dsc00133jpg.jpeg"
+        },
+        {
+          "_id": "69cb786705a04540c45b4037",
+          "width": 2272,
+          "path": "uploads/images/2026/03/31/54f42f51-c944-48df-9ee7-e187af45b55b-dsc00146jpg.jpeg"
+        },
+        {
+          "_id": "69cb786705a04540c45b4038",
+          "width": 2067,
+          "path": "uploads/images/2026/03/31/d7f5cc46-7efb-4697-9459-ee64a8a35945-dsc00154jpg.jpeg"
+        },
+        {
+          "_id": "69cb786705a04540c45b4039",
+          "width": 2094,
+          "path": "uploads/images/2026/03/31/a96505aa-c5b8-4b81-9449-caaefaf5a4f8-dsc00183jpg.jpeg"
+        },
+        {
+          "_id": "69cb786705a04540c45b403a",
+          "width": 2325,
+          "path": "uploads/images/2026/03/31/79b21aa5-c4d2-40e4-aef6-1eed2b606867-dsc00156jpg.jpeg"
+        },
+        {
+          "_id": "69cb789705a04540c45b4048",
+          "width": 2216,
+          "path": "uploads/images/2026/03/31/1de300c2-5459-4997-a3ad-e0d7178ff506-dsc00160jpg.jpeg"
+        },
+        {
+          "_id": "69cb789705a04540c45b4049",
+          "width": 1987,
+          "path": "uploads/images/2026/03/31/6514c43f-37f1-463e-a005-6ab344cd305c-dsc00166jpg.jpeg"
+        },
+        {
+          "_id": "69cb789705a04540c45b404a",
+          "width": 2772,
+          "path": "uploads/images/2026/03/31/1fb41fa9-4a0c-4a7c-8680-8c8b1602bece-dsc00187jpg.jpeg"
+        },
+        {
+          "_id": "69cb789705a04540c45b404b",
+          "width": 2567,
+          "path": "uploads/images/2026/03/31/a1ba0239-8595-427f-9905-effb8c4f56cc-dsc00252jpg.jpeg"
+        },
+        {
+          "_id": "69cb78a105a04540c45b4059",
+          "width": 4032,
+          "path": "uploads/images/2026/03/31/5d2bb5c1-bef3-43bf-b0d5-373ec5d8e085-img1826jpg.jpeg"
+        },
+        {
+          "_id": "69cb78a105a04540c45b405a",
+          "width": 2518,
+          "path": "uploads/images/2026/03/31/5312e185-f6db-437d-b6f5-72a49440e1ec-img1833jpg.jpeg"
+        }
+      ],
+      "menu": [
+        {
+          "_id": "69cb78ae05a04540c45b4068",
+          "width": 3578,
+          "path": "uploads/images/2026/03/31/2ad75efb-d851-48d1-87cb-0724386bfb9c-img1821jpg.jpeg"
+        }
+      ],
+      "employee": [],
+      "view": 470,
+      "deleted": false,
+      "name": "Cà Phê Mẹ Bắp",
+      "slug": "ca-phe-me-bap",
+      "category": "629c9f6617dd741c0c5b5cf8",
+      "region": {
+        "_id": "629cbc4617dd741c0c5b5dcd",
+        "name": "phường Xuân Bình",
+        "slug": "phuong-xuan-binh"
+      },
+      "price": {
+        "min": 30000,
+        "max": 50000
+      },
+      "metaKeywordsES": "",
+      "facebook": {},
+      "metaKeywords": "Cà Phê Mẹ Bắp, Cà Phê, Coffee, Trà, ",
+      "phone": "0352 125 634",
+      "wifi": {},
+      "avatar": {
+        "_id": "69cb782e05a04540c45b4023",
+        "width": 3578,
+        "path": "uploads/images/2026/03/31/3f054b56-7a53-4c1e-a065-4f642977fdf7-img1821jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 11,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "05:30 - 20:30",
+        "1": "05:30 - 20:30",
+        "2": "05:30 - 20:30",
+        "3": "05:30 - 20:30",
+        "4": "05:30 - 20:30",
+        "5": "05:30 - 20:30",
+        "6": "05:30 - 20:30",
+        "now": "05:30 - 20:30"
+      },
+      "id": "69cb77bf05a04540c45b3ffc",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "tram-channel-coffee-and-food": {
+      "_id": "69d6100405a04540c45e3a48",
+      "address": {
+        "specific": "420 Hồ Thị Hương, Long Khánh, Đồng Nai (kế Rạp BHD)",
+        "geo": {
+          "lat": 10.923434,
+          "long": 107.259177
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.259177,
+          10.923434
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "629cbd1117dd741c0c5b5e13",
+        "629cbcfb17dd741c0c5b5e0f",
+        "629cb7fb17dd741c0c5b5d43",
+        "629cb78c17dd741c0c5b5d23",
+        "629cb76417dd741c0c5b5d17"
+      ],
+      "benefits": [
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cba4517dd741c0c5b5d76",
+          "name": "Giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cba6f17dd741c0c5b5d82",
+          "name": "Bàn ngoài trời",
+          "icon": "far fa-sun-cloud"
+        },
+        {
+          "_id": "629cb8e217dd741c0c5b5d66",
+          "name": "Có giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cba3a17dd741c0c5b5d72",
+          "name": "Giữ xe máy",
+          "icon": "far fa-motorcycle"
+        }
+      ],
+      "images": [
+        {
+          "_id": "69d610d005a04540c45e3ab1",
+          "width": 2000,
+          "path": "uploads/images/2026/04/08/ebc81686-3eed-4ded-b668-b01bd46daaec-dsc00531jpg.jpeg"
+        },
+        {
+          "_id": "69d610d005a04540c45e3ab2",
+          "width": 2448,
+          "path": "uploads/images/2026/04/08/6ba4f6ef-5bc1-4fe7-a94a-bc7c8b67b32d-dsc00567jpg.jpeg"
+        },
+        {
+          "_id": "69d610d005a04540c45e3ab3",
+          "width": 2656,
+          "path": "uploads/images/2026/04/08/6dd00737-151e-43d2-b7e4-70d73edf4eaa-dsc00552jpg.jpeg"
+        },
+        {
+          "_id": "69d610d005a04540c45e3ab4",
+          "width": 2474,
+          "path": "uploads/images/2026/04/08/31c9741c-5896-4cbb-a425-fa13134ef879-dsc00559jpg.jpeg"
+        },
+        {
+          "_id": "69d610d005a04540c45e3ab5",
+          "width": 2616,
+          "path": "uploads/images/2026/04/08/cc212a16-1b4e-41da-baf7-eb7772c5dfd6-dsc00563jpg.jpeg"
+        },
+        {
+          "_id": "69d6111605a04540c45e3aca",
+          "width": 2592,
+          "path": "uploads/images/2026/04/08/cb185c2b-64ba-4e9f-b4ee-efd2de937aed-dsc00564jpg.jpeg"
+        },
+        {
+          "_id": "69d6111605a04540c45e3acb",
+          "width": 2542,
+          "path": "uploads/images/2026/04/08/d07f93e3-7609-45b4-9bff-f274a030a214-dsc00571jpg.jpeg"
+        },
+        {
+          "_id": "69d6111605a04540c45e3acc",
+          "width": 2130,
+          "path": "uploads/images/2026/04/08/a6461e32-46d1-4436-8212-ce96f46629ca-dsc00581jpg.jpeg"
+        },
+        {
+          "_id": "69d6111605a04540c45e3acd",
+          "width": 2228,
+          "path": "uploads/images/2026/04/08/9019a573-2565-48ab-bd39-9553ea569573-dsc00585jpg.jpeg"
+        },
+        {
+          "_id": "69d6111605a04540c45e3ace",
+          "width": 2239,
+          "path": "uploads/images/2026/04/08/98956994-88ec-4768-a8cb-841e5cf5a305-dsc00591jpg.jpeg"
+        },
+        {
+          "_id": "69d6114905a04540c45e3ae2",
+          "width": 2700,
+          "path": "uploads/images/2026/04/08/89a60ec2-13d2-43f3-b24b-2f98533cf7c7-dsc00604jpg.jpeg"
+        },
+        {
+          "_id": "69d6114905a04540c45e3ae3",
+          "width": 2268,
+          "path": "uploads/images/2026/04/08/c2a8c8aa-8d79-4298-9ca0-8b88ff4d83f3-dsc00602jpg.jpeg"
+        },
+        {
+          "_id": "69d6114905a04540c45e3ae4",
+          "width": 4032,
+          "path": "uploads/images/2026/04/08/3e572b57-6396-42bb-bd1f-7d64c37e871d-img2014jpg.jpeg"
+        },
+        {
+          "_id": "69d6114905a04540c45e3ae5",
+          "width": 4032,
+          "path": "uploads/images/2026/04/08/a150c216-cb40-46b6-aa85-7af75bdf2369-img2018jpg.jpeg"
+        }
+      ],
+      "menu": [
+        {
+          "_id": "69d6116105a04540c45e3b48",
+          "width": 2048,
+          "path": "uploads/images/2026/04/08/8f757793-5b5c-4c6c-852c-21117fd08619-655814902122107949511279054910.jpeg"
+        }
+      ],
+      "employee": [],
+      "view": 485,
+      "deleted": false,
+      "name": "Trạm Channel - Coffee And Food",
+      "slug": "tram-channel-coffee-and-food",
+      "category": "629c9f6617dd741c0c5b5cf8",
+      "region": {
+        "_id": "629cbc2617dd741c0c5b5dbd",
+        "name": "phường Xuân Thanh",
+        "slug": "phuong-xuan-thanh"
+      },
+      "price": {
+        "min": 12000,
+        "max": 35000
+      },
+      "metaKeywordsES": "tram channel, tram coffee, tra sua, ca phe, tra, tra trai cay,,",
+      "facebook": {
+        "name": "Trạm Channel",
+        "link": "https://www.facebook.com/TramChannelCoffeeAndFood"
+      },
+      "metaKeywords": "Trạm Channel, Trạm Coffee, Trà sữa, cà phê, trà, trà trái cây,,",
+      "phone": "0328 958 541",
+      "wifi": {},
+      "avatar": {
+        "_id": "69d610ad05a04540c45e3a97",
+        "width": 4032,
+        "path": "uploads/images/2026/04/08/1a5b785c-e7dc-473e-af94-45b24e0cf86f-img2013jpg.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 14,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "06:00 - 22:00",
+        "1": "06:00 - 22:00",
+        "2": "06:00 - 22:00",
+        "3": "06:00 - 22:00",
+        "4": "06:00 - 22:00",
+        "5": "06:00 - 22:00",
+        "6": "06:00 - 22:00",
+        "now": "06:00 - 22:00"
+      },
+      "id": "69d6100405a04540c45e3a48",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "tiem-tra-ti-tach": {
+      "_id": "69c253ad05a04540c4592695",
+      "address": {
+        "specific": "Số 6, Trần Nhân Tông, Phường Bảo Vinh",
+        "geo": {
+          "lat": 10.94701,
+          "long": 107.246699
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.246699,
+          10.94701
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "629cbcfb17dd741c0c5b5e0f",
+        "629cb85317dd741c0c5b5d53",
+        "629cb77317dd741c0c5b5d1b",
+        "629cb78c17dd741c0c5b5d23"
+      ],
+      "benefits": [
+        {
+          "_id": "629cba5217dd741c0c5b5d7a",
+          "name": "Chỗ đậu ôtô",
+          "icon": "far fa-cars"
+        },
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cb91a17dd741c0c5b5d6e",
+          "name": "Máy lạnh & điều hòa",
+          "icon": "far fa-air-conditioner"
+        },
+        {
+          "_id": "629cba6f17dd741c0c5b5d82",
+          "name": "Bàn ngoài trời",
+          "icon": "far fa-sun-cloud"
+        },
+        {
+          "_id": "629cba4517dd741c0c5b5d76",
+          "name": "Giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cb8e217dd741c0c5b5d66",
+          "name": "Có giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cba3a17dd741c0c5b5d72",
+          "name": "Giữ xe máy",
+          "icon": "far fa-motorcycle"
+        }
+      ],
+      "images": [
+        {
+          "_id": "69c2543805a04540c4592792",
+          "width": 2745,
+          "path": "uploads/images/2026/03/24/9621112f-eb5c-4a73-93e3-68361edccd5d-dsc09918jpg.jpeg"
+        },
+        {
+          "_id": "69c2542805a04540c459277a",
+          "width": 2549,
+          "path": "uploads/images/2026/03/24/558d9343-a4ed-47ea-b8e7-d62626493867-dsc09913jpg.jpeg"
+        },
+        {
+          "_id": "69c2545b05a04540c45927bd",
+          "width": 2207,
+          "path": "uploads/images/2026/03/24/88fd037d-97c4-4acf-afc8-e4b0837f4c7c-dsc09978jpg.jpeg"
+        },
+        {
+          "_id": "69c253e405a04540c4592732",
+          "width": 4597,
+          "path": "uploads/images/2026/03/24/0b722a78-94b5-48ff-b899-6985de4b90f6-dsc00073jpg.jpeg"
+        },
+        {
+          "_id": "69c253d605a04540c4592716",
+          "width": 2327,
+          "path": "uploads/images/2026/03/24/ffcfbe6c-e598-4976-9f3b-cd6dd7232add-dsc00006jpg.jpeg"
+        },
+        {
+          "_id": "69c253d605a04540c4592717",
+          "width": 2679,
+          "path": "uploads/images/2026/03/24/e7504fc3-838a-422c-be63-18ee756ad480-dsc00066jpg.jpeg"
+        },
+        {
+          "_id": "69c253d605a04540c4592718",
+          "width": 2570,
+          "path": "uploads/images/2026/03/24/74c902b7-5754-423f-a278-33495d86153b-dsc00072jpg.jpeg"
+        },
+        {
+          "_id": "69c253e405a04540c4592733",
+          "width": 4608,
+          "path": "uploads/images/2026/03/24/d79a6d9a-74ba-4d22-94ac-7ae159ccfe99-dsc00089jpg.jpeg"
+        },
+        {
+          "_id": "69c253ef05a04540c4592748",
+          "width": 2970,
+          "path": "uploads/images/2026/03/24/600cd60b-45e1-4c18-a516-d849a26803bd-dsc00093jpg.jpeg"
+        },
+        {
+          "_id": "69c253ef05a04540c4592749",
+          "width": 2611,
+          "path": "uploads/images/2026/03/24/abfd6cee-61b3-4df5-87ef-08669241b007-dsc00097jpg.jpeg"
+        },
+        {
+          "_id": "69c253ef05a04540c459274a",
+          "width": 4608,
+          "path": "uploads/images/2026/03/24/2b5fdd49-7ddf-4b9d-bca3-76ef5fa2a45e-dsc00104jpg.jpeg"
+        },
+        {
+          "_id": "69c253fb05a04540c4592758",
+          "width": 2841,
+          "path": "uploads/images/2026/03/24/2ff1e654-d8fe-49ef-88f8-1aefa7d4cae6-dsc00106jpg.jpeg"
+        },
+        {
+          "_id": "69c253fb05a04540c4592759",
+          "width": 2693,
+          "path": "uploads/images/2026/03/24/c638e052-2484-4a18-9398-df32e914ffcc-dsc00112jpg.jpeg"
+        },
+        {
+          "_id": "69c253fb05a04540c459275a",
+          "width": 2998,
+          "path": "uploads/images/2026/03/24/0e5ef442-d85b-40e0-9e81-61d82fa99ec2-dsc00120jpg.jpeg"
+        },
+        {
+          "_id": "69c2540905a04540c4592768",
+          "width": 4599,
+          "path": "uploads/images/2026/03/24/2ed00b94-cada-49e4-ac92-27cd8910e7c7-dsc00122jpg.jpeg"
+        },
+        {
+          "_id": "69c2540905a04540c4592769",
+          "width": 2633,
+          "path": "uploads/images/2026/03/24/b4329e78-c318-4e7e-b7ff-d9b723175d2e-dsc09874jpg.jpeg"
+        },
+        {
+          "_id": "69c2540905a04540c459276a",
+          "width": 2591,
+          "path": "uploads/images/2026/03/24/7513e6c0-dc91-4fb8-829c-fd789c76dd43-dsc09880jpg.jpeg"
+        },
+        {
+          "_id": "69c2542805a04540c4592779",
+          "width": 2553,
+          "path": "uploads/images/2026/03/24/d637a807-5939-4ffd-bc1b-6494f4213d03-dsc09906jpg.jpeg"
+        },
+        {
+          "_id": "69c2543805a04540c4592794",
+          "width": 2633,
+          "path": "uploads/images/2026/03/24/6f4bd2b5-67ac-4897-8b36-eafbbdb3e4cf-dsc09928jpg.jpeg"
+        },
+        {
+          "_id": "69c2544a05a04540c45927ad",
+          "width": 2621,
+          "path": "uploads/images/2026/03/24/7df3e096-2b98-45e7-bb3b-a4bb58adb6de-dsc09934jpg.jpeg"
+        },
+        {
+          "_id": "69c2544a05a04540c45927ae",
+          "width": 2478,
+          "path": "uploads/images/2026/03/24/3fecc654-4909-499b-90fe-e9626da257c6-dsc09941jpg.jpeg"
+        },
+        {
+          "_id": "69c2545b05a04540c45927bc",
+          "width": 2730,
+          "path": "uploads/images/2026/03/24/04faba3e-aa9b-4a35-a75e-d7559f9b384a-dsc09971jpg.jpeg"
+        },
+        {
+          "_id": "69c2545b05a04540c45927be",
+          "width": 2379,
+          "path": "uploads/images/2026/03/24/af9b7d1a-c1b4-4a93-b023-03e37a3c6fea-dsc09981jpg.jpeg"
+        },
+        {
+          "_id": "69c2546805a04540c45927cc",
+          "width": 2440,
+          "path": "uploads/images/2026/03/24/4d97078e-4863-4c2a-a2eb-94b4a5242b30-dsc09986jpg.jpeg"
+        },
+        {
+          "_id": "69c2546805a04540c45927cd",
+          "width": 2557,
+          "path": "uploads/images/2026/03/24/9d18347a-e958-4a88-9785-9bc856e53b82-dsc09988jpg.jpeg"
+        },
+        {
+          "_id": "69c2546805a04540c45927ce",
+          "width": 2803,
+          "path": "uploads/images/2026/03/24/13e4db6a-e67d-4a26-b1cf-6d3c245ae149-dsc09994jpg.jpeg"
+        },
+        {
+          "_id": "69c2547105a04540c45927dc",
+          "width": 4476,
+          "path": "uploads/images/2026/03/24/cfb23737-de8b-44b5-89bc-f5301ce82853-hhjpg.jpeg"
+        }
+      ],
+      "menu": [
+        {
+          "_id": "69c2547c05a04540c45927ea",
+          "width": 1414,
+          "path": "uploads/images/2026/03/24/0931cbd4-0575-4cb1-8cba-758c8d7ec31d-648449423122103568491280781860.jpeg"
+        }
+      ],
+      "employee": [],
+      "view": 469,
+      "deleted": false,
+      "name": "Tiệm Trà Tí Tách",
+      "slug": "tiem-tra-ti-tach",
+      "category": "629c9f6617dd741c0c5b5cf8",
+      "region": {
+        "_id": "629cbc7217dd741c0c5b5de5",
+        "name": "phường Bảo Vinh",
+        "slug": "phuong-bao-vinh"
+      },
+      "price": {
+        "min": 20000,
+        "max": 39000
+      },
+      "facebook": {
+        "name": "Tiệm Trà Tí Tách",
+        "link": "https://www.facebook.com/profile.php?id=61588423445153"
+      },
+      "phone": "0384884691",
+      "metaKeywords": "Tiệm Trà Tí Tách, Tiệm Trà, Tí Tách, Trà sữa, trà, cà phê,",
+      "metaKeywordsES": "",
+      "avatar": {
+        "_id": "69c253c505a04540c45926e3",
+        "width": 4476,
+        "path": "uploads/images/2026/03/24/76511185-c248-4a62-9d08-0cc6388472e4-hhjpg.jpeg"
+      },
+      "wifi": {},
+      "reviewCount": 0,
+      "imageCount": 27,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "08:00 - 22:00",
+        "1": "08:00 - 22:00",
+        "2": "08:00 - 22:00",
+        "3": "08:00 - 22:00",
+        "4": "08:00 - 22:00",
+        "5": "08:00 - 22:00",
+        "6": "08:00 - 22:00",
+        "now": "08:00 - 22:00"
+      },
+      "id": "69c253ad05a04540c4592695",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "cui-ca-phe": {
+      "_id": "69afc5ff05a04540c449c202",
+      "address": {
+        "specific": "137 Nguyễn Thị Minh Khai, Long Khánh",
+        "geo": {
+          "lat": 10.923112,
+          "long": 107.248013
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.248013,
+          10.923112
+        ]
+      },
+      "verified": false,
+      "isHot": false,
+      "order": 100,
+      "subCategories": [
+        "629cbcfb17dd741c0c5b5e0f",
+        "629cb78c17dd741c0c5b5d23",
+        "629cb77317dd741c0c5b5d1b"
+      ],
+      "benefits": [
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cba6f17dd741c0c5b5d82",
+          "name": "Bàn ngoài trời",
+          "icon": "far fa-sun-cloud"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cba4517dd741c0c5b5d76",
+          "name": "Giao hàng",
+          "icon": "far fa-shipping-fast"
+        },
+        {
+          "_id": "629cb8e217dd741c0c5b5d66",
+          "name": "Có giao hàng",
+          "icon": "far fa-shipping-fast"
+        }
+      ],
+      "images": [
+        {
+          "_id": "69afc67005a04540c449c233",
+          "width": 2048,
+          "path": "uploads/images/2026/03/10/b79a9f60-0c3e-48b4-a2c6-15e5343ea1b9-629708645122188643690341844757.jpeg"
+        },
+        {
+          "_id": "69afc67005a04540c449c234",
+          "width": 2495,
+          "path": "uploads/images/2026/03/10/29e8abd6-6e56-4f1f-b831-8f292c42b630-dsc01936jpg.jpeg"
+        },
+        {
+          "_id": "69afc67c05a04540c449c246",
+          "width": 2974,
+          "path": "uploads/images/2026/03/10/3125a858-7193-44dc-aaab-4ff20cd6411d-dsc01811jpg.jpeg"
+        },
+        {
+          "_id": "69afc67c05a04540c449c247",
+          "width": 2826,
+          "path": "uploads/images/2026/03/10/ac9d6787-6969-4447-89fc-b60d1c78a7d1-dsc01842jpg.jpeg"
+        },
+        {
+          "_id": "69afc67005a04540c449c235",
+          "width": 2477,
+          "path": "uploads/images/2026/03/10/43ec2cb4-8f8a-4aaa-acbc-4b7be6c1784c-dsc01950jpg.jpeg"
+        },
+        {
+          "_id": "69afc67005a04540c449c236",
+          "width": 2048,
+          "path": "uploads/images/2026/03/10/09413454-5eb1-4a74-add9-35da36e33feb-geminigeneratedimagej5pg1fj5pg.jpeg"
+        },
+        {
+          "_id": "69afc67005a04540c449c237",
+          "width": 2385,
+          "path": "uploads/images/2026/03/10/7e12e9fd-6baf-4994-9965-55dfa21baf60-dsc01946jpg.jpeg"
+        },
+        {
+          "_id": "69afc67c05a04540c449c245",
+          "width": 2674,
+          "path": "uploads/images/2026/03/10/0de1507a-7ca4-4056-a7b2-14d60b46d9d7-dsc01806jpg.jpeg"
+        },
+        {
+          "_id": "69afc69a05a04540c449c25f",
+          "width": 2780,
+          "path": "uploads/images/2026/03/10/cd6a3b85-d9ad-4999-a86a-fc02870c502b-dsc01868jpg.jpeg"
+        },
+        {
+          "_id": "69afc69a05a04540c449c260",
+          "width": 2385,
+          "path": "uploads/images/2026/03/10/170da5b8-d037-47a9-b205-2548fac9e0e9-dsc01946jpg.jpeg"
+        },
+        {
+          "_id": "69afc69a05a04540c449c261",
+          "width": 2677,
+          "path": "uploads/images/2026/03/10/a752b7f7-12b7-441c-a363-47fd91c15564-dsc01956jpg.jpeg"
+        },
+        {
+          "_id": "69afc69a05a04540c449c262",
+          "width": 2748,
+          "path": "uploads/images/2026/03/10/52ee9b81-d90f-4075-a01e-796d1762c45e-dsc01982jpg.jpeg"
+        },
+        {
+          "_id": "69afc69a05a04540c449c263",
+          "width": 2274,
+          "path": "uploads/images/2026/03/10/c791e5cb-1c17-4451-9661-5fba46ff3943-dsc02004jpg.jpeg"
+        }
+      ],
+      "menu": [
+        {
+          "_id": "69afc6c705a04540c449c287",
+          "width": 4156,
+          "path": "uploads/images/2026/03/10/1742e1aa-452a-43bd-b971-655788234fb1-dsc01885jpg.jpeg"
+        }
+      ],
+      "employee": [],
+      "view": 563,
+      "deleted": false,
+      "name": "Củi Cà Phê",
+      "slug": "cui-ca-phe",
+      "category": "629c9f6617dd741c0c5b5cf8",
+      "region": {
+        "_id": "629cbc3e17dd741c0c5b5dc9",
+        "name": "phường Xuân Hòa",
+        "slug": "phuong-xuan-hoa"
+      },
+      "price": {
+        "min": 30000,
+        "max": 50000
+      },
+      "metaKeywordsES": "",
+      "facebook": {
+        "name": "Củi Cà Phê",
+        "link": "https://www.facebook.com/profile.php?id=61560255341890"
+      },
+      "metaKeywords": "Củi Cà Phê, Cà phê, trà, trà trái cây, trà sữa, ",
+      "phone": "0937 285 181",
+      "wifi": {},
+      "avatar": {
+        "_id": "69afc65405a04540c449c226",
+        "width": 2048,
+        "path": "uploads/images/2026/03/10/b7229eda-8f44-4f1b-b083-52558dac5868-629708645122188643690341844757.jpeg"
+      },
+      "reviewCount": 0,
+      "imageCount": 13,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "07:00 - 23:00",
+        "1": "07:00 - 23:00",
+        "2": "07:00 - 23:00",
+        "3": "07:00 - 23:00",
+        "4": "07:00 - 23:00",
+        "5": "07:00 - 23:00",
+        "6": "07:00 - 23:00",
+        "now": "07:00 - 23:00"
+      },
+      "id": "69afc5ff05a04540c449c202",
+      "rate": {
+        "summary": 0,
+        "position": 0,
+        "view": 0,
+        "drink": 0,
+        "service": 0,
+        "price": 0
+      }
+    },
+    "khach-san-quoc-thanh-long-khanh": {
+      "_id": "62a0dde1e2f5d451eca0b1c6",
+      "address": {
+        "specific": "03 Nguyễn Thái Học, Xuân An, Long Khánh, Đồng Nai, Vietnam",
+        "geo": {
+          "lat": 10.9311,
+          "long": 107.2453
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.2453,
+          10.9311
+        ]
+      },
+      "verified": false,
+      "isHot": true,
+      "subCategories": [],
+      "benefits": [
+        {
+          "_id": "629cba5217dd741c0c5b5d7a",
+          "name": "Chỗ đậu ôtô",
+          "icon": "far fa-cars"
+        },
+        {
+          "_id": "629cb91a17dd741c0c5b5d6e",
+          "name": "Máy lạnh & điều hòa",
+          "icon": "far fa-air-conditioner"
+        },
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cba3a17dd741c0c5b5d72",
+          "name": "Giữ xe máy",
+          "icon": "far fa-motorcycle"
+        },
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        }
+      ],
+      "images": [
+        {
+          "_id": "62a0dde5e2f5d451eca0b1ca",
+          "width": 960,
+          "path": "uploads/images/2022/06/08/555c1e77-5b26-4048-9e10-76d8e98be936-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1cb",
+          "width": 576,
+          "path": "uploads/images/2022/06/08/2f34359c-3c27-4e5c-a7c7-af1f4333b5c6-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1cc",
+          "width": 960,
+          "path": "uploads/images/2022/06/08/4b12650d-5667-477f-bb27-6773fc0527cd-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1cd",
+          "width": 1636,
+          "path": "uploads/images/2022/06/08/665a6178-18a6-428e-b511-f009e129fea9-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1ce",
+          "width": 1920,
+          "path": "uploads/images/2022/06/08/41e0d10d-d8df-4aab-99f8-020a6feb153a-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1cf",
+          "width": 1920,
+          "path": "uploads/images/2022/06/08/64d652bb-91da-457e-81e9-60ce64555f85-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1d0",
+          "width": 1920,
+          "path": "uploads/images/2022/06/08/97903927-e0e8-48ab-8a7c-e823a8d1aeca-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1d1",
+          "width": 1920,
+          "path": "uploads/images/2022/06/08/1c81856b-f3d6-4a57-9e91-ef99308fddb4-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1d2",
+          "width": 1920,
+          "path": "uploads/images/2022/06/08/da521c1f-086f-42cf-9429-b5a7c4252b62-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1d3",
+          "width": 1024,
+          "path": "uploads/images/2022/06/08/6b1a2c6c-d468-4cfb-87dd-b49ebb3d5d01-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1d4",
+          "width": 1920,
+          "path": "uploads/images/2022/06/08/af68fe1b-9e1c-4362-8e29-70eacaaf6805-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1d5",
+          "width": 1024,
+          "path": "uploads/images/2022/06/08/c7bcd505-f558-4437-b8ad-fd19705ac519-image.jpeg"
+        },
+        {
+          "_id": "62a0dde5e2f5d451eca0b1d6",
+          "width": 1920,
+          "path": "uploads/images/2022/06/08/707455db-d250-4630-ae85-b2de6b6a3724-image.jpeg"
+        }
+      ],
+      "menu": [],
+      "view": 641283,
+      "deleted": false,
+      "name": "Khách Sạn Quốc Thanh Long Khánh",
+      "slug": "khach-san-quoc-thanh-long-khanh",
+      "price": {
+        "min": 420000,
+        "max": 850000
+      },
+      "region": {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "name": "phường Xuân An",
+        "slug": "phuong-xuan-an"
+      },
+      "intro": "Tọa lạc tại trung tâm, Quốc Thanh Hotel tự hào là một khách sạn hàng đầu tại Long Khánh về dịch vụ và tiện nghi. Hiểu rõ giá trị và trách nhiệm của mình, nên từ khi đi vào hoạt động Quốc Thanh hotel đã luôn không ngừng phát triển để mang lại những dịch vụ và tiện ích liên kết nội ngoại khu nhằm nâng cao trải nghiệm cho Khách hàng. Với phương châm “Sự hài lòng của Khách hàng là kim chỉ nam cho sự phát triển của Quốc Thanh Hotel”.",
+      "phone": "02513 719 666",
+      "facebook": {
+        "name": "pg/quocthanhhotel",
+        "link": "https://www.facebook.com/pg/quocthanhhotel"
+      },
+      "category": "629c9fb917dd741c0c5b5d0c",
+      "avatar": {
+        "_id": "62a0dde1e2f5d451eca0b1c8",
+        "width": 960,
+        "path": "uploads/images/2022/06/08/0599d345-cf3f-4a30-9bb9-60e1f17cb1b6-image.jpeg"
+      },
+      "employee": [],
+      "metaKeywords": "khách sạn quốc thanh, phố đi bộ, khách sạn, khách sạn long khánh,, khách sạn quốc thanh long khánh, quốc thanh long khánh, quốc thanh,, cafe quốc thanh, cafe view phố đi bộ,",
+      "wifi": {},
+      "metaKeywordsES": "khach san quoc thanh, pho di bo, khach san, khach san long khanh,, khach san quoc thanh long khanh, quoc thanh long khanh, quoc thanh,, cafe quoc thanh, cafe view pho di bo,",
+      "order": 100,
+      "reviewCount": 2,
+      "imageCount": 13,
+      "openingType": "always_open",
+      "openingStatus": "is_open",
+      "openingTime": {
+        "0": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "now": ""
+      },
+      "id": "62a0dde1e2f5d451eca0b1c6",
+      "rate": {
+        "summary": "5.0",
+        "position": "5.0",
+        "view": "5.0",
+        "drink": "5.0",
+        "service": "5.0",
+        "price": "5.0"
+      }
+    },
+    "rap-chieu-phim-bhd-star-long-khanh": {
+      "_id": "629f8bec9e58837f05e29780",
+      "address": {
+        "specific": "Tầng 2 - 430 Hồ Thị Hương, Xuân An, Long Khánh, Đồng Nai",
+        "geo": {
+          "lat": 10.9231811,
+          "long": 107.2591935
+        }
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          107.2591935,
+          10.9231811
+        ]
+      },
+      "verified": false,
+      "isHot": true,
+      "subCategories": [],
+      "benefits": [
+        {
+          "_id": "629cb90b17dd741c0c5b5d6a",
+          "name": "Thanh toán bằng thẻ",
+          "icon": "far fa-credit-card"
+        },
+        {
+          "_id": "629cb89817dd741c0c5b5d62",
+          "name": "Wi-Fi miễn phí",
+          "icon": "far fa-wifi"
+        },
+        {
+          "_id": "629cb91a17dd741c0c5b5d6e",
+          "name": "Máy lạnh & điều hòa",
+          "icon": "far fa-air-conditioner"
+        },
+        {
+          "_id": "629cba5217dd741c0c5b5d7a",
+          "name": "Chỗ đậu ôtô",
+          "icon": "far fa-cars"
+        },
+        {
+          "_id": "629cba3a17dd741c0c5b5d72",
+          "name": "Giữ xe máy",
+          "icon": "far fa-motorcycle"
+        }
+      ],
+      "images": [
+        {
+          "_id": "629f8bed9e58837f05e2978b",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/f8af1f6d-4fe4-4073-aebf-344bd32882f4-dsc02102-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e2978c",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/8815156a-5fe2-4050-b26a-b5976095b4d3-dsc02104-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e2978d",
+          "width": 1108,
+          "path": "uploads/images/2022/06/07/aa6cbc6e-895b-4ad2-b5e1-c82ad963630c-dsc02112-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e2978e",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/009e720c-311d-41e2-ac3e-733762b7f01c-dsc02118-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e2978f",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/d7015b50-3e97-43b7-b9a7-84b1b28075f7-dsc02120-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e29790",
+          "width": 1152,
+          "path": "uploads/images/2022/06/07/7b3c53d0-e31e-482a-b945-d0c741983860-dsc02126-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e29791",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/0e2e21e3-2dc4-4918-9d68-c8d748dfae28-dsc02129-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e29792",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/5656fb18-b8b7-45f9-87f4-21a367986ace-dsc02131-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e29793",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/8fddfaac-c340-45f8-ad0b-9ab9a0731b43-dsc02133-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e29794",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/b926fd60-4e71-4855-80e9-cb4b84f72d71-dsc02139-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e29795",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/d9550347-3acb-4b1a-8503-bc8f49df2eae-dsc02141-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e29796",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/9d808268-19ff-4812-9dbe-2667b91d2065-dsc02151-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e29797",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/461eaad8-5124-4715-9c40-e7210b707c2d-dsc02156-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e29798",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/b351796a-b45a-4096-bf93-6aef0d0b3eb8-dsc02161-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e29799",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/b7900da9-5d82-49dc-9ad6-0d13753d9319-dsc02165-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e2979a",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/d8a671c4-6a1c-4292-b00d-fe9efe0da9d9-dsc02170-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e2979b",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/3e2fb5c9-2a14-4017-a53a-04f692676e44-dsc02172-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e2979c",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/6cf3aef3-a5b3-4484-b065-6c32c9000c91-dsc02179-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e2979d",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/1e525032-8784-4fb1-a507-728c999f07ff-dsc02186-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e2979e",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/d675f83e-8c6b-477b-af10-5db7136d568d-dsc02188-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e2979f",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/b1179122-c2f8-48a3-990e-dd4e02e8f6b6-dsc02190-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e297a0",
+          "width": 1152,
+          "path": "uploads/images/2022/06/07/dfe928cc-6cfe-4b72-aaab-dff41b048bc3-dsc02192-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e297a1",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/bdbcfe4f-5341-409f-bb12-2f8f3abe321e-dsc02205-copy-mediumjpg.jpeg"
+        },
+        {
+          "_id": "629f8bed9e58837f05e297a2",
+          "width": 768,
+          "path": "uploads/images/2022/06/07/7ad02a05-d994-448a-ab18-3db588f46db3-dsc02208-copy-mediumjpg.jpeg"
+        }
+      ],
+      "menu": [
+        {
+          "_id": "629f8c1d9e58837f05e297b0",
+          "width": 885,
+          "path": "uploads/images/2022/06/07/72ea86a2-0271-42df-afc7-8349021d58f4-dsc02210-copy-mediumjpg.jpeg"
+        }
+      ],
+      "view": 9856779,
+      "deleted": false,
+      "name": "Rạp Chiếu Phim BHD Star Long Khánh",
+      "slug": "rap-chieu-phim-bhd-star-long-khanh",
+      "category": "629c9f8817dd741c0c5b5d00",
+      "region": {
+        "_id": "629cbc4c17dd741c0c5b5dd1",
+        "name": "phường Xuân An",
+        "slug": "phuong-xuan-an"
+      },
+      "price": {
+        "min": 50000,
+        "max": 85000
+      },
+      "intro": "BHD Star Long Khánh Rạp mới được đầu tư siêu xịn, hiện đại, rộng rãi nằm ngay trong khu phức hợp Sunshine đây rồi.",
+      "facebook": {
+        "name": "Rạp Chiếu Phim BHD Star Long Khánh ",
+        "link": "https://www.facebook.com/bhdstarlongkhanh/"
+      },
+      "website": "https://www.bhdstar.vn/",
+      "phone": "02512860696",
+      "metaKeywords": "rạp chiếu phim, bhd, bhd long khánh, rạp phim long khánh,, bhd star, bhd hồ thị hương, rạp bhd,,",
+      "avatar": {
+        "_id": "629f8bec9e58837f05e29789",
+        "width": 1108,
+        "path": "uploads/images/2022/06/07/20df71db-fb55-43b5-a344-a24cf0c59083-dsc02112-copy-mediumjpg.jpeg"
+      },
+      "employee": [],
+      "wifi": {},
+      "metaKeywordsES": "rap chieu phim, bhd, bhd long khanh, rap phim long khanh,, bhd star, bhd ho thi huong, rap bhd,,",
+      "order": 100,
+      "reviewCount": 1,
+      "imageCount": 24,
+      "openingType": "normal",
+      "openingStatus": "is_closed",
+      "openingTime": {
+        "0": "08:30 - 23:45",
+        "1": "08:30 - 23:45",
+        "2": "08:30 - 23:45",
+        "3": "08:30 - 23:45",
+        "4": "08:30 - 23:45",
+        "5": "08:30 - 23:45",
+        "6": "08:30 - 23:45",
+        "now": "08:30 - 23:45"
+      },
+      "id": "629f8bec9e58837f05e29780",
+      "rate": {
+        "summary": "5.0",
+        "position": "5.0",
+        "view": "5.0",
+        "drink": "5.0",
+        "service": "5.0",
+        "price": "5.0"
+      }
+    }
+  },
+  "blogs": [
+    {
+      "_id": "67b7f5eb6cc5936da69e6e64",
+      "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/0ac2d305-a157-4ef6-987d-9e0642ea0d1d-4png.jpeg",
+      "author": "Thanh Ngân",
+      "title": "Top Nhà Xe tại Long Khánh, Đồng Nai",
+      "slug": "top-nha-xe-tai-long-khanh-dong-nai",
+      "createdAt": "2025-02-21T03:41:31.976Z"
+    },
+    {
+      "_id": "678f19856cc5936da69519bc",
+      "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/84e58f54-d710-41e5-a416-67d00bf1b4a2-5png.jpeg",
+      "author": "Thanh Ngân",
+      "title": "Top 4 địa điểm chơi Billiards tại Long Khánh, Đồng Nai",
+      "slug": "top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai",
+      "createdAt": "2025-01-21T03:50:29.091Z"
+    },
+    {
+      "_id": "64b0f91781bb1915710b6991",
+      "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/056d897a-946d-47a8-aae4-482a6434e615-top-10-nhung-dia-diem-chup-anh.jpeg",
+      "author": "Trương Hồng Thuỷ",
+      "title": "Top Những Quán Nướng Ở Long Khánh",
+      "slug": "top-nhung-quan-nuong-o-long-khanh",
+      "createdAt": "2023-07-14T07:28:23.088Z"
+    },
+    {
+      "_id": "63be662a05b9ac281aee750c",
+      "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/03/8141e716-27dd-434a-8c16-0d845aa1259b-top-10-nhung-dia-diem-chup-anh.jpeg",
+      "author": "Trương Hồng Thuỷ",
+      "title": "Top 10 địa điểm chụp hình đẹp tại Long Khánh",
+      "slug": "top-10-dia-diem-chup-hinh-dep-tai-long-khanh",
+      "createdAt": "2023-01-11T07:32:58.163Z"
+    }
+  ],
+  "blogDetails": {
+    "top-nha-xe-tai-long-khanh-dong-nai": {
+      "blog": {
+        "_id": "67b7f5eb6cc5936da69e6e64",
+        "description": "Nếu bạn muốn tìm kiếm các nhà xe thì note ngay vào điện thoại các nhà xe nhất nhì ở Long Khánh nha!",
+        "keywords": "Nhà xe, NHÀ XE, Xe, xe, Kim Mạnh Hùng, KMH, Cúc Phương, cúc phương, cường thuỷ, Cường Thuỷ, kim mạnh hùng, nhà xe long khánh, Nhà xe Long Khánh",
+        "tags": "",
+        "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/0ac2d305-a157-4ef6-987d-9e0642ea0d1d-4png.jpeg",
+        "content": "Nếu bạn đang tìm kiếm các nhà xe tại Long Khánh, Đồng Nai, hãy note ngay những nhà xe nổi bật như Nhà xe Kim Mạnh Hùng, Nhà xe Võ Cúc Phương, Nhà xe Cường Thuỷ vào danh sách của mình nha.\n\n![Tổng hợp nhà xe tại Long Khánh ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/0ac2d305-a157-4ef6-987d-9e0642ea0d1d-4png.jpeg)\n\n## 1. Nhà xe Kim Mạnh Hùng\n\nNhà xe Kim Mạnh Hùng Long Khánh bắt đầu hoạt động từ năm 2012, với hơn 10 năm kinh nghiệm, là lựa chọn hàng đầu cho tuyến Sài Gòn – Đồng Nai, mang đến dịch vụ tận tâm, an toàn và tiện lợi với tần suất chuyến linh hoạt từ 30 đến 45 phút.\n\n![Không gian KMH](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/b67e75c0-e3c3-4e62-b826-b9c55a6ff26c-1png.jpeg)\n*Hình: Nhà xe Kim Mạnh Hùng*\n\n- Địa chỉ: 24E Trần Phú, P. Xuân An, TP. Long Khánh\n- Loại xe: Limousine, giường nằm, giường nằm đôi, ghế ngồi 16 chỗ, ghế ngồi 29 chỗ, \n- Giờ khởi hành: Từ 04:00\n- Giá vé: Từ 120.000, 310.000, 770.000, 500.000\n- Thông tin liên hệ: 1900.888.684\n \n## 2. Nhà xe Võ Cúc Phương\n\nNhà xe Võ Cúc Phương bắt đầu hoạt động từ năm 2008,nhà xe cung cấp dịch vụ vận chuyển chất lượng cao giữa Sài Gòn và Đồng Nai. Với đội ngũ lái xe chuyên nghiệp và xe bảo dưỡng định kỳ, bạn sẽ có chuyến đi an toàn, thoải mái. Tần suất xe linh hoạt, giúp bạn dễ dàng chọn lựa thời gian phù hợp.\n\n![Không gian CP](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/ead6e84e-cb04-4f9e-9084-f78965d5f7d8-3png.jpeg)\n*Hình: Nhà xe Võ Cúc Phương*\n\n- Địa chỉ: 28 Nguyễn Du, P. Xuân An, TP. Long Khánh\n- Loại xe: Limousine, ghế ngồi 29 chỗ\n- Giờ khởi hành: Từ 05:30\n- Giá vé: Từ 150.000 đến 200.000\n- Thông tin liên hệ: 02513.870.018 hoặc 02513.608.079\n\n## 3. Nhà xe Cường Thuỷ\n\nNhà xe Cường Thuỷ, hoạt động từ 2004, đã không ngừng phát triển và xây dựng uy tín trong năm qua. Với đội ngũ nhân viên chuyên nghiệp, thân thiện và các chuyến xe chất lượng, nhà xe mang đến trải nghiệm thoải mái, an toàn. Dịch vụ luôn được cải tiến để đảm bảo sự hài lòng tối đa cho hành khách, là lựa chọn đáng tin cậy cho mọi hành trình.\n\n![Không gian CT](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/467054df-8691-450d-aefd-8421c0f68251-2png.jpeg)\n*Hình: Nhà xe Cường Thuỷ*\n\n- Địa chỉ: 13 Trần Phú, P. Xuân An, TP. Long Khánh\n- Loại xe: Ghế ngồi 25 chỗ\n- Giờ khởi hành: Từ 05:30\n- Giá vé: Từ 110.000/vé\n- Thông tin liên hệ: 02513.785.555 hoặc 02513.876.068",
+        "author": "Thanh Ngân",
+        "isHot": false,
+        "deleted": false,
+        "title": "Top Nhà Xe tại Long Khánh, Đồng Nai",
+        "slug": "top-nha-xe-tai-long-khanh-dong-nai",
+        "category": {
+          "_id": "638ce88f05b9ac281adc8d83",
+          "name": "Cẩm nang du lịch"
+        },
+        "createdAt": "2025-02-21T03:41:31.976Z",
+        "updatedAt": "2025-02-21T03:49:08.533Z",
+        "__v": 0,
+        "headings": [
+          "1. Nhà xe Kim Mạnh Hùng",
+          "2. Nhà xe Võ Cúc Phương",
+          "3. Nhà xe Cường Thuỷ"
+        ]
+      }
+    },
+    "top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai": {
+      "blog": {
+        "_id": "678f19856cc5936da69519bc",
+        "description": "Nếu bạn là người yêu thích Billiards thì note ngay vào điện thoại để không bỏ lỡ những địa điểm chơi Billiards nhất nhì ở Long Khánh nha!",
+        "keywords": "Billiards, địa điểm chơi Billiards, chơi Billiards, Billiards tại Long Khánh Đồng Nai, Billiards tại Long Khánh, Billiards Long Khánh",
+        "tags": "",
+        "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/84e58f54-d710-41e5-a416-67d00bf1b4a2-5png.jpeg",
+        "content": "Nếu bạn đang tìm kiếm địa điểm chơi billiards tại Long Khánh, Đồng Nai, hãy ghé thăm những câu lạc bộ nổi bật như Billiards Wukong, Billiards Club Luxury, Billiards X6, và LK Pro Billiards Club. Các câu lạc bộ này sở hữu không gian hiện đại, bàn chơi chuẩn quốc tế, và dịch vụ chuyên nghiệp, mang đến trải nghiệm tuyệt vời!\n\n![Tổng hợp địa điểm chơi Billiards tại Long Khánh ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/84e58f54-d710-41e5-a416-67d00bf1b4a2-5png.jpeg)\n\n## 1. Billiards Wukong - Điểm hẹn lý tưởng cho giới đam mê billiards tại Long Khánh\n\nBilliards Wukong mang đến một không gian độc đáo với phong cách thiết kế hiện đại, đậm chất cá tính. Câu lạc bộ sở hữu hệ thống bàn chơi cao cấp, đảm bảo chất lượng và tiêu chuẩn thi đấu. Bên cạnh đó, ánh sáng được bố trí khoa học, tạo sự tập trung và thoải mái cho người chơi. Không chỉ là nơi để thỏa mãn đam mê billiards, Billiards Wukong còn tích hợp không gian thư giãn với đồ uống phong phú, phục vụ chuyên nghiệp. Với không gian rộng rãi, đây là địa chỉ không thể bỏ qua cho các trận đấu hấp dẫn hay những buổi tụ tập bạn bè tại Long Khánh.\n\n![Không gian Billiards Wukong](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/e7fa539b-ba1f-44f7-be54-bd96cb6fbc57-2png.jpeg)\n*Hình: Không gian Billiards Wukong*\n\n- Địa chỉ: 121 Hồ Thị Hương, P. Xuân Trung, TP. Long Khánh, Đồng Nai\n \n## 2. Billiards Club Luxury - Điểm đến đẳng cấp tại Long Khánh\n\nBilliards Club Luxury là địa chỉ hàng đầu dành cho các tín đồ billiards. Không gian được thiết kế sang trọng, hiện đại với hệ thống bàn chơi chuẩn quốc tế và ánh sáng tối ưu, mang đến trải nghiệm chơi tuyệt vời. Câu lạc bộ thường xuyên tổ chức các giải đấu chuyên nghiệp, tạo sân chơi giao lưu cho cộng đồng yêu billiards. Bên cạnh đó, khu vực chờ thoải mái cùng các dịch vụ đi kèm, như nước uống và giải khát, đảm bảo sự tiện nghi cho mọi khách hàng. Nếu bạn đang tìm kiếm một nơi chơi billiards chuyên nghiệp và đẳng cấp tại Long Khánh, đừng bỏ lỡ Billiards Club Luxury!\n\n![Không gian Billiards Club Luxury](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/85d41b98-b74d-4623-bc95-0135b3a7afcd-1png.jpeg)\n*Hình: Không gian Billiards Club Luxury*\n\n- Địa chỉ: 214 Thích Quảng Đức, P. Xuân An, TP. Long Khánh, Đồng Nai\n\n## 3. Billiards X6 - Sân chơi sôi động tại Long Khánh\n\nBilliards X6 là điểm đến lý tưởng cho những ai yêu thích không khí trẻ trung và sôi động. Với không gian thiết kế hiện đại, đậm phong cách neon ấn tượng, câu lạc bộ tạo cảm giác mới lạ và thú vị cho mọi người chơi. Billiards X6 được trang bị bàn chơi tiêu chuẩn cao cùng dịch vụ chuyên nghiệp, mang lại trải nghiệm tuyệt vời cho cả người chơi chuyên nghiệp lẫn người mới bắt đầu. Đây cũng là nơi lý tưởng để tổ chức các buổi gặp mặt bạn bè hay giao lưu với cộng đồng yêu billiards tại Long Khánh. Đừng quên ghé thăm để trải nghiệm không gian độc đáo và đầy màu sắc này!\n\n![Không gian Billiards X6](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/0f5a12ac-e2b4-4c7c-b682-12be9e8a08f9-3png.jpeg)\n*Hình: Không gian Billiards X6*\n\n- Địa chỉ: 165 Nguyễn Thị Minh Khai, P. Xuân Hòa, TP. Long Khánh, Đồng Nai\n\n## 4. LK Pro Billiards Club - Đẳng cấp chuyên nghiệp tại Long Khánh\n\nLK Pro Billiards Club là điểm đến không thể bỏ qua cho những ai đam mê billiards chuyên nghiệp. Với không gian rộng rãi, hiện đại và hệ thống bàn chơi đạt chuẩn quốc tế, câu lạc bộ đáp ứng tốt cả nhu cầu tập luyện lẫn thi đấu. LK Pro nổi bật với không khí thân thiện, dịch vụ tận tâm và hệ thống ánh sáng tối ưu, giúp người chơi tập trung và thỏa sức thể hiện kỹ năng. Đây không chỉ là nơi thư giãn mà còn là địa chỉ kết nối cộng đồng billiards tại Long Khánh. Hãy đến LK Pro Billiards Club để trải nghiệm không gian chơi đẳng cấp cùng những trận đấu hấp dẫn!\n\n![Không gian LK Pro Billiards Club](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/c560bd64-d453-4fa8-b481-9e7041603015-4png.jpeg)\n*Hình: Không gian LK Pro Billiards Club*\n\n- Địa chỉ: 03 Thích Quảng Đức, P. Xuân An, TP. Long Khánh, Đồng Nai",
+        "author": "Thanh Ngân",
+        "isHot": false,
+        "deleted": false,
+        "title": "Top 4 địa điểm chơi Billiards tại Long Khánh, Đồng Nai",
+        "slug": "top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai",
+        "category": {
+          "_id": "638ce88f05b9ac281adc8d83",
+          "name": "Cẩm nang du lịch"
+        },
+        "createdAt": "2025-01-21T03:50:29.091Z",
+        "updatedAt": "2025-01-21T03:54:14.756Z",
+        "__v": 0,
+        "headings": [
+          "1. Billiards Wukong - Điểm hẹn lý tưởng cho giới đam mê billiards tại Long Khánh",
+          "2. Billiards Club Luxury - Điểm đến đẳng cấp tại Long Khánh",
+          "3. Billiards X6 - Sân chơi sôi động tại Long Khánh",
+          "4. LK Pro Billiards Club - Đẳng cấp chuyên nghiệp tại Long Khánh"
+        ]
+      }
+    },
+    "top-nhung-quan-nuong-o-long-khanh": {
+      "blog": {
+        "_id": "64b0f91781bb1915710b6991",
+        "description": "Nếu bạn là người yêu thích ẩm thực đặt biệt là đồ nướng, BBQ thì lưu ngay vào \"note\" điện thoại để không bỏ lỡ những món nướng ngon nhất nhì ở Long Khánh nha!",
+        "keywords": "quán nướng, đồ nướng, BBQ, đồ nướng ngon Long Khánh",
+        "tags": "",
+        "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/056d897a-946d-47a8-aae4-482a6434e615-top-10-nhung-dia-diem-chup-anh.jpeg",
+        "content": "Nếu bạn là người yêu thích ẩm thực đặt biệt là đồ nướng, BBQ thì lưu ngay vào \"note\" điện thoại để không bỏ lỡ những món nướng ngon nhất nhì ở Long Khánh nha!\n\n## 1. TIỆM NHÀ NGỌ\nNhà Ngọ thì đã nổi tiếng với các món lẩu đậm vị nhưng bên cạnh đó đồ nướng ở đây cũng không kém cạnh. Đặt biệt là \"khay nướng dài 1 mét\" độc nhất của quán. Thịt được ướp rất vừa vị cùng với những topping khác làm món nướng trở nên đậm đà phong phú hơn. \n![Ảnh: Tiệm Nhà Ngọ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/5af1ca32-2b2b-44be-a944-d9b69c4c8fb1-9png.jpeg)\n*Ảnh: Tiệm Nhà Ngọ*\n\n📍Địa chỉ: 06 Hai Bà Trưng, P Xuân Hòa, Tp Long Khánh, Đồng Nai\n\n## 2. MIN TOWN\nThịnh soạn với Dimsum, món Hoa hơn 30 món, Bò Nhúng Quảng Đông xịn, Lẩu 2 Ngăn sốt chấm X.O siêu dính. Mintown nổi tiếng với Dimsum ngon và món Hoa hơn 30 món khác nhau: Chân gà tàu xì, bánh bao kim sa, bánh bao phô mai, Tàu hũ cuộn, Dimsum hải sản giá siêu bình dân. Bò nhúng Quảng Đông 2 vi sốt nhúng bò cực phẩm: Vị tomyum, vị xí muội Quảng Đông đi kèm rau, nấm, cá viên, hải sản đủ vị bắt mắt.\n![Ảnh: MinTown](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/9282841c-4f69-461d-af15-ea7e822facaa-3png.jpeg)\n*Ảnh: MinTown*\n\n📍Địa chỉ: 139 Thích Quảng Đức (Đối diện Golden Health Gym), P Xuân An, TP Long Khánh, Đồng Nai\n\n## 3. CHILL BBQ & BEER\nMenu của quán siêu đa dạng, tận hưởng quầy salad MIỄN PHÍ, trái cây tráng miệng, kim chi ngon cực cùng với đa dạng các loại nước chấm 🥗🍉. Đặc biệt, dành riêng cho những ai yêu thích hương vị bia thì ở đây có TUBORG là thương hiệu bia cao cấp uống ngon số dách 🍺🍺 Ở đây còn có chiếc view ngồi vô cùng thoải mái luôn.\n![Ảnh: Chill BBQ Beer](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/cd644ad9-2029-420d-b63c-832776259116-4png.jpeg)\n*Ảnh: Chill BBQ Beer*\n\n📍 Địa chỉ: 451 Hồ Thị Hương, Xuân Thanh, Long Khánh, Đồng Nai. (Gần karaoke Kim Cương)\n\n## 4. BẾP NHÀ LEO\nQuán lẩu + set nướng giá sinh dziên mà chất lượng hông hề tầm thường phải thử phải thử liền 👏: Bếp Nhà Leo.\nLẩu Tứ Xuyên mini có 52k mà ngập tràn topping nước dùng đậm đà ngon, ngọt, thơm siu dính, các món nướng giá mềm xèo có 45k tha hồ ăn. Đã thử và bị mê đồ ăn ở đây lắm lắm luôn. \n![Ảnh: Bếp Nhà Leo](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/596e0988-123e-44c5-872c-d18bf1b6424b-anh-collectionpng.jpeg)\n*Ảnh: Bếp Nhà Leo*\n\n📍 Địa chỉ: 92 Nguyễn Tri Phương (Đối diện Tịnh xá Ngọc Khánh), P Xuân An, TP Long Khánh, Đồng Nai\n\n## 5. CẦU DẦU GLAMPING - BBQ \nBuổi chiều 'chill chill' ngắm hoàng hôn, nướng BBQ bình dân bên hồ mát 'gựi' với điểm 'Glamping' mới toanh ngay tại Long Khánh: CẦU DẦU GLAMPING. Điểm 'glamping' mới toanh ngay bên cạnh Hồ Cầu Dầu 😍 có cafe, quầy bar, còn có cắm trại nướng BBQ cực chill luôn nè . Giá Menu nướng BBQ giá siêu hợp lý luôn nè. Chỗ này làm tiệc sinh nhật ngoài trời là đúng bài luôn. Cùng với chiếc view hồ Cầu Dầu buổi chiều hoàng hôn cả một bầu trời gió mát rượi, được decor vài tiểu cảnh xinh xắn nữa. Ngoài ra còn có các tiện ích cắm trại, tham quan vườn trái cây nữa, bảo đảm sẽ là điểm check - in hot rần rần sắp tới ❤️ \n![Ảnh: Cầu Dầu Glamping - BBQ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/4c0b8c4e-15e6-4ca4-afb0-3fd90061cf98-2png.jpeg)\n*Ảnh: Cầu Dầu Glamping - BBQ*\n\n📍 Địa chỉ: Hồ Cầu Dầu, Hàng Gòn, Long Khánh, Đồng Nai\n\n## 6. NHÀ GỖ \nChiếc quán mang cả Đà Lạt thu nhỏ về Long Khánh với không gian toàn gỗ, decor thêm chút đèn vàng lung linh rồi ngồi nướng BBQ cực chill ngoài trời, thích cực 🥰. Menu quán đa dạng có lẩu , có nướng có bò, có đồ ăn vặt món nào cũng ngon cũng nêm nếm đậm đà . \n![Ảnh: Nhà Gỗ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/db5b2bf9-06f4-4e8a-86f0-65978f9ec096-6png.jpeg)\n*Ảnh: Nhà Gỗ*\n\n📍 Địa chỉ: 214 Thích Quảng Đức, phường Xuân An, Long Khánh, Đồng Nai\n\n## 7. PHỐ NHẬT\nNổi tiếng với các món Sushi, Sasimi, Phố Nhật còn có không gian bếp nướng không khói âm cực xịn. Nướng hải sản, thịt bò sốt Nhật...Thuyền Sashimi là món Hot của Phố Nhật có cá hồi tươi, cá ngừ, hàu rong nho, bạch tuộc, cá trích chấm với nước tương pha mù tạc chuẩn Nhật ăn mê. Lẩu Mì Udon Nhật là món truyền thống đáng thử, nướng BBQ với mấy món Nhật truyền thống.\n![Ảnh: Phố Nhật](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/f8fd8007-7ff8-4b5b-adf0-dda987ddc939-5png.jpeg)\n*Ảnh: Phố Nhật*\n\n📍 Địa chỉ: 147 Nguyễn Tri Phương (Nối Dài), P Xuân An, Long Khánh, Đồng Nai\n\n## 8. TIỆM NƯỚNG CHẢO ĐƯỜNG PHỐ\nSet nướng chảo bơ đầy ụ hàu sữa, bò beo béo thơm bơ , trứng cộng nước sốt sền sệt. Nhớ gọi thêm mấy đĩa bò hải sản tự nướng ướp vị đậm đà chấm muối ớt xanh nữa nha. Điểm ưng quán sử dụng thực phẩm tươi, không dùng hàng đông lạnh: Thịt bò tươi, nầm sữa tươi Việt Nam.\n![Ảnh: Tiệm Nướng Chảo Đường Phố](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/15/ce5524eb-6e49-4cbd-b11c-9a0f595358be-anh-collectionpng.jpeg)\n*Ảnh: Tiệm Nướng Chảo Đường Phố*\n\n📍 Địa chỉ: Đầu đường Lê Hồng Phong, phường Xuân Hòa, Long Khánh, Đồng Nai (đường mới gần cầu 908 Nguyễn Trãi)\n\n## 9. BBQ HOUSE LONG KHÁNH \nMenu hơn 50 món các loại từ Hải Sản; Thịt Bò ngoại, thịt heo ướp bằng công thức độc quyền của BBQ House mang tới hương vị đặc biệt cho miếng thịt,  hải sản tươi sống hàng ngày, cùng các món chuẩn Hàn được chế biến sẵn như: Tobokki; Canh rong biển thịt bò; miến Hàn, bánh xèo Hàn, ... đủ làm hài lòng chiếc bụng đói. Ngoài ra, Quán mới đi vào hoạt động khu cafe 'view' cũng khá xinh nhìn đường cũng đẹp lắm nè. Ăn BBQ xong ra ngồi cafe trò chuyện cũng hợp lý nha.\n![Ảnh: BBQ House Long Khánh](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/df60445f-7762-4503-a184-9b4d0c1acc5a-7png.jpeg)\n*Ảnh: BBQ House Long Khánh*\n\n 📍 Địa chỉ: Buffet & Coffee BBQ House 429 Hồ Thị Hương, P. Xuân Thanh, TP Long Khánh, Đồng Nai (Cửa hàng duy nhất KHÔNG CHI NHÁNH)\n\n## 10. BÒ XÈO CẬU BÉO\nBò sốt 179k đủ loại từ Bò Úc, Bò Mỹ, Ba chỉ Heo, Hải sản ăn kèm vị sốt đặc biệt, rắc thêm phô mai chấm bánh mì là ngon đúng điệu. Ngoài ra quán còn có bán cả các Set nướng và Lẩu các loại nữa.\n![Ảnh: Bò Xèo Cậu Béo](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/15/a0f1dc90-3d41-4758-ae59-aaba082197f8-358652684134213083038880743511.jpeg)\n*Ảnh: Bò Xèo Cậu Béo*\n\n📍 CN4: 455 Hồ Thị Hương, P Xuân Thanh, TP Long Khánh, Đồng Nai",
+        "author": "Trương Hồng Thuỷ",
+        "isHot": false,
+        "deleted": false,
+        "title": "Top Những Quán Nướng Ở Long Khánh",
+        "slug": "top-nhung-quan-nuong-o-long-khanh",
+        "category": {
+          "_id": "6384dc46ad71eb37aeb98797",
+          "name": "Cẩm nang ăn uống"
+        },
+        "createdAt": "2023-07-14T07:28:23.088Z",
+        "updatedAt": "2023-07-15T01:26:27.592Z",
+        "__v": 0,
+        "headings": [
+          "1. TIỆM NHÀ NGỌ",
+          "2. MIN TOWN",
+          "3. CHILL BBQ & BEER",
+          "4. BẾP NHÀ LEO",
+          "5. CẦU DẦU GLAMPING - BBQ ",
+          "6. NHÀ GỖ ",
+          "7. PHỐ NHẬT",
+          "8. TIỆM NƯỚNG CHẢO ĐƯỜNG PHỐ",
+          "9. BBQ HOUSE LONG KHÁNH ",
+          "10. BÒ XÈO CẬU BÉO"
+        ]
+      }
+    },
+    "top-10-dia-diem-chup-hinh-dep-tai-long-khanh": {
+      "blog": {
+        "_id": "63be662a05b9ac281aee750c",
+        "description": "Bạn là người thích chụp ảnh sống ảo, thích check-in những địa điểm mới, thích cảnh đẹp, hay đơn giản là Facebook lâu rồi không có ảnh để đăng thì Long Khánh có những nơi đẹp giúp bạn có những tấm ảnh lung linh là lên luôn nè",
+        "keywords": "nơi chụp hình đẹp, check-in Long Khánh, du lịch long Khánh, hình đẹp Long Khánh, địa điểm Long Khánh, quán cà phê Long Khánh",
+        "tags": "",
+        "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/03/8141e716-27dd-434a-8c16-0d845aa1259b-top-10-nhung-dia-diem-chup-anh.jpeg",
+        "content": "Bạn là người thích chụp ảnh sống ảo, thích check-in những địa điểm mới, thích cảnh đẹp, hay đơn giản là Facebook lâu rồi không có ảnh để đăng thì Long Khánh có những nơi đẹp giúp bạn có những tấm ảnh lung linh là lên luôn nè\n\n## 1. Công viên Long Khánh \nCông viên được trồng nhiều cây xanh với bố trí hợp lí tạo cảm giác thoải mái lắm. Có nhiều góc cực xịn, phải nói là chụp góc nào là đẹp góc đó luôn. Nên đi chụp vào buổi sáng hoặc chiều 17h- 18h nắng rất đẹp. \n\n![Ảnh: Công viên Long Khánh ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/9b809e61-f927-44ad-a9d4-91d5e658071e-355286188122497990870886911922.jpeg)\n*Ảnh: Công viên Long Khánh*\n\nĐịa chỉ: Đường 21 Tháng Tư (Ngay Cua Heo), P Xuân Trung, TP Long Khánh, Đồng Nai \n\n## 2.Cà phê hoa giấy\n\nNgay tượng đài có một chiếc quán cà phê đã lâu năm, điều ấn tượng của quán là dàn hoa giấy mọc bên hiên nhà xinh xĩu, hoa có màu hồng đậm, mọc chen nhau trông rất đẹp. Diện cái đầm ra chụp nàng thơ là hợp lí.\n\n![Ảnh: Cà phê hoa giấy](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/6d0dae64-03c2-48f3-8f1a-799573d32f96-355679385122498940870791860621.jpeg)\n*Ảnh: Cà phê hoa giấy*\n\nĐịa chỉ: Quán ngay tượng đài chiến thắng Long Khánh\n\n## 3.Góc đường cách mạng tháng 8\n\nNgay con đường CMT8 có góc đường bên lề lên hình cũng xịn lắm, thảm cỏ xanh mướt, chiều chụp là đẹp nhá. \n\n![Ảnh: Góc đường cách mạng tháng 8](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/01b31b92-7957-4a18-aebc-5444965fd70a-355481207122498367537515552494.jpeg)\n\n*Ảnh: Góc đường cách mạng tháng 8*\n\n\nĐịa chỉ: Đường CMT8, P Xuân An, TP Long Khánh, Đồng Nai\n\n## 4.Cầu dầu Glamping\n\nQuán được bày trí theo mô hình chill giống ở Đà Lạt, thêm điểm cộng là view hồ Cầu Dầu ngay quán luôn. Chiều chụp với mặt trời lặn bao đẹp\n\n![Ảnh: Cầu dầu Glamping](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/395db837-39ee-4f58-b2c0-9a26c2592502-355644007122498247537527821158.jpeg)\n\n*Ảnh: Cầu dầu Glamping*\n\nĐịa chỉ: Ấp Tân Phong, Xã Hàng Gòn, TP Long Khánh, Đồng Nai \n\n## 5.Quán Lavin coffee & tea\n\nAi mê phong cách trời Tây á thì quán này có chiếc view cực xịn luôn, thiết kế cái cổng chụp phát nào ăn ngay phát đó, lên hình xịn xò cực nè. View bên trong lại là không gian mở nên là chụp thấy bầu trời không khác gì trời Tây nhá. \n\n![Ảnh: Quán Lavin coffee & tea](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/334b53f0-1915-42da-a782-013669c47f4c-355491617122498270870858843209.jpeg)\n\n*Ảnh: Quán Lavin coffee & tea*\n\nĐịa chỉ: 207A Nguyễn Trãi, TP Long Khánh, Đồng Nai\n\n## 6.Quán Lagom coffee\n\nBạn nào thích phong cách vintage thì gợi ý cho bạn quán này nha. Quán nhỏ nhỏ núp hẻm dễ thuơng, lên hình xinh xắn lắm\n\n![Ảnh:Quán Lagom coffee](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/c5d1e8e7-8819-4afb-aef1-59e7fee7b8ef-355471004122498570870828672535.jpeg)\n\n*Ảnh: Quán Lagom coffee*\n\nĐịa chỉ: 34/4 Cách mạng tháng 8, TP Long Khánh, Đồng Nai\n\n## 7.Quán Highlands coffee\n\nLong Khánh vừa mới có Highlands mà cả 2 chi nhánh. Chi nhánh 1 view nhìn ra tượng đài, chi nhánh 2 rộng hơn với view nhìn đường xá. Tone chủ đạo đỏ trắng khi lên hình nổi bật, chi nhánh 2 sẽ có góc chụp ảnh nhiều hơn nhé\n  \n![Ảnh: Quán Highlands coffee](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/82a3053f-19a8-4340-b65c-e6d081e2fb71-355286095122498634204155732932.jpeg)\n\n*Ảnh: Quán Highlands coffee*\n\nĐịa chỉ: Chi nhánh 1: 239 Hùng Vương, P Xuân Hoà, TP Long Khánh, Đồng Nai\n\nChi nhánh 2: 01 Nguyễn Thị Minh Khai, P Xuân An, TP Long Khánh, Đồng Nai\n\n\n## 8.Quán Sugar coffee\n\nNếu bạn nào thích chiếc view nhìn toàn thành phố thì đây là quán có cả 3 view nhìn khắp thành phố luôn nè. Chiều mà chụp hình trên này đón được cảnh hoàng hôn thích lắm.\n\n![Ảnh: Quán Sugar coffee](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/65ddbbd3-fd29-453d-9018-2ed04020a6d2-355164303122498047537547333135.jpeg)\n*Ảnh: Quán Sugar coffee*\n\nĐịa chỉ: Tầng 5 Siêu thị Hoàng Đức, 198 Hùng Vương,P Xuân An,TP Long Khánh, Đồng Nai\n\n## 9.Hoa Viên Suối Tre\n\nMuốn chụp hoà mình với thiên nhiên thì Hoa Viên Suối Tre có khuôn viên toàn là cây xanh, cảm giác hoang giã đẹp lắm. Mang concept chụp nàng thơ là hết ý.\n\n\n![Ảnh: Hoa viên Suối Tre](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/887124ab-1282-4863-b039-3b219e208f87-z44755466968380a3ac26ba9c63258.jpeg)\n*Ảnh: Hoa viên Suối Tre*\n\nĐịa chỉ: Đường 27, P Suối Tre, TP Long Khánh, Đồng Nai\n\n## 10.Khu chợ nhà giàu \n\nỞ đây có khu nhà từ thời xưa vẫn còn nét đẹp từ thời ấy. Lên hình kiểu cổ cổ rất là đẹp luôn ấy. Mặc bộ áo dài hay style bụi bặm chụp hợp lắm nhen.\n\n\n![Ảnh: Khu chợ nhà giàu](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/0a54f4cb-c605-4676-8d15-87b0e7a33df7-355119725122257987561553365007.jpeg)\n*Ảnh: Khu chợ nhà giàu*\n\nĐịa chỉ: Đường Nguyễn Thái Học, P Xuân An, TP Long Khánh, Đồng Nai.\n\n",
+        "author": "Trương Hồng Thuỷ",
+        "isHot": true,
+        "deleted": false,
+        "title": "Top 10 địa điểm chụp hình đẹp tại Long Khánh",
+        "slug": "top-10-dia-diem-chup-hinh-dep-tai-long-khanh",
+        "category": {
+          "_id": "638ce88f05b9ac281adc8d83",
+          "name": "Cẩm nang du lịch"
+        },
+        "createdAt": "2023-01-11T07:32:58.163Z",
+        "updatedAt": "2023-07-03T03:34:02.998Z",
+        "__v": 0,
+        "headings": [
+          "1. Công viên Long Khánh ",
+          "2.Cà phê hoa giấy",
+          "3.Góc đường cách mạng tháng 8",
+          "4.Cầu dầu Glamping",
+          "5.Quán Lavin coffee & tea",
+          "6.Quán Lagom coffee",
+          "7.Quán Highlands coffee",
+          "8.Quán Sugar coffee",
+          "9.Hoa Viên Suối Tre",
+          "10.Khu chợ nhà giàu "
+        ]
+      }
+    }
+  },
+  "promos": {
+    "R7AZ1G": {
+      "_id": "62bebfeb248aa67c22a45dd8",
+      "count": 100,
+      "code": "R7AZ1G",
+      "title": "Cài App DDLK - Nhận vé xem phim BHD 1K",
+      "content": "Nhận ngay 1 vé xem phim tại rạp chiếu phim BHD khi cài app và đăng ký tài khoản thành công",
+      "startDate": "2022-07-01T00:00:00.000Z",
+      "endDate": "2022-08-31T00:00:00.000Z",
+      "place": {
+        "_id": "629f8bec9e58837f05e29780",
+        "address": {
+          "specific": "Tầng 2 - 430 Hồ Thị Hương, Xuân An, Long Khánh, Đồng Nai"
+        },
+        "name": "Rạp Chiếu Phim BHD Star Long Khánh",
+        "slug": "rap-chieu-phim-bhd-star-long-khanh"
+      },
+      "thumbnail": {
+        "_id": "62d9fc04dd326c646cff7888",
+        "path": "uploads/images/2022/07/22/5d5ae56d-65fd-4d33-a8ff-cca147fc166b-app-v2-banner-2jpg.jpeg"
+      },
+      "usedCount": 0
+    },
+    "DEYI76": {
+      "_id": "62bebfa6248aa67c22a45dbf",
+      "count": 100,
+      "code": "DEYI76",
+      "title": "Xem phim \"Phờ Ri\" mại zô!!",
+      "content": "🥰 Bạn ơi thoải mái chọn món 💚 Những việc còn lại cứ để chúng tôi lo",
+      "startDate": "2022-07-01T00:00:00.000Z",
+      "endDate": "2022-08-20T00:00:00.000Z",
+      "place": {
+        "_id": "629f8bec9e58837f05e29780",
+        "address": {
+          "specific": "Tầng 2 - 430 Hồ Thị Hương, Xuân An, Long Khánh, Đồng Nai"
+        },
+        "name": "Rạp Chiếu Phim BHD Star Long Khánh",
+        "slug": "rap-chieu-phim-bhd-star-long-khanh"
+      },
+      "thumbnail": {
+        "_id": "62bebfa6248aa67c22a45dbd",
+        "path": "uploads/images/2022/07/01/f8447e6e-e38c-432a-a8e4-395c0e864ccc-2e8f35d0-cdfd-45f5-9289-8ae4aa.jpeg"
+      },
+      "usedCount": 0
+    },
+    "DXFRJG": {
+      "_id": "62bebf79248aa67c22a45daf",
+      "count": 5,
+      "code": "DXFRJG",
+      "title": "DU LỊCH THẬT ĐÃ - ƯU ĐÃI MỖI NGÀY",
+      "content": "Săn ngay 88K - Đặt khách sạn 5 sao & vé máy bay toàn quốc Khung giờ săn Deal: 9h - 12h - 15h - 21h Số lượng có hạn mỗi ngày",
+      "startDate": "2022-06-28T00:00:00.000Z",
+      "endDate": "2022-07-10T00:00:00.000Z",
+      "place": {
+        "_id": "62a0de0282c05d5294d9d55c",
+        "address": {
+          "specific": "13 Thích Quảng Đức, Xuân An, Long Khánh, Đồng Nai, Việt Nam"
+        },
+        "name": "Mia’ Shop: Ba Lô – Túi Xách VNXK Long Khánh",
+        "slug": "mia-shop-ba-lo-tui-xach-vnxk-long-khanh"
+      },
+      "thumbnail": {
+        "_id": "62c154621bf0c34d796891b6",
+        "path": "uploads/images/2022/07/03/a64a96d0-ddad-4237-b95b-e2f1bf4ae963-banner-quet-majpg.jpeg"
+      },
+      "usedCount": 0
+    },
+    "TV26I0": {
+      "_id": "62bebf15248aa67c22a45da1",
+      "count": 50,
+      "code": "TV26I0",
+      "title": "Ăn uống thả ga - Không lo về giá",
+      "content": "Xem review Hot đánh giá ngay, nhận ngay Voucher cực hot !",
+      "startDate": "2022-06-01T00:00:00.000Z",
+      "endDate": "2022-06-30T00:00:00.000Z",
+      "place": {
+        "_id": "629f83849e58837f05e296b8",
+        "address": {
+          "specific": "Chợ Xuân Thanh, Xuân Thanh, Long Khánh, Đồng Nai"
+        },
+        "name": "Cá Viên Chiên - Xôi Chiên Chị Thơm Xuân Thanh",
+        "slug": "ca-vien-chien-xoi-chien-chi-thom-xuan-thanh"
+      },
+      "thumbnail": {
+        "_id": "62c160681bf0c34d796892ff",
+        "path": "uploads/images/2022/07/03/e367c943-424f-433e-ab69-162d8bbef47d-banner-review-hotjpg.jpeg"
+      },
+      "usedCount": 0
+    }
+  }
+}

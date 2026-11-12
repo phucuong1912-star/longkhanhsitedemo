@@ -1,0 +1,15 @@
+<?php
+
+use Duplicator\Installer\Core\InstState;
+
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
+
+$overwriteMode = (InstState::getInstance()->getMode() === InstState::MODE_OVR_INSTALL);
+?>
+
+<div class="no-db-actions requires-no-db">
+    The installer is not going to perform any actions on the database.         
+    <?php if (\DUPX_ArchiveConfig::getInstance()->isDBExcluded()) { ?>
+        The database was excluded during the build of the package.
+    <?php } ?>
+</div>

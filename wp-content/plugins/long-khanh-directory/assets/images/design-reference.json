@@ -1,0 +1,77 @@
+{
+  "source": "https://diadiemlongkhanh.com",
+  "container": {
+    "desktopBreakpoint": 1280,
+    "desktopWidth": 1200,
+    "padding": 16,
+    "mobilePadding": 2
+  },
+  "breakpoints": {
+    "mobileMax": 767,
+    "tabletMax": 991
+  },
+  "hero": {
+    "heightDesktop": 500,
+    "heightTablet": 240,
+    "heightMobile": 180,
+    "backgroundPosition": "50%",
+    "overlay": "linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.6))",
+    "headingDesktop": 40,
+    "headingMobile": 20,
+    "searchHeightDesktop": 65,
+    "searchHeightMobile": 50,
+    "searchButtonWidth": 200
+  },
+  "homeHeadings": {
+    "desktop": 28,
+    "mobile": 18,
+    "weight": 700,
+    "desktopUnderline": {
+      "width": 90,
+      "height": 2,
+      "color": "#52ab5c"
+    }
+  },
+  "featuredPlaces": {
+    "desktopColumns": 4,
+    "mobileWidth": "calc(100% / 1.4 - 10px)",
+    "tabletWidth": "calc(100% / 2.5 - 10px)",
+    "horizontalMobile": true,
+    "tabsDesktop": 18,
+    "tabsMobile": 14
+  },
+  "appSection": {
+    "desktopHeight": 300,
+    "background": "rgba(82,171,92,.2)",
+    "radius": 10,
+    "leftWidth": "40%",
+    "leftPadding": 60,
+    "rightWidth": "60%",
+    "titleFontDesktop": 24,
+    "qrWidth": 100,
+    "storeWidthDesktop": 140,
+    "storeWidthMobile": 160
+  },
+  "suggestSection": {
+    "imageWidthDesktop": 220,
+    "imageWidthMobile": 124,
+    "headingDesktop": 28,
+    "headingMobile": 18,
+    "buttonDesktop": {
+      "height": 40,
+      "font": 16
+    },
+    "buttonMobile": {
+      "height": 30,
+      "font": 12
+    }
+  },
+  "palette": {
+    "primary": "#52ab5c",
+    "primaryHover": "#428a4b"
+  },
+  "sourceCss": [
+    "/_next/static/css/8b620ec04a8a28104658.css",
+    "/_next/static/css/e2faa84ac152a8d54304.css"
+  ]
+}

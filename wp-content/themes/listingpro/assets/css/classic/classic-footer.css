@@ -1,0 +1,51 @@
+/* new classic footer */
+
+.footer-style1.classic-styles .footer-menu a {
+    font-size: 16px;
+}
+
+.footer-style1.classic-styles .footer-menu li {
+    margin-right: 50px;
+}
+
+.footer-style1.classic-styles .footer-upper-bar {
+    padding: 38px 0 34px 0;
+}
+
+.footer-style1.classic-styles .footer-bottom-bar .credit-links,
+.footer-style1.classic-styles .footer-bottom-bar .footer-about-company li {
+    font-weight: 600;
+    font-family: 'Open Sans';
+    margin-right: 15px;
+}
+
+.footer-style1.classic-styles .footer-social-icons {
+    margin-top: 40px;
+}
+
+.footer-style1.classic-styles .footer-bottom-bar .footer-about-company li::before {
+    display: none;
+}
+
+.footer-style1.classic-styles .footer-bottom-bar {
+    padding: 34px 0 42px 0;
+}
+
+.footer-social-icons.font-awesome-icons li i {
+    color: #4F5685;
+    font-size: 22px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-social-icons.font-awesome-icons li {
+    font-size: 16px;
+    margin-right: 40px;
+}
+
+.footer-social-icons.font-awesome-icons li:hover i {
+    transform: scale(1.2);
+}
+
+.footer-style1.classic-styles .footer-bottom-bar .credit-links a:hover {
+    text-decoration: underline;
+}

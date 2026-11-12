@@ -1,0 +1,13 @@
+{
+    "review_count": 1,
+    "overall": 4,
+    "criteria": {
+        "position": 5,
+        "space": 4,
+        "quality": 3,
+        "service": 4,
+        "price": 4
+    },
+    "individual_elementor_data": false,
+    "ok": true
+}

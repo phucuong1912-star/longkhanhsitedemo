@@ -1,0 +1,33 @@
+{
+    "wordpress": "7.1.4",
+    "php": "8.5.12",
+    "child": "listingpro-longkhanh-child",
+    "parent": "listingpro",
+    "listings": 14,
+    "title_entities": [],
+    "published_test_posts": "0",
+    "temporary_profiler": false,
+    "temporary_mobile_harness": false,
+    "checks": [
+        {
+            "url": "http://localhost:180/longkhanhsite/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/search/?categories=mua-sam",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/explore/?lk_feed=following",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/ca-phe-me-bap/",
+            "status": 200,
+            "ok": true
+        }
+    ]
+}

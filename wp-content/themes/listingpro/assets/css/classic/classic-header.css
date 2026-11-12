@@ -1,0 +1,278 @@
+/* header  */
+.lp-customize-header-outer.lp-color-header-style.lp-header-style-classic .lp-search-bar.lp-search-bar-header .active-result {
+    font-size: 14px;
+	border:unset;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.lp-customize-header-outer.lp-color-header-style.lp-header-style-classic .lp-search-bar.lp-search-bar-header  .chosen-drop {
+    padding: 7px;
+    border-radius: 7px;
+    margin-top: 8px;
+}
+.header-inner-page-wrap .lp-header-style-classic .lp-join-now span {
+    margin: 0px 5px;
+    margin-top: 5px;
+    height: 22px;
+}
+.header-inner-page-wrap .lp-header-style-classic .lp-join-now a.md-trigger {
+    line-height: 31px;
+}
+.contentlogin-flex {
+    display: flex;
+}
+
+.lp-header-style-classic .lp-nav-menu-after.lp-menu-outer::after {
+    display: none !important;
+}
+
+.lp-header-style-classic .header-list-icon-st6 {
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 9px 21px !important;
+}
+
+.lp-header-style-classic .lp-menu.menu.lp-menu-outer.lp-nav-menu-after li a {
+    font-weight: 600;
+    font-size: 14px;
+}
+/* new classic setting css  */
+
+.lp-header-style-classic .lp-menu.menu.lp-menu-outer.lp-nav-menu-after li {
+    padding-right: 28px !important;
+}
+
+.lp-header-style-classic .lp-menu.menu.lp-menu-outer.lp-nav-menu-after {
+    margin-right: 32px;
+}
+
+.lp-header-style-classic header {
+    z-index: 99999 !important;
+}
+
+.lp-joinus-icon-outer {
+    padding-left: 7px;
+}
+
+.lp-header-style-classic .lp-join-now span {
+    margin: 0px 5px;
+    margin-top: 8px;
+}
+
+.lp-header-style-classic .lp-join-now span i {
+    color: #fff;
+}
+.lp-header-style-classic .lp-join-now {
+  	position: relative;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    opacity: 1;
+    padding: 1px 12px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    margin-top: 4px;
+}
+
+.lp-header-style-classic .lp-join-now:hover {
+    border: 2px solid #2458ff;
+}
+
+.lp-header-style-classic .form-group.lp-suggested-search .input-group-addon.lp-border {
+    border: unset;
+    box-shadow: 1px 1px 50px 1px #6c6c6c0d;
+    padding: 0px 0 0 10px;
+    margin: 0px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #4F5685;
+    opacity: 1;
+    font-weight: 600 !important;
+    font-size: 13px;
+    font-family: 'Open Sans';
+}
+
+.lp-header-style-classic .form-group.lp-location-search .input-group-addon.lp-border.lp-where {
+    border: unset;
+    box-shadow: 1px 1px 50px 1px #6c6c6c0d;
+    padding: 1px 0 0 10px;
+    margin: 0px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #4F5685;
+    opacity: 1;
+    font-weight: 600 !important;
+    font-size: 13px;
+    font-family: 'Open Sans';
+}
+
+.lp-header-style-classic .form-group.lp-location-search .ui-widget.border-dropdown i {
+    font-size: 10px;
+    left: 62px;
+}
+
+.header-inner-page-wrap .lp-header-style-classic a.header-list-icon-st6 {
+    border: 2px solid #FFFFFF !important;
+}
+
+.lp-header-style-classic .lp-header-search-button .lp-search-bar-right .icons8-search.lp-search-icon:hover {
+    background: transparent !important;
+}
+
+.lp-header-style-classic .lp-header-search-button .lp-search-bar-right:hover i,
+.lp-header-style-classic .lp-header-search-button .lp-search-bar-right:hover .lp-search-btn {
+    color: #000;
+}
+
+.header-inner-page-wrap .lp-header-style-classic .lp-menu-bar {
+    padding: 12px 0;
+}
+
+.lp-header-style-classic .form-group.lp-location-search .ui-widget.border-dropdown input {
+    border-radius: 4px !important;
+    font-family: 'Open Sans';
+}
+
+.lp-header-style-classic .form-group.lp-location-search {
+    width: 34%;
+    border-radius: 5px !important;
+    margin-left: 4px;
+    background: #fff;
+}
+
+.lp-header-style-classic .lp-search-header-style {
+    width: 580px;
+}
+
+.lp-search-bar-header .lp-header-search-button .lp-search-bar-right .icons8-search.lp-search-icon:hover {
+    background-color: transparent;
+    color: #fff !important;
+}
+
+.lp-search-bar-header .lp-header-search-button .lp-search-bar-right i.icons8-search.lp-search-icon {
+    line-height: 30px;
+    border: unset;
+    border-radius: 0;
+    text-align: center;
+    top: 8px;
+    bottom: 0;
+    left: 8px;
+    color: #2458ff;
+    font-weight: 900;
+    transform: rotate(272deg);
+}
+
+.lp-search-bar-header .lp-header-search-button .lp-search-bar-right .lp-search-btn {
+    background-color: #ffffff;
+    border-radius: 7px;
+    border: unset;
+    box-shadow: 1px 1px 50px 1px #6c6c6c0d;
+    padding: 9px 24px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #4F5685;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: 'Open Sans';
+    margin: -1px -4px 0 0;
+}
+
+.lp-header-style-classic .form-group.lp-suggested-search {
+    background: #fff;
+    border-radius: 5px;
+    width: 56%;
+}
+
+.lp-header-style-classic .lp-join-now a::after {
+    content: '';
+    position: absolute;
+    left: -44px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: calc(100% + 52px);
+    height: 100%;
+}
+.lp-header-style-classic .lp-header-full-width .lp-join-user-info li:hover .lp-user-menu {
+    top: calc(100% + 6px);
+    right: 0;
+    background: #fff !important;
+    border-radius: 7px;
+}
+.lp-header-style-classic .lp-header-full-width .lp-join-user-info li .lp-user-menu a {
+    font-weight: 600;
+    font-family: "Open Sans";
+    font-size: 14px;
+}
+
+.lp-header-style-classic .lp-join-now a.md-trigger {
+    position: relative;
+}
+
+.logged-in .lp-header-style-classic .lp-join-now li {
+    display: flex;
+    align-items: center;
+    background: transparent !important;
+    line-height: 32px;
+}
+
+.logged-in .lp-header-style-classic .lp-join-now li span {
+    height: 22px;
+    width: 22px;
+    margin-top: 0px;
+}
+
+.open-clasic-page-container .outer_all_page_overflow.hide-filters {
+    z-index: 99999999 !important;
+}
+
+@media(min-width:1270px) and (max-width:1415px) {
+        .header-inner-page-wrap .lp-header-style-classic header .col-md-6.col-xs-6.lp-menu-container {
+            max-width: 38%;
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1380px) {
+    .lp-search-bar-header .lp-header-search-button .lp-search-bar-right {
+        right: -10px !Important;
+    }
+}
+.header-inner-page-wrap .lp-header-style-classic .lp-join-now:hover {
+    background: #fff0;
+    border: 2px solid #ffffff;
+    transition: 0.3s;
+}
+.lp-joinus-icon.user-login .lp-join-now.after-login.lp-join-user-info {
+    border-color: transparent !important;
+}
+.lp-joinus-icon.user-login .lp-join-now.after-login.lp-join-user-info a {
+    font-weight: 600;
+    font-size: 14px;
+}
+.lp-joinus-icon.user-login .fa-chevron-down {
+    position: absolute;
+    right: 18px;
+    top: 17px;
+    color: #fff;
+	transition:0.2s;
+    font-size: 12px;
+}
+.lp-search-bar-header .lp-header-search-button .lp-search-bar-right:hover i {
+    color: #fff !important;
+}
+.open-clasic-page-container .sidemap-container .leaflet-control-zoom.leaflet-bar.leaflet-control {
+    border: unset;
+    border-radius: 0;
+}
+/* .lp-header-style-classic .lp-menu ul li.menu-item-has-children::after {
+    transition: 0.2s;
+}
+.lp-header-style-classic .lp-menu ul li.menu-item-has-children:hover::after,
+.lp-joinus-icon.user-login:hover i {
+    transform: rotate(180deg);
+} */
+.lp-header-style-classic .lp-logo {
+    max-width: 200px;
+}

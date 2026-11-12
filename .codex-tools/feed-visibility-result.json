@@ -1,0 +1,10 @@
+{
+    "checks": {
+        "password": true,
+        "private": true,
+        "draft": true
+    },
+    "test_post_status": "trash",
+    "remaining_listings": 14,
+    "ok": true
+}

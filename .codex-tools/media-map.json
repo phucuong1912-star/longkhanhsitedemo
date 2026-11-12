@@ -1,0 +1,852 @@
+{
+    "logo": {
+        "id": 26753,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-logo.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-logo-1024x282.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-logo-768x211.png"
+    },
+    "hero": {
+        "id": 26754,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-hero-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-hero-1024x683.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-hero-768x512.jpeg"
+    },
+    "qrcode": {
+        "id": 26755,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-qrcode.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-qrcode-1024x1024.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-qrcode-768x768.png"
+    },
+    "appstore": {
+        "id": 26756,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-appstore.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-appstore.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-appstore.png"
+    },
+    "playstore": {
+        "id": 26757,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-playstore.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-playstore.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-playstore.png"
+    },
+    "app-desktop": {
+        "id": 26758,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-app-desktop.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-app-desktop-1024x514.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-app-desktop-768x386.png"
+    },
+    "app-mobile": {
+        "id": 26759,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-app-mobile.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-app-mobile.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-app-mobile-768x675.png"
+    },
+    "suggest-place": {
+        "id": 0,
+        "url": "http://localhost:180/longkhanhsite/wp-content/plugins/long-khanh-directory/assets/images/suggest-place.svg"
+    },
+    "cooperate": {
+        "id": 26760,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-cooperate.webp",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-cooperate.webp",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-cooperate.webp"
+    },
+    "blog-hero": {
+        "id": 26761,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-hero.webp",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-hero-1024x373.webp",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-hero-768x280.webp"
+    },
+    "blog-hero-overlay": {
+        "id": 26762,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-hero-overlay.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-hero-overlay-1024x74.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-hero-overlay-768x56.png"
+    },
+    "blog-hero-wave": {
+        "id": 0,
+        "url": "http://localhost:180/longkhanhsite/wp-content/plugins/long-khanh-directory/assets/images/blog-hero-wave.svg"
+    },
+    "blog-slogan": {
+        "id": 0,
+        "url": "http://localhost:180/longkhanhsite/wp-content/plugins/long-khanh-directory/assets/images/blog-slogan.svg"
+    },
+    "ads": {
+        "id": 26763,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-ads.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-ads.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-ads.png"
+    },
+    "favicon": {
+        "id": 26764,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-favicon.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-favicon.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-favicon.png"
+    },
+    "banner-r7az1g": {
+        "id": 26765,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-banner-r7az1g.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-banner-r7az1g.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-banner-r7az1g.jpeg"
+    },
+    "banner-dxfrjg": {
+        "id": 26766,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-banner-dxfrjg.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-banner-dxfrjg.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-banner-dxfrjg.jpeg"
+    },
+    "banner-tv26i0": {
+        "id": 26767,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-banner-tv26i0.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-banner-tv26i0.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-banner-tv26i0.jpeg"
+    },
+    "category-an-uong": {
+        "id": 26768,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-an-uong.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-an-uong-833x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-an-uong-768x944.jpeg"
+    },
+    "category-mua-sam": {
+        "id": 26769,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-mua-sam.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-mua-sam-1024x683.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-mua-sam-768x512.jpeg"
+    },
+    "category-giai-tri": {
+        "id": 26770,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-giai-tri.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-giai-tri-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-giai-tri-768x768.jpeg"
+    },
+    "category-du-lich": {
+        "id": 26771,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-du-lich.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-du-lich-1024x768.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-category-du-lich-768x576.jpeg"
+    },
+    "region-phuong-xuan-trung": {
+        "id": 26772,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-trung.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-trung.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-trung.jpeg"
+    },
+    "region-phuong-xuan-thanh": {
+        "id": 26773,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-thanh.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-thanh.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-thanh.jpeg"
+    },
+    "region-phuong-xuan-hoa": {
+        "id": 26774,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-hoa.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-hoa.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-hoa.jpeg"
+    },
+    "region-phuong-xuan-binh": {
+        "id": 26775,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-binh.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-binh.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-binh-768x1011.jpeg"
+    },
+    "region-phuong-xuan-an": {
+        "id": 26776,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-an.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-an.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-region-phuong-xuan-an.jpeg"
+    },
+    "place-lau-bo-bao-bao": {
+        "id": 26777,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-lau-bo-bao-bao-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-lau-bo-bao-bao-1024x693.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-lau-bo-bao-bao-768x520.jpeg"
+    },
+    "gallery-lau-bo-bao-bao-1": {
+        "id": 26778,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lau-bo-bao-bao-1-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lau-bo-bao-bao-1-1024x615.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lau-bo-bao-bao-1-768x461.jpeg"
+    },
+    "gallery-lau-bo-bao-bao-2": {
+        "id": 26779,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lau-bo-bao-bao-2-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lau-bo-bao-bao-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lau-bo-bao-bao-2-768x768.jpeg"
+    },
+    "gallery-lau-bo-bao-bao-3": {
+        "id": 26780,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lau-bo-bao-bao-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lau-bo-bao-bao-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lau-bo-bao-bao-3-768x768.jpeg"
+    },
+    "menu-lau-bo-bao-bao-1": {
+        "id": 26781,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-lau-bo-bao-bao-1-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-lau-bo-bao-bao-1-773x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-lau-bo-bao-bao-1-768x1018.jpeg"
+    },
+    "menu-lau-bo-bao-bao-2": {
+        "id": 26782,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-lau-bo-bao-bao-2-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-lau-bo-bao-bao-2-791x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-lau-bo-bao-bao-2-768x994.jpeg"
+    },
+    "place-de-dai-phat": {
+        "id": 26783,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-de-dai-phat-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-de-dai-phat-1024x612.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-de-dai-phat-768x459.jpeg"
+    },
+    "gallery-de-dai-phat-1": {
+        "id": 26784,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-dai-phat-1-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-dai-phat-1-1024x584.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-dai-phat-1-768x438.jpeg"
+    },
+    "gallery-de-dai-phat-2": {
+        "id": 26785,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-dai-phat-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-dai-phat-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-dai-phat-2-768x768.jpeg"
+    },
+    "gallery-de-dai-phat-3": {
+        "id": 26786,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-dai-phat-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-dai-phat-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-dai-phat-3-768x768.jpeg"
+    },
+    "place-hu-quan": {
+        "id": 26787,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-hu-quan.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-hu-quan-1024x691.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-hu-quan-768x519.jpeg"
+    },
+    "gallery-hu-quan-1": {
+        "id": 26788,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-hu-quan-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-hu-quan-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-hu-quan-1-768x768.jpeg"
+    },
+    "gallery-hu-quan-2": {
+        "id": 26789,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-hu-quan-2-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-hu-quan-2-822x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-hu-quan-2-768x957.jpeg"
+    },
+    "gallery-hu-quan-3": {
+        "id": 26790,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-hu-quan-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-hu-quan-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-hu-quan-3-768x768.jpeg"
+    },
+    "menu-hu-quan-1": {
+        "id": 26791,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-hu-quan-1-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-hu-quan-1-789x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-hu-quan-1-768x997.jpeg"
+    },
+    "menu-hu-quan-2": {
+        "id": 26792,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-hu-quan-2-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-hu-quan-2-801x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-hu-quan-2-768x982.jpeg"
+    },
+    "place-de-nhat-mi-keo": {
+        "id": 26793,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-de-nhat-mi-keo-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-de-nhat-mi-keo-1024x637.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-de-nhat-mi-keo-768x478.jpeg"
+    },
+    "gallery-de-nhat-mi-keo-1": {
+        "id": 26794,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-nhat-mi-keo-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-nhat-mi-keo-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-nhat-mi-keo-1-768x768.jpeg"
+    },
+    "gallery-de-nhat-mi-keo-2": {
+        "id": 26795,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-nhat-mi-keo-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-nhat-mi-keo-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-nhat-mi-keo-2-768x768.jpeg"
+    },
+    "gallery-de-nhat-mi-keo-3": {
+        "id": 26796,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-nhat-mi-keo-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-nhat-mi-keo-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-de-nhat-mi-keo-3-768x768.jpeg"
+    },
+    "place-lo-quay-dung-ky-2-vit-quay-da-gion": {
+        "id": 26797,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-lo-quay-dung-ky-2-vit-quay-da-gion.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-lo-quay-dung-ky-2-vit-quay-da-gion-934x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-lo-quay-dung-ky-2-vit-quay-da-gion-768x842.jpeg"
+    },
+    "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-1": {
+        "id": 26798,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lo-quay-dung-ky-2-vit-quay-da-gion-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lo-quay-dung-ky-2-vit-quay-da-gion-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lo-quay-dung-ky-2-vit-quay-da-gion-1-768x768.jpeg"
+    },
+    "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-2": {
+        "id": 26799,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lo-quay-dung-ky-2-vit-quay-da-gion-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lo-quay-dung-ky-2-vit-quay-da-gion-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lo-quay-dung-ky-2-vit-quay-da-gion-2-768x768.jpeg"
+    },
+    "gallery-lo-quay-dung-ky-2-vit-quay-da-gion-3": {
+        "id": 26800,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lo-quay-dung-ky-2-vit-quay-da-gion-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lo-quay-dung-ky-2-vit-quay-da-gion-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-lo-quay-dung-ky-2-vit-quay-da-gion-3-768x768.jpeg"
+    },
+    "place-shop-hoa-ai-sam": {
+        "id": 26801,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-shop-hoa-ai-sam-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-shop-hoa-ai-sam-1024x800.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-shop-hoa-ai-sam-768x600.jpeg"
+    },
+    "gallery-shop-hoa-ai-sam-1": {
+        "id": 26802,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-shop-hoa-ai-sam-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-shop-hoa-ai-sam-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-shop-hoa-ai-sam-1-768x768.jpeg"
+    },
+    "gallery-shop-hoa-ai-sam-2": {
+        "id": 26803,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-shop-hoa-ai-sam-2-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-shop-hoa-ai-sam-2-798x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-shop-hoa-ai-sam-2-768x985.jpeg"
+    },
+    "gallery-shop-hoa-ai-sam-3": {
+        "id": 26804,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-shop-hoa-ai-sam-3-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-shop-hoa-ai-sam-3-869x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-shop-hoa-ai-sam-3-768x905.jpeg"
+    },
+    "place-gu-oc-ho-thi-huong": {
+        "id": 26805,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-gu-oc-ho-thi-huong-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-gu-oc-ho-thi-huong-1024x536.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-gu-oc-ho-thi-huong-768x402.jpeg"
+    },
+    "gallery-gu-oc-ho-thi-huong-1": {
+        "id": 26806,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-gu-oc-ho-thi-huong-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-gu-oc-ho-thi-huong-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-gu-oc-ho-thi-huong-1-768x768.jpeg"
+    },
+    "gallery-gu-oc-ho-thi-huong-2": {
+        "id": 26807,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-gu-oc-ho-thi-huong-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-gu-oc-ho-thi-huong-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-gu-oc-ho-thi-huong-2-768x768.jpeg"
+    },
+    "gallery-gu-oc-ho-thi-huong-3": {
+        "id": 26808,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-gu-oc-ho-thi-huong-3-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-gu-oc-ho-thi-huong-3-1024x622.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-gu-oc-ho-thi-huong-3-768x466.jpeg"
+    },
+    "menu-gu-oc-ho-thi-huong-1": {
+        "id": 26809,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-gu-oc-ho-thi-huong-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-gu-oc-ho-thi-huong-1-1024x824.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-gu-oc-ho-thi-huong-1-768x618.jpeg"
+    },
+    "menu-gu-oc-ho-thi-huong-2": {
+        "id": 26810,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-gu-oc-ho-thi-huong-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-gu-oc-ho-thi-huong-2-1024x828.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-gu-oc-ho-thi-huong-2-768x621.jpeg"
+    },
+    "place-nha-sach-bach-dang-gia-kiem": {
+        "id": 26811,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-nha-sach-bach-dang-gia-kiem-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-nha-sach-bach-dang-gia-kiem-1024x621.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-nha-sach-bach-dang-gia-kiem-768x466.jpeg"
+    },
+    "gallery-nha-sach-bach-dang-gia-kiem-1": {
+        "id": 26812,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-nha-sach-bach-dang-gia-kiem-1-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-nha-sach-bach-dang-gia-kiem-1-1024x606.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-nha-sach-bach-dang-gia-kiem-1-768x454.jpeg"
+    },
+    "gallery-nha-sach-bach-dang-gia-kiem-2": {
+        "id": 26813,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-nha-sach-bach-dang-gia-kiem-2-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-nha-sach-bach-dang-gia-kiem-2-1024x653.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-nha-sach-bach-dang-gia-kiem-2-768x490.jpeg"
+    },
+    "gallery-nha-sach-bach-dang-gia-kiem-3": {
+        "id": 26814,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-nha-sach-bach-dang-gia-kiem-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-nha-sach-bach-dang-gia-kiem-3-711x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-nha-sach-bach-dang-gia-kiem-3-768x1106.jpeg"
+    },
+    "place-ca-phe-me-bap": {
+        "id": 26815,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-ca-phe-me-bap-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-ca-phe-me-bap-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-ca-phe-me-bap-768x768.jpeg"
+    },
+    "gallery-ca-phe-me-bap-1": {
+        "id": 26816,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-1-768x768.jpeg"
+    },
+    "gallery-ca-phe-me-bap-2": {
+        "id": 26817,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-2-768x768.jpeg"
+    },
+    "gallery-ca-phe-me-bap-3": {
+        "id": 26818,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-3-768x768.jpeg"
+    },
+    "gallery-ca-phe-me-bap-4": {
+        "id": 26819,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-4.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-4-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-4-768x768.jpeg"
+    },
+    "gallery-ca-phe-me-bap-5": {
+        "id": 26820,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-5.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-5-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-5-768x768.jpeg"
+    },
+    "gallery-ca-phe-me-bap-6": {
+        "id": 26821,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-6.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-6-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-6-768x768.jpeg"
+    },
+    "gallery-ca-phe-me-bap-7": {
+        "id": 26822,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-7.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-7-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-7-768x768.jpeg"
+    },
+    "gallery-ca-phe-me-bap-8": {
+        "id": 26823,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-8-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-8-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-8-768x768.jpeg"
+    },
+    "gallery-ca-phe-me-bap-9": {
+        "id": 26824,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-9-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-9-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-9-768x768.jpeg"
+    },
+    "gallery-ca-phe-me-bap-10": {
+        "id": 26825,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-10-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-10-1024x624.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-10-768x468.jpeg"
+    },
+    "gallery-ca-phe-me-bap-11": {
+        "id": 26826,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-11.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-11-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-ca-phe-me-bap-11-768x768.jpeg"
+    },
+    "menu-ca-phe-me-bap-1": {
+        "id": 26827,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-ca-phe-me-bap-1-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-ca-phe-me-bap-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-ca-phe-me-bap-1-768x768.jpeg"
+    },
+    "place-tram-channel-coffee-and-food": {
+        "id": 26828,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-tram-channel-coffee-and-food-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-tram-channel-coffee-and-food-1024x618.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-tram-channel-coffee-and-food-768x463.jpeg"
+    },
+    "gallery-tram-channel-coffee-and-food-1": {
+        "id": 26829,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tram-channel-coffee-and-food-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tram-channel-coffee-and-food-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tram-channel-coffee-and-food-1-768x768.jpeg"
+    },
+    "gallery-tram-channel-coffee-and-food-2": {
+        "id": 26830,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tram-channel-coffee-and-food-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tram-channel-coffee-and-food-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tram-channel-coffee-and-food-2-768x768.jpeg"
+    },
+    "gallery-tram-channel-coffee-and-food-3": {
+        "id": 26831,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tram-channel-coffee-and-food-3-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tram-channel-coffee-and-food-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tram-channel-coffee-and-food-3-768x768.jpeg"
+    },
+    "menu-tram-channel-coffee-and-food-1": {
+        "id": 26832,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-tram-channel-coffee-and-food-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-tram-channel-coffee-and-food-1-1024x724.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-tram-channel-coffee-and-food-1-768x543.jpeg"
+    },
+    "place-tiem-tra-ti-tach": {
+        "id": 26833,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-tiem-tra-ti-tach-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-tiem-tra-ti-tach-1024x595.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-tiem-tra-ti-tach-768x446.jpeg"
+    },
+    "gallery-tiem-tra-ti-tach-1": {
+        "id": 26834,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tiem-tra-ti-tach-1-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tiem-tra-ti-tach-1-778x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tiem-tra-ti-tach-1-768x1011.jpeg"
+    },
+    "gallery-tiem-tra-ti-tach-2": {
+        "id": 26835,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tiem-tra-ti-tach-2-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tiem-tra-ti-tach-2-738x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tiem-tra-ti-tach-2-768x1065.jpeg"
+    },
+    "gallery-tiem-tra-ti-tach-3": {
+        "id": 26836,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tiem-tra-ti-tach-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tiem-tra-ti-tach-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-tiem-tra-ti-tach-3-768x768.jpeg"
+    },
+    "menu-tiem-tra-ti-tach-1": {
+        "id": 26837,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-tiem-tra-ti-tach-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-tiem-tra-ti-tach-1-724x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-tiem-tra-ti-tach-1-768x1086.jpeg"
+    },
+    "place-cui-ca-phe": {
+        "id": 26838,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-cui-ca-phe.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-cui-ca-phe-1024x768.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-cui-ca-phe-768x576.jpeg"
+    },
+    "gallery-cui-ca-phe-1": {
+        "id": 26839,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-cui-ca-phe-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-cui-ca-phe-1-1024x768.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-cui-ca-phe-1-768x576.jpeg"
+    },
+    "gallery-cui-ca-phe-2": {
+        "id": 26840,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-cui-ca-phe-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-cui-ca-phe-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-cui-ca-phe-2-768x768.jpeg"
+    },
+    "gallery-cui-ca-phe-3": {
+        "id": 26841,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-cui-ca-phe-3-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-cui-ca-phe-3-765x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-cui-ca-phe-3-768x1028.jpeg"
+    },
+    "menu-cui-ca-phe-1": {
+        "id": 26842,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-cui-ca-phe-1-scaled.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-cui-ca-phe-1-1024x696.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-cui-ca-phe-1-768x522.jpeg"
+    },
+    "place-khach-san-quoc-thanh-long-khanh": {
+        "id": 26843,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-khach-san-quoc-thanh-long-khanh.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-khach-san-quoc-thanh-long-khanh.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-khach-san-quoc-thanh-long-khanh-768x768.jpeg"
+    },
+    "gallery-khach-san-quoc-thanh-long-khanh-1": {
+        "id": 26844,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-khach-san-quoc-thanh-long-khanh-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-khach-san-quoc-thanh-long-khanh-1.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-khach-san-quoc-thanh-long-khanh-1-768x576.jpeg"
+    },
+    "gallery-khach-san-quoc-thanh-long-khanh-2": {
+        "id": 26845,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-khach-san-quoc-thanh-long-khanh-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-khach-san-quoc-thanh-long-khanh-2.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-khach-san-quoc-thanh-long-khanh-2.jpeg"
+    },
+    "gallery-khach-san-quoc-thanh-long-khanh-3": {
+        "id": 26846,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-khach-san-quoc-thanh-long-khanh-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-khach-san-quoc-thanh-long-khanh-3.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-khach-san-quoc-thanh-long-khanh-3-768x576.jpeg"
+    },
+    "place-rap-chieu-phim-bhd-star-long-khanh": {
+        "id": 26847,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-rap-chieu-phim-bhd-star-long-khanh.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-rap-chieu-phim-bhd-star-long-khanh-1024x710.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-place-rap-chieu-phim-bhd-star-long-khanh-768x532.jpeg"
+    },
+    "gallery-rap-chieu-phim-bhd-star-long-khanh-1": {
+        "id": 26848,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-rap-chieu-phim-bhd-star-long-khanh-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-rap-chieu-phim-bhd-star-long-khanh-1.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-rap-chieu-phim-bhd-star-long-khanh-1.jpeg"
+    },
+    "gallery-rap-chieu-phim-bhd-star-long-khanh-2": {
+        "id": 26849,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-rap-chieu-phim-bhd-star-long-khanh-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-rap-chieu-phim-bhd-star-long-khanh-2-683x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-rap-chieu-phim-bhd-star-long-khanh-2.jpeg"
+    },
+    "gallery-rap-chieu-phim-bhd-star-long-khanh-3": {
+        "id": 26850,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-rap-chieu-phim-bhd-star-long-khanh-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-rap-chieu-phim-bhd-star-long-khanh-3-1024x710.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-gallery-rap-chieu-phim-bhd-star-long-khanh-3-768x532.jpeg"
+    },
+    "menu-rap-chieu-phim-bhd-star-long-khanh-1": {
+        "id": 26851,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-rap-chieu-phim-bhd-star-long-khanh-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-rap-chieu-phim-bhd-star-long-khanh-1.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-menu-rap-chieu-phim-bhd-star-long-khanh-1-768x666.jpeg"
+    },
+    "blog-top-nha-xe-tai-long-khanh-dong-nai": {
+        "id": 26852,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-nha-xe-tai-long-khanh-dong-nai.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-nha-xe-tai-long-khanh-dong-nai-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-nha-xe-tai-long-khanh-dong-nai-768x768.jpeg"
+    },
+    "blog-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai": {
+        "id": 26853,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-768x768.jpeg"
+    },
+    "blog-top-nhung-quan-nuong-o-long-khanh": {
+        "id": 26854,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-nhung-quan-nuong-o-long-khanh.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-nhung-quan-nuong-o-long-khanh.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-nhung-quan-nuong-o-long-khanh-768x644.jpeg"
+    },
+    "blog-top-10-dia-diem-chup-hinh-dep-tai-long-khanh": {
+        "id": 26855,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-10-dia-diem-chup-hinh-dep-tai-long-khanh.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-10-dia-diem-chup-hinh-dep-tai-long-khanh.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-768x644.jpeg"
+    },
+    "promo-r7az1g": {
+        "id": 26856,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-r7az1g.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-r7az1g.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-r7az1g.jpeg"
+    },
+    "promo-deyi76": {
+        "id": 26857,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-deyi76.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-deyi76.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-deyi76.jpeg"
+    },
+    "promo-dxfrjg": {
+        "id": 26858,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-dxfrjg.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-dxfrjg.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-dxfrjg.jpeg"
+    },
+    "promo-tv26i0": {
+        "id": 26859,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-tv26i0.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-tv26i0.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-promo-tv26i0.jpeg"
+    },
+    "login-illustration": {
+        "id": 0,
+        "url": "http://localhost:180/longkhanhsite/wp-content/plugins/long-khanh-directory/assets/images/login-illustration.svg"
+    },
+    "app-icon": {
+        "id": 26860,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-app-icon.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-app-icon.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-app-icon.png"
+    },
+    "no-image": {
+        "id": 26861,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-no-image.png",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-no-image.png",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-no-image-768x576.png"
+    },
+    "menu-icon": {
+        "id": 0,
+        "url": "http://localhost:180/longkhanhsite/wp-content/plugins/long-khanh-directory/assets/images/menu-icon.svg"
+    },
+    "contact-illustration": {
+        "id": 0,
+        "url": "http://localhost:180/longkhanhsite/wp-content/plugins/long-khanh-directory/assets/images/contact-illustration.svg"
+    },
+    "footer-texture": {
+        "id": 27002,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-footer-texture.jpg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-footer-texture-1024x360.jpg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-footer-texture-768x270.jpg"
+    },
+    "promo-illustration": {
+        "id": 0,
+        "url": "http://localhost:180/longkhanhsite/wp-content/plugins/long-khanh-directory/assets/images/promo-illustration.svg"
+    },
+    "blog-section-top-nha-xe-tai-long-khanh-dong-nai-2": {
+        "id": 27003,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nha-xe-tai-long-khanh-dong-nai-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nha-xe-tai-long-khanh-dong-nai-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nha-xe-tai-long-khanh-dong-nai-2-768x768.jpeg"
+    },
+    "blog-section-top-nha-xe-tai-long-khanh-dong-nai-1": {
+        "id": 27004,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nha-xe-tai-long-khanh-dong-nai-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nha-xe-tai-long-khanh-dong-nai-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nha-xe-tai-long-khanh-dong-nai-1-768x768.jpeg"
+    },
+    "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-1": {
+        "id": 27005,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-1-768x768.jpeg"
+    },
+    "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-2": {
+        "id": 27006,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-2-768x768.jpeg"
+    },
+    "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-4": {
+        "id": 27007,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-4.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-4-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-4-768x768.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-2": {
+        "id": 27008,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-2-768x768.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-3": {
+        "id": 27009,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-3-768x768.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-4": {
+        "id": 27010,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-4.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-4-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-4-768x768.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-5": {
+        "id": 27011,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-5.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-5-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-5-768x768.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-6": {
+        "id": 27012,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-6.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-6-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-6-768x768.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-7": {
+        "id": 27013,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-7.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-7-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-7-768x768.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-9": {
+        "id": 27014,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-9.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-9-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-9-768x768.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-10": {
+        "id": 27015,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-10.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-10-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-10-768x768.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-1": {
+        "id": 27016,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-1-768x768.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-2": {
+        "id": 27017,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-2.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-2-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-2-768x768.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-5": {
+        "id": 27018,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-5.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-5-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-5-768x768.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-6": {
+        "id": 27019,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-6.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-6-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-6-768x768.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-7": {
+        "id": 27020,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-7.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-7-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-7-768x768.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-9": {
+        "id": 27021,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-9.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-9-768x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-9-768x1024.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-10": {
+        "id": 27022,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-10.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-10.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-10-768x950.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-8": {
+        "id": 27023,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-8.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-8-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-8-768x768.jpeg"
+    },
+    "blog-section-top-nha-xe-tai-long-khanh-dong-nai-3": {
+        "id": 27024,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nha-xe-tai-long-khanh-dong-nai-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nha-xe-tai-long-khanh-dong-nai-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nha-xe-tai-long-khanh-dong-nai-3-768x768.jpeg"
+    },
+    "blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-3": {
+        "id": 27025,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai-3-768x768.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-8": {
+        "id": 27026,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-8.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-8-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-8-768x768.jpeg"
+    },
+    "blog-section-top-nhung-quan-nuong-o-long-khanh-1": {
+        "id": 27027,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-1.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-1-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-nhung-quan-nuong-o-long-khanh-1-768x768.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-4": {
+        "id": 27028,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-4.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-4-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-4-768x768.jpeg"
+    },
+    "blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-3": {
+        "id": 27029,
+        "url": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-3.jpeg",
+        "large": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-3-1024x1024.jpeg",
+        "medium": "http://localhost:180/longkhanhsite/wp-content/uploads/2026/11/lk-blog-section-top-10-dia-diem-chup-hinh-dep-tai-long-khanh-3-768x768.jpeg"
+    }
+}

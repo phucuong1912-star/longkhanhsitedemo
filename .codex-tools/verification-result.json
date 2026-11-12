@@ -1,0 +1,409 @@
+{
+    "checks": [
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/lau-bo-bao-bao/",
+            "status": 200,
+            "h1": "Lẩu Bò Bảo Bảo",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/lau-bo-bao-bao/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Lẩu Bò Bảo Bảo",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/lau-bo-bao-bao/menu/",
+            "status": 200,
+            "h1": "Menu của Lẩu Bò Bảo Bảo",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/de-dai-phat/",
+            "status": 200,
+            "h1": "Dê Đại Phát",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/de-dai-phat/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Dê Đại Phát",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/de-dai-phat/menu/",
+            "status": 200,
+            "h1": "Menu của Dê Đại Phát",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/hu-quan/",
+            "status": 200,
+            "h1": "Hu Quán",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/hu-quan/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Hu Quán",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/hu-quan/menu/",
+            "status": 200,
+            "h1": "Menu của Hu Quán",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/de-nhat-mi-keo/",
+            "status": 200,
+            "h1": "Đệ Nhất Mì Kéo",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/de-nhat-mi-keo/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Đệ Nhất Mì Kéo",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/de-nhat-mi-keo/menu/",
+            "status": 200,
+            "h1": "Menu của Đệ Nhất Mì Kéo",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/lo-quay-dung-ky-2-vit-quay-da-gion/",
+            "status": 200,
+            "h1": "Lò Quay Dũng Ký 2 – Vịt Quay Da Giòn",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/lo-quay-dung-ky-2-vit-quay-da-gion/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Lò Quay Dũng Ký 2 – Vịt Quay Da Giòn",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/lo-quay-dung-ky-2-vit-quay-da-gion/menu/",
+            "status": 200,
+            "h1": "Menu của Lò Quay Dũng Ký 2 – Vịt Quay Da Giòn",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/shop-hoa-ai-sam/",
+            "status": 200,
+            "h1": "Shop hoa Ái Sâm",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/shop-hoa-ai-sam/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Shop hoa Ái Sâm",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/shop-hoa-ai-sam/menu/",
+            "status": 200,
+            "h1": "Menu của Shop hoa Ái Sâm",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/gu-oc-ho-thi-huong/",
+            "status": 200,
+            "h1": "Gu Ốc – Hồ Thị Hương",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/gu-oc-ho-thi-huong/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Gu Ốc – Hồ Thị Hương",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/gu-oc-ho-thi-huong/menu/",
+            "status": 200,
+            "h1": "Menu của Gu Ốc – Hồ Thị Hương",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/nha-sach-bach-dang-gia-kiem/",
+            "status": 200,
+            "h1": "Nhà Sách Bạch Đằng – Gia Kiệm",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/nha-sach-bach-dang-gia-kiem/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Nhà Sách Bạch Đằng – Gia Kiệm",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/nha-sach-bach-dang-gia-kiem/menu/",
+            "status": 200,
+            "h1": "Menu của Nhà Sách Bạch Đằng – Gia Kiệm",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/ca-phe-me-bap/",
+            "status": 200,
+            "h1": "Cà Phê Mẹ Bắp",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/ca-phe-me-bap/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Cà Phê Mẹ Bắp",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/ca-phe-me-bap/menu/",
+            "status": 200,
+            "h1": "Menu của Cà Phê Mẹ Bắp",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/tram-channel-coffee-and-food/",
+            "status": 200,
+            "h1": "Trạm Channel – Coffee And Food",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/tram-channel-coffee-and-food/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Trạm Channel – Coffee And Food",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/tram-channel-coffee-and-food/menu/",
+            "status": 200,
+            "h1": "Menu của Trạm Channel – Coffee And Food",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/tiem-tra-ti-tach/",
+            "status": 200,
+            "h1": "Tiệm Trà Tí Tách",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/tiem-tra-ti-tach/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Tiệm Trà Tí Tách",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/tiem-tra-ti-tach/menu/",
+            "status": 200,
+            "h1": "Menu của Tiệm Trà Tí Tách",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/cui-ca-phe/",
+            "status": 200,
+            "h1": "Củi Cà Phê",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/cui-ca-phe/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Củi Cà Phê",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/cui-ca-phe/menu/",
+            "status": 200,
+            "h1": "Menu của Củi Cà Phê",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/khach-san-quoc-thanh-long-khanh/",
+            "status": 200,
+            "h1": "Khách Sạn Quốc Thanh Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/khach-san-quoc-thanh-long-khanh/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Khách Sạn Quốc Thanh Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/khach-san-quoc-thanh-long-khanh/menu/",
+            "status": 200,
+            "h1": "Menu của Khách Sạn Quốc Thanh Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/rap-chieu-phim-bhd-star-long-khanh/",
+            "status": 200,
+            "h1": "Rạp Chiếu Phim BHD Star Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/rap-chieu-phim-bhd-star-long-khanh/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Rạp Chiếu Phim BHD Star Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/rap-chieu-phim-bhd-star-long-khanh/menu/",
+            "status": 200,
+            "h1": "Menu của Rạp Chiếu Phim BHD Star Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/lk-template-verification/",
+            "status": 200,
+            "h1": "Kiểm tra template tự động Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/lk-template-verification/photo/",
+            "status": 200,
+            "h1": "Hình ảnh Kiểm tra template tự động Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/lk-template-verification/menu/",
+            "status": 200,
+            "h1": "Menu của Kiểm tra template tự động Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/dia-diem/lk-template-verification/",
+            "status": 200,
+            "h1": "",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/",
+            "status": 200,
+            "h1": "Tìm Kiếm Địa Điểm Tại TP.Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/search/",
+            "status": 200,
+            "h1": "",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/blog/",
+            "status": 200,
+            "h1": "",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/explore/",
+            "status": 200,
+            "h1": "",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/promo/",
+            "status": 200,
+            "h1": "Cập nhật ưu đãi hiện hành",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/profile/",
+            "status": 200,
+            "h1": "",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/contact/",
+            "status": 200,
+            "h1": "Liên hệ với chúng tôi",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/add-place/",
+            "status": 200,
+            "h1": "Thêm địa điểm",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/about/",
+            "status": 200,
+            "h1": "Giới thiệu Địa Điểm Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/privacy/",
+            "status": 200,
+            "h1": "Chính sách bảo mật",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/termsofuse/",
+            "status": 200,
+            "h1": "Điều khoản sử dụng",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/download/",
+            "status": 200,
+            "h1": "",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/new-review/",
+            "status": 200,
+            "h1": "Bạn muốn đánh giá địa điểm nào?",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/blog/top-nha-xe-tai-long-khanh-dong-nai/",
+            "status": 200,
+            "h1": "Top Nhà Xe tại Long Khánh, Đồng Nai",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/blog/top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai/",
+            "status": 200,
+            "h1": "Top 4 địa điểm chơi Billiards tại Long Khánh, Đồng Nai",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/blog/top-nhung-quan-nuong-o-long-khanh/",
+            "status": 200,
+            "h1": "Top Những Quán Nướng Ở Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/blog/top-10-dia-diem-chup-hinh-dep-tai-long-khanh/",
+            "status": 200,
+            "h1": "Top 10 địa điểm chụp hình đẹp tại Long Khánh",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/promo/r7az1g/",
+            "status": 200,
+            "h1": "Cài App DDLK - Nhận vé xem phim BHD 1K",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/promo/deyi76/",
+            "status": 200,
+            "h1": "Xem phim \"Phờ Ri\" mại zô!!",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/promo/dxfrjg/",
+            "status": 200,
+            "h1": "DU LỊCH THẬT ĐÃ - ƯU ĐÃI MỖI NGÀY",
+            "ok": true
+        },
+        {
+            "url": "http://localhost:180/longkhanhsite/promo/tv26i0/",
+            "status": 200,
+            "h1": "Ăn uống thả ga - Không lo về giá",
+            "ok": true
+        }
+    ],
+    "failures": [],
+    "new_listing_check_id": 27031,
+    "test_post_status": "trash"
+}

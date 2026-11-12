@@ -1,0 +1,85 @@
+/* call to action  */
+
+.lp-classic-call-to-action .lp-classic-call-to-action-details {
+    border-radius: 7px 7px 7px 7px;
+    transition: border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 100px 85px 140px 85px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lp-classic-call-to-action .lp-classic-call-to-action-details .lp-classic-call-overlay {
+    background-color: transparent;
+    background-image: linear-gradient(102deg, #000000 38%, #FFFFFF00 94%);
+    opacity: 0.94;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.lp-classic-call-to-action .lp-classic-call-to-action-details .lp-classic-call-to-action-title {
+    color: #FFFFFF;
+    font-family: "Poppins", Sans-serif;
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 43px;
+}
+
+.lp-classic-call-to-action .lp-classic-call-to-action-details .lp-classic-call-to-action-des {
+    color: #FFFFFF;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 6px 0;
+}
+
+.lp-classic-call-to-action .lp-classic-call-to-action-details .lp-classic-call-inner {
+    z-index: 99;
+    position: relative;
+}
+
+.lp-classic-call-to-action-started-button {
+    color: #FFFFFF !important;
+    font-family: "Poppins", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin: 5px 0px 0px 0px;
+    padding: 16px 33px 16px 33px;
+    border-radius: 6px 6px 6px 6px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.lp-classic-call-to-action-started-claim {
+    color: #FFFFFF !important;
+    font-family: "Poppins", Sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 19px;
+    margin: 7px 0px 0px 14px;
+    padding: 12px 12px 13px 12px;
+    background-color: #2440FF00;
+    border-style: solid;
+    transition: 0.3s;
+    border-width: 2px 2px 2px 2px;
+    border-color: #FFFFFF;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.lp-classic-call-to-action-started-button:hover,
+.lp-classic-call-to-action-started-claim:hover {
+    transform: translateY(-4px) !important;
+}
+
+.lp-classic-call-to-action .lp-classic-call-to-action-details .lp-classic-call-inner .lp-classic-call-inner-urls {
+    padding-top: 12px;
+}

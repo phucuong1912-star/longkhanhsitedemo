@@ -1,0 +1,598 @@
+.clearfix{
+    clear: both;
+}
+.form-builder-wrapper{
+    border: solid 1px #ccc;
+}
+.form-builder-wrapper h4{
+    text-align: left;
+    display: block;
+    background: #e1e0e0;
+    margin: 0;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.form-builder-wrapper h4 a{
+    text-align: right;
+    float: right;
+}
+.lp-form-builder-notice{
+    text-align: center;
+    padding: 100px;
+}
+a.switch-submit-form-builder {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    padding-left: 50px;
+    position: relative;
+}
+
+a.switch-submit-form-builder::before{
+    background-color: #cfcfcf;
+    border-radius: 20px;
+    content: "";
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+a.switch-submit-form-builder::after {
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    border-radius: 100%;
+    content: "";
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+a.switch-submit-form-builder.active::before {
+    background-color: #42a7df;
+}
+a.switch-submit-form-builder.active::after {
+    left: 18px;
+    top:-1px;
+}
+a.switch-submit-form-builder:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.lp-form-builder-inner-wrap{
+    display: none;
+}
+.lp-form-builder-inner-wrap{
+    padding: 25px;
+}
+.lp-form-builder-inner-wrap .form-builder-left{
+    width: 45%;
+    float: left;
+}
+.lp-form-builder-inner-wrap .form-builder-right{
+    width: 45%;
+    float: right;
+}
+.default-form-fields{
+
+}
+.form-fields-sorter li.form-section-wrapper{
+    background-color: #fff;
+    border: solid 1px #e5e5e5;
+}
+.form-fields-sorter li.form-section-wrapper .form-section-title{
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 10px;
+    border-bottom: solid 1px #e5e5e5;
+    cursor: pointer;
+}
+.form-fields-sorter li.form-section-wrapper .form-section-title .lp-el-edit{
+    float: right;
+    cursor: pointer;
+}
+.form-fields-sorter li.form-section-wrapper ul{
+    padding: 10px;
+}
+.form-fields-sorter li.form-section-wrapper ul li{
+    border: solid 1px #e5e5e5;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.form-fields-sorter li.form-section-wrapper ul li .form-field-title{
+    background-color: #fafafa;
+    border-bottom: solid 1px #e5e5e5;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+.form-fields-sorter li.form-section-wrapper ul li .lp-el-edit,
+.form-fields-sorter li.form-section-wrapper ul li .lp-el-remove{
+    float: right;
+    margin-left: 10px;
+}
+.form-fields-sorter li.form-section-wrapper .form-section-actions{
+    padding: 15px 10px;
+    background-color: #f4f4f4;
+}
+.form-fields-sorter li.form-section-wrapper .form-section-actions .listing_submit_form_add-new-field{
+    font-size: 12px;
+    text-transform: capitalize;
+    float: right;
+    color: #006799;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form-fields-sorter li.form-section-wrapper .form-section-actions .remove-section{
+    color: #a2202c;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.default-form-fields li.listing_submit_form_add-new-field,
+.default-form-fields li.listing_submit_form_add-new-section{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #008ec2;
+    color: #fff;
+    cursor: pointer;
+}
+.lp-submit-form-add-field{
+    width: 100%;
+    display: none;
+}
+.lp-form-field-options-wrap{
+    display: none;
+    font-weight: normal;
+    padding: 15px 15px 0 15px;
+}
+.lp-submit-form-add-section{
+    display: none;
+}
+.form-fields-list .form-section-wrapper{
+    margin-bottom: 15px;
+    padding: 0;
+    border: none;
+    clear: both;
+}
+.form-fields-list .form-section-wrapper .form-section-title{
+    text-transform: uppercase;
+    border-bottom: solid 1px #e6e6e6;
+    color: #9a9a9a;
+    font-weight: 600;
+}
+.form-fields-list .form-section-wrapper ul,
+.form-fields-list .form-section-wrapper .form-section-actions{
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.form-fields-list .form-section-wrapper .form-section-actions{
+    display: none;
+}
+.form-fields-list .form-section-wrapper ul li span{
+    display: none;
+}
+.form-fields-list .form-section-wrapper .form-section-title .lp-el-edit,
+.form-fields-list .form-section-wrapper .form-section-title .lp-el-edit i{
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+}
+.default-form-fields .form-section-wrapper ul li{
+    padding: 10px 15px;
+    background-color: #fafafa;
+    width: 41%;
+    float: left;
+    font-weight: bold;
+    margin-bottom: 16px;
+    border: solid 1px #e5e5e5;
+}
+.default-form-fields .form-section-wrapper ul li:nth-child(odd){
+    margin-right: 4%;
+}
+.form-fields-list .form-section-wrapper .form-section-title .lp-el-edit{
+    cursor: pointer;
+}
+.submit-form-buttons{
+    margin-bottom: 15px;
+}
+.submit-form-buttons button{
+    float: right;
+    margin-left: 10px !important;
+    text-transform: capitalize;
+    font-size: 14px !important;
+}
+.submit-form-buttons span{
+    font-weight: bold;
+    line-height: 32px;
+}
+.form-section-wrapper .lp-submit-form-add-field{
+
+}
+.form-section-wrapper .lp-submit-form-add-field form{
+    margin: 0 25px 10px 25px;
+    border: solid 1px #e5e5e5;
+}
+.form-section-wrapper .lp-submit-form-add-field .new-field-title{
+    background-color: #fafafa;
+    border-bottom: solid 1px #e5e5e5;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.new-section-title{
+    background-color: #fafafa;
+    border-bottom: solid 1px #e5e5e5;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.lp-submit-form-add-section{
+    background-color: #fff;
+    border: solid 1px #e5e5e5;
+}
+.new-section-inner{
+    margin: 10px 15px;
+}
+.form-group{
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.form-group label{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width: 100%;
+    border-radius: 0px;
+    height: 30px;
+    box-shadow:none;
+}
+.fes-desc{
+    font-size: 14px;
+    font-weight: bold;
+}
+.fes-left-col-title{
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: 5px;
+    display: block;
+}
+.fes-left-col-desc{
+    color: #9a9a9a;
+    font-weight: 500;
+}
+.lp-submit-form-add-field .slider:before {
+    left: 4px;
+}
+.lp-submit-form-add-field .switch {
+
+    margin-top: 6px;
+}
+.lp-submit-form-add-field .lp-invoices-all-stats-on-off>span{
+    color:#333;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform:capitalize;
+}
+.lp-submit-form-add-field input,.lp-submit-form-add-section .new-section-inner input{
+    color:#333;
+}
+.lp-submit-form-add-field input,.lp-submit-form-add-section .new-section-inner input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #333;
+}
+.lp-submit-form-add-field input,.lp-submit-form-add-section .new-section-inner input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #333;
+    opacity:  1;
+}
+.lp-submit-form-add-field input,.lp-submit-form-add-section .new-section-inner input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #333;
+    opacity:  1;
+}
+.lp-submit-form-add-field input,.lp-submit-form-add-section .new-section-inner input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #333;
+}
+.lp-submit-form-add-field input,.lp-submit-form-add-section .new-section-inner input::-ms-input-placeholder { /* Microsoft Edge */
+    color:    #333;
+}
+
+.lp-submit-form-add-field input,.lp-submit-form-add-section .new-section-inner input::placeholder { /* Most modern browsers support this now. */
+    color:    #333;
+}
+.lp-submit-form-add-section .new-section-inner .form-group{
+    margin-right:0px;
+    margin-left:0px;
+}
+#lp-submit-builder-ovelay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0000009c;
+    z-index: 10;
+    display: none;
+}
+#lp-submit-builder-ovelay .form-builder-msg{
+    background-color: #fff;
+    padding: 30px 50px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+    margin-left: -40px;
+}
+#lp-submit-builder-ovelay .form-builder-msg i{
+    font-size: 41px;
+}
+#lp-submit-builder-ovelay .form-builder-msg p{
+    display: none;
+}
+.settings-saved-btn{
+    color: green;
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 6px;
+    font-weight: bold;
+}
+.lp-form-field-options-wrap .form-group i{
+    font-size: 15px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.lp-submit-form-add-field .form-control.error{
+    border-color: red;
+}
+.form-builder-fields-tabs{
+    background-color: #fff;
+    min-height: 48px;
+}
+.hide-form-builder-tabs{
+    display: none;
+}
+.form-builder-fields-tabs .switch-submit-form-builder{
+    float: right;
+    margin: 0;
+    margin-top: 13px;
+}
+.form-builder-fields-tabs ul{
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.form-builder-fields-tabs ul li{
+    cursor: pointer;
+    margin: 0;
+    display: inline-block;
+    padding: 15px;
+    font-weight: bold;
+}
+.form-builder-fields-tabs ul li.active{
+    background-color: #008ec2;
+    color: #fff;
+}
+.form-builder-active-popup{
+    position: fixed;
+    top: 32px;
+    left: 0;
+    color: #fff;
+    z-index: 9999;
+    border-radius: 5px;
+    background-color: #000000cc;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.form-builder-active-popup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500px;
+    min-height: 150px;
+    background: #fff;
+    color: #000;
+    padding: 15px 0px;
+}
+.form-builder-active-popup-container-header {
+    padding: 0px 15px 15px 15px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+.form-builder-active-popup-container-content {
+    padding: 15px;
+    padding-bottom: 68px;
+}
+.form-builder-active-popup-container-footer {
+    padding: 15px 15px 0px 15px;
+    position: absolute;
+    bottom: calc(0px + 15px);
+    width: calc(100% - 30px);
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.form-builder-active-popup-container-footer button.btn {
+    background: #f0ad4e;
+    border: 0px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.form-builder-active-popup-container-footer button.btn.float-l {
+    background: #0275d8;
+    color: #fff;
+}
+.form-builder-active-popup-container-footer button.btn.info {
+    background: #f0ad4e;
+    color: #fff;
+}
+.form-builder-reset-popup{
+    position: fixed;
+    top: 32px;
+    left: 0;
+    color: #fff;
+    z-index: 9999;
+    border-radius: 5px;
+    background-color: #000000cc;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.form-builder-reset-popup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500px;
+    min-height: 150px;
+    background: #fff;
+    color: #000;
+    padding: 15px 0px;
+}
+.form-builder-reset-popup-container-header .close-reset-pop{
+    float: right;
+    cursor: pointer;
+}
+.form-builder-reset-popup-container-header {
+    padding: 0px 15px 15px 15px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+.form-builder-reset-popup-container-content {
+    padding: 15px;
+    padding-bottom: 68px;
+}
+.form-builder-reset-popup-container-footer {
+    padding: 15px 15px 0px 15px;
+    position: absolute;
+    bottom: calc(0px + 15px);
+    width: calc(100% - 30px);
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.form-builder-reset-popup-container-footer button.btn {
+    background: #f7f7f7;
+    border: 0px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 500ms ease-in-out;
+}
+.form-builder-reset-popup-container-footer button.btn.float-l {
+    background: #0275d8;
+    color: #fff;
+}
+.form-builder-reset-popup-container-footer button.btn.info {
+    background: #f0ad4e;
+    color: #fff;
+}
+.form-builder-confirm-reset-loader{
+    margin-left: 15px;
+}
+.form-builder-active-popup .close-form-builder-pop{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+.custom-add-new-field-markup{
+    display: none;
+}
+.reset-form-builder{
+    cursor: pointer;
+}
+.custom-form-fields-spinner{
+    text-align: center;
+    font-size: 41px;
+    margin-top: 20px;
+}
+.disabled-form-builder-sorting{
+    background-color: #cdcdcd !important;
+    cursor: not-allowed;
+    color: #b1b1b1;
+    position: relative;
+}
+.disabled-form-builder-sorting .already-active-field{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.form-fields-sorter li.form-section-wrapper .form-section-title .lp-edit-form-section{
+    float: right;
+    cursor: pointer;
+    margin-right: 8px;
+}
+#lp-layout-builder-ovelay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0000009c;
+    z-index: 10;
+    display: none;
+}
+#lp-layout-builder-ovelay .layout-builder-content {
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-weight: bold;
+    width: 560px;
+}
+#lp-layout-builder-ovelay .lp-submit-form-add-section{
+    display: block !important;
+}
+#lp-layout-builder-ovelay .new-section-inner {
+    margin: 20px 15px;
+}
+#lp-layout-builder-ovelay .new-section-title {
+    background-color: #fafafa;
+    border-bottom: solid 1px #e5e5e5;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+#lp-layout-builder-ovelay #section-label{
+    font-weight: normal;
+    font-size: 14px;
+}
+.lp-showin-filter{
+    display: none;
+}

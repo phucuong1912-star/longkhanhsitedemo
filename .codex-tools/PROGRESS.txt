@@ -1,0 +1,70 @@
+Long Khanh child-theme implementation, verified 2026-11-12
+
+USER CONSTRAINTS
+Do not upgrade PHP or WordPress. Keep presentation on active child theme
+listingpro-longkhanh-child; parent listingpro remains unchanged. Do not copy
+child overrides into parent. PHP 8.5.12, WP 7.1.4, Elementor 4.4.0, ListingPro
+2.9.12 were already present before this implementation.
+
+CURRENT ARCHITECTURE
+Child: Canvas shell, native Elementor documents, single-listing routes,
+responsive CSS and reference motion. Data/admin fields, forms, reviews,
+search and community feed: long-khanh-directory plugin. MU long-khanh-compat
+bridges legacy CubeWP render_block signature. No core/vendor edits required.
+
+26 published Elementor documents, 353 native widgets, 14 custom data widgets.
+Shared listing26979, album/menu26980, preview listing26902. 14 published listings;
+zero individual listing Elementor documents. Old data preserved in legacy meta,
+28 replaced per-listing photo/menu pages recoverable in Trash.
+
+COMPLETED
+Shared native headings, images/gallery, icon lists, Maps and ten Progress rating
+widgets bind independently per listing; scoped Elementor cache prevents title
+and gallery leaking between listings. Actual Elementor content/font editing and
+save verified on two listings, then content restored. H1 font weight500 saved.
+Native Progress source selection confirmed in actual editor.
+
+Classic listing data editor, native WP photo/menu gallery ordering, address,
+phone, prices, hours, coordinates, category, location and amenities. Address
+save/restore verified; legacy ListingPro callback no longer erases Features.
+New posts automatically inherit detail/photo/menu templates. New categories
+and regions enter filters/add-place selectors. Live counts on homepage regions.
+
+Blog index/four articles expanded with source headings/photos, contents links,
+related articles; prose is original demo content. Explore/sidebar/following,
+expired promos, contact, header/footer/mobile menu polished against reference.
+Typewriter, hover zoom1.1/1500ms, review shake, drawer300ms, menu zoom, carousel
+drag/autoplay, sticky tabs, gradients and mobile pin tuned to reference.
+Reduced motion and editor mode suppress moving controls appropriately.
+
+Public data-only directory index5min invalidates on relevant data/review/media
+updates; current open status recalculated. Media queries batched. Fixed reserved
+WP feed collision (lk_feed), accent/coffee search, multi-category tab filtering,
+HTML entity titles, duplicate widget IDs/anchors. Private/draft/protected posts
+excluded from public review feed/authors/follow. Actual follow/unfollow tested.
+
+VALIDATION
+verification-result.json: 67 URLs, no failures; automatic template, empty albums,
+password protection and rating moderation pass. expansion-result.json: cache
+invalidation, new post ordering/category filtering/unfollow pass,15 listing URLs
+correct. review-form-result.json: five UI scores5/4/3/4/4 persist, average4 and
+both summaries/bars correct. feed-visibility-result.json: password/private/draft
+excluded. Fixtures recoverably trashed, temporary subscriber/category removed.
+final-status.json: unchanged versions, active child,14 listings, zero published
+verification posts, temporary profiler/harness removed;4 final URLs200 without
+PHP diagnostic text in HTML. PHP lint and JS syntax checks pass.
+Actual guest mobile375px/scrollWidth375, no overflow. Search cancel/reopen,
+accented suggestions/submission, category filter, drawer and menu photo verified.
+Some scrolled iframe buttons activated with Enter because CUA could not click
+nodes outside its parent viewport. Proof screenshots saved outside webroot.
+
+LIMITS / HANDOFF
+Local reconstruction has14 reference listings and demo article/policy prose,
+not the entire source database or full copyrighted articles. Historical promos
+remain expired. Contact saves private WordPress messages; outbound mail not
+configured/tested. Geolocation permission not granted during QA. Maps depend
+on Google. Some Redux/CubeWP translation timing and vendor deprecation notices
+remain in debug.log; display disabled. Do not claim all logged warnings fixed,
+pixel-perfect match, or full production readiness. No PHP/WP/theme upgrades.
+Do not blindly rerun build-site.php or shared-listing-template.php: they may
+overwrite edits. Use wp-admin > Long Khanh for content/shared template links.

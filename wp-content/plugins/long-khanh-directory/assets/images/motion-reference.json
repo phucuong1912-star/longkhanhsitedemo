@@ -1,0 +1,371 @@
+{
+  "source": "https://diadiemlongkhanh.com",
+  "verifiedBy": "Public HTML, CSS and compiled JavaScript fetched through HTTP; no browser interactions or application edits.",
+  "sources": {
+    "homeCss": "https://diadiemlongkhanh.com/_next/static/css/8b620ec04a8a28104658.css",
+    "globalCss": "https://diadiemlongkhanh.com/_next/static/css/e2faa84ac152a8d54304.css",
+    "antdCss": "https://diadiemlongkhanh.com/_next/static/css/c00047d314d66c58d3fb.css",
+    "placeCss": "https://diadiemlongkhanh.com/_next/static/css/a53ff59c71443634e946.css",
+    "homeJs": "https://diadiemlongkhanh.com/_next/static/chunks/pages/index-932a16b50700af2fa2d5.js",
+    "helperJs": "https://diadiemlongkhanh.com/_next/static/chunks/f7e135bde3290be21b625d6629719d6a2a8e0c6a.d11c791923ead0ef43b0.js",
+    "placeJs": "https://diadiemlongkhanh.com/_next/static/chunks/pages/dia-diem/%5Bslug%5D-c93cc5a0462c54d3ebab.js",
+    "appJs": "https://diadiemlongkhanh.com/_next/static/chunks/pages/_app-aa0bea88202bceb084f6.js"
+  },
+  "heroTypewriter": {
+    "selector": ".Sider_title__3fYHq h1 .Typewriter",
+    "strings": [
+      "Tìm kiếm Địa điểm tại TP.Long Khánh",
+      "Viết Review - Chia sẻ cùng cộng đồng"
+    ],
+    "typingDelayMs": {
+      "mode": "natural",
+      "min": 120,
+      "max": 160
+    },
+    "deletingDelayMs": 50,
+    "holdAfterCompletedStringMs": 1500,
+    "loop": true,
+    "autoStart": true,
+    "sequence": "Type string -> hold1500ms -> delete all at50ms/char -> type next string; no explicit pause after delete.",
+    "cursor": {
+      "text": "|",
+      "marginLeftPx": 1,
+      "animation": "Typewriter-cursor 1s infinite",
+      "keyframes": {
+        "0%": {
+          "opacity": 0
+        },
+        "50%": {
+          "opacity": 1
+        },
+        "100%": {
+          "opacity": 0
+        }
+      }
+    },
+    "sourceSnippet": "options:{strings:[\"T\\xecm ki\\u1ebfm \\u0110\\u1ecba \\u0111i\\u1ec3m t\\u1ea1i TP.Long Kh\\xe1nh\",\"Vi\\u1ebft Review - Chia s\\u1ebb c\\xf9ng c\\u1ed9ng \\u0111\\u1ed3ng\"],autoStart:!0,loop:!0,deleteSpeed:50}})),K(\"h3\",null,\"\\u0110\\u1ecba \\u0110i\\u1ec3m \\u0102n U\\u1ed1ng - Mua S\\u1eafm - Gi\\u1ea3i Tr\\xed - Du L\\u1ecbch t\\u1ea1i Long Kh\\x",
+    "libraryDefaults": "\"options\",{strings:null,cursor:\"|\",delay:\"natural\",pauseFor:1500,deleteSpeed:\"natural\",loop:!1,autoStart:!1,devMode:!1,skipAddStyles:!1,wrapperClassName:\"Typewriter__wrapper\",cursorClassName:\"Typewriter__cursor\",stringSplitter:null,onCreateTextNode:null,onRemoveNode:null}),k(this,\"setupWrapperElement\",(function(){b.state.elements.c"
+  },
+  "homeCarousels": {
+    "library": "Keen Slider React",
+    "commonConfig": {
+      "slidesPerView": 1.4,
+      "loop": true,
+      "durationConfiguredMs": 800,
+      "breakpoints": {
+        "min-width:767px": {
+          "slidesPerView": 2.5
+        },
+        "min-width:992px": {
+          "slidesPerView": 3
+        }
+      }
+    },
+    "durationCaveat": "The application passes a top-level duration:800. The bundled Keen engine moveToIdx reads options.defaultAnimation.duration with a fallback500ms, not the top-level duration. No defaultAnimation override is found in home config; programmatic next() therefore uses the engine fallback500ms.",
+    "engineDefaultAnimation": {
+      "durationMs": 500,
+      "easingExpression": "1 + (--t) * t * t * t * t",
+      "meaning": "easeOutQuint"
+    },
+    "promotions": {
+      "container": ".Home_voucherList__3joF3 .keen-slider",
+      "autoplayIntervalMs": 3000,
+      "autoplayMobileMaxWidth": 991,
+      "autoplayDesktop": false,
+      "slidesPerViewMobile": 1,
+      "slidesPerViewDesktop": 3,
+      "loopMobile": true,
+      "loopDesktop": false
+    },
+    "categories": {
+      "container": ".Home_categoryList__3tcdh .keen-slider",
+      "autoplayIntervalMs": 4000,
+      "autoplayMobileMaxWidth991": false,
+      "autoplayDesktopMinWidth992": true,
+      "slidesPerViewMobile": 1.4,
+      "slidesPerViewTabletMinWidth767": 2.5,
+      "slidesPerViewDesktop": 3,
+      "loop": true
+    },
+    "regions": {
+      "container": "region keen-slider in second discovery section",
+      "autoplayIntervalMs": 5000,
+      "autoplayMobileMaxWidth991": false,
+      "autoplayDesktopMinWidth992": true,
+      "slidesPerViewMobile": 1.4,
+      "slidesPerViewTabletMinWidth767": 2.5,
+      "slidesPerViewDesktop": 4,
+      "loop": true
+    },
+    "autoplayBehavior": {
+      "pauseEvents": [
+        "mouseover",
+        "dragStarted"
+      ],
+      "resumeEvents": [
+        "mouseout",
+        "animationEnded",
+        "updated"
+      ],
+      "cleanup": "clearTimeout on destroyed",
+      "delayScheduling": "Schedule the next delay after animationEnded, so effective start-to-start interval is delay plus the preceding transition duration."
+    },
+    "configSnippet": "var ce={slides:{perView:1.4},loop:!0,duration:800,breakpoints:{\"(min-width: 767px)\":{slides:{perView:2.5},perView:2.5},\"(min-width: 992px)\":{slides:{perView:3}}}};var ue=function(e){var t,n,o=e.vouchers,c=e.categories,l=e.regions,m=Object(f.useMediaQuery)({maxWidth:991}),v=Object(a.useState)(0),h=(v[0],v[1]),g=Object(a.useState)(!1),y=(g[0],g[1]),b=Object(a.useState)(0),w=b[0],S=b[1],N=Object(a.useState)(!1),k=N[0],O=N[1],j=Object(a.useState)(0),T=j[0],I=j[1],P=Object(a.useState)(!1),A=P[0],M=P[1],L=Object(a.useState)(\"new\"),D=L[0],R=L[1],H=Object($.b)(\"places/hot?category=\".concat(D)).data,F=Object(p.useKeenSlider)(se(se({},ce),{},{breakpoints:{\"(min-width: 992px)\":{loop:!1,slides:{perView:3},slideChanged:function(e){}}},slides:{perView:1},slideChanged:function(e){h(e.track.details.rel)},created:function(){y(!0)}}),[function(e){return Object(_.q)(e,3e3,m,!1,!0)}]),B=Object(s.a)(F,2),z=B[0],V=(B[1],Object(p.useKeenSlider)(se(se({},ce),{},{slideChanged:function(e){S(e.track.details.rel)},created:function(){O(!0)}}),[function(e){return Object(_.q)(e,4e3,m,!0)}])),q=Object(s.a)(V,2),Q=q[0],K=q[1],W=Object(p.useKeenSlider)(se(se({},ce),{},{breakpoints:se(se({},ce.breakpoints),{},{\"(min-width: 992px)\":{slides:{perView:4}}}),slideChanged:function(e){I(e.track.details.rel)},created:function(){M(!0)}}),[function(e){return Object(_.q)(e,5e3,m,!0)}]),Y=Object(s.a)(W,2),G=Y[0],X=Y[1];return oe(\"div\",{className:Z.a.home},oe(U,null),o.length?oe(\"section\",{className:Z.a.section},oe(\"div\",{className:Z.a.container},oe(\"div\",{className:u()(Z.a.voucherList)},oe(\"div\",{ref:z,className:\"keen-slider\"},o.map((",
+    "helperSnippet": "k=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:3e3,a=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3&&void 0!==arguments[3]&&arguments[3],s=arguments.length>4&&void 0!==arguments[4]&&arguments[4];if(e&&(!n||!a)&&(a||!s)){var r,i=!1;e.on(\"destroyed\",(function(){clearTimeout(r)})),e.on(\"created\",(function(){e.container.addEventListener(\"mouseover\",(function(){i=!0,d()})),e.container.addEventListener(\"mouseout\",(function(){i=!1,o()})),o()})),e.on(\"dragStarted\",d),e.on(\"animationEnded\",o),e.on(\"updated\",o)}function d(){clearTimeout(r)}function o(){clearTimeout(r),i||(r=setTimeout((function(){e&&e.next()}),t))}},D=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:50;return(e=e.replace(\"s96-c\",\"s\".concat(t,\"-c\"))).includes(\"uploads/images\")?w(e):e},g=fun"
+  },
+  "cardHover": {
+    "desktopMinWidth": 992,
+    "imageScale": 1.1,
+    "imageTransform": "scale3d(1.1,1.1,1.1) translateZ(0)",
+    "imageTransition": "all 1.5s cubic-bezier(0,0,.2,1)",
+    "mobileMaxWidth991": {
+      "imageScale": 1,
+      "imageTransform": "translateZ(0)"
+    },
+    "placeCard": {
+      "selector": ".PlaceItemCard_placeItem__3b-Kl",
+      "restShadow": "0 2px 8px rgba(0,0,0,.15)",
+      "hoverShadow": "0 4px 10px rgba(27,27,27,.2)",
+      "cardTransition": "color .15s ease,border-color .15s ease",
+      "saveButtonTransition": "opacity .25s ease-in-out",
+      "saveButtonOpacityRestDesktop": 0,
+      "saveButtonOpacityHover": 1,
+      "saveButtonOpacityMobile": 1
+    },
+    "regionCardSelector": ".RegionCard_cardItem__6vxrE",
+    "categoryCardSelector": ".CategoryCard_cardItem__CDSj7",
+    "promoCard": "No :hover zoom rule found for VoucherCard in the homepage stylesheet.",
+    "css": [
+      {
+        "selector": ".PlaceItemCard_placeItem__3b-Kl .PlaceItemCard_card__1bxNI",
+        "declarations": "position:relative;display:block;cursor:pointer;color:inherit;background:#fff;margin:0 12px 24px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.15);-webkit-transition:color .15s ease,border-color .15s ease;transition:color .15s ease,border-color .15s ease"
+      },
+      {
+        "selector": ".PlaceItemCard_placeItem__3b-Kl .PlaceItemCard_cardImage__1VGyJ .PlaceItemCard_cardImageWrapper__1ZOIE img",
+        "declarations": "background-position:50%;background-size:cover;height:100%;width:100%;object-fit:cover;border-radius:10px;-webkit-transform:perspective(1px) translateZ(0);transform:perspective(1px) translateZ(0);-webkit-transition:all 1.5s cubic-bezier(0,0,.2,1);transition:all 1.5s cubic-bezier(0,0,.2,1);border-radius:0;border-top-left-radius:10px;border-top-right-radius:10px"
+      },
+      {
+        "selector": ".PlaceItemCard_placeItem__3b-Kl .PlaceItemCard_saveButton__19cJi",
+        "declarations": "position:absolute;top:10px;right:10px;bottom:auto;left:auto;-webkit-transition:opacity .25s ease-in-out;transition:opacity .25s ease-in-out;opacity:0"
+      },
+      {
+        "selector": ".PlaceItemCard_placeItem__3b-Kl:hover .PlaceItemCard_card__1bxNI",
+        "declarations": "box-shadow:0 4px 10px rgba(27,27,27,.2)"
+      },
+      {
+        "selector": ".PlaceItemCard_placeItem__3b-Kl:hover .PlaceItemCard_card__1bxNI .PlaceItemCard_cardImage__1VGyJ img",
+        "declarations": "-webkit-transform:scale3d(1.1,1.1,1.1) translateZ(0);transform:scale3d(1.1,1.1,1.1) translateZ(0)"
+      },
+      {
+        "selector": ".PlaceItemCard_placeItem__3b-Kl:hover .PlaceItemCard_card__1bxNI .PlaceItemCard_cardImage__1VGyJ img",
+        "declarations": "-webkit-transform:translateZ(0);transform:translateZ(0)"
+      },
+      {
+        "selector": ".PlaceItemCard_placeItem__3b-Kl:hover .PlaceItemCard_saveButton__19cJi",
+        "declarations": "opacity:1"
+      },
+      {
+        "selector": ".PlaceItemCard_placeItem__3b-Kl .PlaceItemCard_saveButton__19cJi",
+        "declarations": "opacity:1"
+      },
+      {
+        "selector": ".RegionCard_cardItem__6vxrE .RegionCard_cardImage__eHTPQ .RegionCard_cardImageWrapper__1B_ml img",
+        "declarations": "background-position:50%;background-size:cover;height:100%;width:100%;object-fit:cover;border-radius:10px;-webkit-transform:perspective(1px) translateZ(0);transform:perspective(1px) translateZ(0);-webkit-transition:all 1.5s cubic-bezier(0,0,.2,1);transition:all 1.5s cubic-bezier(0,0,.2,1)"
+      },
+      {
+        "selector": ".RegionCard_cardItem__6vxrE:hover .RegionCard_card__2zbNc .RegionCard_cardImage__eHTPQ img",
+        "declarations": "border-radius:10px;box-shadow:0 4px 10px rgba(27,27,27,.2);-webkit-transform:scale3d(1.1,1.1,1.1) translateZ(0);transform:scale3d(1.1,1.1,1.1) translateZ(0)"
+      },
+      {
+        "selector": ".RegionCard_cardItem__6vxrE:hover .RegionCard_card__2zbNc .RegionCard_cardImage__eHTPQ img",
+        "declarations": "-webkit-transform:translateZ(0);transform:translateZ(0)"
+      },
+      {
+        "selector": ".CategoryCard_cardItem__CDSj7 .CategoryCard_cardImage__2mPIW .CategoryCard_cardImageWrapper__1WAaA img",
+        "declarations": "background-position:50%;background-size:cover;height:100%;width:100%;object-fit:cover;border-radius:10px;-webkit-transform:perspective(1px) translateZ(0);transform:perspective(1px) translateZ(0);-webkit-transition:all 1.5s cubic-bezier(0,0,.2,1);transition:all 1.5s cubic-bezier(0,0,.2,1)"
+      },
+      {
+        "selector": ".CategoryCard_cardItem__CDSj7:hover .CategoryCard_card__2DZJb .CategoryCard_cardImage__2mPIW img",
+        "declarations": "box-shadow:0 4px 10px rgba(27,27,27,.2);-webkit-transform:scale3d(1.1,1.1,1.1) translateZ(0);transform:scale3d(1.1,1.1,1.1) translateZ(0)"
+      },
+      {
+        "selector": ".CategoryCard_cardItem__CDSj7:hover .CategoryCard_card__2DZJb .CategoryCard_cardImage__2mPIW img",
+        "declarations": "-webkit-transform:translateZ(0);transform:translateZ(0)"
+      },
+      {
+        "selector": ".VoucherCard_cardItem__2fFMp .VoucherCard_cardImage__2cFuV .VoucherCard_cardImageWrapper__779p6 img",
+        "declarations": "background-position:50%;background-size:cover;height:100%;width:100%;object-fit:cover;border-radius:10px;-webkit-transform:perspective(1px) translateZ(0);transform:perspective(1px) translateZ(0);-webkit-transition:all 1.5s cubic-bezier(0,0,.2,1);transition:all 1.5s cubic-bezier(0,0,.2,1)"
+      }
+    ]
+  },
+  "buttonHover": {
+    "standardGreen": {
+      "rest": "#52ab5c",
+      "hover": "#428a4b",
+      "transition": "all .15s ease"
+    },
+    "loginGradient": {
+      "selector": ".Login_Button__7EgPZ,.Login_ButtonLoad__3vGv-,.Login_LoginButton__rGMBY,.Login_RegisterButton__2FDD5",
+      "background": "linear-gradient(90deg,#52ab5c,#8cdf8a 51%,#52ab5c)",
+      "backgroundSize": "200% auto",
+      "hoverBackgroundPosition": "100%",
+      "transition": "all .3s"
+    },
+    "socialLogin": {
+      "selector": ".Login_Facebook__3neci,.Login_Gmail__UBj_d",
+      "hoverTransform": "translateY(-2px)",
+      "transition": "all .15s ease"
+    },
+    "loginClose": {
+      "restFontSize": 26,
+      "hoverFontSize": 30,
+      "transition": "all .15s ease"
+    },
+    "headerNav": {
+      "transition": "color .3s ease-in-out,border .1s ease-in-out"
+    },
+    "headerIconButtons": {
+      "transition": "all .15s ease",
+      "hoverShadow": "0 0 2px 0 rgba(0,0,0,.2),0 0 10px 0 rgba(0,0,0,.19)",
+      "hoverShadowTransition": "box-shadow .1s"
+    }
+  },
+  "reviewButtonShake": {
+    "selector": ".Place_votes__2qnHC .Place_none__1TSkD button",
+    "label": "Đánh giá ngay",
+    "animation": "Place_shake__2yRPZ 2s ease infinite",
+    "hoverAnimation": "none",
+    "baselineTransform": "translateZ(0)",
+    "keyframes": {
+      "0%": "rotate(0) scale(1) skew(1deg)",
+      "10%": "rotate(-25deg) scale(1) skew(1deg)",
+      "20%": "rotate(25deg) scale(1) skew(1deg)",
+      "30%": "rotate(-25deg) scale(1) skew(1deg)",
+      "40%": "rotate(25deg) scale(1) skew(1deg)",
+      "50%": "rotate(0) scale(1) skew(1deg)",
+      "100%": "rotate(0) scale(1) skew(1deg)"
+    },
+    "keyframesCss": "@keyframes Place_shake__2yRPZ{0%{-webkit-transform:rotate(0) scale(1) skew(1deg);transform:rotate(0) scale(1) skew(1deg)}10%{-webkit-transform:rotate(-25deg) scale(1) skew(1deg);transform:rotate(-25deg) scale(1) skew(1deg)}20%{-webkit-transform:rotate(25deg) scale(1) skew(1deg);transform:rotate(25deg) scale(1) skew(1deg)}30%{-webkit-transform:rotate(-25deg) scale(1) skew(1deg);transform:rotate(-25deg) scale(1) skew(1deg)}40%{-webkit-transform:rotate(25deg) scale(1) skew(1deg);transform:rotate(25deg) scale(1) skew(1deg)}50%{-webkit-transform:rotate(0) scale(1) skew(1deg);transform:rotate(0) scale(1) skew(1deg)}to{-webkit-transform:rotate(0) scale(1) skew(1deg);transform:rotate(0) scale(1) skew(1deg)}}"
+  },
+  "drawers": {
+    "library": "Ant Design drawer",
+    "panelTransition": "transform .3s cubic-bezier(.7,.3,.1,1),box-shadow .3s cubic-bezier(.7,.3,.1,1)",
+    "rightDrawerClosedTransform": "translateX(100%) (applied by component inline style; direction inferred from right drawer pattern)",
+    "openTransform": "translateX(0)",
+    "maskBackground": "rgba(0,0,0,.45)",
+    "maskOpenAnimation": "antdDrawerFadeIn .3s cubic-bezier(.7,.3,.1,1)",
+    "maskCloseTransition": "opacity .3s linear,height 0s ease .3s",
+    "css": [
+      {
+        "selector": ".ant-drawer",
+        "declarations": "position:fixed;z-index:1000;width:0;height:100%;-webkit-transition:height 0s ease .3s,width 0s ease .3s,-webkit-transform .3s cubic-bezier(.7,.3,.1,1);transition:height 0s ease .3s,width 0s ease .3s,-webkit-transform .3s cubic-bezier(.7,.3,.1,1);transition:transform .3s cubic-bezier(.7,.3,.1,1),height 0s ease .3s,width 0s ease .3s;transition:transform .3s cubic-bezier(.7,.3,.1,1),height 0s ease .3s,width 0s ease .3s,-webkit-transform .3s cubic-bezier(.7,.3,.1,1)"
+      },
+      {
+        "selector": ".ant-drawer>*",
+        "declarations": "-webkit-transition:box-shadow .3s cubic-bezier(.7,.3,.1,1),-webkit-transform .3s cubic-bezier(.7,.3,.1,1);transition:box-shadow .3s cubic-bezier(.7,.3,.1,1),-webkit-transform .3s cubic-bezier(.7,.3,.1,1);transition:transform .3s cubic-bezier(.7,.3,.1,1),box-shadow .3s cubic-bezier(.7,.3,.1,1);transition:transform .3s cubic-bezier(.7,.3,.1,1),box-shadow .3s cubic-bezier(.7,.3,.1,1),-webkit-transform .3s cubic-bezier(.7,.3,.1,1)"
+      },
+      {
+        "selector": ".ant-drawer-left.ant-drawer-open,.ant-drawer-right.ant-drawer-open",
+        "declarations": "width:100%;-webkit-transition:-webkit-transform .3s cubic-bezier(.7,.3,.1,1);transition:-webkit-transform .3s cubic-bezier(.7,.3,.1,1);transition:transform .3s cubic-bezier(.7,.3,.1,1);transition:transform .3s cubic-bezier(.7,.3,.1,1),-webkit-transform .3s cubic-bezier(.7,.3,.1,1)"
+      },
+      {
+        "selector": ".ant-drawer-bottom.ant-drawer-open,.ant-drawer-top.ant-drawer-open",
+        "declarations": "height:100%;-webkit-transition:-webkit-transform .3s cubic-bezier(.7,.3,.1,1);transition:-webkit-transform .3s cubic-bezier(.7,.3,.1,1);transition:transform .3s cubic-bezier(.7,.3,.1,1);transition:transform .3s cubic-bezier(.7,.3,.1,1),-webkit-transform .3s cubic-bezier(.7,.3,.1,1)"
+      },
+      {
+        "selector": ".ant-drawer.ant-drawer-open .ant-drawer-mask",
+        "declarations": "height:100%;opacity:1;-webkit-transition:none;transition:none;-webkit-animation:antdDrawerFadeIn .3s cubic-bezier(.7,.3,.1,1);animation:antdDrawerFadeIn .3s cubic-bezier(.7,.3,.1,1);pointer-events:auto"
+      },
+      {
+        "selector": ".ant-drawer-close",
+        "declarations": "position:absolute;top:0;right:0;z-index:10;display:block;padding:20px;color:rgba(0,0,0,.45);font-weight:700;font-size:16px;font-style:normal;line-height:1;text-align:center;text-transform:none;text-decoration:none;background:transparent;border:0;outline:0;cursor:pointer;-webkit-transition:color .3s;transition:color .3s;text-rendering:auto"
+      },
+      {
+        "selector": ".ant-drawer-mask",
+        "declarations": "position:absolute;top:0;left:0;width:100%;height:0;background-color:rgba(0,0,0,.45);opacity:0;filter:alpha(opacity=45);-webkit-transition:opacity .3s linear,height 0s ease .3s;transition:opacity .3s linear,height 0s ease .3s;pointer-events:none"
+      }
+    ],
+    "maskKeyframes": "@keyframes antdDrawerFadeIn{0%{opacity:0}to{opacity:1}}"
+  },
+  "modals": {
+    "login": {
+      "selectors": [
+        ".Login_Overlight__2HX5d",
+        ".Login_Modal__7W6yH"
+      ],
+      "overlay": "rgba(0,0,0,.65)",
+      "transition": "No open/close CSS animation or transition found for the custom Login overlay/modal itself; it is conditionally mounted. Do not assume Ant Design zoom applies to this login modal.",
+      "desktop": "Centered modal; left form400px and illustration right.",
+      "mobile": "Full viewport, border-radius0, scrollable."
+    },
+    "antdMenuModal": {
+      "enterDurationMs": 300,
+      "leaveDurationMs": 200,
+      "enterAnimation": "antZoomIn",
+      "leaveAnimation": "antZoomOut",
+      "enterEasing": "cubic-bezier(.08,.82,.17,1)",
+      "leaveEasing": "cubic-bezier(.78,.14,.15,.86)",
+      "maskFadeDurationMs": 200,
+      "maskFadeEasing": "linear",
+      "maskBackground": "rgba(0,0,0,.45)"
+    },
+    "keyframes": {
+      "antFadeIn": "@keyframes antFadeIn{0%{opacity:0}to{opacity:1}}",
+      "antFadeOut": "@keyframes antFadeOut{0%{opacity:1}to{opacity:0}}",
+      "antZoomIn": "@keyframes antZoomIn{0%{-webkit-transform:scale(.2);transform:scale(.2);opacity:0}to{-webkit-transform:scale(1);transform:scale(1);opacity:1}}",
+      "antZoomOut": "@keyframes antZoomOut{0%{-webkit-transform:scale(1);transform:scale(1)}to{-webkit-transform:scale(.2);transform:scale(.2);opacity:0}}"
+    }
+  },
+  "placeGalleryHover": {
+    "selectors": [
+      ".Place_resGalery__KK15R .Place_one__1Egwe:after",
+      ".Place_resGalery__KK15R .Place_two__1vRUQ:after",
+      ".Place_resGalery__KK15R .Place_three__3Afgw>div.Place_threeOne__jtK02:after",
+      ".Place_resGalery__KK15R .Place_threeTwo__2MExA>div:after"
+    ],
+    "overlay": "rgba(0,0,0,.4)",
+    "restOpacity": 0,
+    "hoverOpacity": 1,
+    "declaredTransition": "all,.25s ease-in-out",
+    "note": "Source declaration contains a comma between all and duration (potentially invalid/partial parsing); intended250ms but preserve observed behavior during QA rather than inventing a different effect."
+  },
+  "stickyPlaceTabs": {
+    "visibleWhen": "window.scrollY > 200",
+    "visibleClass": ".Place_stickyBar__dcVK-",
+    "hiddenClass": ".Place_stickyBarHidden__3C-di",
+    "position": "fixed",
+    "top": 0,
+    "zIndex": 2,
+    "visibleOpacity": 1,
+    "hiddenOpacity": 0,
+    "transition": "visibility 0s,opacity .2s linear",
+    "shadow": "0 2px 4px 0 rgba(189,171,171,.4)",
+    "anchorTargetOffsetDesktopPx": 60,
+    "anchorTargetOffsetMobilePx": 46,
+    "activeBorderTransition": "border-color .1s ease-in-out",
+    "scrollToReview": "window.scrollTo({top:review.top + pageYOffset - (mobile ? 46 : 60),behavior:\"smooth\"})",
+    "triggerSnippet": "q=function(){var e=window.scrollY;R(e>200)},Z=function(e){return z(e)},K=function(){s||O(!w)},G=function(e){return f(e)},X=function(e)"
+  },
+  "additional": {
+    "heroSearchBackdrop": {
+      "selector": ".Sider_search__uWQt2:before,.Sider_searchModeOn__eJAXs:before",
+      "transition": "all .2s ease-out",
+      "background": "#232a31"
+    },
+    "nearbyIconPulse": {
+      "selector": ".Header_navMobile__GO83p .Header_navIcon__2sBQ6 .Header_location__1LH54",
+      "animation": "Header_location-pulse-animation__17Qu5 2s infinite",
+      "keyframesCss": "@keyframes Header_location-pulse-animation__17Qu5{0%{background-color:rgba(82,171,92,.3);box-shadow:0 0 0 0 rgba(82,171,92,.3)}to{background-color:transparent;box-shadow:0 0 0 10px transparent}}"
+    },
+    "loadingImageShimmer": {
+      "animation": "loading-image-animation 1.2s ease-in-out infinite",
+      "background": "linear-gradient(90deg,#eee,#f5f5f5,#eee)",
+      "backgroundSize": "200px 100%",
+      "keyframesCss": "@keyframes loading-image-animation{0%{background-position:-200px 0}to{background-position:-webkit-calc(200px + 100%) 0;background-position:calc(200px + 100%) 0}}"
+    },
+    "ownerClaimArrow": {
+      "animation": "Place_moveLeftRight__2otwS 1s infinite",
+      "keyframesCss": "@keyframes Place_moveLeftRight__2otwS{0%{padding-right:4px}50%{padding-right:0;padding-left:4px}to{padding-right:4px;padding-left:0}}"
+    }
+  }
+}
