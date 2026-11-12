@@ -13,4 +13,7 @@ wp-config.php
 debug.log
 # Dependencies
 node_modules/
-vendor/
+# Only project-root development dependencies; bundled WordPress/plugin vendor
+# directories are required on the host.
+/vendor/
+wp-content/uploads/elementor/css/

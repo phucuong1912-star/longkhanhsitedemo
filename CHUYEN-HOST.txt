@@ -1,0 +1,93 @@
+CHUYỂN HOST / ĐỔI DOMAIN — ĐỊA ĐIỂM LONG KHÁNH
+
+Lưu ý quan trọng
+- Git/FTP chỉ chuyển file. Nội dung, bố cục Elementor, template chung địa điểm,
+  menu, media attachment ID và cài đặt nằm trong database. Luôn chuyển cả hai.
+- Giữ nguyên phiên bản PHP, WordPress, Elementor, theme và plugin trong lần
+  chuyển này; việc đổi host/domain không đòi hỏi nâng cấp chúng.
+- Giữ child theme listingpro-longkhanh-child hoạt động. Không chép các chỉnh
+  sửa vào theme chính listingpro.
+
+1. Sao lưu trước khi chuyển
+Xuất toàn bộ database và lưu bản sao toàn bộ file, đặc biệt wp-content/uploads,
+child theme, plugin long-khanh-directory và wp-config.php. Lưu bản sao ngoài
+thư mục public và ngoài Git. Nếu website còn nhận bài/review, lấy database và
+uploads mới nhất trong cùng một đợt để tránh thiếu dữ liệu phát sinh.
+
+2. Chuyển lên host mới
+- Tải đủ file của phiên bản hiện tại và import database vừa xuất.
+- Giữ đầy đủ thư mục vendor được đóng gói trong WordPress/plugin. Cụ thể:
+  wp-includes/js/dist/vendor/ và wp-content/plugins/elementor/vendor/.
+  Không dùng quy tắc loại trừ chung **/vendor/**. Lần deploy ngày 12/11/2026
+  đã thiếu 627 file ở hai thư mục này, khiến Elementor không mở được.
+- Giữ ảnh/media gốc trong uploads. CSS trong uploads/elementor/css là file
+  phát sinh và sẽ tạo lại sau khi đổi URL; không dùng CSS cache của host cũ.
+- Cấu hình database của host mới trong wp-config.php, giữ nguyên table prefix
+  tương ứng database đã import. Không commit thông tin kết nối vào Git.
+- Đặt domain, DNS và chứng chỉ HTTPS trên host mới. Giữ .htaccess/rewrite
+  phù hợp với webserver mới; workflow hiện không chép đè .htaccess/wp-config.
+
+3. Nếu giữ nguyên domain
+Không cần thay domain trong database. Sau khi chuyển DNS, làm bước 5 và kiểm
+tra ảnh, link, trang địa điểm, đăng nhập, Elementor trên host mới.
+
+4. Nếu đổi domain hoặc bỏ đường dẫn con
+Ví dụ lần tới: https://longkhanhsites.site.je -> https://tenmienmoi.vn
+
+Đặt WordPress Address và Site Address đúng URL thực tế của host mới. Nếu
+WordPress cài trong thư mục con, hai giá trị có thể khác nhau: đừng tự bỏ
+đường dẫn con khi file WordPress vẫn còn nằm ở đó.
+
+Thay URL bằng công cụ hiểu dữ liệu serialized/JSON. Không dùng SQL REPLACE
+thô hoặc tìm-thay trực tiếp trong file SQL vì có thể làm hỏng cấu hình.
+
+Cách có SSH/WP-CLI, chạy từ thư mục WordPress trên HOST MỚI:
+
+  wp search-replace 'https://longkhanhsites.site.je' 'https://tenmienmoi.vn' --all-tables-with-prefix --skip-columns=guid --precise --dry-run
+
+Kiểm tra báo cáo trước. Sau khi đã có bản sao và kiểm tra đúng database,
+chạy lại cùng lệnh, bỏ --dry-run để ghi thay đổi. Dùng URL cũ thực tế, gồm
+http/https, port và thư mục con nếu có. Không thay các link website ngoài.
+
+Cách không có SSH:
+Dùng chức năng migration/search-replace an toàn với serialized data của
+công cụ chuyển host. Sau đó vào Elementor > Tools > Replace URL, nhập URL
+cũ và URL mới. Replace URL của Elementor xử lý dữ liệu thiết kế Elementor;
+nếu công cụ migration chưa đổi option/widget/plugin data thì vẫn cần bước
+search-replace toàn database trước đó.
+
+5. Tạo lại file và kiểm tra
+- Elementor > Tools > General > Clear Files & Data (tạo lại CSS/cache).
+- Settings > Permalinks: giữ lựa chọn hiện tại và Save Changes để tạo lại
+  rewrite trên host mới. Không đổi cấu trúc link đang dùng.
+- Xóa cache hosting/CDN nếu có và tải lại trình duyệt.
+- Kiểm tra trang chủ, trang địa điểm và template chung, danh mục, ảnh tải app,
+  link header/footer, tìm kiếm, nút đóng góp trên mobile 320/375px.
+- Mở Edit with Elementor, chọn widget, thử lưu rồi kiểm tra lại frontend.
+- Kiểm tra không còn tài nguyên/link nội bộ trỏ về domain/localhost cũ.
+
+Đối với GitHub Actions hiện tại
+- File đã sửa: .github/workflows/deploy.yml và .gitignore.
+- Workflow không còn bỏ qua vendor của WordPress/Elementor; bỏ cache CSS,
+  debug log, wp-config.php, .htaccess và công cụ CLI khỏi gói FTP.
+- Khi đổi host, cập nhật FTP_SERVER / FTP_USERNAME / FTP_PASSWORD trong
+  GitHub repository secrets; kiểm tra server-dir đúng thư mục public mới.
+  Không ghi mật khẩu trực tiếp vào workflow. Giữ dangerous-clean-slate:false.
+- Deploy code không tự đồng bộ các thay đổi Elementor từ database local lên
+  hosting. Chỉnh Elementor trên đúng môi trường hoặc export/import dữ liệu.
+
+Lần sửa hosting ngày 12/11/2026
+- Đã khôi phục file cùng phiên bản WP 7.1.4 / Elementor 4.4.0, không nâng cấp.
+- Đã sao lưu 32 tài liệu và sửa 31 tài liệu Elementor cùng các option liên quan.
+- Đã chuyển khối tải app cũ sang ảnh/widget Elementor gốc và tạo lại cache.
+- Child theme functions.php tải riêng script quản trị để tránh gói load-scripts
+  được cache lúc còn thiếu React. Chức năng không phụ thuộc plugin sửa host.
+- Bản sao dữ liệu trước sửa có trong option lkr_host_last_backup; functions.php
+  cũ có trong lkr_host_child_backup. Công cụ quản trị Long Khánh - Sửa lỗi
+  chuyển hosting có nút hoàn tác dữ liệu. Công cụ này dành cho lần sửa từ
+  localhost:180/longkhanhsite, KHÔNG phải công cụ đổi mọi domain tùy ý.
+
+Tài liệu chính thức
+https://elementor.com/help/site-migration/
+https://elementor.com/help/regenerate-css-data/
+https://developer.wordpress.org/cli/commands/search-replace/

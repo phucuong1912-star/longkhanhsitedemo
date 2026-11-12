@@ -49,7 +49,12 @@ jobs:
             **/.htaccess
             **/wp-config.php
             **/.codex-tools/**
-            **/vendor/**
+            **/wp-content/cache/**
+            **/wp-content/debug.log
+            **/wp-content/uploads/elementor/css/**
+
+          # WordPress React and Elementor PHP dependencies live in vendor/.
+          # They are part of the installed release and must be uploaded.
 
           # Không xóa toàn bộ thư mục hosting
           dangerous-clean-slate: false
