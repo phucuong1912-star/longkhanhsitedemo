@@ -41,18 +41,20 @@ jobs:
           # Không upload các file không cần thiết
           exclude: |
             **/.git*
-            **/.github/*
+            **/.git*/**
+            **/.github/**
             **/.env
             **/.env.*
-            **/node_modules/*
+            **/node_modules/**
             **/.htaccess
             **/wp-config.php
-            */.codex-tools/*
+            **/.codex-tools/**
+            **/vendor/**
 
           # Không xóa toàn bộ thư mục hosting
-          dangerous-clean-slate: false
+          dangerous-clean-slate: true
 
           # Thời gian chờ kết nối
-          timeout: 600000
+          timeout: 60000000
 
-          log-level: standard
+          log-level: verbose
