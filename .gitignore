@@ -1,0 +1,15 @@
+# WordPress backup
+wp-content/duplicator-backups/
+wp-content/updraft/
+wp-content/ai1wm-backups/
+
+# WordPress cache
+wp-content/cache/
+
+# Environment
+.env
+.env.*
+
+# Dependencies
+node_modules/
+vendor/
