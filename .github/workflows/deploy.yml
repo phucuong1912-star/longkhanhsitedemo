@@ -41,12 +41,13 @@ jobs:
           # Không upload các file không cần thiết
           exclude: |
             **/.git*
-            **/.github/**
+            **/.github/*
             **/.env
             **/.env.*
-            **/node_modules/**
+            **/node_modules/*
             **/.htaccess
             **/wp-config.php
+            */.codex-tools/*
 
           # Không xóa toàn bộ thư mục hosting
           dangerous-clean-slate: false
