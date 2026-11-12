@@ -1,0 +1,55 @@
+
+name: Deploy PHP to FPT Hosting
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fpt-production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to FPT Linux Hosting
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Lấy source code từ GitHub
+      - name: Checkout source code
+        uses: actions/checkout@v6
+
+      # 2. Deploy qua FTP
+      - name: Deploy to FPT Hosting
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          protocol: ftp
+          port: 21
+
+          local-dir: ./
+          server-dir: /htdocs/
+
+          # Không upload các file không cần thiết
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/.env
+            **/.env.*
+            **/node_modules/**
+
+          # Không xóa toàn bộ thư mục hosting
+          dangerous-clean-slate: false
+
+          # Thời gian chờ kết nối
+          timeout: 600000
+
+          log-level: standard
