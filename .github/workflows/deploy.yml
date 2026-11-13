@@ -17,6 +17,7 @@ concurrency:
 jobs:
   deploy:
     name: Deploy to FTP Hosting
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
 
     steps:
