@@ -11,3 +11,9 @@ add_action('after_setup_theme', function () {
 add_action('admin_init', function () {
  $GLOBALS['concatenate_scripts'] = false;
 });
+
+// Load child overrides after ListingPro's generated stylesheet (priority 11).
+add_action('wp_enqueue_scripts', function () {
+ $path = get_stylesheet_directory() . '/assets/parent-overrides.css';
+ wp_enqueue_style('lk-parent-overrides', get_stylesheet_directory_uri() . '/assets/parent-overrides.css', array('LP_dynamic_php_css'), (string) filemtime($path));
+}, 20);

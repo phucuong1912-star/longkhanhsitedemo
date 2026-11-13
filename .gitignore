@@ -10,10 +10,14 @@ wp-config.php
 # Environment
 .env
 .env.*
-debug.log
+*.log
 # Dependencies
 node_modules/
 # Only project-root development dependencies; bundled WordPress/plugin vendor
 # directories are required on the host.
 /vendor/
 wp-content/uploads/elementor/css/
+feedback-2.rtf
+
+# Local maintenance scripts and generated reports
+/.codex-tools/

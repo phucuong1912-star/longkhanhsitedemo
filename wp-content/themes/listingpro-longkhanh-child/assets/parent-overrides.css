@@ -1,0 +1,4 @@
+/* Keep this override outside ListingPro's regenerated dynamic-css.css. */
+div.lp-top-notification-bar {
+  top: 0 !important;
+}
