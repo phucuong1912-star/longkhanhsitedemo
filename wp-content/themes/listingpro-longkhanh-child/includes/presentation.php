@@ -31,6 +31,7 @@ add_filter('body_class', function($classes) {
 });
 add_action('wp_enqueue_scripts', function() {
  if (!lk_is_site()) return;
+ wp_dequeue_script('mapsjs');
  // ListingPro remains active. Canvas owns the page shell; avoid its global
  // Bootstrap/layout rules overriding the editable Elementor documents.
  global $wp_styles, $wp_scripts;
@@ -49,6 +50,11 @@ add_action('wp_enqueue_scripts', function() {
  wp_enqueue_script('lk-motion',get_stylesheet_directory_uri().'/assets/motion.js',array('lk-site'),(string)filemtime(get_stylesheet_directory().'/assets/motion.js'),true);
  wp_enqueue_style('lk-pages',get_stylesheet_directory_uri().'/assets/pages.css',array('lk-motion'),(string)filemtime(get_stylesheet_directory().'/assets/pages.css'));
  wp_enqueue_script('lk-composer',get_stylesheet_directory_uri().'/assets/review-composer.js',array('lk-site'),(string)filemtime(get_stylesheet_directory().'/assets/review-composer.js'),true);
+ wp_enqueue_style('lk-feedback',get_stylesheet_directory_uri().'/assets/feedback.css',array('lk-pages'),(string)filemtime(get_stylesheet_directory().'/assets/feedback.css'));
+ wp_enqueue_script('lk-results',get_stylesheet_directory_uri().'/assets/directory-results.js',array('lk-site'),(string)filemtime(get_stylesheet_directory().'/assets/directory-results.js'),true);
+ wp_enqueue_style('lk-listing-fields',LK_URL.'assets/listing-fields.css',array('lk-feedback'),(string)filemtime(LK_DIR.'assets/listing-fields.css'));
+ wp_enqueue_script('lk-listing-fields',LK_URL.'assets/listing-fields.js',array(),(string)filemtime(LK_DIR.'assets/listing-fields.js'),true);
+ wp_enqueue_style('lk-elementor-controls',LK_URL.'assets/elementor-controls.css',array('lk-feedback','lk-listing-fields'),(string)filemtime(LK_DIR.'assets/elementor-controls.css'));
  $places=lk_directory_index();
  wp_add_inline_script('lk-site', 'window.LK_SITE=' . wp_json_encode(array('base'=>home_url('/'),'search'=>lk_link('search'),'profile'=>lk_link('profile'),'places'=>$places,'page'=>get_queried_object_id(),'loggedIn'=>is_user_logged_in()),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) . ';','before');
 });

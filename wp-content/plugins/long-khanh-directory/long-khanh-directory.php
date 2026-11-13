@@ -7,7 +7,10 @@
 if (!defined('ABSPATH')) { exit; }
 define('LK_DIR', __DIR__ . '/');
 define('LK_URL', plugin_dir_url(__FILE__));
+require_once LK_DIR . 'includes/listing-fields.php';
+require_once LK_DIR . 'includes/location-picker.php';
 require_once LK_DIR . 'includes/directory.php';
+require_once LK_DIR . 'includes/search-results.php';
 require_once LK_DIR . 'includes/review-composer.php';
 require_once LK_DIR . 'includes/forms.php';
 require_once LK_DIR . 'includes/community.php';
@@ -62,15 +65,18 @@ add_action('add_meta_boxes',function(){ add_meta_box('lk-data','Thông tin đị
 function lk_meta_box($post){
  if(!get_post_meta($post->ID,'_lk_managed',true)&&$post->post_status!=='auto-draft')return;
  wp_nonce_field('lk_save_data','lk_data_nonce'); $d=lk_place_data($post);
- foreach(array('address'=>'Địa chỉ','phone'=>'Điện thoại','min'=>'Giá thấp nhất (đ)','max'=>'Giá cao nhất (đ)','open'=>'Giờ mở cửa','close'=>'Giờ đóng cửa','lat'=>'Vĩ độ','lng'=>'Kinh độ') as $key=>$label){$type=in_array($key,array('open','close'),true)?'time':(in_array($key,array('min','max','lat','lng'),true)?'number':'text');echo '<p><label>'.esc_html($label).'<br><input style="width:100%" type="'.$type.'" '.(in_array($key,array('lat','lng'),true)?'step="any"':(in_array($key,array('min','max'),true)?'min="0"':'')).' name="lk_data['.esc_attr($key).']" value="'.esc_attr($d[$key]).'"></label></p>';}
+ lk_location_editor($d,true);
+ foreach(array('phone'=>'Điện thoại','min'=>'Giá thấp nhất (đ)','max'=>'Giá cao nhất (đ)') as $key=>$label){$type=in_array($key,array('open','close'),true)?'time':(in_array($key,array('min','max','lat','lng'),true)?'number':'text');echo '<p><label>'.esc_html($label).'<br><input style="width:100%" type="'.$type.'" '.(in_array($key,array('lat','lng'),true)?'step="any"':(in_array($key,array('min','max'),true)?'min="0"':'')).' name="lk_data['.esc_attr($key).']" value="'.esc_attr($d[$key]).'"></label></p>';}
+ lk_price_status_select('lk_data[price_status]',$d['priceStatus']);lk_schedule_editor($d['schedule'],'lk_data[hours]');
 }
 add_action('save_post_listing',function($id){
  if(!isset($_POST['lk_data_nonce'])||!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['lk_data_nonce'])),'lk_save_data')||!current_user_can('edit_post',$id))return;
  $d=isset($_POST['lk_data'])?map_deep(wp_unslash($_POST['lk_data']),'sanitize_text_field'):array();
  $options=get_post_meta($id,'lp_listingpro_options',true); if(!is_array($options))$options=array();
- foreach(array('address'=>'gAddress','phone'=>'phone','min'=>'list_price','max'=>'list_price_to','lat'=>'latitude','lng'=>'longitude') as $key=>$field)if(isset($d[$key]))$options[$field]=$d[$key];
- foreach(array('open','close') as $key)if(isset($d[$key])&&preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/',$d[$key]))update_post_meta($id,'_lk_'.$key,$d[$key]);
- foreach(array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday') as $day)$options['business_hours'][$day]=array('open'=>get_post_meta($id,'_lk_open',true)?:'07:00','close'=>get_post_meta($id,'_lk_close',true)?:'22:00');
+ if(isset($d['lat'])||isset($d['lng'])){$coordinates=lk_parse_coordinates($d['lat']??'', $d['lng']??'');if(is_wp_error($coordinates)){add_filter('redirect_post_location',function($url){return add_query_arg('lk_location_error',1,$url);});return;}$options=array_merge($options,$coordinates);}
+ foreach(array('address'=>'gAddress','phone'=>'phone','min'=>'list_price','max'=>'list_price_to') as $key=>$field)if(isset($d[$key]))$options[$field]=$d[$key];
+ if(isset($d['hours'])){$schedule=lk_parse_schedule($d['hours']);if(is_wp_error($schedule)){add_filter('redirect_post_location',function($url){return add_query_arg('lk_hours_error',1,$url);});return;}$options=array_merge($options,lk_schedule_options($schedule));lk_save_legacy_hours($id,$schedule);}
+ if(isset($d['price_status'])&&array_key_exists($d['price_status'],lk_price_status_labels()))$options['price_status']=$d['price_status'];
  update_post_meta($id,'lp_listingpro_options',$options);
  update_post_meta($id,'_lk_managed',1);
 });

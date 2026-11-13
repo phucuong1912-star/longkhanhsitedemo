@@ -63,3 +63,28 @@ nam ngang, anh mobile nam duoi. Khong doi lai thanh anh nen phu nut.
 Blog co noi dung bien soan rieng va thong tin tham khao tu bai goc.
 Dia chi/gia co the thay doi; cac uu dai lich su duoc ghi da ket thuc.
 Chu website can chot noi dung chinh sach truoc khi cong khai website.
+
+GIA VA LICH MO CUA THEO THU
+
+Form dang dia diem va hop Thong tin dia diem trong quan tri co truong
+Thong tin gia: Khong cong khai, Binh dan, Vua phai, Kha cao, Cao cap.
+Bo loc Muc gia dung phan loai nay; thanh keo khoang tien van doc lap.
+Lich tung thu ho tro Nghi, Mo24gio hoac toi da3 khung gio. Gio dong
+som hon gio mo duoc hieu la sang ngay ke tiep. Nut sao chep chi ap dung
+khi nguoi sua bam. Trang chi tiet mo lich7ngay tu dong gio mo cua.
+Trang thai Dang mo cua va bo loc dung lich nay theo mui gio WordPress.
+
+CHON VI TRI VA CHINH UI
+
+Form Them dia diem va admin co Nhap dia chi / Nhap toa do thu cong / Tha ghim.
+Bam ban do hoac keo ghim se cap nhat vi do/kinh do. Dung vi tri cua toi chi
+xin quyen khi bam. Theme Options > Map quan ly Map Type va Google Map & Places
+API Key. Google can Maps JavaScript API va Places API (New), Billing va key
+bi gioi han theo website. Khi chua cau hinh Google, dung OpenStreetMap.
+
+Trong Elementor: widget Bieu mau Long Khanh co tieu de tung phan; tab Kieu
+hien thi co mau, chu, khoang cach, chieu cao o nhap/ban do va nut. Widget Ket
+qua va bo loc co tieu de nhom, do rong cot loc, khoang cach ket qua. Widget
+Danh gia cong dong co nhan popup, chieu rong va kich thuoc sao. Day la widget
+du lieu tuy chinh, khong phai tung o nhap Elementor keo tha rieng. Form trong
+wp-admin khong duoc chinh bang Elementor. Khong sua theme ListingPro cha.

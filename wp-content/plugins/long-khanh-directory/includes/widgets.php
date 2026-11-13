@@ -5,6 +5,20 @@ abstract class LK_Widget extends \Elementor\Widget_Base {
  public function get_categories(){return array('long-khanh');}
  public function get_icon(){return 'eicon-map-pin';}
  public function get_style_depends(){return array('lk-site');}
+ protected function fields_style(){
+  $this->start_controls_section('fields_style',array('label'=>'Ô nhập và biểu mẫu','tab'=>\Elementor\Controls_Manager::TAB_STYLE));
+  foreach(array('field_text'=>array('Màu chữ ô nhập','--lk-field-text'),'label_color'=>array('Màu nhãn','--lk-label-color'),'field_background'=>array('Nền ô nhập','--lk-field-background'),'field_border'=>array('Viền ô nhập','--lk-field-border')) as $key=>$data)$this->add_control($key,array('label'=>$data[0],'type'=>'color','selectors'=>array('{{WRAPPER}}'=>$data[1].': {{VALUE}};')));
+  $this->add_group_control(\Elementor\Group_Control_Typography::get_type(),array('name'=>'field_typography','label'=>'Chữ ô nhập','selector'=>'{{WRAPPER}} input, {{WRAPPER}} select, {{WRAPPER}} textarea'));
+  foreach(array('field_height'=>array('Chiều cao ô nhập','--lk-field-height',32,80),'field_gap'=>array('Khoảng cách các trường','--lk-field-gap',0,60),'map_height'=>array('Chiều cao bản đồ chọn ghim','--lk-map-height',180,600)) as $key=>$data)$this->add_responsive_control($key,array('label'=>$data[0],'type'=>'slider','range'=>array('px'=>array('min'=>$data[2],'max'=>$data[3])),'selectors'=>array('{{WRAPPER}}'=>$data[1].': {{SIZE}}{{UNIT}};')));
+  $this->end_controls_section();
+ }
+ protected function button_style(){
+  $this->start_controls_section('button_style',array('label'=>'Nút thao tác','tab'=>\Elementor\Controls_Manager::TAB_STYLE));
+  foreach(array('button_background'=>array('Nền nút','--lk-button-background'),'button_color'=>array('Chữ nút','--lk-button-color'),'button_hover'=>array('Nền khi rê chuột','--lk-button-hover')) as $key=>$data)$this->add_control($key,array('label'=>$data[0],'type'=>'color','selectors'=>array('{{WRAPPER}}'=>$data[1].': {{VALUE}};')));
+  $this->add_group_control(\Elementor\Group_Control_Typography::get_type(),array('name'=>'button_typography','label'=>'Chữ trên nút','selector'=>'{{WRAPPER}} .lk-button, {{WRAPPER}} .lk-search>button'));
+  $this->add_responsive_control('button_radius',array('label'=>'Bo góc nút','type'=>'slider','range'=>array('px'=>array('min'=>0,'max'=>40)),'selectors'=>array('{{WRAPPER}}'=>'--lk-button-radius: {{SIZE}}{{UNIT}};')));
+  $this->end_controls_section();
+ }
  protected function appearance(){
   $this->start_controls_section('appearance',array('label'=>'Giao diện','tab'=>\Elementor\Controls_Manager::TAB_STYLE));
   $this->add_control('accent',array('label'=>'Màu chủ đạo','type'=>\Elementor\Controls_Manager::COLOR,'default'=>'#52ab5c','selectors'=>array('{{WRAPPER}}'=>'--lk-accent: {{VALUE}};')));
@@ -43,8 +57,14 @@ class LK_Widget_Results extends LK_Widget {
  protected function register_controls(){
   $this->start_controls_section('content',array('label'=>'Bộ lọc tìm kiếm'));
   $this->add_control('filter_title',array('label'=>'Tiêu đề bộ lọc','type'=>'text','default'=>'Lọc kết quả'));
+  foreach(array('categories_title'=>'Danh mục','regions_title'=>'Khu vực','price_tier_title'=>'Mức giá','price_range_title'=>'Khoảng giá','features_title'=>'Tiện ích') as $key=>$label)$this->add_control($key,array('label'=>'Tiêu đề '.$label,'type'=>'text','default'=>$label));
   $this->add_control('help',array('type'=>'raw_html','raw'=>'Dữ liệu lấy từ Địa điểm ListingPro. Các bộ lọc được giữ trong URL khi tải lại hoặc chia sẻ.'));
-  $this->end_controls_section();$this->appearance();
+  $this->end_controls_section();$this->appearance();$this->fields_style();$this->button_style();
+  $this->start_controls_section('results_layout',array('label'=>'Bố cục bộ lọc','tab'=>\Elementor\Controls_Manager::TAB_STYLE));
+  $this->add_control('filter_width',array('label'=>'Chiều rộng bộ lọc desktop','type'=>'slider','range'=>array('px'=>array('min'=>200,'max'=>400)),'selectors'=>array('{{WRAPPER}}'=>'--lk-filter-width: {{SIZE}}{{UNIT}};')));
+  $this->add_responsive_control('result_gap',array('label'=>'Khoảng cách thẻ kết quả','type'=>'slider','range'=>array('px'=>array('min'=>0,'max'=>50)),'selectors'=>array('{{WRAPPER}}'=>'--lk-result-gap: {{SIZE}}{{UNIT}};')));
+  $this->add_control('panel_background',array('label'=>'Nền bộ lọc','type'=>'color','selectors'=>array('{{WRAPPER}}'=>'--lk-panel-background: {{VALUE}};')));
+  $this->end_controls_section();
  }
  protected function render(){lk_results($this->get_settings_for_display());}
 }
@@ -56,19 +76,28 @@ class LK_Widget_Reviews extends LK_Widget {
   $this->add_control('invite_title',array('label'=>'Tiêu đề mời đánh giá','type'=>'text','default'=>'Bạn đã từng đến đây?'));
   $this->add_control('invite_copy',array('label'=>'Lời mời đánh giá','type'=>'textarea','default'=>'Chia sẻ trải nghiệm và cảm nhận của bạn cho mọi người cùng biết.'));
   $this->add_control('invite_image',array('label'=>'Hình minh họa','type'=>'media','default'=>array('id'=>0,'url'=>lk_asset('review-illustration'))));
-  $this->end_controls_section();$this->appearance();
+  foreach(array('modal_title'=>'Đánh giá','rating_title'=>'Xếp hạng của bạn','review_heading'=>'Đánh giá của bạn','anonymous_title'=>'Đánh giá ẩn danh','review_button'=>'Gửi đánh giá') as $key=>$label)$this->add_control($key,array('label'=>$label,'type'=>'text','default'=>$label));
+  $this->end_controls_section();$this->appearance();$this->fields_style();$this->button_style();
+  $this->start_controls_section('review_popup',array('label'=>'Popup đánh giá','tab'=>\Elementor\Controls_Manager::TAB_STYLE));
+  foreach(array('review_width'=>array('Chiều rộng popup','--lk-review-width',360,960),'star_size'=>array('Kích thước sao','--lk-star-size',18,44)) as $key=>$data)$this->add_responsive_control($key,array('label'=>$data[0],'type'=>'slider','range'=>array('px'=>array('min'=>$data[2],'max'=>$data[3])),'selectors'=>array('{{WRAPPER}}'=>$data[1].': {{SIZE}}{{UNIT}};')));
+  $this->add_control('panel_background',array('label'=>'Nền popup','type'=>'color','selectors'=>array('{{WRAPPER}}'=>'--lk-panel-background: {{VALUE}};')));
+  $this->end_controls_section();
  }
  protected function render(){lk_reviews($this->get_settings_for_display());}
 }
 class LK_Widget_Form extends LK_Widget {
+ // Elementor also asks the unconfigured widget prototype for its dependencies.
+ public function get_script_depends(){return array('lk-location-picker','lk-listing-fields');}
+ public function get_style_depends(){return array_merge(parent::get_style_depends(),array('lk-location-picker'));}
  public function get_name(){return 'lk-form';} public function get_title(){return 'Biểu mẫu Long Khánh';}
  public function get_icon(){return 'eicon-form-horizontal';}
  protected function register_controls(){
   $this->start_controls_section('content',array('label'=>'Biểu mẫu'));
   $this->add_control('kind',array('label'=>'Loại biểu mẫu','type'=>'select','options'=>array('contact'=>'Liên hệ','add-place'=>'Thêm địa điểm','review'=>'Viết review đầy đủ'),'default'=>'contact'));
+  foreach(array('basic_title'=>'Thông tin cơ bản','other_title'=>'Thông tin khác','contact_title'=>'Thông tin liên hệ','images_title'=>'Hình ảnh','address_title'=>'Thêm Địa Chỉ Tùy Chỉnh','hours_title'=>'Giờ mở cửa theo thứ','price_title'=>'Thông tin giá','add_place_button'=>'Thêm địa điểm') as $key=>$label)$this->add_control($key,array('label'=>$label,'type'=>'text','default'=>$label,'condition'=>array('kind'=>'add-place')));
   $this->add_control('button',array('label'=>'Chữ nút gửi','type'=>'text','default'=>'Gửi'));
   foreach(array('rating_title'=>array('Tiêu đề xếp hạng','Xếp hạng của bạn'),'review_heading'=>array('Tiêu đề nội dung đánh giá','Đánh giá của bạn'),'place_title'=>array('Tiêu đề chọn địa điểm','Địa điểm'),'recent_title'=>array('Tiêu đề lịch sử','Đánh giá gần đây'),'anonymous_title'=>array('Tiêu đề ẩn danh','Đánh giá ẩn danh')) as $key=>$label)$this->add_control($key,array('label'=>$label[0],'type'=>'text','default'=>$label[1],'condition'=>array('kind'=>'review')));
-  $this->end_controls_section();$this->appearance();
+  $this->end_controls_section();$this->appearance();$this->fields_style();$this->button_style();
  }
  protected function render(){lk_form($this->get_settings_for_display());}
 }

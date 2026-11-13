@@ -49,8 +49,12 @@ function lk_listing_media_box($post){
 }
 add_action('admin_enqueue_scripts',function(){
  $screen=get_current_screen();if(!$screen||$screen->post_type!=='listing')return;
+ lk_enqueue_location_assets();
  wp_enqueue_media();wp_enqueue_script('lk-admin-media',LK_URL.'assets/admin-media.js',array('jquery','media-views','media-editor'),filemtime(LK_DIR.'assets/admin-media.js'),true);
+ wp_enqueue_style('lk-listing-fields',LK_URL.'assets/listing-fields.css',array(),filemtime(LK_DIR.'assets/listing-fields.css'));
+ wp_enqueue_script('lk-listing-fields',LK_URL.'assets/listing-fields.js',array(),filemtime(LK_DIR.'assets/listing-fields.js'),true);
 });
+add_action('admin_notices',function(){if(!empty($_GET['lk_hours_error']))echo '<div class="notice notice-error"><p>Lịch mở cửa chưa được lưu. Vui lòng kiểm tra giờ của từng thứ, tránh khung giờ trùng nhau và chọn Mở 24 giờ nếu mở cả ngày.</p></div>';});
 add_action('save_post_listing',function($id){
  if(wp_is_post_autosave($id)||wp_is_post_revision($id)||!current_user_can('edit_post',$id)||empty($_POST['lk_media_nonce'])||!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['lk_media_nonce'])),'lk_listing_media'))return;
  foreach(array('photo'=>'gallery_image_ids','menu'=>'_lk_menu_ids') as $view=>$key){
@@ -64,7 +68,7 @@ add_action('save_post_listing',function($id){
 function lk_refresh_rating($post_id){
  if(get_post_type($post_id)!=='listing')return;
  $reviews=get_comments(array('post_id'=>$post_id,'type'=>'lk_review','status'=>'approve'));
- $scores=array_filter(array_map(function($review){$score=(int)get_comment_meta($review->comment_ID,'lk_rating',true);return $score>=1&&$score<=5?$score:0;},$reviews));
+ $scores=array_filter(array_map(function($review){$score=(float)get_comment_meta($review->comment_ID,'lk_rating',true);return $score>=1&&$score<=5?$score:0;},$reviews));
  update_post_meta($post_id,'_lk_rating',$scores?round(array_sum($scores)/count($scores),1):0);
 }
 add_action('transition_comment_status',function($new,$old,$comment){if($comment->comment_type==='lk_review')lk_refresh_rating($comment->comment_post_ID);},10,3);

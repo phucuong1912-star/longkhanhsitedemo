@@ -1,0 +1,19 @@
+/* Widget variables are set by Elementor's native controls and scoped per widget. */
+body.lk-site .lk-form{gap:var(--lk-field-gap,24px)}
+body.lk-site .lk-form label,body.lk-site .lk-form legend{color:var(--lk-label-color,inherit)}
+body.lk-site .lk-form input:not([type=checkbox]):not([type=radio]):not([type=file]),body.lk-site .lk-form select,body.lk-site .lk-form textarea,
+body.lk-site .lk-review-composer input[type=text],body.lk-site .lk-review-composer textarea,body.lk-site .lk-review-composer select{background:var(--lk-field-background,#fff);color:var(--lk-field-text,#252e27);border-color:var(--lk-field-border,#ddd);border-radius:var(--lk-radius,8px)}
+body.lk-site .lk-form input:not([type=checkbox]):not([type=radio]):not([type=file]),body.lk-site .lk-form select{min-height:var(--lk-field-height,44px)}
+body.lk-site .lk-filter{background:var(--lk-panel-background,#fff);color:var(--lk-field-text,inherit)}
+body.lk-site .lk-filter legend{color:var(--lk-label-color,inherit)}
+body.lk-site .lk-results-cards{gap:var(--lk-result-gap,20px)}
+body.lk-site .lk-button,body.lk-site .lk-search>button{background:var(--lk-button-background,var(--lk-accent));color:var(--lk-button-color,#fff);border-radius:var(--lk-button-radius,8px)}
+body.lk-site .lk-button:hover,body.lk-site .lk-search>button:hover{background:var(--lk-button-hover,var(--lk-dark))}
+body.lk-site .lk-review-dialog{width:var(--lk-review-width,610px);background:var(--lk-panel-background,#fff);color:var(--lk-field-text,var(--lk-text))}
+body.lk-site .lk-review-dialog-header{background:var(--lk-panel-background,#fff)}
+body.lk-site .lk-review-composer h3{color:var(--lk-label-color,#8b8f9b)}
+body.lk-site .lk-review-composer .lk-stars-input label{font-size:var(--lk-star-size,30px)}
+@media(min-width:992px){body.lk-site .lk-results-layout{grid-template-columns:var(--lk-filter-width,270px) minmax(0,1fr)}}
+@media(max-width:767px){body.lk-site .lk-results-cards{gap:var(--lk-result-gap,8px)}body.lk-site .lk-review-composer .lk-stars-input label{font-size:var(--lk-star-size,clamp(19px,5.6vw,26px))}}
+
+body.lk-site .lk-button.lk-outline{background:transparent;color:var(--lk-accent)}

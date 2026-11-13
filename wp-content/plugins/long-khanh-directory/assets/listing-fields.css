@@ -1,0 +1,53 @@
+.lk-hours-editor{min-width:0;border:0;padding:0;margin:4px 0 20px;font:inherit;color:inherit}
+.lk-hours-editor>legend{padding:0;margin-bottom:8px;font-size:18px;font-weight:600}
+.lk-hours-editor .lk-hours-help{font-size:13px;color:#68726b;margin:0 0 12px;line-height:1.6}
+.lk-hours-editor .lk-hours-day{display:grid;grid-template-columns:minmax(180px,36%) minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid #e4e8e5;align-items:start}
+.lk-hours-editor .lk-hours-day-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px}
+.lk-hours-editor .lk-hours-day-heading strong{font-size:14px;white-space:nowrap;font-weight:600}
+.lk-hours-editor .lk-hours-day-heading label{min-width:0;max-width:170px;flex:1}
+.lk-hours-editor [hidden]{display:none!important}
+.lk-hours-editor .lk-hours-slot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 28px;gap:10px;align-items:end;margin:0 0 10px}
+.lk-hours-editor .lk-hours-slot label{font-size:12px;display:block;min-width:0;color:#68726b}
+.lk-hours-editor input[type=time],.lk-hours-editor select,.lk-price-status-select select{font:inherit;display:block;width:100%;min-width:0;min-height:40px;max-width:100%;background:white;border:1px solid #d6dcd7;border-radius:6px;padding:7px 9px;margin:0;color:#252e27;line-height:1.5;box-sizing:border-box}
+.lk-hours-editor input[type=time]{font-size:14px;margin-top:3px}
+.lk-hours-editor select{font-size:13px}
+.lk-hours-editor .lk-hours-remove{border:0;background:#f4e9e7;border-radius:50%;width:27px;height:27px;padding:0;margin:0 0 7px;color:#a75d52;font-size:22px;line-height:1;cursor:pointer}
+.lk-hours-editor .lk-hours-remove:disabled{opacity:.35;cursor:default}
+.lk-hours-editor .lk-hours-add,.lk-hours-editor .lk-hours-copy{display:inline-flex;align-items:center;justify-content:center;min-height:34px;font:inherit;font-size:13px;border:1px solid #b8d3bc;color:#357c3d;background:#fff;border-radius:5px;padding:5px 10px;cursor:pointer;text-decoration:none}
+.lk-hours-editor .lk-hours-copy{margin-top:16px}
+.lk-hours-editor .lk-hours-add:hover,.lk-hours-editor .lk-hours-copy:hover{background:#eff7f0}
+.lk-hours-editor .lk-hours-error{font-size:14px;color:#a12e27;margin:12px 0 0}
+.lk-hours-editor .lk-hours-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.lk-hours-editor :focus-visible{outline:2px solid #357c3d;outline-offset:3px}
+.lk-price-status-select{display:block;font-size:14px;line-height:1.6}
+.lk-price-status-select select{margin-top:5px}
+body.lk-site .lk-form-prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+body.lk-site .lk-form .lk-hours-day-heading label{margin:0}
+body.lk-site .lk-form .lk-hours-slot label{font-size:12px;line-height:1.4}
+body.lk-site .lk-form .lk-hours-editor input[type=time],body.lk-site .lk-form .lk-hours-editor select{padding:7px 9px;min-height:40px;font-size:14px}
+body.lk-site .lk-place p.lk-price-level{font-size:12px;color:#52845a;margin:0 0 6px;line-height:1.5}
+body.lk-site .lk-weekly-hours{width:100%;min-width:0;font-size:14px}
+body.lk-site .lk-weekly-hours summary{display:flex;align-items:flex-start;gap:8px;list-style:none;cursor:pointer;line-height:1.6}
+body.lk-site .lk-weekly-hours summary::-webkit-details-marker{display:none}
+body.lk-site .lk-weekly-hours summary>i{flex:0 0 16px;line-height:1.6}
+body.lk-site .lk-weekly-hours summary>i:last-child{font-size:11px;margin-left:auto;color:#78837b}
+body.lk-site .lk-weekly-hours summary>span{flex:1;min-width:0}
+body.lk-site .lk-weekly-hours[open] summary>i:last-child{transform:rotate(180deg)}
+body.lk-site .lk-weekly-hours .is-open{color:#3e9949}
+body.lk-site .lk-weekly-hours .is-closed{color:#9b6056}
+body.lk-site .lk-weekly-hours summary strong{background:transparent;padding:0;border-radius:0;font-size:inherit;line-height:inherit}
+body.lk-site .lk-weekly-hours dl{font-size:13px;margin:12px 0 0;padding:10px 0;border-top:1px solid #e2e9e3}
+body.lk-site .lk-weekly-hours dl>div{display:grid;grid-template-columns:82px minmax(0,1fr);gap:10px;padding:6px 0}
+body.lk-site .lk-weekly-hours dd{margin:0;text-align:right}
+body.lk-site .lk-weekly-hours dt{font-weight:500}
+body.lk-site .lk-weekly-hours .is-today{color:#357c3d;font-weight:600}
+body.lk-site .lk-hours-list-item{display:block;width:100%;padding:2px 0}
+@media(max-width:600px){
+ .lk-hours-editor .lk-hours-day{grid-template-columns:minmax(0,1fr);gap:8px;padding:12px 0}
+ .lk-hours-editor .lk-hours-day-heading{min-height:36px}
+ .lk-hours-editor .lk-hours-day-heading label{max-width:180px}
+ .lk-hours-editor .lk-hours-slot{gap:8px}
+ .lk-hours-editor .lk-hours-copy{width:100%}
+ body.lk-site .lk-form-prices{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ body.lk-site .lk-form-prices>.lk-price-status-select{grid-column:1/-1}
+}

@@ -108,3 +108,83 @@ Reserved60px + safe-area in body on mobile/tablet; hid empty desktop footer
 wrapper so no black strip remains. Floating back-top avoids full contribution
 section. Responsive checks use Tab.screenshot + Playwright consistently; native
 getScreenshot/AX can lag behind the DOM renderer's current viewport in IAB.
+
+FEEDBACK 1 — 2026-11-13
+User scope: keep add-place form unchanged, skip account dashboard; temporarily
+hide ownership claim (.lk-owner). Reference inspected in logged-in Chrome.
+Search now opens suggestions with compass/nearby action above recent places.
+Nearby asks for browser position, keeps coordinates only in session storage for
+five minutes (no coordinates in URL), ranks all filtered published listings by
+Haversine distance before pagination. Missing/invalid listing coordinates are
+excluded from ranking; denial/timeout has an explicit fallback and retry.
+Filters: category/region checkboxes, Features taxonomy amenity icons/checks,
+AND across chosen amenities, category-specific options, dual price slider,
+active filter removal chips, nearest/rating/price sorting. Desktop autosubmits;
+mobile collects changes until Apply. Admin toolbar offset fixed on mobile.
+Search renderer: plugin includes/search-results.php; browser results behavior:
+child assets/directory-results.js; scoped presentation: assets/feedback.css.
+Detail review is a native dialog using the shared composer (five star groups,
+pointer dragging/keyboard, text/title, photo validation/preview/removal, anon).
+Fractional review summary now keeps decimal scores. Directions use address
+when coordinates are absent; submission/admin forms were not edited.
+Checks: 13 PHP behavioral checks, 5 Node tests including pointer dragging,
+Haversine/denied/cache and ranking beyond page 1; PHP/JS syntax and diff checks.
+Actual local browser submission on fixture27050 saved scores3/5/5/5/5,
+average4.6, one JPEG and anonymous flag. Fixture/comment trashed; uploaded test
+attachment and generated sizes removed. 15 user listings preserved. Desktop
+1366x900 and mobile390x844 checked in IAB. Real-device GPS permission/grant
+was not exercised; success/denial/timeout exercised with synthetic coordinates.
+No deployment or parent/core changes. Pre-existing feedback_1.rtf/debug.log
+changes are unrelated; do not overwrite them. Screenshot artifacts are under
+C:/Users/ITCK/.codex/visualizations/2026/11/13/01a1d467-a3ed-7e93-abf1-25d11ad86d94/feedback-ui.
+
+PRICE TIERS AND WEEKDAY HOURS — 2026-11-13
+User expanded scope: now edit the price/hours sections of add-place and admin
+listing forms. Other submission fields stay as before; account work still skipped.
+Added native ListingPro price_status values (notsay, inexpensive, moderate,
+pricey, ultra_high_end) to both forms, search checkboxes/chips and displayed data.
+Numeric two-handle slider remains independent and combines with tier filtering.
+New includes/listing-fields.php normalizes business_hours to seven days. Read
+legacy scalar/array and 12-hour times; save native business_hours plus the
+lk_hours_defined marker so an all-closed week cannot fall back to legacy hours.
+Each day has open/closed/24h mode and up to3 intervals. Duplicate/overlapping
+intervals (including Sunday→Monday carry) rejected. Admin edits preserve other
+ListingPro options and no longer overwrite all weekdays with one daily pair.
+Daily status uses WP site timezone, intervals/end-exclusive boundaries, midnight
+carry and previous-day overnight shifts. Public index schema nowv3, computes
+status for current day on cache reads. Cards, detail and open filter use this
+status. Native details summary shows the7-day schedule in detail info list;
+handles Elementor font icons and SVG icons. Scoped listing-fields CSS/JS work
+in frontend and wp-admin; mobile390 fit checked without horizontal overflow.
+verify-listing-fields.php:30 checks pass; earlier13 PHP and5 Node checks pass.
+Actual browser submission27058 saved moderate,25000–100000, Monday2 shifts,
+Tuesday/Fridayclosed, Wednesday24h, Thursday22–02 and weekend copied shifts.
+Admin form reopened and matched saved data; detail schedule and combined tier
+filter visible. Browser fixture recoverably trashed;15 user listings preserved.
+User's existing admin tab27034 was left untouched; tests used a separate tab3.
+Refresh already-open admin pages to load new fields; do not overwrite drafts.
+
+LOCATION PICKER AND ELEMENTOR CONTROLS — 2026-11-13
+Added includes/location-picker.php and assets/location-picker.js/css. Frontend
+and managed wp-admin listing forms now offer address/manual coordinates/pin.
+Uses existing ListingPro map_option/google_map_api config and theme-bundled
+Leaflet for OpenStreetMap; Google uses Places New autocomplete and draggable
+AdvancedMarkerElement, loaded lazily. No key exists in saved config, so Google
+has not been verified live. No Nominatim/geocoding API was added to OSM.
+No fake initial coordinates are saved. Server validates paired finite bounds,
+accepts zero/negative values, preserves existing data on invalid admin input.
+Legacy demo-key scripts dequeued on managed pages/admin only. Map selection,
+marker drag, manual fields and responsive layout verified in IAB. Browser test
+listing27069 saved actual selected coordinates; admin save/preservation checked,
+then recoverably trashed. Published user listings remain15; tab27034 untouched.
+Elementor widgets expose labels, field/button colors and typography, field gaps
+and height, map height, filter width/result gaps, review width and star size.
+These remain custom widgets; individual fields cannot be dragged independently.
+Confirmed actual editor controls and 400px map/56px field live CSS, reverted
+preview inputs without publishing. Fixed prototype dependency methods to avoid
+get_settings() on unconfigured Elementor widget prototypes (preview fatal).
+verify-location-elementor.php:27 checks passed; weekly30, feedback13 and Node5
+regressions passed. Syntax and diff checks passed. Generated parent dynamic CSS
+was restored to its pre-test version. No core/parent implementation edited.
+Google Cloud billing/key setup left to user; provided official current pricing
+and restricted-key instructions. Waiting on key for live Google verification.

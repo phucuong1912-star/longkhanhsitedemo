@@ -67,7 +67,8 @@ function lk_resolve_listing_settings($type,$settings,$id) {
  if(!$binding||!$id)return $settings;
  $d=lk_place_data($id);
  $item=function($text,$url,$icon,$i){return array('_id'=>'lk-field-'.$i,'text'=>$text,'link'=>array('url'=>$url),'selected_icon'=>array('value'=>'fas fa-'.$icon,'library'=>'fa-solid'));};
- $directions='https://www.google.com/maps/dir/?api=1&destination='.$d['lat'].','.$d['lng'];
+ $destination=$d['lat']!==null&&$d['lng']!==null?$d['lat'].','.$d['lng']:$d['address'];
+ $directions='https://www.google.com/maps/dir/?api=1&destination='.rawurlencode($destination);
  if($type==='heading')$settings['title']=esc_html(($binding==='gallery-title'?(get_query_var('lk_view')==='menu'?'Menu của ':'Hình ảnh '):'').$d['title']);
  if($type==='text-editor'){
   $content='';
@@ -85,7 +86,7 @@ function lk_resolve_listing_settings($type,$settings,$id) {
  if($type==='icon-list'){
   $items=array();
   if($binding==='links')$items=array($item($d['address'],'','map-marker-alt',0),$item('Hiển thị bản đồ','#location','map-marked-alt',1),$item('Xem đường đi',$directions,'directions',2),$item('Xem menu',$d['url'].'menu/','utensils',3));
-  if($binding==='info')$items=array($item(lk_money($d['min']).' - '.lk_money($d['max']),'','dollar-sign',0),$item(($d['opened']?'Đang mở cửa':'Đang đóng cửa').' - '.$d['open'].' - '.$d['close'],'','clock',1),$item($d['phone']?:'Đang cập nhật',$d['phone']?'tel:'.$d['phone']:'','phone-alt',2));
+  if($binding==='info')$items=array($item(lk_money($d['min']).' - '.lk_money($d['max']).($d['priceStatus']&&$d['priceStatus']!=='notsay'?' · '.$d['priceLabel']:''),'','dollar-sign',0),$item(($d['opened']?'Đang mở cửa':'Đang đóng cửa').' · '.$d['hoursLabel'],'','clock',1),$item($d['phone']?:'Đang cập nhật',$d['phone']?'tel:'.$d['phone']:'','phone-alt',2));
   if($binding==='benefits')foreach(wp_get_post_terms($id,'features') as $i=>$term){$icon=get_term_meta($term->term_id,'_lk_icon',true)?:'check';$icon=strtr($icon,array('hand-holding-box'=>'shopping-bag'));$items[]=$item($term->name,'',$icon,$i);}
   if($binding==='directions')$items=array($item('Xem đường đi',$directions,'directions',0));
   $settings['icon_list']=$items;
@@ -123,6 +124,7 @@ add_action('elementor/widget/before_render_content',function($widget){
  if(method_exists($widget,'reset_render_state'))$widget->reset_render_state();
 });
 add_filter('elementor/widget/render_content',function($html,$widget){
+ if($widget->get_name()==='icon-list'&&$widget->get_settings('lk_binding')==='info'&&lk_context_id()){$data=lk_place_data(lk_context_id());$html=preg_replace_callback('/<li\b[^>]*>.*?<\/li>/s',function($match)use($data){return (str_contains($match[0],'fa-clock')||str_contains($match[0],'fas-clock'))?'<li class="elementor-icon-list-item lk-hours-list-item">'.lk_schedule_details($data).'</li>':$match[0];},$html);}
  if($widget->get_name()==='progress'&&str_starts_with((string)$widget->get_settings('lk_binding'),'criteria-')){$criteria=lk_rating_criteria(lk_context_id());$score=$criteria[substr($widget->get_settings('lk_binding'),9)]??0;$html=preg_replace_callback('/(<span class="elementor-progress-percentage">).*?(<\/span>)/s',function($match)use($score){return $match[1].esc_html($score).$match[2];},$html);}
  if($widget->get_name()==='heading'&&$widget->get_settings('lk_typewriter_lines')){
   $lines=trim($widget->get_settings('lk_typewriter_lines'));

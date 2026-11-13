@@ -19,7 +19,7 @@
     const dialog = $(selector); if (!dialog) return;
     lastFocus = document.activeElement;
     dialog.showModal(); document.documentElement.classList.add('lk-dialog-open');
-    const first = $('input:not([type="hidden"]),button,a[href]', dialog); if (first) first.focus();
+    const first = $('input:not([type="hidden"]),textarea,button,a[href]', dialog); if (first) first.focus();
   }
   function closeDialog(dialog) {
     if (!dialog || dialog.classList.contains('is-closing')) return;
@@ -51,36 +51,61 @@
     const result = inModal ? $('.lk-search-suggestions', inModal) : $('.lk-suggest', input.closest('form'));
     if (!result) return;
     const found = term ? places.filter(p => normalize(p.title + ' ' + p.address + ' ' + (p.categoryNames || '')).includes(term)).slice(0,5) : places.filter(p => read('lk-recent').includes(p.id)).slice(0,4);
-    result.innerHTML = (!term ? '<p class="lk-suggestion-label">Đã xem gần đây</p>' : '') + found.map(suggestion).join('') + (term ? `<a class="lk-all-results" href="${escape(config.search)}?q=${encodeURIComponent(input.value)}">Xem tất cả tìm kiếm cho “${escape(input.value)}”</a>` : '<button type="button" class="lk-nearby">Tìm quanh đây</button>');
+    const nearby = '<button type="button" class="lk-nearby"><i class="far fa-compass" aria-hidden="true"></i> Tìm quanh đây</button>';
+    result.innerHTML = (!term ? nearby + '<p class="lk-suggestion-label">Đã xem gần đây</p>' : '') + found.map(suggestion).join('') + (term ? `<a class="lk-all-results" href="${escape(config.search)}?q=${encodeURIComponent(input.value)}">Xem tất cả tìm kiếm cho “${escape(input.value)}”</a>` : (!found.length ? '<p class="lk-recent-hint">Địa điểm bạn vừa xem sẽ xuất hiện tại đây.</p>' : ''));
     result.hidden = false;
   }
   $$('.lk-search input').forEach(input => {
     input.addEventListener('input', () => suggestions(input));
     input.addEventListener('focus', () => {
       if(restoringFocus)return;
-      if (innerWidth < 992 && !input.closest('#lk-search-modal')) {
+      if (!input.closest('#lk-search-modal')) {
         openDialog('#lk-search-modal'); const next = $('#lk-search-modal input'); next.value = input.value; next.focus(); suggestions(next);
       } else suggestions(input);
     });
-    input.addEventListener('click',()=>{if(!restoringFocus&&innerWidth<992&&!input.closest('#lk-search-modal')&&!$('#lk-search-modal').open){openDialog('#lk-search-modal');const next=$('#lk-search-modal input');next.value=input.value;suggestions(next);}});
+    input.addEventListener('click',()=>{if(!restoringFocus&&!input.closest('#lk-search-modal')&&!$('#lk-search-modal').open){openDialog('#lk-search-modal');const next=$('#lk-search-modal input');next.value=input.value;suggestions(next);}});
   });
   const current = places.find(p => p.id === Number(config.page));
   if (current) write('lk-recent', [current.id, ...read('lk-recent').filter(id => id !== current.id)].slice(0,6));
-  function card(p) {
+  function card(p, view = 'grid') {
     const reviewLabel=p.reviews ? `${Number(p.reviews)} đánh giá` : 'Chưa có đánh giá';
-    return `<article class="lk-place lk-place--grid" data-place-id="${p.id}"><a class="lk-place-photo" href="${escape(p.url)}" tabindex="-1" aria-hidden="true"><img src="${escape(p.image)}" alt="" loading="lazy" width="400" height="300"></a><button class="lk-save" data-save="${p.id}" aria-label="Lưu ${escape(p.title)}" aria-pressed="false"><i class="fas fa-bookmark" aria-hidden="true"></i></button><div class="lk-place-copy"><h3><a href="${escape(p.url)}">${escape(p.title)}</a></h3><div class="lk-list-rating"><span class="lk-stars" aria-label="${p.rating ? `Điểm ${p.rating} trên 5` : reviewLabel}">${p.rating || ''} ☆☆☆☆☆</span><span>${reviewLabel}</span></div><p class="lk-price">${money(p.min)} - ${money(p.max)}</p><p class="lk-address" title="${escape(p.address)}">${escape(p.address)}</p><div class="lk-place-meta"><span class="lk-region"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> ${escape(p.region)}</span><span class="lk-status ${p.opened ? 'is-open' : 'is-closed'}">${p.opened ? 'Đang mở cửa' : 'Đang đóng cửa'}</span></div></div></article>`;
+    return `<article class="lk-place lk-place--${view}" data-place-id="${p.id}"><a class="lk-place-photo" href="${escape(p.url)}" tabindex="-1" aria-hidden="true"><img src="${escape(p.image)}" alt="" loading="lazy" width="400" height="300"></a><button class="lk-save" data-save="${p.id}" aria-label="Lưu ${escape(p.title)}" aria-pressed="false"><i class="fas fa-bookmark" aria-hidden="true"></i></button><div class="lk-place-copy"><h3><a href="${escape(p.url)}">${escape(p.title)}</a></h3><div class="lk-list-rating"><span class="lk-stars" aria-label="${p.rating ? `Điểm ${p.rating} trên 5` : reviewLabel}">${p.rating || ''} ☆☆☆☆☆</span><span>${reviewLabel}</span></div><p class="lk-price">${p.min || p.max ? `${money(p.min)} - ${money(p.max)}` : 'Đang cập nhật'}</p>${p.priceStatus && p.priceStatus !== 'notsay' ? `<p class="lk-price-level">${escape(p.priceLabel)}</p>` : ''}<p class="lk-address" title="${escape(p.address)}">${escape(p.address)}</p><div class="lk-place-meta"><span class="lk-region"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> ${escape(p.region)}</span><span class="lk-status ${p.opened ? 'is-open' : 'is-closed'}">${p.opened ? 'Đang mở cửa' : 'Đang đóng cửa'}</span><span class="lk-hours"> - ${escape(p.hoursLabel || `${p.open} - ${p.close}`)}</span>${Number.isFinite(p.distance) ? `<span class="lk-distance"><i class="fas fa-location-arrow" aria-hidden="true"></i> ${p.distance < 1 ? `${Math.round(p.distance * 1000)} m` : `${p.distance.toLocaleString('vi-VN', {maximumFractionDigits: 1})} km`}</span>` : ''}</div></div></article>`;
   }
+  function hasCoordinates(p) { return p.lat !== null && p.lng !== null && Number.isFinite(p.lat) && Number.isFinite(p.lng) && Math.abs(p.lat) <= 90 && Math.abs(p.lng) <= 180; }
+  function distance(origin, p) {
+    const rad = value => value * Math.PI / 180;
+    const dlat = rad(p.lat - origin.lat), dlng = rad(p.lng - origin.lng);
+    const a = Math.sin(dlat / 2) ** 2 + Math.cos(rad(origin.lat)) * Math.cos(rad(p.lat)) * Math.sin(dlng / 2) ** 2;
+    return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(Math.max(0, 1 - a)));
+  }
+  function locate() {
+    return new Promise((resolve, reject) => {
+      if (!navigator.geolocation) { reject(new Error('Trình duyệt chưa hỗ trợ vị trí. Bạn có thể tìm theo tên hoặc khu vực.')); return; }
+      let cached;
+      try { cached = JSON.parse(sessionStorage.getItem('lk-location') || 'null'); } catch {}
+      if (cached && hasCoordinates(cached) && Date.now() - cached.time < 5 * 60 * 1000) { resolve(cached); return; }
+      navigator.geolocation.getCurrentPosition(position => {
+        const origin = {lat:position.coords.latitude, lng:position.coords.longitude, time:Date.now()};
+        try { sessionStorage.setItem('lk-location', JSON.stringify(origin)); } catch {}
+        resolve(origin);
+      }, error => reject(new Error(error.code === 1 ? 'Bạn chưa cho phép chia sẻ vị trí. Hãy cho phép vị trí trong trình duyệt rồi thử lại, hoặc tìm theo tên và khu vực.' : error.code === 3 ? 'Lấy vị trí quá thời gian chờ. Vui lòng thử lại hoặc tìm theo khu vực.' : 'Chưa xác định được vị trí. Vui lòng bật định vị rồi thử lại hoặc tìm theo khu vực.')), {enableHighAccuracy:false, timeout:12000, maximumAge:300000});
+    });
+  }
+  window.LK_DIRECTORY = {hasCoordinates, distance, locate, card, savedState};
   async function showMap(id) {
     openDialog('#lk-map');
-    const listingIds = $$('.lk-results-cards [data-place-id]').map(el => Number(el.dataset.placeId));
-    const list = listingIds.length ? places.filter(p => listingIds.includes(p.id)) : places;
-    const selected = places.find(p => p.id === Number(id)) || list[0] || places[0];
-    $('.lk-map-list').innerHTML = list.map(p => suggestion(p).replace('class="lk-suggestion"', `data-map-place="${p.id}" class="lk-suggestion"`)).join('');
-    if (selected) $('#lk-map iframe').src = `https://maps.google.com/maps?q=${selected.lat},${selected.lng}&z=14&output=embed`;
+    const results = $('.lk-results-layout');
+    const listingIds = results ? JSON.parse(results.dataset.mapIds || results.dataset.resultIds) : [];
+    const list = (results ? places.filter(p => listingIds.includes(p.id)) : places).filter(hasCoordinates);
+    const selected = list.find(p => p.id === Number(id)) || list[0];
+    $('.lk-map-list').innerHTML = list.length ? list.map(p => suggestion(p).replace('class="lk-suggestion"', `data-map-place="${p.id}" class="lk-suggestion"`)).join('') : '<p class="lk-location-status">Chưa có địa điểm có tọa độ trong các kết quả này.</p>';
+    $('#lk-map iframe').removeAttribute('src');
+    if (selected && hasCoordinates(selected)) $('#lk-map iframe').src = `https://maps.google.com/maps?q=${selected.lat},${selected.lng}&z=14&output=embed`;
   }
   document.addEventListener('click', e => {
     if (e.target.closest('[data-close]')) { e.preventDefault(); closeDialog(e.target.closest('dialog')); }
     if (e.target.closest('.lk-open-menu')) { e.preventDefault(); openDialog('#lk-menu'); }
+    if (e.target.closest('.lk-review-open, .lk-review-cta a, a[href="#lk-review-form"]') && $('#lk-review-dialog')) { e.preventDefault(); openDialog('#lk-review-dialog'); }
     if (e.target.closest('.lk-login-open')) { e.preventDefault(); openDialog('#lk-login'); }
     if (e.target.closest('.lk-open-search')) { e.preventDefault(); openDialog('#lk-search-modal'); suggestions($('#lk-search-modal input')); }
     if (e.target.closest('.lk-detail-links a[href$="/menu/"]')&&$('#lk-place-menu')){e.preventDefault();openDialog('#lk-place-menu');}
@@ -98,7 +123,16 @@
     const like = e.target.closest('.lk-like'); if(like){ const active=like.getAttribute('aria-pressed')!=='true';like.setAttribute('aria-pressed',String(active));like.innerHTML=`<i class="fas fa-heart" aria-hidden="true"></i> ${active?'Đã thích':'Thích'}`; }
     const share=e.target.closest('.lk-share');if(share){ if(navigator.share)navigator.share({url:share.dataset.url}).catch(()=>{});else navigator.clipboard?.writeText(share.dataset.url).then(()=>toast('Đã sao chép liên kết')).catch(()=>toast('Bạn có thể sao chép liên kết trên thanh địa chỉ.')); }
     if(!e.target.closest('.lk-search'))$$('.lk-suggest').forEach(el=>el.hidden=true);
-    if(e.target.closest('.lk-nearby')){ e.preventDefault(); if(!$('#lk-search-modal').open)openDialog('#lk-search-modal'); $('.lk-search-suggestions').textContent='Đang tìm vị trí của bạn…'; if(!navigator.geolocation){$('.lk-search-suggestions').textContent='Trình duyệt chưa hỗ trợ xác định vị trí. Bạn có thể tìm theo tên hoặc khu vực.';return;} navigator.geolocation.getCurrentPosition(pos=>{places.sort((a,b)=>Math.hypot(a.lat-pos.coords.latitude,a.lng-pos.coords.longitude)-Math.hypot(b.lat-pos.coords.latitude,b.lng-pos.coords.longitude));const input=$('#lk-search-modal input');input.value='';$('.lk-search-suggestions').innerHTML='<h3>Địa điểm quanh bạn</h3>'+places.slice(0,6).map(suggestion).join('');},()=>{$('.lk-search-suggestions').textContent='Chưa lấy được vị trí. Bạn có thể nhập tên địa điểm hoặc chọn khu vực trong bộ lọc.';}); }
+    if(e.target.closest('.lk-nearby')) {
+      e.preventDefault();
+      if (!$('#lk-search-modal').open) openDialog('#lk-search-modal');
+      const result = $('.lk-search-suggestions');
+      result.innerHTML = '<p class="lk-location-status" role="status">Đang xin quyền truy cập vị trí của bạn…</p>';
+      locate().then(() => { const url = new URL(config.search); url.searchParams.set('nearby','me'); url.searchParams.set('sort','nearest'); location.assign(url); }).catch(error => {
+        result.replaceChildren(); const message = document.createElement('p'); message.className = 'lk-location-error'; message.setAttribute('role','status'); message.textContent = error.message;
+        const retry = document.createElement('button'); retry.type = 'button'; retry.className = 'lk-nearby'; retry.textContent = 'Thử lấy vị trí lại'; result.append(message,retry);
+      });
+    }
   });
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){ const filter=$('.lk-filter-wrap.is-open');if(filter){filter.classList.remove('is-open');document.documentElement.classList.remove('lk-filter-opened');}$$('.lk-suggest').forEach(el=>el.hidden=true);} });
   document.addEventListener('keydown',e=>{
@@ -107,7 +141,7 @@
     index=e.key==='Home'?0:e.key==='End'?tabs.length-1:(index+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
     tabs[index].focus();tabs[index].click();
   });
-  const range=$('#lk-max-price');if(range)range.addEventListener('input',()=>{$('output',range.parentElement).textContent=money(range.value);});
+
   const path=new URL(location.href).pathname.replace(/\/$/,'');$$('.lk-header-nav a,.lk-bottom-nav a,.lk-drawer a').forEach(a=>{if(new URL(a.href,location.href).pathname.replace(/\/$/,'')===path)a.setAttribute('aria-current','page');});
   try {if(sessionStorage.getItem('lk-app-dismissed')==='1'&&$('.lk-app-bar'))$('.lk-app-bar').hidden=true;}catch{}
   savedState();
