@@ -2,3 +2,13 @@
 div.lp-top-notification-bar {
   top: 0 !important;
 }
+
+/* The legacy browse link overflows its column and covers the save icon. */
+#image_menu_wrapper .add-new-service_img_menu { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+#image_menu_wrapper .select_listing_for_img_menu { flex: 1 1 260px; min-width: 0; }
+#image_menu_wrapper .select_listing_for_img_menu .select2-container { min-width: 100%; max-width: 100%; width: 100% !important; }
+#image_menu_wrapper .add-menu_image { display: flex; align-items: center; gap: 12px; margin: 0; }
+#image_menu_wrapper .add-menu_image .upload-field.img-menu-upload-field { flex: 1; width: auto; min-width: 0; max-width: 180px; margin: 0; }
+#image_menu_wrapper .add-menu_image .jFiler-input-choose-btn { display: block; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#image_menu_wrapper #add-menu-image_btn { position: relative; z-index: 1; display: grid; place-items: center; flex: 0 0 44px; width: 44px; height: 44px; margin: 0; border: 1px solid #007fd4; border-radius: 4px; background: white; }
+#image_menu_wrapper #add-menu-image_btn:focus-visible { outline: 2px solid #007fd4; outline-offset: 3px; }

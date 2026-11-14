@@ -1,5 +1,30 @@
 ListingPro Long Khánh Child
 
+FEEDBACK 2
+
+Giao dien va hieu ung moi: assets/feedback2.css va assets/feedback2.js.
+Tich hop va migration Elementor: includes/feedback2.php. Migration chay mot
+lan khi quan tri vien mo website hoac WP-CLI khoi dong WordPress. Moi document
+duoc luu ban truoc sua trong post meta _lk_feedback2_backup. Khong nhap lai DB
+local de dua rieng thay doi giao dien nay len website dang co du lieu moi.
+
+Bo suu tap: Listings > Bo suu tap. Gan nhieu nhom cho dia diem trong editor
+du lieu; form dong gop va bo loc cung dung taxonomy lk_collection. Khong tu
+gan Bo suu tap cho bai cu. Tien ich lay tu cau hinh danh muc ListingPro va
+cac dia diem da xuat ban. Video nam trong hop Video gioi thieu cua bai.
+
+Thanh 3 nut mobile nam trong template chung dia diem, widget Thanh thao tac
+dia diem mobile. Co the sua nhan, mau va chu trong Elementor. Cac nut tu lay
+so dien thoai/toa do/URL theo dia diem. Nut chia se dung chia se cua thiet bi;
+neu trinh duyet khong ho tro thi hien Facebook va sao chep lien ket.
+
+Menu doc ca menu_listing[menu-img] tu dashboard ListingPro va _lk_menu_ids.
+Xac nhan chu dia diem tam an bang child CSS. Hai nut dang nhap mang xa hoi
+chi la giao dien cho den khi chu website cau hinh nha cung cap dang nhap.
+
+Ban do ket qua dung thu vien Leaflet da co san va tile OpenStreetMap, khong
+yeu cau key moi. Attribution phai duoc giu nguyen.
+
 Keep this child theme active. Update only the ListingPro parent theme through
 the normal theme update process. Do not move child files into the parent.
 
@@ -88,3 +113,31 @@ qua va bo loc co tieu de nhom, do rong cot loc, khoang cach ket qua. Widget
 Danh gia cong dong co nhan popup, chieu rong va kich thuoc sao. Day la widget
 du lieu tuy chinh, khong phai tung o nhap Elementor keo tha rieng. Form trong
 wp-admin khong duoc chinh bang Elementor. Khong sua theme ListingPro cha.
+
+
+FEEDBACK 2
+
+Giao dien va hieu ung bo sung nam o assets/feedback2.css, feedback2.js.
+Popup dang nhap sua tai Long Khanh > Popup dang nhap (Elementor).
+Thanh thao tac dia diem mobile la widget Thanh thao tac dia diem mobile;
+co nhan nut, font, mau va co bieu tuong trong Elementor. Tablet cung dung
+bo cuc chi tiet mot cot va thanh3nut nhu ban tham chieu.
+
+Listings > Bo suu tap la nhom rieng; tu tao va gan cho dia diem. Khong tu
+suy doan bo suu tap tu danh muc an uong. Bo loc co the ket hop cac nhom.
+
+Menu anh van tai qua Dashboard > Menu > Upload Image Menu. Chon dia diem,
+Browse File, chon anh va bam nut dau cong (Luu menu anh). Child theme sua
+vung bam bi che; menu_listing goc duoc doc truc tiep ngoai trang dia diem.
+Video nhap trong thong tin dia diem; template chung dung widget Video goc,
+chon nguon Video gioi thieu dia diem. Dia diem khong co video se an widget.
+
+Xem them o Blog mo nhom bai, dung lai cac the Elementor trong trang Cam
+nang Long Khanh. Sua the mot lan cap nhat ca trang Blog va nhom tuong ung.
+Xem them o Dia diem lan can sap xep quanh dia diem dang xem, khong xin vi
+tri nguoi xem. Nut Gan toi o thanh duoi dung vi tri cua nguoi xem.
+
+Cac chuyen doi cau truc Elementor chay mot lan trong includes/feedback2.php,
+co ban sao _lk_feedback2_backup truoc khi doi du lieu. Sau khi dua code len
+host, mo wp-admin > Long Khanh de ap dung chuyen doi. Khong can nang PHP,
+WordPress hay sao chep file sang theme cha.

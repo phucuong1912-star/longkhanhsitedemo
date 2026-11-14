@@ -47,7 +47,7 @@ add_action('admin_menu',function(){ add_menu_page('Địa Điểm Long Khánh','
 function lk_admin_page(){
  if(!current_user_can('edit_pages'))return;
  echo '<div class="wrap"><h1>Địa Điểm Long Khánh</h1><p>Theme ListingPro vẫn đang hoạt động. Các trang và bản mẫu bên dưới được dựng bằng Elementor Free.</p><h2>Bản mẫu dùng chung</h2><ul>';
- foreach(array('header'=>'Header và thanh điều hướng mobile','footer'=>'Footer','menu'=>'Menu mobile','listing'=>'Template chung chi tiết địa điểm','listing_gallery'=>'Template chung album và menu') as $key=>$name){$id=get_option('lk_template_'.$key);if($id)echo '<li><a href="'.esc_url(admin_url('post.php?post='.$id.'&action=elementor')).'">Sửa '.$name.' bằng Elementor</a></li>';}
+ foreach(array('header'=>'Header và thanh điều hướng mobile','footer'=>'Footer','menu'=>'Menu mobile','login'=>'Popup đăng nhập','listing'=>'Template chung chi tiết địa điểm','listing_gallery'=>'Template chung album và menu') as $key=>$name){$id=get_option('lk_template_'.$key);if($id)echo '<li><a href="'.esc_url(admin_url('post.php?post='.$id.'&action=elementor')).'">Sửa '.$name.' bằng Elementor</a></li>';}
  echo '</ul><form method="post" action="'.esc_url(admin_url('admin-post.php')).'"><input type="hidden" name="action" value="lk_template_preview">';wp_nonce_field('lk_template_preview');
  echo '<label for="lk-preview-listing"><strong>Địa điểm dùng để xem trước khi sửa template</strong></label> <select id="lk-preview-listing" name="listing_id">';
  foreach(lk_posts() as $place)echo '<option value="'.$place->ID.'" '.selected(get_option('lk_listing_preview'),$place->ID,false).'>'.esc_html($place->post_title).'</option>';

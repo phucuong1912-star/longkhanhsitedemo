@@ -6,6 +6,7 @@
  const form = document.querySelector('#lk-filter');
  const sort = document.querySelector('.lk-sort select');
  const status = layout.querySelector('.lk-location-status');
+ const presetOrigin = (window.LK_SITE?.places || []).find(place => place.id === Number(layout.dataset.originId)) || null;
  const min = form.elements.min_price, max = form.elements.max_price;
  const money = value => Number(value).toLocaleString('vi-VN') + 'đ';
  function updatePrice(changed) {
@@ -31,6 +32,7 @@
  sort.addEventListener('change', async () => {
   if (locating) return;
   if (sort.value !== 'nearest') { form.elements.nearby.value = ''; form.requestSubmit(); return; }
+  if (presetOrigin) { form.requestSubmit(); return; }
   locating = true; sort.disabled = true;
   showStatus('Đang xin quyền truy cập vị trí của bạn…');
   try { await api.locate(); form.elements.nearby.value = 'me'; sort.disabled = false; form.requestSubmit(); }
@@ -45,13 +47,13 @@
  const pagination = layout.querySelector('.lk-pagination');
  const count = layout.querySelector('.lk-result-count strong');
  cards.hidden = true; pagination.hidden = true;
- showStatus('Đang lấy vị trí để tìm các địa điểm gần bạn…');
- api.locate().then(origin => {
+ showStatus(presetOrigin ? `Đang tìm địa điểm gần ${presetOrigin.title}…` : 'Đang lấy vị trí để tìm các địa điểm gần bạn…');
+ (presetOrigin ? Promise.resolve(presetOrigin) : api.locate()).then(origin => {
   const ranked = matches.filter(api.hasCoordinates).map(place => ({...place, distance:api.distance(origin,place)})).sort((a,b) => a.distance - b.distance || a.id - b.id);
   layout.dataset.mapIds = JSON.stringify(ranked.map(place => place.id));
   count.textContent = ranked.length;
   const missing = matches.length - ranked.length;
-  showStatus(`Đã sắp xếp theo khoảng cách từ vị trí của bạn.${missing ? ` ${missing} địa điểm chưa có tọa độ nên chưa thể xếp khoảng cách.` : ''}`);
+  showStatus(`Đã sắp xếp theo khoảng cách từ ${presetOrigin ? presetOrigin.title : 'vị trí của bạn'}.${missing ? ` ${missing} địa điểm chưa có tọa độ nên chưa thể xếp khoảng cách.` : ''}`);
   function render(page) {
    cards.hidden = false;
    cards.innerHTML = ranked.length ? ranked.slice((page - 1) * 10, page * 10).map(place => api.card(place, 'list')).join('') : '<div class="lk-empty"><h2>Chưa có địa điểm phù hợp có tọa độ</h2><p>Thử bỏ bớt bộ lọc hoặc tìm theo tên và khu vực.</p></div>';

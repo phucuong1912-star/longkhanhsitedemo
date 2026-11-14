@@ -119,12 +119,13 @@ function lk_schedule_status($schedule,$now=null) {
 
 function lk_schedule_editor($schedule=null,$root='hours',$settings=array()) {
  $schedule=$schedule?:lk_legacy_schedule();
+ $compact=$root==='hours'&&function_exists('lk_f2_features');
  echo '<fieldset class="lk-hours-editor"><legend>'.esc_html($settings['hours_title']??'Giờ mở cửa theo thứ').'</legend><p class="lk-hours-help">Giờ đóng sớm hơn giờ mở được tính sang ngày kế tiếp. Có thể thêm tối đa 3 khung giờ mỗi ngày.</p>';
  foreach(lk_weekdays() as $day=>$label) {
   $row=$schedule[$day];$slots=$row['slots']?:array(array('open'=>'07:00','close'=>'22:00'));$prefix=$root.'['.$day.']';
-  echo '<div class="lk-hours-day" data-hours-root="'.esc_attr($prefix).'" data-day-label="'.esc_attr($label).'"><div class="lk-hours-day-heading"><strong>'.esc_html($label).'</strong><label><span class="lk-hours-sr">Trạng thái '.esc_html($label).'</span><select name="'.esc_attr($prefix).'[mode]" data-hours-mode>';
+  echo '<div class="lk-hours-day'.($compact?' is-folded':'').'" data-hours-root="'.esc_attr($prefix).'" data-day-label="'.esc_attr($label).'"><div class="lk-hours-day-heading"><strong>'.esc_html($label).'</strong><label><span class="lk-hours-sr">Trạng thái '.esc_html($label).'</span><select name="'.esc_attr($prefix).'[mode]" data-hours-mode>';
   foreach(array('open'=>'Theo khung giờ','closed'=>'Nghỉ','24h'=>'Mở 24 giờ') as $mode=>$text)echo '<option value="'.$mode.'" '.selected($row['mode'],$mode,false).'>'.$text.'</option>';
-  echo '</select></label></div><div class="lk-hours-slots"'.($row['mode']!=='open'?' hidden':'').'>';
+  echo '</select></label>'.($compact?'<span class="lk-hours-day-summary">'.esc_html(lk_day_hours_label($row)).'</span><button type="button" class="lk-hours-clear-day" aria-label="'.esc_attr('Xóa lịch '.$label).'">×</button>':'').'</div><div class="lk-hours-slots"'.($row['mode']!=='open'?' hidden':'').'>';
   foreach($slots as $index=>$slot) {
    echo '<div class="lk-hours-slot">';
    foreach(array('open'=>'Mở cửa','close'=>'Đóng cửa') as $field=>$text)echo '<label>'.esc_html($text).'<input type="time" data-hours-time="'.$field.'" name="'.esc_attr($prefix).'['.$field.']['.$index.']" value="'.esc_attr($slot[$field]).'" aria-label="'.esc_attr($text.' '.$label.' khung '.($index+1)).'" '.($row['mode']==='open'?'required':'disabled').'></label>';
@@ -132,6 +133,7 @@ function lk_schedule_editor($schedule=null,$root='hours',$settings=array()) {
   }
   echo '<button type="button" class="lk-hours-add">+ Thêm khung giờ</button></div></div>';
  }
+ if($compact){echo '<label class="lk-hours-day-picker"><span>Chọn thứ để thêm hoặc sửa giờ</span><select aria-label="Chọn thứ để nhập giờ"><option value="">Chọn thứ</option>';foreach(array_values(lk_weekdays()) as $index=>$label)echo '<option value="'.$index.'">'.esc_html($label).'</option>';echo '</select></label>';}
  echo '<button type="button" class="lk-hours-copy">Áp dụng giờ Thứ Hai cho cả tuần</button><p class="lk-hours-error" role="alert" hidden></p></fieldset>';
 }
 function lk_schedule_details($data) {
