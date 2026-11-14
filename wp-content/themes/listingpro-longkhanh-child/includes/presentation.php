@@ -76,12 +76,12 @@ add_action('elementor/page_templates/canvas/after_content', function() {
  echo '<dialog id="lk-menu" class="lk-drawer" aria-label="Menu điều hướng"><button class="lk-close" data-close aria-label="Đóng menu">&times;</button>';
  lk_template('menu'); echo '</dialog>';
  echo '<dialog id="lk-login" class="lk-login" aria-labelledby="lk-login-title"><button class="lk-close" data-close aria-label="Đóng đăng nhập">&times;</button><div class="lk-login-body">';
- lk_account('login');
+ if(get_option('lk_template_login'))lk_template('login');else lk_account('login');
  echo '</div><div class="lk-login-art"><img src="'.esc_url(lk_asset('login-illustration')).'" alt="Khám phá địa điểm Long Khánh"><h2>Địa Điểm Long Khánh</h2></div></dialog>';
  echo '<dialog id="lk-search-modal" class="lk-search-modal" aria-label="Tìm kiếm địa điểm">';
  lk_search(array('placeholder'=>'Nhập tên quán, khu vực, kiểu quán,...','button'=>'Tìm quán','mode'=>'modal'));
  echo '<button data-close class="lk-cancel">Huỷ</button><div class="lk-search-suggestions"></div></dialog>';
- echo '<dialog id="lk-map" class="lk-map-dialog" aria-labelledby="lk-map-title"><h2 id="lk-map-title">Tìm kiếm địa điểm</h2><button class="lk-close" data-close aria-label="Đóng bản đồ">&times;</button><div class="lk-map-layout"><div class="lk-map-list"></div><iframe title="Bản đồ địa điểm Long Khánh" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></dialog>';
+ echo '<dialog id="lk-map" class="lk-map-dialog" aria-labelledby="lk-map-title"><h2 id="lk-map-title">'.lk_icon('map-marker-alt').' Tìm kiếm địa điểm</h2><button class="lk-close" data-close aria-label="Đóng bản đồ">&times;</button><div class="lk-map-layout"><div class="lk-map-list"></div><iframe title="Bản đồ địa điểm Long Khánh" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></dialog>';
  if(is_singular('listing')&&!get_query_var('lk_view')&&!post_password_required()){
   echo '<dialog id="lk-place-menu" class="lk-place-menu" aria-label="Menu địa điểm"><button class="lk-close" data-close aria-label="Đóng menu địa điểm">&times;</button>';
   $GLOBALS['lk_menu_dialog']=true;set_query_var('lk_view','menu');lk_template('listing_gallery');set_query_var('lk_view','');unset($GLOBALS['lk_menu_dialog']);

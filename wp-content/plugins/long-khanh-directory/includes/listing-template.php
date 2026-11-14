@@ -16,6 +16,10 @@ function lk_is_directory_listing($id) {
 function lk_listing_media($id,$view='photo') {
  if(isset($GLOBALS['lk_media_cache'][$id][$view]))return $GLOBALS['lk_media_cache'][$id][$view];
  $raw=get_post_meta($id,$view==='menu'?'_lk_menu_ids':'gallery_image_ids',true);
+ if($view==='menu'){
+  $native=get_post_meta($id,'menu_listing',true);$urls=is_array($native)?($native['menu-img']??''):'';
+  if($urls){$items=array();foreach(is_array($urls)?$urls:explode(',',$urls) as $url){$url=esc_url_raw(trim($url));if($url)$items[]=array('id'=>attachment_url_to_postid($url),'url'=>$url);}if($items)return $GLOBALS['lk_media_cache'][$id][$view]=$items;}
+ }
  $ids=is_array($raw)?$raw:explode(',',(string)$raw);
  $ids=array_values(array_filter(array_map('absint',$ids)));
  if(!$ids&&$view!=='menu'&&get_post_thumbnail_id($id))$ids[]=get_post_thumbnail_id($id);
@@ -29,16 +33,17 @@ function lk_bindings_for($type) {
   'heading'=>array('title'=>'Tên địa điểm','gallery-title'=>'Tiêu đề album / menu'),
   'text-editor'=>array('description'=>'Giới thiệu địa điểm','score'=>'Điểm đánh giá','rating-message'=>'Trạng thái đánh giá','address'=>'Địa chỉ','gallery-status'=>'Thông báo album trống','region-count'=>'Số địa điểm trong khu vực'),
   'image'=>array('featured'=>'Ảnh đại diện'),
+  'video'=>array('listing-video'=>'Video giới thiệu địa điểm'),
   'image-gallery'=>array('gallery'=>'Ảnh địa điểm','view-gallery'=>'Album / menu đang xem'),
   'icon-list'=>array('links'=>'Địa chỉ và liên kết nhanh','info'=>'Giá, giờ, điện thoại','benefits'=>'Tiện ích','directions'=>'Liên kết chỉ đường'),
   'google_maps'=>array('map'=>'Vị trí địa điểm'),
-  'button'=>array('photos-button'=>'Xem tất cả ảnh','back-button'=>'Về địa điểm','menu-button'=>'Xem menu','directions-button'=>'Xem đường đi'),
+  'button'=>array('photos-button'=>'Xem tất cả ảnh','back-button'=>'Về địa điểm','menu-button'=>'Xem menu','directions-button'=>'Xem đường đi','save-button'=>'Lưu địa điểm'),
   'progress'=>array('criteria-position'=>'Điểm vị trí','criteria-space'=>'Điểm không gian','criteria-quality'=>'Điểm chất lượng','criteria-service'=>'Điểm phục vụ','criteria-price'=>'Điểm giá cả'),
  );
  return $options+($sources[$type]??array());
 }
 add_action('elementor/element/after_section_end',function($element,$section){
- $sections=array('heading'=>'section_title','text-editor'=>'section_editor','image'=>'section_image','image-gallery'=>'section_gallery','icon-list'=>'section_icon','google_maps'=>'section_map','button'=>'section_button','progress'=>'section_progress');
+ $sections=array('heading'=>'section_title','text-editor'=>'section_editor','image'=>'section_image','video'=>'section_video','image-gallery'=>'section_gallery','icon-list'=>'section_icon','google_maps'=>'section_map','button'=>'section_button','progress'=>'section_progress');
  $type=$element->get_name();
  if(!isset($sections[$type])||$section!==$sections[$type])return;
  $element->start_controls_section('lk_binding_section',array('label'=>'Dữ liệu địa điểm Long Khánh','tab'=>\Elementor\Controls_Manager::TAB_CONTENT));
@@ -69,7 +74,7 @@ function lk_resolve_listing_settings($type,$settings,$id) {
  $item=function($text,$url,$icon,$i){return array('_id'=>'lk-field-'.$i,'text'=>$text,'link'=>array('url'=>$url),'selected_icon'=>array('value'=>'fas fa-'.$icon,'library'=>'fa-solid'));};
  $destination=$d['lat']!==null&&$d['lng']!==null?$d['lat'].','.$d['lng']:$d['address'];
  $directions='https://www.google.com/maps/dir/?api=1&destination='.rawurlencode($destination);
- if($type==='heading')$settings['title']=esc_html(($binding==='gallery-title'?(get_query_var('lk_view')==='menu'?'Menu của ':'Hình ảnh '):'').$d['title']);
+ if($type==='heading'){$settings['title']=esc_html(($binding==='gallery-title'?(get_query_var('lk_view')==='menu'?'Menu của ':'Hình ảnh '):'').$d['title']);if($binding==='gallery-title')$settings['link']=array('url'=>$d['url']);}
  if($type==='text-editor'){
   $content='';
   if($binding==='description')$content=wpautop(wp_kses_post(get_post_field('post_content',$id)?:get_post_field('post_excerpt',$id)));
@@ -80,6 +85,7 @@ function lk_resolve_listing_settings($type,$settings,$id) {
   $settings['editor']=$content;
  }
  if($type==='image')$settings['image']=array('id'=>get_post_thumbnail_id($id),'url'=>$d['image']);
+ if($type==='video'&&$binding==='listing-video'){$options=get_post_meta($id,'lp_listingpro_options',true);$video=esc_url_raw(is_array($options)?($options['video']??''):'');$host=strtolower((string)wp_parse_url($video,PHP_URL_HOST));$settings['video_type']=in_array($host,array('vimeo.com','www.vimeo.com'),true)?'vimeo':'youtube';$settings['youtube_url']=$video;$settings['vimeo_url']=$video;if(preg_match('/\.(mp4|webm)$/i',(string)wp_parse_url($video,PHP_URL_PATH))){$settings['video_type']='hosted';$settings['hosted_url']=array('url'=>$video,'id'=>0);}}
  if($type==='image-gallery')$settings['wp_gallery']=lk_listing_media($id,$binding==='view-gallery'?get_query_var('lk_view','photo'):'photo');
  if($type==='google_maps')$settings['address']=$d['address'];
  if($type==='progress'){$criteria=lk_rating_criteria($id);$settings['percent']=array('size'=>($criteria[substr($binding,9)]??0)*20,'unit'=>'%');}
@@ -92,6 +98,7 @@ function lk_resolve_listing_settings($type,$settings,$id) {
   $settings['icon_list']=$items;
  }
  if($type==='button'){
+  if($binding==='save-button')$settings['link']=array('url'=>'#');
   if($binding==='photos-button'){$settings['text']='Xem tất cả ảnh ('.count(lk_listing_media($id)).')';$settings['link']=array('url'=>$d['url'].'photo/');}
   if($binding==='back-button')$settings['link']=array('url'=>$d['url']);
   if($binding==='menu-button')$settings['link']=array('url'=>$d['url'].'menu/');

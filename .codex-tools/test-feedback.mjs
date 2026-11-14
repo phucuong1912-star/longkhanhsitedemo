@@ -32,7 +32,7 @@ test('location permission, timeout, unsupported browser and short-lived cache',a
  await assert.rejects(directory().locate(),/chưa hỗ trợ/);
 });
 function element() {return {hidden:false,textContent:'',innerHTML:'',children:[],classList:{toggle(){}},style:{setProperty(){}},addEventListener(){},append(...items){this.children.push(...items);},replaceChildren(){this.children=[];},setAttribute(){}};}
-async function nearbyResults(reject=false) {
+async function nearbyResults(reject=false,preset=false) {
  const api=directory(); const status=element(),cards=element(),pagination=element(),count=element(),chip=element();
  const min={value:'0',max:'300000',addEventListener(){}},max={value:'300000',max:'300000',addEventListener(){}};
  const output=element(),track=element(),sort={value:'nearest',addEventListener(){}};
@@ -40,12 +40,13 @@ async function nearbyResults(reject=false) {
  const places=Array.from({length:12},(_,i)=>({id:i+1,lat:10+(12-i)/100,lng:107}));
  places.push({id:13,lat:null,lng:null});
  const layout={dataset:{nearby:'1',resultIds:JSON.stringify(places.map(p=>p.id))},querySelector:selector=>({'.lk-location-status':status,'.lk-results-cards':cards,'.lk-pagination':pagination,'.lk-result-count strong':count,'.lk-nearby-chip':chip})[selector]};
- let rendered=[];
- Object.assign(api,{locate:()=>reject?Promise.reject(new Error('Không có quyền vị trí')):Promise.resolve({lat:10,lng:107}),card:place=>{rendered.push(place.id);return `<article>${place.id}</article>`;},savedState(){}});
+ if(preset){layout.dataset.originId='99';places.push({id:99,lat:10,lng:107,title:'Địa điểm đang xem'});}
+ let rendered=[],locationRequests=0;
+ Object.assign(api,{locate:()=>{locationRequests++;return reject?Promise.reject(new Error('Không có quyền vị trí')):Promise.resolve({lat:10,lng:107});},card:place=>{rendered.push(place.id);return `<article>${place.id}</article>`;},savedState(){}});
  const document={querySelector:selector=>({'.lk-results-layout':layout,'#lk-filter':form,'.lk-sort select':sort})[selector],createElement:()=>element()};
  vm.runInNewContext(resultsSource,{document,window:{LK_DIRECTORY:api,LK_SITE:{places}},location:{href:'http://localhost/search/?nearby=me'},URL,JSON,Number,Math,matchMedia:()=>({matches:true}),history:{replaceState(){}}});
  await new Promise(resolve=>setImmediate(resolve));
- return {layout,status,cards,count,pagination,rendered,chip,sort};
+ return {layout,status,cards,count,pagination,rendered,chip,sort,locationRequests};
 }
 test('nearby ranks the entire filtered set before pagination and excludes missing coordinates',async()=>{
  const result=await nearbyResults();
@@ -79,4 +80,36 @@ test('star rating supports pointer dragging and native radio changes',()=>{
  listeners.pointermove(event(167)); assert.equal(selected,5);
  listeners.pointerup(event(53)); assert.equal(selected,2); assert.equal(output.textContent,'Chưa tốt');
  inputs[0].checked=true; inputs[0].dispatchEvent({type:'change'}); assert.equal(output.textContent,'Rất tệ');
+});
+
+
+test('listing-origin nearby uses the listing coordinates without requesting visitor location',async()=>{
+ const result=await nearbyResults(true,true);
+ assert.equal(result.locationRequests,0);
+ assert.equal(result.rendered[0],12);
+ assert.equal(result.rendered.includes(99),false);
+ assert.match(result.status.textContent,/Địa điểm đang xem/);
+ assert.equal(JSON.parse(result.layout.dataset.mapIds).length,12);
+});
+
+
+test('share sheet stays usable when native sharing is cancelled or unavailable', async()=>{
+ const source=readFileSync(new URL('../wp-content/themes/listingpro-longkhanh-child/assets/feedback2.js',import.meta.url),'utf8');
+ const listeners={},opener={focused:false,focus(){this.focused=true;}};
+ let sheet,shared=0,copied='';
+ const create=tag=>({tag,dataset:{},events:{},hidden:false,open:false,children:[],textContent:'',className:'',setAttribute(){},addEventListener(name,fn){this.events[name]=fn;},append(child){this.children.push(child);},showModal(){this.open=true;},close(){this.open=false;this.events.close?.();},querySelector(selector){return this.parts?.[selector]||null;}});
+ const classes=new Set();
+ const document={body:{classList:{contains:()=>false},append(el){sheet=el;}},documentElement:{classList:{add:v=>classes.add(v),remove:v=>classes.delete(v)}},querySelector:selector=>selector==='dialog[open]'&&sheet?.open?sheet:null,querySelectorAll:()=>[],addEventListener(type,fn){(listeners[type]??=[]).push(fn);},createElement(tag){const el=create(tag);if(tag==='dialog'){const link=create('a'),copy=create('button'),links=create('div'),status=create('p');links.append(copy);el.parts={'a':link,'.lk-share-links':links,'.lk-share-links button':copy,'p':status};const query=el.querySelector;el.querySelector=selector=>selector==='[data-system-share]'?links.children.find(c=>c.dataset.systemShare!==undefined)||null:query.call(el,selector);}return el;}};
+ const canonical='https://example.test/dia-diem/ca-phe-me-bap/';
+ const navigator={share:async()=>{shared++;throw Object.assign(new Error('cancel'),{name:'AbortError'});},clipboard:{writeText:async value=>{copied=value;}}};
+ vm.runInNewContext(source,{document,window:{LK_SITE:{base:'https://example.test/',page:1,places:[{id:1,title:'Cà Phê Mẹ Bắp',url:canonical}]}},location:{href:canonical+'?tracking=1'},navigator,URL,Map,Number,String,Math,JSON});
+ const event={target:{closest:selector=>selector==='[data-place-share]'?opener:null}};
+ for(const listener of listeners.click)await listener(event);
+ assert.equal(sheet.open,true);assert.equal(shared,0);assert.ok(classes.has('lk-dialog-open'));
+ assert.equal(sheet.parts.a.href,'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(canonical));
+ await sheet.parts['.lk-share-links button'].onclick();assert.equal(copied,canonical);
+ const other=sheet.parts['.lk-share-links'].children.find(c=>c.dataset.systemShare!==undefined);
+ await other.events.click();assert.equal(shared,1);assert.equal(sheet.open,true);
+ navigator.clipboard.writeText=async()=>{throw new Error('denied');};await sheet.parts['.lk-share-links button'].onclick();assert.equal(sheet.parts.p.textContent,canonical);
+ sheet.close();assert.equal(opener.focused,true);assert.equal(classes.has('lk-dialog-open'),false);
 });

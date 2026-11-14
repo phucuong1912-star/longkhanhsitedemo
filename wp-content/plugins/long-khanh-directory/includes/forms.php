@@ -12,29 +12,31 @@ function lk_form($s){
  }else{
   echo '<h2>'.esc_html($s['basic_title']??'Thông tin cơ bản').'</h2>';lk_input('name','Tên địa điểm','text',true,'Nhập tên địa điểm');
   foreach(array('category'=>array('Danh mục','listing-category'),'region'=>array('Khu vực','location')) as $name=>$config){echo '<label>'.esc_html($config[0]).' <span aria-hidden="true">*</span><select name="'.$name.'" required><option value="">Chọn '.esc_html(mb_strtolower($config[0])).'</option>';foreach(lk_directory_terms($config[1]) as $t)echo '<option value="'.$t->term_id.'">'.esc_html($t->name).'</option>';echo '</select></label>';}
-  lk_location_editor(array(),false,$s);lk_input('description','Giới thiệu','textarea');echo '<label class="lk-inline"><input type="checkbox" name="owner" value="1"> Bạn là chủ quán</label><h2>'.esc_html($s['other_title']??'Thông tin khác').'</h2>';lk_schedule_editor(null,'hours',$s);echo '<div class="lk-form-prices">';lk_price_status_select('price_status','notsay',$s['price_title']??'Thông tin giá');lk_input('min','Giá từ (VNĐ)','number');lk_input('max','Giá đến (VNĐ)','number');echo '</div><h2>'.esc_html($s['contact_title']??'Thông tin liên hệ').'</h2>';lk_input('phone','Điện thoại','tel');lk_input('email','Email','email');lk_input('facebook','Facebook','url');lk_input('website','Website','url');echo '<h2>'.esc_html($s['images_title']??'Hình ảnh').'</h2><label>Chọn tối đa 5 ảnh (JPG, PNG hoặc WebP, tối đa 5 MB/ảnh)<input type="file" name="photos[]" accept="image/jpeg,image/png,image/webp" multiple></label>';
+  do_action('lk_add_place_taxonomies',$s);lk_location_editor(array(),false,$s);lk_input('description','Giới thiệu','textarea');echo '<h2>'.esc_html($s['other_title']??'Thông tin khác').'</h2>';lk_schedule_editor(null,'hours',$s);echo '<div class="lk-form-prices">';lk_price_status_select('price_status','notsay',$s['price_title']??'Thông tin giá');lk_input('min','Giá từ (VNĐ)','number');lk_input('max','Giá đến (VNĐ)','number');echo '</div><h2>'.esc_html($s['contact_title']??'Thông tin liên hệ').'</h2>';lk_input('phone','Điện thoại','tel');lk_input('email','Email','email');lk_input('facebook','Facebook','url');lk_input('website','Website','url');echo '<h2>'.esc_html($s['images_title']??'Hình ảnh').'</h2>';do_action('lk_add_place_media_before',$s);echo '<label>Chọn tối đa 5 ảnh (JPG, PNG hoặc WebP, tối đa 5 MB/ảnh)<input type="file" name="photos[]" accept="image/jpeg,image/png,image/webp" multiple></label>';
  }
+ if($kind==='add-place')do_action('lk_add_place_fields',$s);
  echo '<button class="lk-button" type="submit">'.esc_html($kind==='add-place'?($s['add_place_button']??'Thêm địa điểm'):($s['button']??'Gửi')).'</button></form>';
 }
-function lk_input($name,$label,$type='text',$required=false,$placeholder=''){
- $id='lk-field-'.$name;echo '<label for="'.$id.'">'.esc_html($label).($required?' <span aria-hidden="true">*</span>':'');
+function lk_input($name,$label,$type='text',$required=false,$placeholder='',$prefix='lk-field-'){
+ $id=$prefix.$name;echo '<label for="'.$id.'">'.esc_html($label).($required?' <span aria-hidden="true">*</span>':'');
  if($type==='textarea')echo '<textarea id="'.$id.'" name="'.$name.'" rows="5" '.($required?'required':'').'></textarea>';
  else echo '<input id="'.$id.'" name="'.$name.'" type="'.$type.'" '.($type==='number'?'min="0" ':'').'placeholder="'.esc_attr($placeholder).'" '.($required?'required':'').' '.($type==='email'?'autocomplete="email"':($type==='tel'?'autocomplete="tel"':'')).'>';
  echo '</label>';
 }
 function lk_account($mode='page',$s=array()){
- if(is_user_logged_in()){
+ if(is_user_logged_in()&&$mode!=='login'){
   $u=wp_get_current_user();echo '<h2>'.esc_html($s['title']??'Tài khoản của bạn').'</h2><p>Xin chào, <strong>'.esc_html($u->display_name).'</strong>.</p><p><a href="'.esc_url(lk_link('add-place')).'" class="lk-button">Đóng góp địa điểm</a> <a href="'.esc_url(wp_logout_url(lk_link('profile'))).'">Đăng xuất</a></p><h3>Địa điểm đã lưu</h3><div class="lk-saved-places"></div>';return;
  }
  $register=$mode==='page'&&isset($_GET['register']);
- echo '<h2 id="lk-login-title">'.($register?'Tạo tài khoản':'Đăng nhập tài khoản').'</h2>';
+ echo '<h2 class="lk-login-heading" id="'.($mode==='login'?'lk-login-title':'lk-account-title').'">'.esc_html($register?'Tạo tài khoản':($s['login_title']??'Đăng nhập tài khoản')).'</h2>';
  if(isset($_GET['login_error']))echo '<p class="lk-error" role="alert">Tên đăng nhập hoặc mật khẩu chưa đúng. Vui lòng thử lại.</p>';
  if(isset($_GET['registered']))echo '<p class="lk-notice" role="status">Đã tạo tài khoản. Bạn có thể đăng nhập ngay.</p>';
  if(isset($_GET['register_error']))echo '<p class="lk-error" role="alert">Tên đăng nhập hoặc email đã được sử dụng, hoặc mật khẩu chưa đủ 8 ký tự.</p>';
  echo '<form class="lk-form" action="'.esc_url(admin_url('admin-post.php')).'" method="post"><input type="hidden" name="action" value="'.($register?'lk_register':'lk_login').'">';wp_nonce_field($register?'lk_register':'lk_login','lk_nonce');
- lk_input('username',$register?'Tên người dùng':'Email hoặc tên người dùng','text',true);
+ lk_input('username',$register?'Tên người dùng':($s['username_label']??'Email hoặc tên người dùng'),'text',true,'',$mode==='login'?'lk-login-field-':'lk-account-field-');
  if($register)lk_input('email','Email','email',true);
- echo '<label>Mật khẩu<div class="lk-password"><input type="password" name="password" required '.($register?'minlength="8" autocomplete="new-password"':'autocomplete="current-password"').'><button type="button" class="lk-toggle-password" aria-label="Hiện mật khẩu">'.lk_icon('eye').'</button></div></label><input type="hidden" name="redirect_to" value="'.esc_url($mode==='login'?get_permalink():lk_link('profile')).'"><button type="submit" class="lk-button">'.($register?'Tạo tài khoản':'Đăng nhập').'</button></form>';
+ echo '<label>Mật khẩu<div class="lk-password"><input type="password" name="password" required '.($register?'minlength="8" autocomplete="new-password"':'autocomplete="current-password"').'><button type="button" class="lk-toggle-password" aria-label="Hiện mật khẩu">'.lk_icon('eye').'</button></div></label><input type="hidden" name="redirect_to" value="'.esc_url(home_url('/')).'"><button type="submit" class="lk-button">'.($register?'Tạo tài khoản':'Đăng nhập').'</button></form>';
+ if(!$register&&($s['show_social']??'yes')==='yes')echo '<div class="lk-social-signin"><div class="lk-social-divider">'.esc_html($s['social_divider']??'hoặc tiếp tục với').'</div><div class="lk-socials"><button type="button" data-social="Facebook"><i class="fab fa-facebook" style="color:#4267b2" aria-hidden="true"></i>'.esc_html($s['facebook_label']??'Facebook').'</button><button type="button" data-social="Google"><i class="fab fa-google" style="color:#db4437" aria-hidden="true"></i>'.esc_html($s['google_label']??'Google').'</button></div><p class="lk-social-status" role="status" hidden></p></div>';
  echo '<p class="lk-center"><a href="'.esc_url(wp_lostpassword_url(lk_link('profile'))).'">Quên mật khẩu?</a></p><p class="lk-center">'.($register?'Bạn đã có tài khoản? <a href="'.esc_url(lk_link('profile')).'">Đăng nhập</a>':'Bạn chưa có tài khoản? <a href="'.esc_url(add_query_arg('register',1,lk_link('profile'))).'">Tạo tài khoản</a>').'</p>';
  if($mode==='page')echo '<h3>Địa điểm đã lưu trên thiết bị</h3><div class="lk-saved-places"></div>';
 }
@@ -53,7 +55,7 @@ add_action('admin_post_nopriv_lk_contact','lk_handle_contact');add_action('admin
 function lk_handle_login(){
  lk_require_nonce('lk_login');$result=wp_signon(array('user_login'=>lk_post_value('username'),'user_password'=>isset($_POST['password'])?wp_unslash($_POST['password']):'','remember'=>true),is_ssl());
  if(is_wp_error($result))lk_redirect_form('profile',array('login_error'=>1));
- wp_safe_redirect(wp_validate_redirect(lk_post_value('redirect_to'),lk_link('profile')));exit;
+ wp_safe_redirect(home_url('/'));exit;
 }
 add_action('admin_post_nopriv_lk_login','lk_handle_login');add_action('admin_post_lk_login','lk_handle_login');
 function lk_handle_register(){
@@ -94,6 +96,7 @@ function lk_handle_add_place(){
    $_FILES['lk_photo']=array('name'=>sanitize_file_name($filename),'type'=>$type['type'],'tmp_name'=>$tmp,'error'=>0,'size'=>$_FILES['photos']['size'][$i]);$attachment=media_handle_upload('lk_photo',$id);if(!is_wp_error($attachment))$ids[]=$attachment;
   }if($ids){set_post_thumbnail($id,$ids[0]);update_post_meta($id,'gallery_image_ids',implode(',',$ids));}
  }
+ do_action('lk_place_created',$id);
  lk_redirect_form('add-place',array('lk_success'=>1));
 }
 add_action('admin_post_lk_add_place','lk_handle_add_place');add_action('admin_post_nopriv_lk_add_place',function(){lk_redirect_form('profile',array());});

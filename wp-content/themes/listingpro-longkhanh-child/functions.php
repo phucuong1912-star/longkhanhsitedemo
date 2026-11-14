@@ -4,6 +4,7 @@ if (!defined('ABSPATH')) exit;
 // never copy these files into the parent theme when updating ListingPro.
 add_action('after_setup_theme', function () {
  if (defined('LK_DIR')) require_once __DIR__ . '/includes/presentation.php';
+ if (defined('LK_DIR')) require_once __DIR__ . '/includes/feedback2.php';
 }, 20);
 
 // Serve admin dependencies individually. After a host migration, load-scripts.php
