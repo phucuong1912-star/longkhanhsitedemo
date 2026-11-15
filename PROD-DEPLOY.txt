@@ -1,0 +1,83 @@
+NHÁNH PROD — VPS THODIATIENHAI.COM
+
+Quy tắc bắt buộc: đọc AGENTS.md và docs/deployment-spec.md.
+Chỉ sửa local, người dùng tự push master → chờ workflow xanh → merge master
+vào prod rồi push prod. Không agent SSH/FTP, sửa WordPress từ xa hoặc chạy
+script deploy thủ công. Các script trong .github chỉ chạy bởi GitHub Actions.
+Secrets/workflows đã được cấu hình; cập nhật thường ngày không cần tạo lại.
+
+Hai workflow theo nhánh, triển khai theo đúng thứ tự master rồi prod
+- master: workflow deploy.yml, FTP hosting đang dùng trước đây.
+- prod: workflow deploy-prod.yml, SSH đến 45.76.161.17:22, user root,
+  website https://thodiatienhai.com, web root /var/www/html.
+- Manual workflow cũng kiểm tra nhánh, tránh chọn nhầm prod để deploy FTP.
+- Không nâng cấp PHP/WordPress bằng workflow. Phiên bản WordPress trên server
+  phải khớp source; nếu khác, job dừng để kiểm tra trước.
+
+Cấu hình GitHub đã có (tham khảo khi chuyển server)
+Vào repository > Settings > Environments > New environment: prod.
+Trong environment này, thêm hai secrets (không thêm vào file source):
+
+  PROD_SSH_PRIVATE_KEY
+    Nội dung khóa riêng trên máy này:
+    C:\Users\ITCK\.ssh\longkhanh_prod_ed25519
+    Không phải file có đuôi .pub, không phải mật khẩu root.
+
+  PROD_SSH_KNOWN_HOSTS
+    Nội dung file host key đã xác nhận khi tự đăng nhập SSH:
+    C:\Users\ITCK\.codex\backups\prod-vps\known_hosts
+
+Có thể dùng repository Actions secrets cùng tên nếu không dùng environment
+secrets. Workflow luôn gắn environment prod. Giới hạn deployment branch của
+environment này về prod nếu muốn ngăn nhánh khác dùng các secrets này.
+
+Không cần thêm biến cho VPS hiện tại. Khi đổi server có thể cấu hình variables:
+  PROD_SSH_HOST, PROD_SSH_PORT, PROD_SSH_USER, PROD_WEB_ROOT, PROD_SITE_URL.
+PROD_SITE_URL là HTTPS origin, không thêm dấu / cuối. Host mới phải có WP-CLI,
+rsync, PHP đúng phiên bản, WordPress đã khởi tạo và marker .lk-prod-deploy
+trong web root chứa đúng PROD_SITE_URL ở dòng đầu.
+
+Các lần cập nhật code tiếp theo
+Commit code/gói Elementor đã kiểm tra trên master và:
+  git push origin master
+Chờ workflow master thành công, kiểm tra giao diện rồi mới:
+  git switch prod
+  git merge master
+  git push origin prod
+
+GitHub Actions sẽ:
+1. Kiểm tra nhánh, đường dẫn cụ thể, host key đã ghim và phiên bản WordPress.
+2. Chuyển source vào thư mục tạm, kiểm tra thư viện React/Elementor và PHP
+   của child theme/plugin Long Khánh.
+3. Sao lưu database và code cũ vào /root/longkhanh-prod-backups/ (ngoài web root).
+4. Cập nhật code, tạo lại CSS Elementor, xóa cache và kiểm tra HTTP trang chủ.
+5. Publish marker sau khi truyền code xong, tự đồng bộ gói metadata Elementor
+   trong allowlist, có backup/xung đột/transaction; xác minh đúng release và
+   commit qua HTTP. Job không xanh nếu bước đồng bộ chưa được xác nhận.
+
+Các lần push code giữ lại
+- wp-config.php, .htaccess, .user.ini và chứng chỉ/cấu hình server.
+- Toàn bộ wp-content/uploads, cache/runtime và dữ liệu người dùng.
+- CSS ListingPro sinh từ cấu hình database: assets/css/dynamic-css.css.
+- Bài viết, review, tài khoản và dữ liệu kinh doanh đang có trên prod.
+- Chỉ metadata bố cục trong allowlist theo gói local được cập nhật có backup.
+- File vendor của WordPress và Elementor vẫn được deploy đầy đủ.
+
+Không dùng --delete khi rsync. File runtime không bị xóa bởi code push; nếu
+xóa/đổi tên file code trong repository, cần xử lý file cũ có chủ đích khi deploy.
+Mỗi lần deploy có bản sao trước sửa để khôi phục nếu cần.
+
+Nội dung Elementor và ảnh
+Chỉ sửa ở local. Git hooks tự xuất manifest/ảnh tham chiếu khi commit; push
+code sẽ đưa gói này qua hai workflow tới đúng môi trường. Xem đầy đủ phạm vi,
+ánh xạ ID/URL và cách xử lý xung đột trong docs/deployment-spec.md.
+Không import đè toàn bộ database local lên production đang nhận bài/review
+mới. Đợt import toàn database trước đây là bước chuyển site ban đầu, không
+phải quy trình cập nhật code/giao diện và không được chạy lại khi deploy.
+
+Thông tin xác thực
+- Khóa riêng chỉ nằm trên máy này và GitHub Secrets nếu chủ website cho phép.
+- Có thể thu hồi bằng cách xóa dòng public key có ghi longkhanh-prod-deploy
+  trong /root/.ssh/authorized_keys và xóa secret GitHub tương ứng.
+- Không commit wp-config.php của VPS, khóa riêng, file SQL hay mật khẩu.
+- File backup chứa dữ liệu/config được giữ trong thư mục root riêng trên VPS.
