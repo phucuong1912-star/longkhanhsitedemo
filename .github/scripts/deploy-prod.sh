@@ -83,12 +83,15 @@ rsync -a --chown=www-data:www-data --delay-updates "$prod_stage/" "$prod_root/"
 php "$prod_root/scripts/elementor/ready.php" --environment=prod --commit="$prod_sha" \
   --origin="$prod_site" --output="$prod_root/wp-content/lk-layouts/ready.json"
 chown www-data:www-data "$prod_root/wp-content/lk-layouts/ready.json"
-wp --allow-root --path="$prod_root" --url="$prod_site" cache flush
-wp --allow-root --path="$prod_root" --url="$prod_site" eval 'if (function_exists("lk_invalidate_public_index")) { lk_invalidate_public_index(); }'
-wp --allow-root --path="$prod_root" --url="$prod_site" elementor flush-css --regenerate
+# Nextend's version migration redirects and exits during plugins_loaded. Keep
+# it out of CLI maintenance while leaving social login active for web requests.
+prod_wp=(wp --allow-root --path="$prod_root" --url="$prod_site" --skip-plugins=nextend-facebook-connect,nextend-social-login-pro)
+"${prod_wp[@]}" cache flush
+"${prod_wp[@]}" eval 'if (function_exists("lk_invalidate_public_index")) { lk_invalidate_public_index(); }'
+"${prod_wp[@]}" elementor flush-css --regenerate
 chown -R www-data:www-data "$prod_root/wp-content/uploads/elementor"
 printf '%s\n' "$prod_sha" > "$prod_root/.lk-prod-commit"
-curl --fail --silent --show-error --retry 3 --output /dev/null "$prod_site/?lk_deploy=$prod_sha"
+curl --fail --location --max-redirs 5 --silent --show-error --retry 3 --output /dev/null "$prod_site/?lk_deploy=$prod_sha"
 case "$prod_stage" in /var/tmp/lk-prod-[0-9]*-[0-9]*) rm -rf -- "$prod_stage";; *) exit 1;; esac
 printf 'Code uploaded: %s (%s); the workflow must verify layout status next.\n' "$prod_site" "$prod_sha"
 REMOTE

@@ -141,6 +141,22 @@ Phải commit sau mỗi lần sửa Elementor. Push lại một commit cũ khôn
 5. Xóa cache/CSS Elementor cần tạo lại. Workflow gọi HTTP warmup không cần
    đăng nhập và kiểm tra `applied.json` phải khớp **release + commit + nhánh**.
    Job thất bại nếu importer báo lỗi hoặc không xác minh được đúng bản.
+   Sau trạng thái `applied`, cả master/prod còn kiểm tra trang chủ phải là
+   HTML với HTTP 200, không phải trang lỗi WordPress hoặc redirect sang trang
+   khác. Metadata đã áp dụng chưa đủ để kết luận frontend hoạt động.
+
+Các lệnh WP-CLI bảo trì prod bỏ qua `nextend-facebook-connect` và
+`nextend-social-login-pro` trong đúng tiến trình CLI. Nextend có nhánh nâng
+version gọi redirect rồi `exit` tại `plugins_loaded`, có thể làm lệnh cache
+thoát trước khi thực hiện. Plugin vẫn giữ kích hoạt và cấu hình đăng nhập
+cho các request web. Không tắt social login hoặc sửa option để né cảnh báo.
+
+MU-plugin `long-khanh-compat.php` xử lý module CubeWP business-hours cũ còn
+trên server khi giữ file qua rsync. Khi thiếu helper `get_user_fields_by_type`,
+chỉ tag `cubewp-business-hours-tag` không đủ dependency bị bỏ khỏi registry
+trước lúc Elementor đọc controls. Khi helper tồn tại, tag được giữ nguyên.
+Không thêm helper giả, sửa/xóa vendor trên server hay xóa dữ liệu giờ mở cửa.
+Kiểm thử compatibility chạy bằng `php scripts/test-compat.php` ở cả hai job.
 
 Hosting master có lớp kiểm tra JavaScript/cookie: HTTP thuần có thể nhận
 `200 text/html` chứa `/aes.js` thay cho JSON. Vì vậy workflow master cài

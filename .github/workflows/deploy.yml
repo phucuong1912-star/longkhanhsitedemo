@@ -43,6 +43,9 @@ jobs:
       - name: Test layout data preservation
         run: php scripts/elementor/test.php
 
+      - name: Test frontend compatibility
+        run: php scripts/test-compat.php
+
       - name: Test deployment status verification
         run: python3 scripts/elementor/test-deploy-check.py
 

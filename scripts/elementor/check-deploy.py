@@ -75,6 +75,18 @@ def import_error(state):
     return 'Layout import refused' + context + '. Inspect WordPress Tools > Layout Sync; do not bypass conflicts.'
 
 
+def validate_homepage(payload):
+    body = payload.body.lower()
+    if payload.status != 200:
+        raise ResponseError('Public homepage returned HTTP ' + str(payload.status) + '.')
+    if not body.strip() or (b'<html' not in body and b'<!doctype html' not in body):
+        raise ResponseError('Public homepage did not return an HTML document.')
+    if b'id="error-page"' in body or b'class="wp-die-message"' in body:
+        raise ResponseError('Public homepage returned a WordPress error page.')
+    if urlsplit(payload.url).path not in ('', '/'):
+        raise ResponseError('Public homepage redirected to a different page.')
+
+
 class HttpClient:
     def __init__(self, origin):
         self.origin = origin
@@ -180,6 +192,8 @@ def verify(client, origin, package, args):
             if exact and state.get('status') == 'error':
                 raise SystemExit(import_error(state))
             if exact and state.get('status') == 'applied':
+                # Applied metadata alone does not prove the public page renders.
+                validate_homepage(client.read(origin + '/?lk_deploy=' + args.commit, timeout=40))
                 print(f"Verified {args.environment}: layout {package['release']} applied at commit {args.commit}.")
                 return 0
             last = 'Waiting for status=applied with the exact release, commit and environment.'

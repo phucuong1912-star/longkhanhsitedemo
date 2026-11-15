@@ -43,6 +43,8 @@ class Fixture(BaseHTTPRequestHandler):
             self.challenge('layout_fixture')
         elif self.path.startswith('/wp-login.php'):
             self.send('<html><body>Fixture WordPress booted</body></html>')
+        elif self.path.startswith('/?lk_deploy='):
+            self.send('<html><body>Fixture public home page</body></html>', status=self.server.homepage_status)
         elif self.path.startswith('/wp-content/lk-layouts/applied.json'):
             if self.server.challenge_status and 'layout_status_fixture=ready' not in cookie:
                 self.challenge('layout_status_fixture')
@@ -62,6 +64,7 @@ class BrowserVerificationTest(unittest.TestCase):
         self.server.challenge_status = False
         self.server.html_status = False
         self.server.status_code = 200
+        self.server.homepage_status = 200
         self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
         self.thread.start()
         self.origin = 'http://127.0.0.1:' + str(self.server.server_port)
@@ -106,6 +109,11 @@ class BrowserVerificationTest(unittest.TestCase):
     def test_http_error_does_not_pass_with_a_matching_json_body(self):
         self.server.status_code = 404
         with self.assertRaisesRegex(SystemExit, 'HTTP 404'):
+            self.verify()
+
+    def test_successful_import_with_homepage_500_is_refused(self):
+        self.server.homepage_status = 500
+        with self.assertRaisesRegex(SystemExit, 'HTTP 500'):
             self.verify()
 
 

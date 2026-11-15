@@ -20,7 +20,7 @@ class DeploymentCheckTest(unittest.TestCase):
         state.update(changes)
         return state
 
-    def run_check(self, statuses, warmup_challenge=False):
+    def run_check(self, statuses, warmup_challenge=False, homepage_status=200, homepage_body=b'<html><body>Home page</body></html>'):
         pending = iter(statuses)
 
         def response(url, body, content_type='application/json', status=200):
@@ -30,6 +30,8 @@ class DeploymentCheckTest(unittest.TestCase):
             return result
 
         def respond(request, **kwargs):
+            if '/?lk_deploy=' in request.full_url:
+                return response(request.full_url, homepage_body, 'text/html', homepage_status)
             if '/wp-login.php?' in request.full_url:
                 if warmup_challenge:
                     return response(request.full_url, b'<script src="/aes.js"></script><script>slowAES.decrypt()</script>', 'text/html')
@@ -102,6 +104,21 @@ class DeploymentCheckTest(unittest.TestCase):
 
     def test_pending_import_never_reports_success(self):
         self.assertIn('not verified', self.run_check([self.status(status='pending')]))
+
+    def test_applied_layout_with_broken_homepage_fails_verification(self):
+        error = self.run_check([self.status()], homepage_status=500)
+        self.assertIn('not verified', error)
+        self.assertIn('HTTP 500', error)
+
+    def test_applied_layout_with_empty_homepage_is_not_success(self):
+        self.assertIn('HTML document', self.run_check([self.status()], homepage_body=b''))
+
+    def test_wordpress_error_html_cannot_pass_with_status_200(self):
+        body = b'<html><body id="error-page"><div class="wp-die-message">Critical error</div></body></html>'
+        self.assertIn('WordPress error page', self.run_check([self.status()], homepage_body=body))
+
+    def test_homepage_204_is_not_a_rendered_page(self):
+        self.assertIn('HTTP 204', self.run_check([self.status()], homepage_status=204))
 
 
 if __name__ == '__main__':
