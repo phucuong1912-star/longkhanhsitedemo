@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Long Khánh - Sửa lỗi chuyển hosting
+ * Plugin Name: Tiền Hải - Sửa lỗi chuyển hosting
  * Description: Khôi phục thư viện bị bỏ sót khi deploy và sửa URL/bố cục Elementor sau chuyển host. Chỉ chạy theo thao tác quản trị có nonce, có bản sao và hoàn tác dữ liệu.
  * Version: 1.0.1
  * Requires PHP: 7.4
@@ -98,7 +98,7 @@ add_action('admin_post_lkr_restore_files',function(){
 });
 add_action('admin_post_lkr_child_scripts',function(){
  lkr_guard('lkr_child_scripts');
- if(!current_user_can('edit_themes')||get_stylesheet()!=='listingpro-longkhanh-child')wp_die('Chỉ sửa child theme Long Khánh đang hoạt động.');
+ if(!current_user_can('edit_themes')||get_stylesheet()!=='listingpro-longkhanh-child')wp_die('Chỉ sửa child theme Tiền Hải đang hoạt động.');
  $path=get_stylesheet_directory().'/functions.php';$original=file_get_contents($path);
  if(strpos($original,"\$GLOBALS['concatenate_scripts'] = false;")!==false)lkr_redirect('Child theme đã tải riêng thư viện quản trị.');
  if(!is_writable($path))wp_die('Không ghi được child theme. Chưa thay đổi file.');
@@ -128,11 +128,11 @@ add_action('admin_post_lkr_rollback',function(){
  foreach($backup['options'] as $key=>$value){if($value===false)delete_option($key);else update_option($key,$value);}
  lkr_clear_cache(array_keys($backup['posts']));lkr_redirect('Đã hoàn tác dữ liệu về bản sao '.$backup['time'].'. Thư viện cùng phiên bản đã khôi phục được giữ nguyên.');
 });
-add_action('admin_menu',function(){add_management_page('Sửa chuyển host Long Khánh','Sửa chuyển host Long Khánh','manage_options','lk-host-repair','lkr_admin_page');});
+add_action('admin_menu',function(){add_management_page('Sửa chuyển host Tiền Hải','Sửa chuyển host Tiền Hải','manage_options','lk-host-repair','lkr_admin_page');});
 function lkr_admin_page() {
  if(!current_user_can('manage_options'))return;
  $status=lkr_library_status();$ids=lkr_document_ids();$old=0;foreach($ids as $id)if(strpos(get_post_meta($id,'_elementor_data',true),'localhost:180')!==false)$old++;
- echo '<div class="wrap"><h1>Sửa lỗi chuyển hosting Long Khánh</h1><p>WordPress '.esc_html($GLOBALS['wp_version']).' · Elementor '.esc_html(defined('ELEMENTOR_VERSION')?ELEMENTOR_VERSION:'không kích hoạt').'. Công cụ không nâng cấp phiên bản và không sửa theme chính.</p>';
+ echo '<div class="wrap"><h1>Sửa lỗi chuyển hosting Tiền Hải</h1><p>WordPress '.esc_html($GLOBALS['wp_version']).' · Elementor '.esc_html(defined('ELEMENTOR_VERSION')?ELEMENTOR_VERSION:'không kích hoạt').'. Công cụ không nâng cấp phiên bản và không sửa theme chính.</p>';
  if(get_option('lkr_host_last_result'))echo '<div class="notice notice-success"><p>'.esc_html(get_option('lkr_host_last_result')).'</p></div>';
  echo '<h2>1. Thư viện bị thiếu khi deploy</h2><p>File còn thiếu: <strong>'.count($status['missing']).'</strong>. Chỉ khôi phục file thiếu/rỗng từ đúng bản đang dùng, không ghi đè file hiện có.</p>';
  if($status['blocked'])echo '<p>Phiên bản không khớp, không chép thư viện.</p>';

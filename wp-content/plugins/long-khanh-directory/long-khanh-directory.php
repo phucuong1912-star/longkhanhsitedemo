@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Long Khánh - Elementor Directory
- * Description: Giao diện Địa Điểm Long Khánh cho ListingPro. Trang, header và footer chỉnh bằng Elementor Free; bổ sung tìm kiếm, đánh giá và biểu mẫu động.
+ * Plugin Name: Tiền Hải - Elementor Directory
+ * Description: Giao diện Địa Điểm Tiền Hải cho ListingPro. Trang, header và footer chỉnh bằng Elementor Free; bổ sung tìm kiếm, đánh giá và biểu mẫu động.
  * Version: 1.0.0
  */
 if (!defined('ABSPATH')) { exit; }
@@ -16,6 +16,7 @@ require_once LK_DIR . 'includes/forms.php';
 require_once LK_DIR . 'includes/community.php';
 require_once LK_DIR . 'includes/listing-template.php';
 require_once LK_DIR . 'includes/admin-listing.php';
+require_once LK_DIR . 'includes/blog.php';
 
 add_action('elementor/widgets/register', function($manager) {
  // ListingPro registers its own widget with the same name. Keep the native
@@ -27,11 +28,11 @@ add_action('elementor/widgets/register', function($manager) {
  }
 },100);
 add_action('elementor/elements/categories_registered', function($manager) {
- $manager->add_category('long-khanh', array('title'=>'Địa Điểm Long Khánh','icon'=>'fa fa-map-marker'));
+ $manager->add_category('long-khanh', array('title'=>'Địa Điểm Tiền Hải','icon'=>'fa fa-map-marker'));
 });
 
 add_action('init',function(){
- register_post_type('lk_message',array('label'=>'Liên hệ Long Khánh','public'=>false,'show_ui'=>true,'supports'=>array('title','editor'),'capability_type'=>'post','capabilities'=>array('create_posts'=>'do_not_allow'),'map_meta_cap'=>true));
+ register_post_type('lk_message',array('label'=>'Liên hệ Tiền Hải','public'=>false,'show_ui'=>true,'supports'=>array('title','editor'),'capability_type'=>'post','capabilities'=>array('create_posts'=>'do_not_allow'),'map_meta_cap'=>true));
 });
 function lk_register_routes(){
  add_rewrite_rule('^dia-diem/([^/]+)/(photo|menu)/?$', 'index.php?post_type=listing&name=$matches[1]&lk_view=$matches[2]', 'top');
@@ -43,10 +44,10 @@ add_action('init','lk_register_routes',30);
 add_filter('post_type_link',function($url,$post){return $post->post_type==='listing'&&get_post_meta($post->ID,'_lk_managed',true)?lk_link('dia-diem/'.$post->post_name):$url;},10,2);
 add_filter('post_link',function($url,$post){return get_post_meta($post->ID,'_lk_managed',true)?lk_link('blog/'.$post->post_name):$url;},10,2);
 add_filter('page_link',function($url,$id){static $routes; if($routes===null)$routes=array_flip(get_option('lk_routes',array()));return isset($routes[$id])?lk_link($routes[$id]):$url;},10,2);
-add_action('admin_menu',function(){ add_menu_page('Địa Điểm Long Khánh','Long Khánh','edit_pages','lk-directory','lk_admin_page','dashicons-location-alt',28); });
+add_action('admin_menu',function(){ add_menu_page('Địa Điểm Tiền Hải','Tiền Hải','edit_pages','lk-directory','lk_admin_page','dashicons-location-alt',28); });
 function lk_admin_page(){
  if(!current_user_can('edit_pages'))return;
- echo '<div class="wrap"><h1>Địa Điểm Long Khánh</h1><p>Theme ListingPro vẫn đang hoạt động. Các trang và bản mẫu bên dưới được dựng bằng Elementor Free.</p><h2>Bản mẫu dùng chung</h2><ul>';
+ echo '<div class="wrap"><h1>Địa Điểm Tiền Hải</h1><p>Theme ListingPro vẫn đang hoạt động. Các trang và bản mẫu bên dưới được dựng bằng Elementor Free.</p><h2>Bản mẫu dùng chung</h2><ul>';
  foreach(array('header'=>'Header và thanh điều hướng mobile','footer'=>'Footer','menu'=>'Menu mobile','login'=>'Popup đăng nhập','listing'=>'Template chung chi tiết địa điểm','listing_gallery'=>'Template chung album và menu') as $key=>$name){$id=get_option('lk_template_'.$key);if($id)echo '<li><a href="'.esc_url(admin_url('post.php?post='.$id.'&action=elementor')).'">Sửa '.$name.' bằng Elementor</a></li>';}
  echo '</ul><form method="post" action="'.esc_url(admin_url('admin-post.php')).'"><input type="hidden" name="action" value="lk_template_preview">';wp_nonce_field('lk_template_preview');
  echo '<label for="lk-preview-listing"><strong>Địa điểm dùng để xem trước khi sửa template</strong></label> <select id="lk-preview-listing" name="listing_id">';
@@ -59,9 +60,9 @@ function lk_admin_page(){
   else echo '<a href="'.esc_url(admin_url('post.php?post='.$p->ID.'&action=elementor')).'">Sửa với Elementor</a> | <a href="'.esc_url(get_edit_post_link($p->ID)).'">Thông tin WordPress</a>';
   echo '</td><td><a href="'.esc_url(get_permalink($p)).'">Mở trang</a></td></tr>';
  }
- echo '</tbody></table><h2>Cách chỉnh sửa</h2><p>Chữ, ảnh, nút, danh mục, khu vực, bố cục và nền dùng widget Elementor gốc. Bấm vào từng thành phần trong trình sửa để thay nội dung. Các widget trong nhóm “Địa Điểm Long Khánh” bổ sung dữ liệu động và biểu mẫu mà Elementor Free chưa có.</p><p>Địa điểm được lưu bằng loại bài ListingPro. Giá, địa chỉ và giờ hoạt động trong bảng “Thông tin địa điểm Long Khánh” được dùng cho tìm kiếm và thẻ địa điểm. Ảnh đại diện dùng cho kết quả tìm kiếm. Các nội dung được thêm từ bản tham chiếu là dữ liệu demo.</p></div>';
+ echo '</tbody></table><h2>Cách chỉnh sửa</h2><p>Chữ, ảnh, nút, danh mục, khu vực, bố cục và nền dùng widget Elementor gốc. Bấm vào từng thành phần trong trình sửa để thay nội dung. Các widget trong nhóm “Địa Điểm Tiền Hải” bổ sung dữ liệu động và biểu mẫu mà Elementor Free chưa có.</p><p>Địa điểm được lưu bằng loại bài ListingPro. Giá, địa chỉ và giờ hoạt động trong bảng “Thông tin địa điểm Tiền Hải” được dùng cho tìm kiếm và thẻ địa điểm. Ảnh đại diện dùng cho kết quả tìm kiếm. Các nội dung được thêm từ bản tham chiếu là dữ liệu demo.</p></div>';
 }
-add_action('add_meta_boxes',function(){ add_meta_box('lk-data','Thông tin địa điểm Long Khánh','lk_meta_box','listing','normal'); });
+add_action('add_meta_boxes',function(){ add_meta_box('lk-data','Thông tin địa điểm Tiền Hải','lk_meta_box','listing','normal'); });
 function lk_meta_box($post){
  if(!get_post_meta($post->ID,'_lk_managed',true)&&$post->post_status!=='auto-draft')return;
  wp_nonce_field('lk_save_data','lk_data_nonce'); $d=lk_place_data($post);

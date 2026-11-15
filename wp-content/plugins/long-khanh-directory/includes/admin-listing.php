@@ -10,7 +10,7 @@ add_action('add_meta_boxes_listing',function($post){
  remove_meta_box('listing_meta_settings','listing','normal');
  remove_meta_box('postcustom','listing','normal');
  remove_meta_box('lk-data','listing','normal');
- add_meta_box('lk-data','Thông tin địa điểm Long Khánh','lk_meta_box','listing','normal','high');
+ add_meta_box('lk-data','Thông tin địa điểm Tiền Hải','lk_meta_box','listing','normal','high');
  global $wp_meta_boxes;
  $boxes=&$wp_meta_boxes['listing']['normal']['high'];
  if(is_array($boxes))$boxes=array_intersect_key($boxes,array_flip(array('lk-data')))+$boxes;

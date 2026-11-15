@@ -199,7 +199,7 @@
     {
       "_id": "6af4301dd48f66422a0acdf4",
       "address": {
-        "specific": "78 Trần Phú. Long Khánh"
+        "specific": "78 Trần Phú. Tiền Hải"
       },
       "order": 100,
       "view": 41,
@@ -223,7 +223,7 @@
     {
       "_id": "6ae6b257d48f66422a052621",
       "address": {
-        "specific": "213 Thích Quảng Đức Nối Dài, Long Khánh"
+        "specific": "213 Thích Quảng Đức Nối Dài, Tiền Hải"
       },
       "order": 100,
       "view": 135,
@@ -247,7 +247,7 @@
     {
       "_id": "6ad86fe8d48f66422a003b31",
       "address": {
-        "specific": "252A Thích Quảng Đức (nối Dài), Long Khánh, Đồng Nai"
+        "specific": "252A Thích Quảng Đức (nối Dài), Tiền Hải, Đồng Nai"
       },
       "order": 100,
       "view": 235,
@@ -271,7 +271,7 @@
     {
       "_id": "6ad83b86d48f66422a002e40",
       "address": {
-        "specific": "411 Hồ Thị Hương, Long Khánh, Đồng Nai"
+        "specific": "411 Hồ Thị Hương, Tiền Hải, Đồng Nai"
       },
       "order": 100,
       "view": 228,
@@ -319,7 +319,7 @@
     {
       "_id": "6ac851fbd48f66422afc264d",
       "address": {
-        "specific": "11 Phan Chu Trinh, Long Khánh, Đồng Nai"
+        "specific": "11 Phan Chu Trinh, Tiền Hải, Đồng Nai"
       },
       "order": 100,
       "view": 123,
@@ -343,7 +343,7 @@
     {
       "_id": "6abc86a0d48f66422af979a0",
       "address": {
-        "specific": "451 Hồ Thị Hương, Long Khánh, Đồng Nai"
+        "specific": "451 Hồ Thị Hương, Tiền Hải, Đồng Nai"
       },
       "order": 100,
       "view": 178,
@@ -393,7 +393,7 @@
     "lau-bo-bao-bao": {
       "_id": "6af4301dd48f66422a0acdf4",
       "address": {
-        "specific": "78 Trần Phú. Long Khánh",
+        "specific": "78 Trần Phú. Tiền Hải",
         "geo": {
           "lat": 10.933425,
           "long": 107.247471
@@ -574,7 +574,7 @@
     "de-dai-phat": {
       "_id": "6ae6b257d48f66422a052621",
       "address": {
-        "specific": "213 Thích Quảng Đức Nối Dài, Long Khánh",
+        "specific": "213 Thích Quảng Đức Nối Dài, Tiền Hải",
         "geo": {
           "lat": 10.926038,
           "long": 107.252508
@@ -768,7 +768,7 @@
     "hu-quan": {
       "_id": "6ad86fe8d48f66422a003b31",
       "address": {
-        "specific": "252A Thích Quảng Đức (nối Dài), Long Khánh, Đồng Nai",
+        "specific": "252A Thích Quảng Đức (nối Dài), Tiền Hải, Đồng Nai",
         "geo": {
           "lat": 10.926083,
           "long": 107.25572
@@ -971,7 +971,7 @@
     "de-nhat-mi-keo": {
       "_id": "6ad83b86d48f66422a002e40",
       "address": {
-        "specific": "411 Hồ Thị Hương, Long Khánh, Đồng Nai",
+        "specific": "411 Hồ Thị Hương, Tiền Hải, Đồng Nai",
         "geo": {
           "lat": 10.9317,
           "long": 107.254498
@@ -1324,7 +1324,7 @@
     "shop-hoa-ai-sam": {
       "_id": "6ac851fbd48f66422afc264d",
       "address": {
-        "specific": "11 Phan Chu Trinh, Long Khánh, Đồng Nai",
+        "specific": "11 Phan Chu Trinh, Tiền Hải, Đồng Nai",
         "geo": {
           "lat": 10.931871,
           "long": 107.247653
@@ -1550,7 +1550,7 @@
     "gu-oc-ho-thi-huong": {
       "_id": "6abc86a0d48f66422af979a0",
       "address": {
-        "specific": "451 Hồ Thị Hương, Long Khánh, Đồng Nai",
+        "specific": "451 Hồ Thị Hương, Tiền Hải, Đồng Nai",
         "geo": {
           "lat": 10.928164,
           "long": 107.256716
@@ -1993,7 +1993,7 @@
     "ca-phe-me-bap": {
       "_id": "69cb77bf05a04540c45b3ffc",
       "address": {
-        "specific": "13 Trần Phú, Long Khánh, Đồng Nai",
+        "specific": "13 Trần Phú, Tiền Hải, Đồng Nai",
         "geo": {
           "lat": 10.933436,
           "long": 107.243968
@@ -2150,7 +2150,7 @@
     "tram-channel-coffee-and-food": {
       "_id": "69d6100405a04540c45e3a48",
       "address": {
-        "specific": "420 Hồ Thị Hương, Long Khánh, Đồng Nai (kế Rạp BHD)",
+        "specific": "420 Hồ Thị Hương, Tiền Hải, Đồng Nai (kế Rạp BHD)",
         "geo": {
           "lat": 10.923434,
           "long": 107.259177
@@ -2602,7 +2602,7 @@
     "cui-ca-phe": {
       "_id": "69afc5ff05a04540c449c202",
       "address": {
-        "specific": "137 Nguyễn Thị Minh Khai, Long Khánh",
+        "specific": "137 Nguyễn Thị Minh Khai, Tiền Hải",
         "geo": {
           "lat": 10.923112,
           "long": 107.248013
@@ -2779,7 +2779,7 @@
     "khach-san-quoc-thanh-long-khanh": {
       "_id": "62a0dde1e2f5d451eca0b1c6",
       "address": {
-        "specific": "03 Nguyễn Thái Học, Xuân An, Long Khánh, Đồng Nai, Vietnam",
+        "specific": "03 Nguyễn Thái Học, Xuân An, Tiền Hải, Đồng Nai, Vietnam",
         "geo": {
           "lat": 10.9311,
           "long": 107.2453
@@ -2892,7 +2892,7 @@
       "menu": [],
       "view": 641283,
       "deleted": false,
-      "name": "Khách Sạn Quốc Thanh Long Khánh",
+      "name": "Khách Sạn Quốc Thanh Tiền Hải",
       "slug": "khach-san-quoc-thanh-long-khanh",
       "price": {
         "min": 420000,
@@ -2903,7 +2903,7 @@
         "name": "phường Xuân An",
         "slug": "phuong-xuan-an"
       },
-      "intro": "Tọa lạc tại trung tâm, Quốc Thanh Hotel tự hào là một khách sạn hàng đầu tại Long Khánh về dịch vụ và tiện nghi. Hiểu rõ giá trị và trách nhiệm của mình, nên từ khi đi vào hoạt động Quốc Thanh hotel đã luôn không ngừng phát triển để mang lại những dịch vụ và tiện ích liên kết nội ngoại khu nhằm nâng cao trải nghiệm cho Khách hàng. Với phương châm “Sự hài lòng của Khách hàng là kim chỉ nam cho sự phát triển của Quốc Thanh Hotel”.",
+      "intro": "Tọa lạc tại trung tâm, Quốc Thanh Hotel tự hào là một khách sạn hàng đầu tại Tiền Hải về dịch vụ và tiện nghi. Hiểu rõ giá trị và trách nhiệm của mình, nên từ khi đi vào hoạt động Quốc Thanh hotel đã luôn không ngừng phát triển để mang lại những dịch vụ và tiện ích liên kết nội ngoại khu nhằm nâng cao trải nghiệm cho Khách hàng. Với phương châm “Sự hài lòng của Khách hàng là kim chỉ nam cho sự phát triển của Quốc Thanh Hotel”.",
       "phone": "02513 719 666",
       "facebook": {
         "name": "pg/quocthanhhotel",
@@ -2916,9 +2916,9 @@
         "path": "uploads/images/2022/06/08/0599d345-cf3f-4a30-9bb9-60e1f17cb1b6-image.jpeg"
       },
       "employee": [],
-      "metaKeywords": "khách sạn quốc thanh, phố đi bộ, khách sạn, khách sạn long khánh,, khách sạn quốc thanh long khánh, quốc thanh long khánh, quốc thanh,, cafe quốc thanh, cafe view phố đi bộ,",
+      "metaKeywords": "khách sạn quốc thanh, phố đi bộ, khách sạn, khách sạn tiền hải,, khách sạn quốc thanh tiền hải, quốc thanh tiền hải, quốc thanh,, cafe quốc thanh, cafe view phố đi bộ,",
       "wifi": {},
-      "metaKeywordsES": "khach san quoc thanh, pho di bo, khach san, khach san long khanh,, khach san quoc thanh long khanh, quoc thanh long khanh, quoc thanh,, cafe quoc thanh, cafe view pho di bo,",
+      "metaKeywordsES": "khach san quoc thanh, pho di bo, khach san, khach san tien hai,, khach san quoc thanh tien hai, quoc thanh tien hai, quoc thanh,, cafe quoc thanh, cafe view pho di bo,",
       "order": 100,
       "reviewCount": 2,
       "imageCount": 13,
@@ -2947,7 +2947,7 @@
     "rap-chieu-phim-bhd-star-long-khanh": {
       "_id": "629f8bec9e58837f05e29780",
       "address": {
-        "specific": "Tầng 2 - 430 Hồ Thị Hương, Xuân An, Long Khánh, Đồng Nai",
+        "specific": "Tầng 2 - 430 Hồ Thị Hương, Xuân An, Tiền Hải, Đồng Nai",
         "geo": {
           "lat": 10.9231811,
           "long": 107.2591935
@@ -3121,7 +3121,7 @@
       ],
       "view": 9856779,
       "deleted": false,
-      "name": "Rạp Chiếu Phim BHD Star Long Khánh",
+      "name": "Rạp Chiếu Phim BHD Star Tiền Hải",
       "slug": "rap-chieu-phim-bhd-star-long-khanh",
       "category": "629c9f8817dd741c0c5b5d00",
       "region": {
@@ -3133,14 +3133,14 @@
         "min": 50000,
         "max": 85000
       },
-      "intro": "BHD Star Long Khánh Rạp mới được đầu tư siêu xịn, hiện đại, rộng rãi nằm ngay trong khu phức hợp Sunshine đây rồi.",
+      "intro": "BHD Star Tiền Hải Rạp mới được đầu tư siêu xịn, hiện đại, rộng rãi nằm ngay trong khu phức hợp Sunshine đây rồi.",
       "facebook": {
-        "name": "Rạp Chiếu Phim BHD Star Long Khánh ",
+        "name": "Rạp Chiếu Phim BHD Star Tiền Hải ",
         "link": "https://www.facebook.com/bhdstarlongkhanh/"
       },
       "website": "https://www.bhdstar.vn/",
       "phone": "02512860696",
-      "metaKeywords": "rạp chiếu phim, bhd, bhd long khánh, rạp phim long khánh,, bhd star, bhd hồ thị hương, rạp bhd,,",
+      "metaKeywords": "rạp chiếu phim, bhd, bhd tiền hải, rạp phim tiền hải,, bhd star, bhd hồ thị hương, rạp bhd,,",
       "avatar": {
         "_id": "629f8bec9e58837f05e29789",
         "width": 1108,
@@ -3148,7 +3148,7 @@
       },
       "employee": [],
       "wifi": {},
-      "metaKeywordsES": "rap chieu phim, bhd, bhd long khanh, rap phim long khanh,, bhd star, bhd ho thi huong, rap bhd,,",
+      "metaKeywordsES": "rap chieu phim, bhd, bhd tien hai, rap phim tien hai,, bhd star, bhd ho thi huong, rap bhd,,",
       "order": 100,
       "reviewCount": 1,
       "imageCount": 24,
@@ -3180,7 +3180,7 @@
       "_id": "67b7f5eb6cc5936da69e6e64",
       "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/0ac2d305-a157-4ef6-987d-9e0642ea0d1d-4png.jpeg",
       "author": "Thanh Ngân",
-      "title": "Top Nhà Xe tại Long Khánh, Đồng Nai",
+      "title": "Top Nhà Xe tại Tiền Hải, Đồng Nai",
       "slug": "top-nha-xe-tai-long-khanh-dong-nai",
       "createdAt": "2025-02-21T03:41:31.976Z"
     },
@@ -3188,7 +3188,7 @@
       "_id": "678f19856cc5936da69519bc",
       "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/84e58f54-d710-41e5-a416-67d00bf1b4a2-5png.jpeg",
       "author": "Thanh Ngân",
-      "title": "Top 4 địa điểm chơi Billiards tại Long Khánh, Đồng Nai",
+      "title": "Top 4 địa điểm chơi Billiards tại Tiền Hải, Đồng Nai",
       "slug": "top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai",
       "createdAt": "2025-01-21T03:50:29.091Z"
     },
@@ -3196,7 +3196,7 @@
       "_id": "64b0f91781bb1915710b6991",
       "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/056d897a-946d-47a8-aae4-482a6434e615-top-10-nhung-dia-diem-chup-anh.jpeg",
       "author": "Trương Hồng Thuỷ",
-      "title": "Top Những Quán Nướng Ở Long Khánh",
+      "title": "Top Những Quán Nướng Ở Tiền Hải",
       "slug": "top-nhung-quan-nuong-o-long-khanh",
       "createdAt": "2023-07-14T07:28:23.088Z"
     },
@@ -3204,7 +3204,7 @@
       "_id": "63be662a05b9ac281aee750c",
       "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/03/8141e716-27dd-434a-8c16-0d845aa1259b-top-10-nhung-dia-diem-chup-anh.jpeg",
       "author": "Trương Hồng Thuỷ",
-      "title": "Top 10 địa điểm chụp hình đẹp tại Long Khánh",
+      "title": "Top 10 địa điểm chụp hình đẹp tại Tiền Hải",
       "slug": "top-10-dia-diem-chup-hinh-dep-tai-long-khanh",
       "createdAt": "2023-01-11T07:32:58.163Z"
     }
@@ -3213,15 +3213,15 @@
     "top-nha-xe-tai-long-khanh-dong-nai": {
       "blog": {
         "_id": "67b7f5eb6cc5936da69e6e64",
-        "description": "Nếu bạn muốn tìm kiếm các nhà xe thì note ngay vào điện thoại các nhà xe nhất nhì ở Long Khánh nha!",
-        "keywords": "Nhà xe, NHÀ XE, Xe, xe, Kim Mạnh Hùng, KMH, Cúc Phương, cúc phương, cường thuỷ, Cường Thuỷ, kim mạnh hùng, nhà xe long khánh, Nhà xe Long Khánh",
+        "description": "Nếu bạn muốn tìm kiếm các nhà xe thì note ngay vào điện thoại các nhà xe nhất nhì ở Tiền Hải nha!",
+        "keywords": "Nhà xe, NHÀ XE, Xe, xe, Kim Mạnh Hùng, KMH, Cúc Phương, cúc phương, cường thuỷ, Cường Thuỷ, kim mạnh hùng, nhà xe tiền hải, Nhà xe Tiền Hải",
         "tags": "",
         "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/0ac2d305-a157-4ef6-987d-9e0642ea0d1d-4png.jpeg",
-        "content": "Nếu bạn đang tìm kiếm các nhà xe tại Long Khánh, Đồng Nai, hãy note ngay những nhà xe nổi bật như Nhà xe Kim Mạnh Hùng, Nhà xe Võ Cúc Phương, Nhà xe Cường Thuỷ vào danh sách của mình nha.\n\n![Tổng hợp nhà xe tại Long Khánh ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/0ac2d305-a157-4ef6-987d-9e0642ea0d1d-4png.jpeg)\n\n## 1. Nhà xe Kim Mạnh Hùng\n\nNhà xe Kim Mạnh Hùng Long Khánh bắt đầu hoạt động từ năm 2012, với hơn 10 năm kinh nghiệm, là lựa chọn hàng đầu cho tuyến Sài Gòn – Đồng Nai, mang đến dịch vụ tận tâm, an toàn và tiện lợi với tần suất chuyến linh hoạt từ 30 đến 45 phút.\n\n![Không gian KMH](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/b67e75c0-e3c3-4e62-b826-b9c55a6ff26c-1png.jpeg)\n*Hình: Nhà xe Kim Mạnh Hùng*\n\n- Địa chỉ: 24E Trần Phú, P. Xuân An, TP. Long Khánh\n- Loại xe: Limousine, giường nằm, giường nằm đôi, ghế ngồi 16 chỗ, ghế ngồi 29 chỗ, \n- Giờ khởi hành: Từ 04:00\n- Giá vé: Từ 120.000, 310.000, 770.000, 500.000\n- Thông tin liên hệ: 1900.888.684\n \n## 2. Nhà xe Võ Cúc Phương\n\nNhà xe Võ Cúc Phương bắt đầu hoạt động từ năm 2008,nhà xe cung cấp dịch vụ vận chuyển chất lượng cao giữa Sài Gòn và Đồng Nai. Với đội ngũ lái xe chuyên nghiệp và xe bảo dưỡng định kỳ, bạn sẽ có chuyến đi an toàn, thoải mái. Tần suất xe linh hoạt, giúp bạn dễ dàng chọn lựa thời gian phù hợp.\n\n![Không gian CP](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/ead6e84e-cb04-4f9e-9084-f78965d5f7d8-3png.jpeg)\n*Hình: Nhà xe Võ Cúc Phương*\n\n- Địa chỉ: 28 Nguyễn Du, P. Xuân An, TP. Long Khánh\n- Loại xe: Limousine, ghế ngồi 29 chỗ\n- Giờ khởi hành: Từ 05:30\n- Giá vé: Từ 150.000 đến 200.000\n- Thông tin liên hệ: 02513.870.018 hoặc 02513.608.079\n\n## 3. Nhà xe Cường Thuỷ\n\nNhà xe Cường Thuỷ, hoạt động từ 2004, đã không ngừng phát triển và xây dựng uy tín trong năm qua. Với đội ngũ nhân viên chuyên nghiệp, thân thiện và các chuyến xe chất lượng, nhà xe mang đến trải nghiệm thoải mái, an toàn. Dịch vụ luôn được cải tiến để đảm bảo sự hài lòng tối đa cho hành khách, là lựa chọn đáng tin cậy cho mọi hành trình.\n\n![Không gian CT](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/467054df-8691-450d-aefd-8421c0f68251-2png.jpeg)\n*Hình: Nhà xe Cường Thuỷ*\n\n- Địa chỉ: 13 Trần Phú, P. Xuân An, TP. Long Khánh\n- Loại xe: Ghế ngồi 25 chỗ\n- Giờ khởi hành: Từ 05:30\n- Giá vé: Từ 110.000/vé\n- Thông tin liên hệ: 02513.785.555 hoặc 02513.876.068",
+        "content": "Nếu bạn đang tìm kiếm các nhà xe tại Tiền Hải, Đồng Nai, hãy note ngay những nhà xe nổi bật như Nhà xe Kim Mạnh Hùng, Nhà xe Võ Cúc Phương, Nhà xe Cường Thuỷ vào danh sách của mình nha.\n\n![Tổng hợp nhà xe tại Tiền Hải ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/0ac2d305-a157-4ef6-987d-9e0642ea0d1d-4png.jpeg)\n\n## 1. Nhà xe Kim Mạnh Hùng\n\nNhà xe Kim Mạnh Hùng Tiền Hải bắt đầu hoạt động từ năm 2012, với hơn 10 năm kinh nghiệm, là lựa chọn hàng đầu cho tuyến Sài Gòn – Đồng Nai, mang đến dịch vụ tận tâm, an toàn và tiện lợi với tần suất chuyến linh hoạt từ 30 đến 45 phút.\n\n![Không gian KMH](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/b67e75c0-e3c3-4e62-b826-b9c55a6ff26c-1png.jpeg)\n*Hình: Nhà xe Kim Mạnh Hùng*\n\n- Địa chỉ: 24E Trần Phú, P. Xuân An, TP. Tiền Hải\n- Loại xe: Limousine, giường nằm, giường nằm đôi, ghế ngồi 16 chỗ, ghế ngồi 29 chỗ, \n- Giờ khởi hành: Từ 04:00\n- Giá vé: Từ 120.000, 310.000, 770.000, 500.000\n- Thông tin liên hệ: 1900.888.684\n \n## 2. Nhà xe Võ Cúc Phương\n\nNhà xe Võ Cúc Phương bắt đầu hoạt động từ năm 2008,nhà xe cung cấp dịch vụ vận chuyển chất lượng cao giữa Sài Gòn và Đồng Nai. Với đội ngũ lái xe chuyên nghiệp và xe bảo dưỡng định kỳ, bạn sẽ có chuyến đi an toàn, thoải mái. Tần suất xe linh hoạt, giúp bạn dễ dàng chọn lựa thời gian phù hợp.\n\n![Không gian CP](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/ead6e84e-cb04-4f9e-9084-f78965d5f7d8-3png.jpeg)\n*Hình: Nhà xe Võ Cúc Phương*\n\n- Địa chỉ: 28 Nguyễn Du, P. Xuân An, TP. Tiền Hải\n- Loại xe: Limousine, ghế ngồi 29 chỗ\n- Giờ khởi hành: Từ 05:30\n- Giá vé: Từ 150.000 đến 200.000\n- Thông tin liên hệ: 02513.870.018 hoặc 02513.608.079\n\n## 3. Nhà xe Cường Thuỷ\n\nNhà xe Cường Thuỷ, hoạt động từ 2004, đã không ngừng phát triển và xây dựng uy tín trong năm qua. Với đội ngũ nhân viên chuyên nghiệp, thân thiện và các chuyến xe chất lượng, nhà xe mang đến trải nghiệm thoải mái, an toàn. Dịch vụ luôn được cải tiến để đảm bảo sự hài lòng tối đa cho hành khách, là lựa chọn đáng tin cậy cho mọi hành trình.\n\n![Không gian CT](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/02/21/467054df-8691-450d-aefd-8421c0f68251-2png.jpeg)\n*Hình: Nhà xe Cường Thuỷ*\n\n- Địa chỉ: 13 Trần Phú, P. Xuân An, TP. Tiền Hải\n- Loại xe: Ghế ngồi 25 chỗ\n- Giờ khởi hành: Từ 05:30\n- Giá vé: Từ 110.000/vé\n- Thông tin liên hệ: 02513.785.555 hoặc 02513.876.068",
         "author": "Thanh Ngân",
         "isHot": false,
         "deleted": false,
-        "title": "Top Nhà Xe tại Long Khánh, Đồng Nai",
+        "title": "Top Nhà Xe tại Tiền Hải, Đồng Nai",
         "slug": "top-nha-xe-tai-long-khanh-dong-nai",
         "category": {
           "_id": "638ce88f05b9ac281adc8d83",
@@ -3240,15 +3240,15 @@
     "top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai": {
       "blog": {
         "_id": "678f19856cc5936da69519bc",
-        "description": "Nếu bạn là người yêu thích Billiards thì note ngay vào điện thoại để không bỏ lỡ những địa điểm chơi Billiards nhất nhì ở Long Khánh nha!",
-        "keywords": "Billiards, địa điểm chơi Billiards, chơi Billiards, Billiards tại Long Khánh Đồng Nai, Billiards tại Long Khánh, Billiards Long Khánh",
+        "description": "Nếu bạn là người yêu thích Billiards thì note ngay vào điện thoại để không bỏ lỡ những địa điểm chơi Billiards nhất nhì ở Tiền Hải nha!",
+        "keywords": "Billiards, địa điểm chơi Billiards, chơi Billiards, Billiards tại Tiền Hải Đồng Nai, Billiards tại Tiền Hải, Billiards Tiền Hải",
         "tags": "",
         "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/84e58f54-d710-41e5-a416-67d00bf1b4a2-5png.jpeg",
-        "content": "Nếu bạn đang tìm kiếm địa điểm chơi billiards tại Long Khánh, Đồng Nai, hãy ghé thăm những câu lạc bộ nổi bật như Billiards Wukong, Billiards Club Luxury, Billiards X6, và LK Pro Billiards Club. Các câu lạc bộ này sở hữu không gian hiện đại, bàn chơi chuẩn quốc tế, và dịch vụ chuyên nghiệp, mang đến trải nghiệm tuyệt vời!\n\n![Tổng hợp địa điểm chơi Billiards tại Long Khánh ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/84e58f54-d710-41e5-a416-67d00bf1b4a2-5png.jpeg)\n\n## 1. Billiards Wukong - Điểm hẹn lý tưởng cho giới đam mê billiards tại Long Khánh\n\nBilliards Wukong mang đến một không gian độc đáo với phong cách thiết kế hiện đại, đậm chất cá tính. Câu lạc bộ sở hữu hệ thống bàn chơi cao cấp, đảm bảo chất lượng và tiêu chuẩn thi đấu. Bên cạnh đó, ánh sáng được bố trí khoa học, tạo sự tập trung và thoải mái cho người chơi. Không chỉ là nơi để thỏa mãn đam mê billiards, Billiards Wukong còn tích hợp không gian thư giãn với đồ uống phong phú, phục vụ chuyên nghiệp. Với không gian rộng rãi, đây là địa chỉ không thể bỏ qua cho các trận đấu hấp dẫn hay những buổi tụ tập bạn bè tại Long Khánh.\n\n![Không gian Billiards Wukong](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/e7fa539b-ba1f-44f7-be54-bd96cb6fbc57-2png.jpeg)\n*Hình: Không gian Billiards Wukong*\n\n- Địa chỉ: 121 Hồ Thị Hương, P. Xuân Trung, TP. Long Khánh, Đồng Nai\n \n## 2. Billiards Club Luxury - Điểm đến đẳng cấp tại Long Khánh\n\nBilliards Club Luxury là địa chỉ hàng đầu dành cho các tín đồ billiards. Không gian được thiết kế sang trọng, hiện đại với hệ thống bàn chơi chuẩn quốc tế và ánh sáng tối ưu, mang đến trải nghiệm chơi tuyệt vời. Câu lạc bộ thường xuyên tổ chức các giải đấu chuyên nghiệp, tạo sân chơi giao lưu cho cộng đồng yêu billiards. Bên cạnh đó, khu vực chờ thoải mái cùng các dịch vụ đi kèm, như nước uống và giải khát, đảm bảo sự tiện nghi cho mọi khách hàng. Nếu bạn đang tìm kiếm một nơi chơi billiards chuyên nghiệp và đẳng cấp tại Long Khánh, đừng bỏ lỡ Billiards Club Luxury!\n\n![Không gian Billiards Club Luxury](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/85d41b98-b74d-4623-bc95-0135b3a7afcd-1png.jpeg)\n*Hình: Không gian Billiards Club Luxury*\n\n- Địa chỉ: 214 Thích Quảng Đức, P. Xuân An, TP. Long Khánh, Đồng Nai\n\n## 3. Billiards X6 - Sân chơi sôi động tại Long Khánh\n\nBilliards X6 là điểm đến lý tưởng cho những ai yêu thích không khí trẻ trung và sôi động. Với không gian thiết kế hiện đại, đậm phong cách neon ấn tượng, câu lạc bộ tạo cảm giác mới lạ và thú vị cho mọi người chơi. Billiards X6 được trang bị bàn chơi tiêu chuẩn cao cùng dịch vụ chuyên nghiệp, mang lại trải nghiệm tuyệt vời cho cả người chơi chuyên nghiệp lẫn người mới bắt đầu. Đây cũng là nơi lý tưởng để tổ chức các buổi gặp mặt bạn bè hay giao lưu với cộng đồng yêu billiards tại Long Khánh. Đừng quên ghé thăm để trải nghiệm không gian độc đáo và đầy màu sắc này!\n\n![Không gian Billiards X6](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/0f5a12ac-e2b4-4c7c-b682-12be9e8a08f9-3png.jpeg)\n*Hình: Không gian Billiards X6*\n\n- Địa chỉ: 165 Nguyễn Thị Minh Khai, P. Xuân Hòa, TP. Long Khánh, Đồng Nai\n\n## 4. LK Pro Billiards Club - Đẳng cấp chuyên nghiệp tại Long Khánh\n\nLK Pro Billiards Club là điểm đến không thể bỏ qua cho những ai đam mê billiards chuyên nghiệp. Với không gian rộng rãi, hiện đại và hệ thống bàn chơi đạt chuẩn quốc tế, câu lạc bộ đáp ứng tốt cả nhu cầu tập luyện lẫn thi đấu. LK Pro nổi bật với không khí thân thiện, dịch vụ tận tâm và hệ thống ánh sáng tối ưu, giúp người chơi tập trung và thỏa sức thể hiện kỹ năng. Đây không chỉ là nơi thư giãn mà còn là địa chỉ kết nối cộng đồng billiards tại Long Khánh. Hãy đến LK Pro Billiards Club để trải nghiệm không gian chơi đẳng cấp cùng những trận đấu hấp dẫn!\n\n![Không gian LK Pro Billiards Club](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/c560bd64-d453-4fa8-b481-9e7041603015-4png.jpeg)\n*Hình: Không gian LK Pro Billiards Club*\n\n- Địa chỉ: 03 Thích Quảng Đức, P. Xuân An, TP. Long Khánh, Đồng Nai",
+        "content": "Nếu bạn đang tìm kiếm địa điểm chơi billiards tại Tiền Hải, Đồng Nai, hãy ghé thăm những câu lạc bộ nổi bật như Billiards Wukong, Billiards Club Luxury, Billiards X6, và LK Pro Billiards Club. Các câu lạc bộ này sở hữu không gian hiện đại, bàn chơi chuẩn quốc tế, và dịch vụ chuyên nghiệp, mang đến trải nghiệm tuyệt vời!\n\n![Tổng hợp địa điểm chơi Billiards tại Tiền Hải ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/84e58f54-d710-41e5-a416-67d00bf1b4a2-5png.jpeg)\n\n## 1. Billiards Wukong - Điểm hẹn lý tưởng cho giới đam mê billiards tại Tiền Hải\n\nBilliards Wukong mang đến một không gian độc đáo với phong cách thiết kế hiện đại, đậm chất cá tính. Câu lạc bộ sở hữu hệ thống bàn chơi cao cấp, đảm bảo chất lượng và tiêu chuẩn thi đấu. Bên cạnh đó, ánh sáng được bố trí khoa học, tạo sự tập trung và thoải mái cho người chơi. Không chỉ là nơi để thỏa mãn đam mê billiards, Billiards Wukong còn tích hợp không gian thư giãn với đồ uống phong phú, phục vụ chuyên nghiệp. Với không gian rộng rãi, đây là địa chỉ không thể bỏ qua cho các trận đấu hấp dẫn hay những buổi tụ tập bạn bè tại Tiền Hải.\n\n![Không gian Billiards Wukong](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/e7fa539b-ba1f-44f7-be54-bd96cb6fbc57-2png.jpeg)\n*Hình: Không gian Billiards Wukong*\n\n- Địa chỉ: 121 Hồ Thị Hương, P. Xuân Trung, TP. Tiền Hải, Đồng Nai\n \n## 2. Billiards Club Luxury - Điểm đến đẳng cấp tại Tiền Hải\n\nBilliards Club Luxury là địa chỉ hàng đầu dành cho các tín đồ billiards. Không gian được thiết kế sang trọng, hiện đại với hệ thống bàn chơi chuẩn quốc tế và ánh sáng tối ưu, mang đến trải nghiệm chơi tuyệt vời. Câu lạc bộ thường xuyên tổ chức các giải đấu chuyên nghiệp, tạo sân chơi giao lưu cho cộng đồng yêu billiards. Bên cạnh đó, khu vực chờ thoải mái cùng các dịch vụ đi kèm, như nước uống và giải khát, đảm bảo sự tiện nghi cho mọi khách hàng. Nếu bạn đang tìm kiếm một nơi chơi billiards chuyên nghiệp và đẳng cấp tại Tiền Hải, đừng bỏ lỡ Billiards Club Luxury!\n\n![Không gian Billiards Club Luxury](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/85d41b98-b74d-4623-bc95-0135b3a7afcd-1png.jpeg)\n*Hình: Không gian Billiards Club Luxury*\n\n- Địa chỉ: 214 Thích Quảng Đức, P. Xuân An, TP. Tiền Hải, Đồng Nai\n\n## 3. Billiards X6 - Sân chơi sôi động tại Tiền Hải\n\nBilliards X6 là điểm đến lý tưởng cho những ai yêu thích không khí trẻ trung và sôi động. Với không gian thiết kế hiện đại, đậm phong cách neon ấn tượng, câu lạc bộ tạo cảm giác mới lạ và thú vị cho mọi người chơi. Billiards X6 được trang bị bàn chơi tiêu chuẩn cao cùng dịch vụ chuyên nghiệp, mang lại trải nghiệm tuyệt vời cho cả người chơi chuyên nghiệp lẫn người mới bắt đầu. Đây cũng là nơi lý tưởng để tổ chức các buổi gặp mặt bạn bè hay giao lưu với cộng đồng yêu billiards tại Tiền Hải. Đừng quên ghé thăm để trải nghiệm không gian độc đáo và đầy màu sắc này!\n\n![Không gian Billiards X6](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/0f5a12ac-e2b4-4c7c-b682-12be9e8a08f9-3png.jpeg)\n*Hình: Không gian Billiards X6*\n\n- Địa chỉ: 165 Nguyễn Thị Minh Khai, P. Xuân Hòa, TP. Tiền Hải, Đồng Nai\n\n## 4. LK Pro Billiards Club - Đẳng cấp chuyên nghiệp tại Tiền Hải\n\nLK Pro Billiards Club là điểm đến không thể bỏ qua cho những ai đam mê billiards chuyên nghiệp. Với không gian rộng rãi, hiện đại và hệ thống bàn chơi đạt chuẩn quốc tế, câu lạc bộ đáp ứng tốt cả nhu cầu tập luyện lẫn thi đấu. LK Pro nổi bật với không khí thân thiện, dịch vụ tận tâm và hệ thống ánh sáng tối ưu, giúp người chơi tập trung và thỏa sức thể hiện kỹ năng. Đây không chỉ là nơi thư giãn mà còn là địa chỉ kết nối cộng đồng billiards tại Tiền Hải. Hãy đến LK Pro Billiards Club để trải nghiệm không gian chơi đẳng cấp cùng những trận đấu hấp dẫn!\n\n![Không gian LK Pro Billiards Club](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2025/01/21/c560bd64-d453-4fa8-b481-9e7041603015-4png.jpeg)\n*Hình: Không gian LK Pro Billiards Club*\n\n- Địa chỉ: 03 Thích Quảng Đức, P. Xuân An, TP. Tiền Hải, Đồng Nai",
         "author": "Thanh Ngân",
         "isHot": false,
         "deleted": false,
-        "title": "Top 4 địa điểm chơi Billiards tại Long Khánh, Đồng Nai",
+        "title": "Top 4 địa điểm chơi Billiards tại Tiền Hải, Đồng Nai",
         "slug": "top-4-dia-diem-choi-billiards-tai-long-khanh-dong-nai",
         "category": {
           "_id": "638ce88f05b9ac281adc8d83",
@@ -3258,25 +3258,25 @@
         "updatedAt": "2025-01-21T03:54:14.756Z",
         "__v": 0,
         "headings": [
-          "1. Billiards Wukong - Điểm hẹn lý tưởng cho giới đam mê billiards tại Long Khánh",
-          "2. Billiards Club Luxury - Điểm đến đẳng cấp tại Long Khánh",
-          "3. Billiards X6 - Sân chơi sôi động tại Long Khánh",
-          "4. LK Pro Billiards Club - Đẳng cấp chuyên nghiệp tại Long Khánh"
+          "1. Billiards Wukong - Điểm hẹn lý tưởng cho giới đam mê billiards tại Tiền Hải",
+          "2. Billiards Club Luxury - Điểm đến đẳng cấp tại Tiền Hải",
+          "3. Billiards X6 - Sân chơi sôi động tại Tiền Hải",
+          "4. LK Pro Billiards Club - Đẳng cấp chuyên nghiệp tại Tiền Hải"
         ]
       }
     },
     "top-nhung-quan-nuong-o-long-khanh": {
       "blog": {
         "_id": "64b0f91781bb1915710b6991",
-        "description": "Nếu bạn là người yêu thích ẩm thực đặt biệt là đồ nướng, BBQ thì lưu ngay vào \"note\" điện thoại để không bỏ lỡ những món nướng ngon nhất nhì ở Long Khánh nha!",
-        "keywords": "quán nướng, đồ nướng, BBQ, đồ nướng ngon Long Khánh",
+        "description": "Nếu bạn là người yêu thích ẩm thực đặt biệt là đồ nướng, BBQ thì lưu ngay vào \"note\" điện thoại để không bỏ lỡ những món nướng ngon nhất nhì ở Tiền Hải nha!",
+        "keywords": "quán nướng, đồ nướng, BBQ, đồ nướng ngon Tiền Hải",
         "tags": "",
         "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/056d897a-946d-47a8-aae4-482a6434e615-top-10-nhung-dia-diem-chup-anh.jpeg",
-        "content": "Nếu bạn là người yêu thích ẩm thực đặt biệt là đồ nướng, BBQ thì lưu ngay vào \"note\" điện thoại để không bỏ lỡ những món nướng ngon nhất nhì ở Long Khánh nha!\n\n## 1. TIỆM NHÀ NGỌ\nNhà Ngọ thì đã nổi tiếng với các món lẩu đậm vị nhưng bên cạnh đó đồ nướng ở đây cũng không kém cạnh. Đặt biệt là \"khay nướng dài 1 mét\" độc nhất của quán. Thịt được ướp rất vừa vị cùng với những topping khác làm món nướng trở nên đậm đà phong phú hơn. \n![Ảnh: Tiệm Nhà Ngọ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/5af1ca32-2b2b-44be-a944-d9b69c4c8fb1-9png.jpeg)\n*Ảnh: Tiệm Nhà Ngọ*\n\n📍Địa chỉ: 06 Hai Bà Trưng, P Xuân Hòa, Tp Long Khánh, Đồng Nai\n\n## 2. MIN TOWN\nThịnh soạn với Dimsum, món Hoa hơn 30 món, Bò Nhúng Quảng Đông xịn, Lẩu 2 Ngăn sốt chấm X.O siêu dính. Mintown nổi tiếng với Dimsum ngon và món Hoa hơn 30 món khác nhau: Chân gà tàu xì, bánh bao kim sa, bánh bao phô mai, Tàu hũ cuộn, Dimsum hải sản giá siêu bình dân. Bò nhúng Quảng Đông 2 vi sốt nhúng bò cực phẩm: Vị tomyum, vị xí muội Quảng Đông đi kèm rau, nấm, cá viên, hải sản đủ vị bắt mắt.\n![Ảnh: MinTown](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/9282841c-4f69-461d-af15-ea7e822facaa-3png.jpeg)\n*Ảnh: MinTown*\n\n📍Địa chỉ: 139 Thích Quảng Đức (Đối diện Golden Health Gym), P Xuân An, TP Long Khánh, Đồng Nai\n\n## 3. CHILL BBQ & BEER\nMenu của quán siêu đa dạng, tận hưởng quầy salad MIỄN PHÍ, trái cây tráng miệng, kim chi ngon cực cùng với đa dạng các loại nước chấm 🥗🍉. Đặc biệt, dành riêng cho những ai yêu thích hương vị bia thì ở đây có TUBORG là thương hiệu bia cao cấp uống ngon số dách 🍺🍺 Ở đây còn có chiếc view ngồi vô cùng thoải mái luôn.\n![Ảnh: Chill BBQ Beer](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/cd644ad9-2029-420d-b63c-832776259116-4png.jpeg)\n*Ảnh: Chill BBQ Beer*\n\n📍 Địa chỉ: 451 Hồ Thị Hương, Xuân Thanh, Long Khánh, Đồng Nai. (Gần karaoke Kim Cương)\n\n## 4. BẾP NHÀ LEO\nQuán lẩu + set nướng giá sinh dziên mà chất lượng hông hề tầm thường phải thử phải thử liền 👏: Bếp Nhà Leo.\nLẩu Tứ Xuyên mini có 52k mà ngập tràn topping nước dùng đậm đà ngon, ngọt, thơm siu dính, các món nướng giá mềm xèo có 45k tha hồ ăn. Đã thử và bị mê đồ ăn ở đây lắm lắm luôn. \n![Ảnh: Bếp Nhà Leo](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/596e0988-123e-44c5-872c-d18bf1b6424b-anh-collectionpng.jpeg)\n*Ảnh: Bếp Nhà Leo*\n\n📍 Địa chỉ: 92 Nguyễn Tri Phương (Đối diện Tịnh xá Ngọc Khánh), P Xuân An, TP Long Khánh, Đồng Nai\n\n## 5. CẦU DẦU GLAMPING - BBQ \nBuổi chiều 'chill chill' ngắm hoàng hôn, nướng BBQ bình dân bên hồ mát 'gựi' với điểm 'Glamping' mới toanh ngay tại Long Khánh: CẦU DẦU GLAMPING. Điểm 'glamping' mới toanh ngay bên cạnh Hồ Cầu Dầu 😍 có cafe, quầy bar, còn có cắm trại nướng BBQ cực chill luôn nè . Giá Menu nướng BBQ giá siêu hợp lý luôn nè. Chỗ này làm tiệc sinh nhật ngoài trời là đúng bài luôn. Cùng với chiếc view hồ Cầu Dầu buổi chiều hoàng hôn cả một bầu trời gió mát rượi, được decor vài tiểu cảnh xinh xắn nữa. Ngoài ra còn có các tiện ích cắm trại, tham quan vườn trái cây nữa, bảo đảm sẽ là điểm check - in hot rần rần sắp tới ❤️ \n![Ảnh: Cầu Dầu Glamping - BBQ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/4c0b8c4e-15e6-4ca4-afb0-3fd90061cf98-2png.jpeg)\n*Ảnh: Cầu Dầu Glamping - BBQ*\n\n📍 Địa chỉ: Hồ Cầu Dầu, Hàng Gòn, Long Khánh, Đồng Nai\n\n## 6. NHÀ GỖ \nChiếc quán mang cả Đà Lạt thu nhỏ về Long Khánh với không gian toàn gỗ, decor thêm chút đèn vàng lung linh rồi ngồi nướng BBQ cực chill ngoài trời, thích cực 🥰. Menu quán đa dạng có lẩu , có nướng có bò, có đồ ăn vặt món nào cũng ngon cũng nêm nếm đậm đà . \n![Ảnh: Nhà Gỗ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/db5b2bf9-06f4-4e8a-86f0-65978f9ec096-6png.jpeg)\n*Ảnh: Nhà Gỗ*\n\n📍 Địa chỉ: 214 Thích Quảng Đức, phường Xuân An, Long Khánh, Đồng Nai\n\n## 7. PHỐ NHẬT\nNổi tiếng với các món Sushi, Sasimi, Phố Nhật còn có không gian bếp nướng không khói âm cực xịn. Nướng hải sản, thịt bò sốt Nhật...Thuyền Sashimi là món Hot của Phố Nhật có cá hồi tươi, cá ngừ, hàu rong nho, bạch tuộc, cá trích chấm với nước tương pha mù tạc chuẩn Nhật ăn mê. Lẩu Mì Udon Nhật là món truyền thống đáng thử, nướng BBQ với mấy món Nhật truyền thống.\n![Ảnh: Phố Nhật](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/f8fd8007-7ff8-4b5b-adf0-dda987ddc939-5png.jpeg)\n*Ảnh: Phố Nhật*\n\n📍 Địa chỉ: 147 Nguyễn Tri Phương (Nối Dài), P Xuân An, Long Khánh, Đồng Nai\n\n## 8. TIỆM NƯỚNG CHẢO ĐƯỜNG PHỐ\nSet nướng chảo bơ đầy ụ hàu sữa, bò beo béo thơm bơ , trứng cộng nước sốt sền sệt. Nhớ gọi thêm mấy đĩa bò hải sản tự nướng ướp vị đậm đà chấm muối ớt xanh nữa nha. Điểm ưng quán sử dụng thực phẩm tươi, không dùng hàng đông lạnh: Thịt bò tươi, nầm sữa tươi Việt Nam.\n![Ảnh: Tiệm Nướng Chảo Đường Phố](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/15/ce5524eb-6e49-4cbd-b11c-9a0f595358be-anh-collectionpng.jpeg)\n*Ảnh: Tiệm Nướng Chảo Đường Phố*\n\n📍 Địa chỉ: Đầu đường Lê Hồng Phong, phường Xuân Hòa, Long Khánh, Đồng Nai (đường mới gần cầu 908 Nguyễn Trãi)\n\n## 9. BBQ HOUSE LONG KHÁNH \nMenu hơn 50 món các loại từ Hải Sản; Thịt Bò ngoại, thịt heo ướp bằng công thức độc quyền của BBQ House mang tới hương vị đặc biệt cho miếng thịt,  hải sản tươi sống hàng ngày, cùng các món chuẩn Hàn được chế biến sẵn như: Tobokki; Canh rong biển thịt bò; miến Hàn, bánh xèo Hàn, ... đủ làm hài lòng chiếc bụng đói. Ngoài ra, Quán mới đi vào hoạt động khu cafe 'view' cũng khá xinh nhìn đường cũng đẹp lắm nè. Ăn BBQ xong ra ngồi cafe trò chuyện cũng hợp lý nha.\n![Ảnh: BBQ House Long Khánh](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/df60445f-7762-4503-a184-9b4d0c1acc5a-7png.jpeg)\n*Ảnh: BBQ House Long Khánh*\n\n 📍 Địa chỉ: Buffet & Coffee BBQ House 429 Hồ Thị Hương, P. Xuân Thanh, TP Long Khánh, Đồng Nai (Cửa hàng duy nhất KHÔNG CHI NHÁNH)\n\n## 10. BÒ XÈO CẬU BÉO\nBò sốt 179k đủ loại từ Bò Úc, Bò Mỹ, Ba chỉ Heo, Hải sản ăn kèm vị sốt đặc biệt, rắc thêm phô mai chấm bánh mì là ngon đúng điệu. Ngoài ra quán còn có bán cả các Set nướng và Lẩu các loại nữa.\n![Ảnh: Bò Xèo Cậu Béo](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/15/a0f1dc90-3d41-4758-ae59-aaba082197f8-358652684134213083038880743511.jpeg)\n*Ảnh: Bò Xèo Cậu Béo*\n\n📍 CN4: 455 Hồ Thị Hương, P Xuân Thanh, TP Long Khánh, Đồng Nai",
+        "content": "Nếu bạn là người yêu thích ẩm thực đặt biệt là đồ nướng, BBQ thì lưu ngay vào \"note\" điện thoại để không bỏ lỡ những món nướng ngon nhất nhì ở Tiền Hải nha!\n\n## 1. TIỆM NHÀ NGỌ\nNhà Ngọ thì đã nổi tiếng với các món lẩu đậm vị nhưng bên cạnh đó đồ nướng ở đây cũng không kém cạnh. Đặt biệt là \"khay nướng dài 1 mét\" độc nhất của quán. Thịt được ướp rất vừa vị cùng với những topping khác làm món nướng trở nên đậm đà phong phú hơn. \n![Ảnh: Tiệm Nhà Ngọ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/5af1ca32-2b2b-44be-a944-d9b69c4c8fb1-9png.jpeg)\n*Ảnh: Tiệm Nhà Ngọ*\n\n📍Địa chỉ: 06 Hai Bà Trưng, P Xuân Hòa, Tp Tiền Hải, Đồng Nai\n\n## 2. MIN TOWN\nThịnh soạn với Dimsum, món Hoa hơn 30 món, Bò Nhúng Quảng Đông xịn, Lẩu 2 Ngăn sốt chấm X.O siêu dính. Mintown nổi tiếng với Dimsum ngon và món Hoa hơn 30 món khác nhau: Chân gà tàu xì, bánh bao kim sa, bánh bao phô mai, Tàu hũ cuộn, Dimsum hải sản giá siêu bình dân. Bò nhúng Quảng Đông 2 vi sốt nhúng bò cực phẩm: Vị tomyum, vị xí muội Quảng Đông đi kèm rau, nấm, cá viên, hải sản đủ vị bắt mắt.\n![Ảnh: MinTown](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/9282841c-4f69-461d-af15-ea7e822facaa-3png.jpeg)\n*Ảnh: MinTown*\n\n📍Địa chỉ: 139 Thích Quảng Đức (Đối diện Golden Health Gym), P Xuân An, TP Tiền Hải, Đồng Nai\n\n## 3. CHILL BBQ & BEER\nMenu của quán siêu đa dạng, tận hưởng quầy salad MIỄN PHÍ, trái cây tráng miệng, kim chi ngon cực cùng với đa dạng các loại nước chấm 🥗🍉. Đặc biệt, dành riêng cho những ai yêu thích hương vị bia thì ở đây có TUBORG là thương hiệu bia cao cấp uống ngon số dách 🍺🍺 Ở đây còn có chiếc view ngồi vô cùng thoải mái luôn.\n![Ảnh: Chill BBQ Beer](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/cd644ad9-2029-420d-b63c-832776259116-4png.jpeg)\n*Ảnh: Chill BBQ Beer*\n\n📍 Địa chỉ: 451 Hồ Thị Hương, Xuân Thanh, Tiền Hải, Đồng Nai. (Gần karaoke Kim Cương)\n\n## 4. BẾP NHÀ LEO\nQuán lẩu + set nướng giá sinh dziên mà chất lượng hông hề tầm thường phải thử phải thử liền 👏: Bếp Nhà Leo.\nLẩu Tứ Xuyên mini có 52k mà ngập tràn topping nước dùng đậm đà ngon, ngọt, thơm siu dính, các món nướng giá mềm xèo có 45k tha hồ ăn. Đã thử và bị mê đồ ăn ở đây lắm lắm luôn. \n![Ảnh: Bếp Nhà Leo](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/596e0988-123e-44c5-872c-d18bf1b6424b-anh-collectionpng.jpeg)\n*Ảnh: Bếp Nhà Leo*\n\n📍 Địa chỉ: 92 Nguyễn Tri Phương (Đối diện Tịnh xá Ngọc Khánh), P Xuân An, TP Tiền Hải, Đồng Nai\n\n## 5. CẦU DẦU GLAMPING - BBQ \nBuổi chiều 'chill chill' ngắm hoàng hôn, nướng BBQ bình dân bên hồ mát 'gựi' với điểm 'Glamping' mới toanh ngay tại Tiền Hải: CẦU DẦU GLAMPING. Điểm 'glamping' mới toanh ngay bên cạnh Hồ Cầu Dầu 😍 có cafe, quầy bar, còn có cắm trại nướng BBQ cực chill luôn nè . Giá Menu nướng BBQ giá siêu hợp lý luôn nè. Chỗ này làm tiệc sinh nhật ngoài trời là đúng bài luôn. Cùng với chiếc view hồ Cầu Dầu buổi chiều hoàng hôn cả một bầu trời gió mát rượi, được decor vài tiểu cảnh xinh xắn nữa. Ngoài ra còn có các tiện ích cắm trại, tham quan vườn trái cây nữa, bảo đảm sẽ là điểm check - in hot rần rần sắp tới ❤️ \n![Ảnh: Cầu Dầu Glamping - BBQ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/4c0b8c4e-15e6-4ca4-afb0-3fd90061cf98-2png.jpeg)\n*Ảnh: Cầu Dầu Glamping - BBQ*\n\n📍 Địa chỉ: Hồ Cầu Dầu, Hàng Gòn, Tiền Hải, Đồng Nai\n\n## 6. NHÀ GỖ \nChiếc quán mang cả Đà Lạt thu nhỏ về Tiền Hải với không gian toàn gỗ, decor thêm chút đèn vàng lung linh rồi ngồi nướng BBQ cực chill ngoài trời, thích cực 🥰. Menu quán đa dạng có lẩu , có nướng có bò, có đồ ăn vặt món nào cũng ngon cũng nêm nếm đậm đà . \n![Ảnh: Nhà Gỗ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/db5b2bf9-06f4-4e8a-86f0-65978f9ec096-6png.jpeg)\n*Ảnh: Nhà Gỗ*\n\n📍 Địa chỉ: 214 Thích Quảng Đức, phường Xuân An, Tiền Hải, Đồng Nai\n\n## 7. PHỐ NHẬT\nNổi tiếng với các món Sushi, Sasimi, Phố Nhật còn có không gian bếp nướng không khói âm cực xịn. Nướng hải sản, thịt bò sốt Nhật...Thuyền Sashimi là món Hot của Phố Nhật có cá hồi tươi, cá ngừ, hàu rong nho, bạch tuộc, cá trích chấm với nước tương pha mù tạc chuẩn Nhật ăn mê. Lẩu Mì Udon Nhật là món truyền thống đáng thử, nướng BBQ với mấy món Nhật truyền thống.\n![Ảnh: Phố Nhật](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/f8fd8007-7ff8-4b5b-adf0-dda987ddc939-5png.jpeg)\n*Ảnh: Phố Nhật*\n\n📍 Địa chỉ: 147 Nguyễn Tri Phương (Nối Dài), P Xuân An, Tiền Hải, Đồng Nai\n\n## 8. TIỆM NƯỚNG CHẢO ĐƯỜNG PHỐ\nSet nướng chảo bơ đầy ụ hàu sữa, bò beo béo thơm bơ , trứng cộng nước sốt sền sệt. Nhớ gọi thêm mấy đĩa bò hải sản tự nướng ướp vị đậm đà chấm muối ớt xanh nữa nha. Điểm ưng quán sử dụng thực phẩm tươi, không dùng hàng đông lạnh: Thịt bò tươi, nầm sữa tươi Việt Nam.\n![Ảnh: Tiệm Nướng Chảo Đường Phố](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/15/ce5524eb-6e49-4cbd-b11c-9a0f595358be-anh-collectionpng.jpeg)\n*Ảnh: Tiệm Nướng Chảo Đường Phố*\n\n📍 Địa chỉ: Đầu đường Lê Hồng Phong, phường Xuân Hòa, Tiền Hải, Đồng Nai (đường mới gần cầu 908 Nguyễn Trãi)\n\n## 9. BBQ HOUSE TIỀN HẢI \nMenu hơn 50 món các loại từ Hải Sản; Thịt Bò ngoại, thịt heo ướp bằng công thức độc quyền của BBQ House mang tới hương vị đặc biệt cho miếng thịt,  hải sản tươi sống hàng ngày, cùng các món chuẩn Hàn được chế biến sẵn như: Tobokki; Canh rong biển thịt bò; miến Hàn, bánh xèo Hàn, ... đủ làm hài lòng chiếc bụng đói. Ngoài ra, Quán mới đi vào hoạt động khu cafe 'view' cũng khá xinh nhìn đường cũng đẹp lắm nè. Ăn BBQ xong ra ngồi cafe trò chuyện cũng hợp lý nha.\n![Ảnh: BBQ House Tiền Hải](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/14/df60445f-7762-4503-a184-9b4d0c1acc5a-7png.jpeg)\n*Ảnh: BBQ House Tiền Hải*\n\n 📍 Địa chỉ: Buffet & Coffee BBQ House 429 Hồ Thị Hương, P. Xuân Thanh, TP Tiền Hải, Đồng Nai (Cửa hàng duy nhất KHÔNG CHI NHÁNH)\n\n## 10. BÒ XÈO CẬU BÉO\nBò sốt 179k đủ loại từ Bò Úc, Bò Mỹ, Ba chỉ Heo, Hải sản ăn kèm vị sốt đặc biệt, rắc thêm phô mai chấm bánh mì là ngon đúng điệu. Ngoài ra quán còn có bán cả các Set nướng và Lẩu các loại nữa.\n![Ảnh: Bò Xèo Cậu Béo](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/15/a0f1dc90-3d41-4758-ae59-aaba082197f8-358652684134213083038880743511.jpeg)\n*Ảnh: Bò Xèo Cậu Béo*\n\n📍 CN4: 455 Hồ Thị Hương, P Xuân Thanh, TP Tiền Hải, Đồng Nai",
         "author": "Trương Hồng Thuỷ",
         "isHot": false,
         "deleted": false,
-        "title": "Top Những Quán Nướng Ở Long Khánh",
+        "title": "Top Những Quán Nướng Ở Tiền Hải",
         "slug": "top-nhung-quan-nuong-o-long-khanh",
         "category": {
           "_id": "6384dc46ad71eb37aeb98797",
@@ -3294,7 +3294,7 @@
           "6. NHÀ GỖ ",
           "7. PHỐ NHẬT",
           "8. TIỆM NƯỚNG CHẢO ĐƯỜNG PHỐ",
-          "9. BBQ HOUSE LONG KHÁNH ",
+          "9. BBQ HOUSE TIỀN HẢI ",
           "10. BÒ XÈO CẬU BÉO"
         ]
       }
@@ -3302,15 +3302,15 @@
     "top-10-dia-diem-chup-hinh-dep-tai-long-khanh": {
       "blog": {
         "_id": "63be662a05b9ac281aee750c",
-        "description": "Bạn là người thích chụp ảnh sống ảo, thích check-in những địa điểm mới, thích cảnh đẹp, hay đơn giản là Facebook lâu rồi không có ảnh để đăng thì Long Khánh có những nơi đẹp giúp bạn có những tấm ảnh lung linh là lên luôn nè",
-        "keywords": "nơi chụp hình đẹp, check-in Long Khánh, du lịch long Khánh, hình đẹp Long Khánh, địa điểm Long Khánh, quán cà phê Long Khánh",
+        "description": "Bạn là người thích chụp ảnh sống ảo, thích check-in những địa điểm mới, thích cảnh đẹp, hay đơn giản là Facebook lâu rồi không có ảnh để đăng thì Tiền Hải có những nơi đẹp giúp bạn có những tấm ảnh lung linh là lên luôn nè",
+        "keywords": "nơi chụp hình đẹp, check-in Tiền Hải, du lịch Tiền Hải, hình đẹp Tiền Hải, địa điểm Tiền Hải, quán cà phê Tiền Hải",
         "tags": "",
         "thumbnail": "https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/03/8141e716-27dd-434a-8c16-0d845aa1259b-top-10-nhung-dia-diem-chup-anh.jpeg",
-        "content": "Bạn là người thích chụp ảnh sống ảo, thích check-in những địa điểm mới, thích cảnh đẹp, hay đơn giản là Facebook lâu rồi không có ảnh để đăng thì Long Khánh có những nơi đẹp giúp bạn có những tấm ảnh lung linh là lên luôn nè\n\n## 1. Công viên Long Khánh \nCông viên được trồng nhiều cây xanh với bố trí hợp lí tạo cảm giác thoải mái lắm. Có nhiều góc cực xịn, phải nói là chụp góc nào là đẹp góc đó luôn. Nên đi chụp vào buổi sáng hoặc chiều 17h- 18h nắng rất đẹp. \n\n![Ảnh: Công viên Long Khánh ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/9b809e61-f927-44ad-a9d4-91d5e658071e-355286188122497990870886911922.jpeg)\n*Ảnh: Công viên Long Khánh*\n\nĐịa chỉ: Đường 21 Tháng Tư (Ngay Cua Heo), P Xuân Trung, TP Long Khánh, Đồng Nai \n\n## 2.Cà phê hoa giấy\n\nNgay tượng đài có một chiếc quán cà phê đã lâu năm, điều ấn tượng của quán là dàn hoa giấy mọc bên hiên nhà xinh xĩu, hoa có màu hồng đậm, mọc chen nhau trông rất đẹp. Diện cái đầm ra chụp nàng thơ là hợp lí.\n\n![Ảnh: Cà phê hoa giấy](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/6d0dae64-03c2-48f3-8f1a-799573d32f96-355679385122498940870791860621.jpeg)\n*Ảnh: Cà phê hoa giấy*\n\nĐịa chỉ: Quán ngay tượng đài chiến thắng Long Khánh\n\n## 3.Góc đường cách mạng tháng 8\n\nNgay con đường CMT8 có góc đường bên lề lên hình cũng xịn lắm, thảm cỏ xanh mướt, chiều chụp là đẹp nhá. \n\n![Ảnh: Góc đường cách mạng tháng 8](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/01b31b92-7957-4a18-aebc-5444965fd70a-355481207122498367537515552494.jpeg)\n\n*Ảnh: Góc đường cách mạng tháng 8*\n\n\nĐịa chỉ: Đường CMT8, P Xuân An, TP Long Khánh, Đồng Nai\n\n## 4.Cầu dầu Glamping\n\nQuán được bày trí theo mô hình chill giống ở Đà Lạt, thêm điểm cộng là view hồ Cầu Dầu ngay quán luôn. Chiều chụp với mặt trời lặn bao đẹp\n\n![Ảnh: Cầu dầu Glamping](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/395db837-39ee-4f58-b2c0-9a26c2592502-355644007122498247537527821158.jpeg)\n\n*Ảnh: Cầu dầu Glamping*\n\nĐịa chỉ: Ấp Tân Phong, Xã Hàng Gòn, TP Long Khánh, Đồng Nai \n\n## 5.Quán Lavin coffee & tea\n\nAi mê phong cách trời Tây á thì quán này có chiếc view cực xịn luôn, thiết kế cái cổng chụp phát nào ăn ngay phát đó, lên hình xịn xò cực nè. View bên trong lại là không gian mở nên là chụp thấy bầu trời không khác gì trời Tây nhá. \n\n![Ảnh: Quán Lavin coffee & tea](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/334b53f0-1915-42da-a782-013669c47f4c-355491617122498270870858843209.jpeg)\n\n*Ảnh: Quán Lavin coffee & tea*\n\nĐịa chỉ: 207A Nguyễn Trãi, TP Long Khánh, Đồng Nai\n\n## 6.Quán Lagom coffee\n\nBạn nào thích phong cách vintage thì gợi ý cho bạn quán này nha. Quán nhỏ nhỏ núp hẻm dễ thuơng, lên hình xinh xắn lắm\n\n![Ảnh:Quán Lagom coffee](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/c5d1e8e7-8819-4afb-aef1-59e7fee7b8ef-355471004122498570870828672535.jpeg)\n\n*Ảnh: Quán Lagom coffee*\n\nĐịa chỉ: 34/4 Cách mạng tháng 8, TP Long Khánh, Đồng Nai\n\n## 7.Quán Highlands coffee\n\nLong Khánh vừa mới có Highlands mà cả 2 chi nhánh. Chi nhánh 1 view nhìn ra tượng đài, chi nhánh 2 rộng hơn với view nhìn đường xá. Tone chủ đạo đỏ trắng khi lên hình nổi bật, chi nhánh 2 sẽ có góc chụp ảnh nhiều hơn nhé\n  \n![Ảnh: Quán Highlands coffee](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/82a3053f-19a8-4340-b65c-e6d081e2fb71-355286095122498634204155732932.jpeg)\n\n*Ảnh: Quán Highlands coffee*\n\nĐịa chỉ: Chi nhánh 1: 239 Hùng Vương, P Xuân Hoà, TP Long Khánh, Đồng Nai\n\nChi nhánh 2: 01 Nguyễn Thị Minh Khai, P Xuân An, TP Long Khánh, Đồng Nai\n\n\n## 8.Quán Sugar coffee\n\nNếu bạn nào thích chiếc view nhìn toàn thành phố thì đây là quán có cả 3 view nhìn khắp thành phố luôn nè. Chiều mà chụp hình trên này đón được cảnh hoàng hôn thích lắm.\n\n![Ảnh: Quán Sugar coffee](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/65ddbbd3-fd29-453d-9018-2ed04020a6d2-355164303122498047537547333135.jpeg)\n*Ảnh: Quán Sugar coffee*\n\nĐịa chỉ: Tầng 5 Siêu thị Hoàng Đức, 198 Hùng Vương,P Xuân An,TP Long Khánh, Đồng Nai\n\n## 9.Hoa Viên Suối Tre\n\nMuốn chụp hoà mình với thiên nhiên thì Hoa Viên Suối Tre có khuôn viên toàn là cây xanh, cảm giác hoang giã đẹp lắm. Mang concept chụp nàng thơ là hết ý.\n\n\n![Ảnh: Hoa viên Suối Tre](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/887124ab-1282-4863-b039-3b219e208f87-z44755466968380a3ac26ba9c63258.jpeg)\n*Ảnh: Hoa viên Suối Tre*\n\nĐịa chỉ: Đường 27, P Suối Tre, TP Long Khánh, Đồng Nai\n\n## 10.Khu chợ nhà giàu \n\nỞ đây có khu nhà từ thời xưa vẫn còn nét đẹp từ thời ấy. Lên hình kiểu cổ cổ rất là đẹp luôn ấy. Mặc bộ áo dài hay style bụi bặm chụp hợp lắm nhen.\n\n\n![Ảnh: Khu chợ nhà giàu](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/0a54f4cb-c605-4676-8d15-87b0e7a33df7-355119725122257987561553365007.jpeg)\n*Ảnh: Khu chợ nhà giàu*\n\nĐịa chỉ: Đường Nguyễn Thái Học, P Xuân An, TP Long Khánh, Đồng Nai.\n\n",
+        "content": "Bạn là người thích chụp ảnh sống ảo, thích check-in những địa điểm mới, thích cảnh đẹp, hay đơn giản là Facebook lâu rồi không có ảnh để đăng thì Tiền Hải có những nơi đẹp giúp bạn có những tấm ảnh lung linh là lên luôn nè\n\n## 1. Công viên Tiền Hải \nCông viên được trồng nhiều cây xanh với bố trí hợp lí tạo cảm giác thoải mái lắm. Có nhiều góc cực xịn, phải nói là chụp góc nào là đẹp góc đó luôn. Nên đi chụp vào buổi sáng hoặc chiều 17h- 18h nắng rất đẹp. \n\n![Ảnh: Công viên Tiền Hải ](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/9b809e61-f927-44ad-a9d4-91d5e658071e-355286188122497990870886911922.jpeg)\n*Ảnh: Công viên Tiền Hải*\n\nĐịa chỉ: Đường 21 Tháng Tư (Ngay Cua Heo), P Xuân Trung, TP Tiền Hải, Đồng Nai \n\n## 2.Cà phê hoa giấy\n\nNgay tượng đài có một chiếc quán cà phê đã lâu năm, điều ấn tượng của quán là dàn hoa giấy mọc bên hiên nhà xinh xĩu, hoa có màu hồng đậm, mọc chen nhau trông rất đẹp. Diện cái đầm ra chụp nàng thơ là hợp lí.\n\n![Ảnh: Cà phê hoa giấy](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/6d0dae64-03c2-48f3-8f1a-799573d32f96-355679385122498940870791860621.jpeg)\n*Ảnh: Cà phê hoa giấy*\n\nĐịa chỉ: Quán ngay tượng đài chiến thắng Tiền Hải\n\n## 3.Góc đường cách mạng tháng 8\n\nNgay con đường CMT8 có góc đường bên lề lên hình cũng xịn lắm, thảm cỏ xanh mướt, chiều chụp là đẹp nhá. \n\n![Ảnh: Góc đường cách mạng tháng 8](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/01b31b92-7957-4a18-aebc-5444965fd70a-355481207122498367537515552494.jpeg)\n\n*Ảnh: Góc đường cách mạng tháng 8*\n\n\nĐịa chỉ: Đường CMT8, P Xuân An, TP Tiền Hải, Đồng Nai\n\n## 4.Cầu dầu Glamping\n\nQuán được bày trí theo mô hình chill giống ở Đà Lạt, thêm điểm cộng là view hồ Cầu Dầu ngay quán luôn. Chiều chụp với mặt trời lặn bao đẹp\n\n![Ảnh: Cầu dầu Glamping](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/395db837-39ee-4f58-b2c0-9a26c2592502-355644007122498247537527821158.jpeg)\n\n*Ảnh: Cầu dầu Glamping*\n\nĐịa chỉ: Ấp Tân Phong, Xã Hàng Gòn, TP Tiền Hải, Đồng Nai \n\n## 5.Quán Lavin coffee & tea\n\nAi mê phong cách trời Tây á thì quán này có chiếc view cực xịn luôn, thiết kế cái cổng chụp phát nào ăn ngay phát đó, lên hình xịn xò cực nè. View bên trong lại là không gian mở nên là chụp thấy bầu trời không khác gì trời Tây nhá. \n\n![Ảnh: Quán Lavin coffee & tea](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/334b53f0-1915-42da-a782-013669c47f4c-355491617122498270870858843209.jpeg)\n\n*Ảnh: Quán Lavin coffee & tea*\n\nĐịa chỉ: 207A Nguyễn Trãi, TP Tiền Hải, Đồng Nai\n\n## 6.Quán Lagom coffee\n\nBạn nào thích phong cách vintage thì gợi ý cho bạn quán này nha. Quán nhỏ nhỏ núp hẻm dễ thuơng, lên hình xinh xắn lắm\n\n![Ảnh:Quán Lagom coffee](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/c5d1e8e7-8819-4afb-aef1-59e7fee7b8ef-355471004122498570870828672535.jpeg)\n\n*Ảnh: Quán Lagom coffee*\n\nĐịa chỉ: 34/4 Cách mạng tháng 8, TP Tiền Hải, Đồng Nai\n\n## 7.Quán Highlands coffee\n\nTiền Hải vừa mới có Highlands mà cả 2 chi nhánh. Chi nhánh 1 view nhìn ra tượng đài, chi nhánh 2 rộng hơn với view nhìn đường xá. Tone chủ đạo đỏ trắng khi lên hình nổi bật, chi nhánh 2 sẽ có góc chụp ảnh nhiều hơn nhé\n  \n![Ảnh: Quán Highlands coffee](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/82a3053f-19a8-4340-b65c-e6d081e2fb71-355286095122498634204155732932.jpeg)\n\n*Ảnh: Quán Highlands coffee*\n\nĐịa chỉ: Chi nhánh 1: 239 Hùng Vương, P Xuân Hoà, TP Tiền Hải, Đồng Nai\n\nChi nhánh 2: 01 Nguyễn Thị Minh Khai, P Xuân An, TP Tiền Hải, Đồng Nai\n\n\n## 8.Quán Sugar coffee\n\nNếu bạn nào thích chiếc view nhìn toàn thành phố thì đây là quán có cả 3 view nhìn khắp thành phố luôn nè. Chiều mà chụp hình trên này đón được cảnh hoàng hôn thích lắm.\n\n![Ảnh: Quán Sugar coffee](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/07/01/65ddbbd3-fd29-453d-9018-2ed04020a6d2-355164303122498047537547333135.jpeg)\n*Ảnh: Quán Sugar coffee*\n\nĐịa chỉ: Tầng 5 Siêu thị Hoàng Đức, 198 Hùng Vương,P Xuân An,TP Tiền Hải, Đồng Nai\n\n## 9.Hoa Viên Suối Tre\n\nMuốn chụp hoà mình với thiên nhiên thì Hoa Viên Suối Tre có khuôn viên toàn là cây xanh, cảm giác hoang giã đẹp lắm. Mang concept chụp nàng thơ là hết ý.\n\n\n![Ảnh: Hoa viên Suối Tre](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/887124ab-1282-4863-b039-3b219e208f87-z44755466968380a3ac26ba9c63258.jpeg)\n*Ảnh: Hoa viên Suối Tre*\n\nĐịa chỉ: Đường 27, P Suối Tre, TP Tiền Hải, Đồng Nai\n\n## 10.Khu chợ nhà giàu \n\nỞ đây có khu nhà từ thời xưa vẫn còn nét đẹp từ thời ấy. Lên hình kiểu cổ cổ rất là đẹp luôn ấy. Mặc bộ áo dài hay style bụi bặm chụp hợp lắm nhen.\n\n\n![Ảnh: Khu chợ nhà giàu](https://diadiemlongkhanh.cdn.vccloud.vn/static/images/2023/06/30/0a54f4cb-c605-4676-8d15-87b0e7a33df7-355119725122257987561553365007.jpeg)\n*Ảnh: Khu chợ nhà giàu*\n\nĐịa chỉ: Đường Nguyễn Thái Học, P Xuân An, TP Tiền Hải, Đồng Nai.\n\n",
         "author": "Trương Hồng Thuỷ",
         "isHot": true,
         "deleted": false,
-        "title": "Top 10 địa điểm chụp hình đẹp tại Long Khánh",
+        "title": "Top 10 địa điểm chụp hình đẹp tại Tiền Hải",
         "slug": "top-10-dia-diem-chup-hinh-dep-tai-long-khanh",
         "category": {
           "_id": "638ce88f05b9ac281adc8d83",
@@ -3320,7 +3320,7 @@
         "updatedAt": "2023-07-03T03:34:02.998Z",
         "__v": 0,
         "headings": [
-          "1. Công viên Long Khánh ",
+          "1. Công viên Tiền Hải ",
           "2.Cà phê hoa giấy",
           "3.Góc đường cách mạng tháng 8",
           "4.Cầu dầu Glamping",
@@ -3346,9 +3346,9 @@
       "place": {
         "_id": "629f8bec9e58837f05e29780",
         "address": {
-          "specific": "Tầng 2 - 430 Hồ Thị Hương, Xuân An, Long Khánh, Đồng Nai"
+          "specific": "Tầng 2 - 430 Hồ Thị Hương, Xuân An, Tiền Hải, Đồng Nai"
         },
-        "name": "Rạp Chiếu Phim BHD Star Long Khánh",
+        "name": "Rạp Chiếu Phim BHD Star Tiền Hải",
         "slug": "rap-chieu-phim-bhd-star-long-khanh"
       },
       "thumbnail": {
@@ -3368,9 +3368,9 @@
       "place": {
         "_id": "629f8bec9e58837f05e29780",
         "address": {
-          "specific": "Tầng 2 - 430 Hồ Thị Hương, Xuân An, Long Khánh, Đồng Nai"
+          "specific": "Tầng 2 - 430 Hồ Thị Hương, Xuân An, Tiền Hải, Đồng Nai"
         },
-        "name": "Rạp Chiếu Phim BHD Star Long Khánh",
+        "name": "Rạp Chiếu Phim BHD Star Tiền Hải",
         "slug": "rap-chieu-phim-bhd-star-long-khanh"
       },
       "thumbnail": {
@@ -3390,9 +3390,9 @@
       "place": {
         "_id": "62a0de0282c05d5294d9d55c",
         "address": {
-          "specific": "13 Thích Quảng Đức, Xuân An, Long Khánh, Đồng Nai, Việt Nam"
+          "specific": "13 Thích Quảng Đức, Xuân An, Tiền Hải, Đồng Nai, Việt Nam"
         },
-        "name": "Mia’ Shop: Ba Lô – Túi Xách VNXK Long Khánh",
+        "name": "Mia’ Shop: Ba Lô – Túi Xách VNXK Tiền Hải",
         "slug": "mia-shop-ba-lo-tui-xach-vnxk-long-khanh"
       },
       "thumbnail": {
@@ -3412,7 +3412,7 @@
       "place": {
         "_id": "629f83849e58837f05e296b8",
         "address": {
-          "specific": "Chợ Xuân Thanh, Xuân Thanh, Long Khánh, Đồng Nai"
+          "specific": "Chợ Xuân Thanh, Xuân Thanh, Tiền Hải, Đồng Nai"
         },
         "name": "Cá Viên Chiên - Xôi Chiên Chị Thơm Xuân Thanh",
         "slug": "ca-vien-chien-xoi-chien-chi-thom-xuan-thanh"

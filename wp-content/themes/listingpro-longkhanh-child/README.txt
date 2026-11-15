@@ -1,4 +1,12 @@
-ListingPro Long Khánh Child
+ListingPro Tiền Hải Child
+
+Đổi thương hiệu Tiền Hải (2026-11-15):
+- Tên hiển thị trong theme/plugin và font Quicksand được cập nhật trong mã.
+- Với database cũ, sao lưu trước rồi chạy một lần từ thư mục WordPress:
+  php wp-content/plugins/long-khanh-directory/tools/rebrand-tien-hai.php
+- Công cụ cập nhật chữ trong dữ liệu WordPress/Elementor và font đã lưu,
+  giữ nguyên ID, slug, đường dẫn plugin/theme và liên kết tài nguyên.
+- Logo do chủ website tự thay. Tiêu đề Blog dùng SVG Quicksand.
 
 FEEDBACK 2
 
@@ -32,17 +40,17 @@ Presentation: assets/site.css, assets/site.js, includes/presentation.php.
 Reference motion: assets/motion.css and assets/motion.js.
 Content: WordPress pages and reusable Elementor header/footer/menu templates.
 Dynamic directory widgets: separate plugin long-khanh-directory.
-Edit links: WordPress administration > Long Khánh.
+Edit links: WordPress administration > Tiền Hải.
 
 PHP, WordPress and the ListingPro parent theme are not upgraded by this theme.
 
 HUONG DAN NHAP DIA DIEM
 
-1. Vao wp-admin > Long Khanh > Them dia diem tu du lieu.
+1. Vao wp-admin > Tien Hai > Them dia diem tu du lieu.
 2. Nhap ten va bai gioi thieu trong trinh soan thao WordPress.
 3. Chon Categories (An Uong, Mua Sam, Giai Tri...), Location va Features.
 4. Dien dia chi, so dien thoai, gia, gio hoat dong, toa do trong hop
-   Thong tin dia diem Long Khanh. Chon anh dai dien.
+   Thong tin dia diem Tien Hai. Chon anh dai dien.
 5. Chon anh dia diem va anh menu. Khi sua album da co anh, dung keo tha
    trong Thu vien anh WordPress de doi thu tu. Cap nhat / Xuat ban bai.
 
@@ -52,15 +60,15 @@ Gia, dia chi va cac thong tin khac duoc luu trong du lieu ListingPro.
 
 SUA GIAO DIEN CHUNG
 
-Vao wp-admin > Long Khanh > Template chung chi tiet dia diem (Elementor).
-Chon widget goc, mo Du lieu dia diem Long Khanh de chon Nguon noi dung.
+Vao wp-admin > Tien Hai > Template chung chi tiet dia diem (Elementor).
+Chon widget goc, mo Du lieu dia diem Tien Hai de chon Nguon noi dung.
 Ten, anh, dia chi, gia, gio va menu tu lay theo bai dang xem. Mau, chu,
 khoang cach va bo cuc sua bang cac dieu khien Elementor goc.
-Chon dia diem xem truoc o trang Long Khanh, luu va tai lai Elementor.
+Chon dia diem xem truoc o trang Tien Hai, luu va tai lai Elementor.
 
 Template chung album/menu cung sua tai muc Ban mau dung chung.
 Header, footer, menu mobile va cac trang noi dung co lien ket Elementor
-rieng trong trang Long Khanh. Hieu ung va bo cuc mac dinh nam o child.
+rieng trong trang Tien Hai. Hieu ung va bo cuc mac dinh nam o child.
 
 Nam thanh diem Vi tri / Khong gian / Chat luong / Phuc vu / Gia ca la
 widget Thanh tien trinh goc. Nguon noi dung lay diem tu danh gia da duyet.
@@ -75,7 +83,7 @@ duoc cap boi plugin long-khanh-directory; can giu plugin nay kich hoat.
 CAC TRANG THONG TIN VA REVIEW
 
 Gioi thieu, Bao mat, Dieu khoan va Tai ung dung sua bang widget goc
-Elementor. Trang Viet Review dung widget Bieu mau Long Khanh, chon loai
+Elementor. Trang Viet Review dung widget Bieu mau Tien Hai, chon loai
 Viet review day du. Tieu de cac khu vuc, nut gui, font, mau va bo goc
 co dieu khien Elementor. Bai review luu vao binh luan lk_review.
 Anh va ten an danh duoc luu cung danh gia; danh gia an danh khong len
@@ -107,7 +115,7 @@ xin quyen khi bam. Theme Options > Map quan ly Map Type va Google Map & Places
 API Key. Google can Maps JavaScript API va Places API (New), Billing va key
 bi gioi han theo website. Khi chua cau hinh Google, dung OpenStreetMap.
 
-Trong Elementor: widget Bieu mau Long Khanh co tieu de tung phan; tab Kieu
+Trong Elementor: widget Bieu mau Tien Hai co tieu de tung phan; tab Kieu
 hien thi co mau, chu, khoang cach, chieu cao o nhap/ban do va nut. Widget Ket
 qua va bo loc co tieu de nhom, do rong cot loc, khoang cach ket qua. Widget
 Danh gia cong dong co nhan popup, chieu rong va kich thuoc sao. Day la widget
@@ -118,7 +126,7 @@ wp-admin khong duoc chinh bang Elementor. Khong sua theme ListingPro cha.
 FEEDBACK 2
 
 Giao dien va hieu ung bo sung nam o assets/feedback2.css, feedback2.js.
-Popup dang nhap sua tai Long Khanh > Popup dang nhap (Elementor).
+Popup dang nhap sua tai Tien Hai > Popup dang nhap (Elementor).
 Thanh thao tac dia diem mobile la widget Thanh thao tac dia diem mobile;
 co nhan nut, font, mau va co bieu tuong trong Elementor. Tablet cung dung
 bo cuc chi tiet mot cot va thanh3nut nhu ban tham chieu.
@@ -132,12 +140,20 @@ vung bam bi che; menu_listing goc duoc doc truc tiep ngoai trang dia diem.
 Video nhap trong thong tin dia diem; template chung dung widget Video goc,
 chon nguon Video gioi thieu dia diem. Dia diem khong co video se an widget.
 
-Xem them o Blog mo nhom bai, dung lai cac the Elementor trong trang Cam
-nang Long Khanh. Sua the mot lan cap nhat ca trang Blog va nhom tuong ung.
+Blog tự lấy bài WordPress: Bài viết > Viết bài mới, nhập tiêu đề/nội dung,
+chọn ảnh đại diện và chuyên mục, rồi Xuất bản. Bài tự lên Blog, không cần
+tạo Trang hay thêm thẻ Elementor. Ba nhóm dùng chuyên mục có slug an-uong,
+du-lich, giai-tri; bài chưa chọn một trong ba nhóm vẫn hiện ở bài mới nhất.
+Mẫu chung nằm trong plugin: templates/single-blog.php, assets/blog.css.
+Nội dung Elementor của bài cũ được giữ nguyên trong database, chỉ đọc khi
+hiển thị. Các thẻ trên Blog được thay bằng truy vấn khi render; tài liệu gốc
+vẫn còn nguyên. Sau khi cài bản nâng cấp trên database cũ, sao lưu rồi chạy:
+php wp-content/plugins/long-khanh-directory/tools/setup-blog.php
+Có thể tắt chức năng mới bằng cách đặt option lk_dynamic_blog_enabled = 0.
 Xem them o Dia diem lan can sap xep quanh dia diem dang xem, khong xin vi
 tri nguoi xem. Nut Gan toi o thanh duoi dung vi tri cua nguoi xem.
 
 Cac chuyen doi cau truc Elementor chay mot lan trong includes/feedback2.php,
 co ban sao _lk_feedback2_backup truoc khi doi du lieu. Sau khi dua code len
-host, mo wp-admin > Long Khanh de ap dung chuyen doi. Khong can nang PHP,
+host, mo wp-admin > Tien Hai de ap dung chuyen doi. Khong can nang PHP,
 WordPress hay sao chep file sang theme cha.

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Long Khánh - Compatibility bridge
+ * Plugin Name: Tiền Hải - Compatibility bridge
  * Description: Accept both legacy and current render_block hook signatures without editing WordPress or CubeWP vendor files.
  */
 if (!defined('ABSPATH')) exit;

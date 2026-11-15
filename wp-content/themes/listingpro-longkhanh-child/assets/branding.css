@@ -1,0 +1,20 @@
+/* Shared public typography, including Elementor globals and native forms. */
+body {
+  --e-global-typography-primary-font-family: "Quicksand";
+  --e-global-typography-secondary-font-family: "Quicksand";
+  --e-global-typography-text-font-family: "Quicksand";
+  --e-global-typography-accent-font-family: "Quicksand";
+}
+body,
+body.lk-site,
+body :is(h1, h2, h3, h4, h5, h6, p, input, textarea, select, button, label, legend, blockquote, figcaption),
+body a:not(.elementor-icon):not([class*="eicon"]):not([class*="dashicons"]),
+body.lk-site span:not([class*="icon"]):not([class*="fa-"]):not(.fa),
+body .elementor-widget-container,
+body .elementor-widget-heading .elementor-heading-title,
+body .elementor-widget-text-editor,
+body .elementor-button,
+body .elementor-icon-list-text {
+  font-family: "Quicksand", sans-serif !important;
+}
+

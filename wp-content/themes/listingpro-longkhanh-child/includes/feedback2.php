@@ -147,7 +147,7 @@ add_action('wp_loaded',function(){
 
 add_action('wp_loaded',function(){
  if(get_option('lk_template_login')||!(PHP_SAPI==='cli'||current_user_can('manage_options')))return;
- $id=wp_insert_post(array('post_type'=>'elementor_library','post_status'=>'publish','post_title'=>'Long Khánh - Popup đăng nhập','post_name'=>'long-khanh-popup-dang-nhap'));
+ $id=wp_insert_post(array('post_type'=>'elementor_library','post_status'=>'publish','post_title'=>'Tiền Hải - Popup đăng nhập','post_name'=>'long-khanh-popup-dang-nhap'));
  if(is_wp_error($id)||!$id)return;
  $nodes=array(array('id'=>'f2106101','elType'=>'section','settings'=>array('css_classes'=>'lk-login-content','layout'=>'full_width','gap'=>'no'),'elements'=>array(array('id'=>'f2106102','elType'=>'column','settings'=>array('_column_size'=>100),'elements'=>array(array('id'=>'f2106103','elType'=>'widget','widgetType'=>'lk-account','settings'=>array('display_mode'=>'login','login_title'=>'Đăng nhập tài khoản','show_social'=>'yes','_css_classes'=>'lk-login-elementor-form'),'elements'=>array()))))));
  foreach(array('_lk_managed'=>1,'_elementor_edit_mode'=>'builder','_elementor_template_type'=>'section','_wp_page_template'=>'elementor_canvas','_elementor_version'=>ELEMENTOR_VERSION) as $key=>$value)update_post_meta($id,$key,$value);

@@ -46,7 +46,7 @@ add_action('elementor/element/after_section_end',function($element,$section){
  $sections=array('heading'=>'section_title','text-editor'=>'section_editor','image'=>'section_image','video'=>'section_video','image-gallery'=>'section_gallery','icon-list'=>'section_icon','google_maps'=>'section_map','button'=>'section_button','progress'=>'section_progress');
  $type=$element->get_name();
  if(!isset($sections[$type])||$section!==$sections[$type])return;
- $element->start_controls_section('lk_binding_section',array('label'=>'Dữ liệu địa điểm Long Khánh','tab'=>\Elementor\Controls_Manager::TAB_CONTENT));
+ $element->start_controls_section('lk_binding_section',array('label'=>'Dữ liệu địa điểm Tiền Hải','tab'=>\Elementor\Controls_Manager::TAB_CONTENT));
  $element->add_control('lk_binding',array('label'=>'Nguồn nội dung','type'=>\Elementor\Controls_Manager::SELECT,'options'=>lk_bindings_for($type),'default'=>'','description'=>'Trong template chung, nội dung tự lấy từ bài địa điểm đang xem. Kiểu chữ, màu và bố cục vẫn sửa bằng Elementor.'));
  if($type==='heading')$element->add_control('lk_typewriter_lines',array('label'=>'Câu chuyển động (mỗi dòng một câu)','type'=>\Elementor\Controls_Manager::TEXTAREA,'description'=>'Để trống để dùng tiêu đề tĩnh. Câu đầu lấy từ ô Tiêu đề; các dòng dưới là câu tiếp theo.'));
  if($type==='text-editor'){$regions=array();$terms=lk_directory_terms('location');if(!is_wp_error($terms))foreach($terms as $term)$regions[$term->slug]=$term->name;$element->add_control('lk_region',array('label'=>'Khu vực cần đếm','type'=>\Elementor\Controls_Manager::SELECT,'options'=>$regions,'condition'=>array('lk_binding'=>'region-count')));}
@@ -151,9 +151,9 @@ add_filter('elementor/widget/print_template',function($template,$widget){return 
 add_filter('query_vars',function($vars){$vars[]='lk_view';return $vars;});
 
 add_action('add_meta_boxes_listing',function($post){
- add_meta_box('lk-shared-template','Template chung Long Khánh',function($p){
+ add_meta_box('lk-shared-template','Template chung Tiền Hải',function($p){
   $id=(int)get_option('lk_template_listing');
-  echo '<p>Địa điểm dùng template Elementor chung. Chỉ nhập nội dung, ảnh, giá và danh mục cho bài này.</p><p><a class="button button-primary" href="'.esc_url(admin_url('post.php?post='.$id.'&action=elementor')).'">Sửa template chung bằng Elementor</a></p><p>Sửa template sẽ áp dụng cho tất cả địa điểm Long Khánh.</p>';
+  echo '<p>Địa điểm dùng template Elementor chung. Chỉ nhập nội dung, ảnh, giá và danh mục cho bài này.</p><p><a class="button button-primary" href="'.esc_url(admin_url('post.php?post='.$id.'&action=elementor')).'">Sửa template chung bằng Elementor</a></p><p>Sửa template sẽ áp dụng cho tất cả địa điểm Tiền Hải.</p>';
  },'listing','side','high');
 });
 add_filter('post_row_actions',function($actions,$post){

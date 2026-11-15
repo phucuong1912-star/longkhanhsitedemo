@@ -1,10 +1,11 @@
 /* Feedback 2: shared defaults. Elementor widget controls retain precedence. */
-body.lk-site{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;--lk-field-height:38px;--lk-field-gap:14px}
+body.lk-site{font-family:"Quicksand",sans-serif;font-size:15px;line-height:1.5;--lk-field-height:38px;--lk-field-gap:14px}
 body.lk-site .lk-login-content,body.lk-site .lk-login-content>.elementor-container>.elementor-column>.elementor-widget-wrap{padding:0;margin:0}
 body.lk-site .lk-login-body .lk-login-body{padding:0}
 body.lk-site h1,body.lk-site h2,body.lk-site h3{font-family:inherit;line-height:1.3;font-weight:600}
 body.lk-site .lk-owner{display:none}
-body.lk-site .lk-category-card a:is(:hover,:focus,:active,:visited){color:#fff}
+/* Keep card titles at their heading color, including in Elementor previews. */
+body :is(.lk-category-card,.lk-region-card) .elementor-heading-title a{color:inherit !important}
 body.lk-site .lk-star-track{position:relative;display:inline-block;white-space:nowrap;line-height:1.2;letter-spacing:1px;color:#9ca39e;vertical-align:middle}
 body.lk-site .lk-star-track>span{position:absolute;inset:0 auto 0 0;overflow:hidden;color:#52ab5c;white-space:nowrap}
 body.lk-site .lk-price-level{display:inline;font-size:.9em;color:#737973;margin-left:8px;white-space:nowrap}
