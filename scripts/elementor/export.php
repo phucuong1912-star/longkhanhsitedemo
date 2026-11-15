@@ -71,18 +71,30 @@ foreach ($policy['documents'] as $key => $scope) {
  }
  $documents[$key] = array('type' => $scope['type'], 'meta' => $meta);
 }
-$payload = array('version' => 1, 'documents' => $documents, 'assets' => $assets);
+// Transport images as gzip, preserving their original bytes even when an
+// upload/hosting layer rewrites PNG/JPEG files. Each payload stays independent.
+if (!function_exists('gzencode')) throw new RuntimeException('Gzip support is required to export layout assets.');
+if (!$check && !wp_mkdir_p($directory . '/assets')) throw new RuntimeException('Cannot create the layout package directory.');
+foreach ($files as $name => $source) {
+ $key = pathinfo($name, PATHINFO_FILENAME); $raw = file_get_contents($source);
+ $compressed = gzencode($raw, 9);
+ if ($compressed === false) throw new RuntimeException('Cannot compress a layout image.');
+ $assets[$key]['bytes'] = strlen($raw); $assets[$key]['payload_sha256'] = hash('sha256', $compressed);
+ $target = $directory . '/assets/' . $name . '.gz';
+ $matches = is_file($target) && hash_file('sha256', $target) === $assets[$key]['payload_sha256'];
+ if ($check && !$matches) throw new RuntimeException('A layout asset is not exported: ' . $name . '.gz');
+ if (!$check && !$matches) {
+  $temp = $target . '.tmp';
+  if (file_put_contents($temp, $compressed, LOCK_EX) === false || !rename($temp, $target)) throw new RuntimeException('Cannot package a layout image.');
+ }
+}
+unset($raw, $compressed);
+$payload = array('version' => 2, 'documents' => $documents, 'assets' => $assets);
 $package = $payload; $package['release'] = LK_Layout_Package::hash($payload);
 $json = LK_Layout_Package::json($package) . "\n";
 if ($check) {
  if (!is_file($directory . '/manifest.json') || file_get_contents($directory . '/manifest.json') !== $json) { fwrite(STDERR, "Local Elementor changes are not exported. Run php scripts/elementor/export.php and commit the package.\n"); exit(1); }
- foreach ($files as $name => $source) if (!is_file($directory . '/assets/' . $name) || hash_file('sha256', $directory . '/assets/' . $name) !== hash_file('sha256', $source)) { fwrite(STDERR, "A layout asset is not committed/exported: $name\n"); exit(1); }
  echo "Elementor package matches the local database.\n"; exit;
-}
-if (!wp_mkdir_p($directory . '/assets')) throw new RuntimeException('Cannot create the layout package directory.');
-foreach ($files as $name => $source) {
- $target = $directory . '/assets/' . $name;
- if (!is_file($target) && !copy($source, $target)) throw new RuntimeException('Cannot package an image.');
 }
 file_put_contents($directory . '/manifest.json', $json, LOCK_EX);
 echo wp_json_encode(array('release' => $package['release'], 'documents' => count($documents), 'images' => count($assets), 'articles_exported' => 0)), PHP_EOL;

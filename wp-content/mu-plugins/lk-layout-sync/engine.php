@@ -37,7 +37,7 @@ final class LK_Layout_Engine {
    $strings = array('{{home}}' => $this->store->home(), '{{site}}' => $this->store->site());
    foreach ($plan['ids'] as $key => $id) $strings['{{document:' . $key . '}}'] = $id;
    if ($plan['changes']) foreach ($package['assets'] as $key => $asset) {
-    $media = $this->store->asset($key, $asset, $this->directory . '/assets/' . $asset['file']);
+    $media = $this->store->asset($key, $asset, LK_Layout_Package::asset_source($package, $this->directory, $asset));
     $strings['{{attachment:' . $key . '}}'] = $media['id'];
     $strings['{{asset:' . $key . '}}'] = $media['url'];
    }

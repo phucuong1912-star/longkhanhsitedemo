@@ -6,3 +6,4 @@ wp-content/mu-plugins/lk-layout-sync*.php text eol=lf
 wp-content/mu-plugins/lk-layout-sync/*.php text eol=lf
 wp-content/mu-plugins/lk-layout-sync/scopes.json text eol=lf
 wp-content/lk-layouts/manifest.json text eol=lf
+wp-content/lk-layouts/assets/*.gz binary

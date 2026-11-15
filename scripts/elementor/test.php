@@ -50,6 +50,7 @@ final class Layout_Test_Store {
  function load_backup($id) { return $this->backups[$id]; }
  function invalidate($ids) { if ($this->fail_cache) throw new RuntimeException('Injected cache failure'); ++$this->invalidations; }
  function asset($key, $asset, $source) {
+  expect(hash_file('sha256', $source) === $key, 'Importer received incorrect image bytes');
   if ($this->on_asset) { $callback = $this->on_asset; $this->on_asset = null; $callback($this); }
   if (!isset($this->media[$key])) $this->media[$key] = array('id' => 80001 + count($this->media), 'url' => $this->home() . '/wp-content/uploads/lk-layouts/' . $asset['file']);
   return $this->media[$key];
@@ -66,8 +67,58 @@ $package = seal(array('version' => 1, 'documents' => array(
  'header' => array('type' => 'elementor_library', 'meta' => array('_elementor_data' => array(array('image' => array('id' => '{{attachment:' . $sha . '}}', 'url' => '{{asset:' . $sha . '}}'), 'url' => '{{home}}/blog/', 'template_id' => '{{document:header}}')), '_wp_page_template' => 'elementor_canvas')),
  'blog' => array('type' => 'page', 'meta' => array('_elementor_data' => array(array('widgetType' => 'posts', 'text' => 'Dynamic blog')), '_elementor_edit_mode' => 'builder'))),
  'assets' => array($sha => array('file' => $sha . '.png', 'title' => 'Logo', 'alt' => 'Owner logo', 'width' => 1, 'height' => 1))));
+$gzip_bytes = gzencode($bytes, 9); $gzip_file = $image . '.gz'; file_put_contents($gzip_file, $gzip_bytes);
+$gzip_package = $package; $gzip_package['version'] = 2;
+$gzip_package['assets'][$sha]['bytes'] = strlen($bytes);
+$gzip_package['assets'][$sha]['payload_sha256'] = hash('sha256', $gzip_bytes);
+$gzip_package = seal($gzip_package);
 $new = function () use ($policy, $directory) { $store = new Layout_Test_Store(); return array($store, new LK_Layout_Engine($store, $policy, $directory)); };
 $tests = array();
+$tests['gzip transport verifies original image bytes and imports through the same safe engine'] = function () use ($new, $gzip_package, $directory, $sha, $bytes) {
+ list($store, $engine) = $new(); $before = $store->protected;
+ $engine->apply($gzip_package);
+ $source = LK_Layout_Package::asset_source($gzip_package, $directory, $gzip_package['assets'][$sha]);
+ $output = $directory . '/decompressed.png';
+ try { expect(copy($source, $output) && file_get_contents($output) === $bytes, 'Copy did not restore the exact original image'); }
+ finally { if (is_file($output)) unlink($output); }
+ expect($store->protected === $before && count($store->media) === 1, 'Gzip import changed protected content');
+};
+$tests['rewritten PNG files cannot corrupt the compressed transport'] = function () use ($new, $gzip_package, $image, $bytes) {
+ list($store, $engine) = $new(); file_put_contents($image, 'An upload layer rewrote the legacy PNG');
+ try { $engine->apply($gzip_package); expect(count($store->media) === 1, 'Importer used the rewritten PNG instead of gzip'); }
+ finally { file_put_contents($image, $bytes); }
+};
+$tests['modified gzip payload is refused before any layout writes'] = function () use ($new, $gzip_package, $gzip_file, $gzip_bytes) {
+ list($store, $engine) = $new(); file_put_contents($gzip_file, gzencode('A different image'));
+ try { rejects(function () use ($engine, $gzip_package) { $engine->apply($gzip_package); }, 'modified layout asset'); }
+ finally { file_put_contents($gzip_file, $gzip_bytes); }
+ expect(!$store->backups && !$store->writes && !$store->media, 'Corrupt transport changed the destination');
+};
+$tests['a matching compressed checksum cannot disguise different original image bytes'] = function () use ($new, $gzip_package, $gzip_file, $gzip_bytes, $sha) {
+ list($store, $engine) = $new(); $different = gzencode('A different image'); file_put_contents($gzip_file, $different);
+ $bad = $gzip_package; $bad['assets'][$sha]['payload_sha256'] = hash('sha256', $different); $bad['assets'][$sha]['bytes'] = strlen('A different image');
+ try { rejects(function () use ($engine, $bad) { $engine->apply(seal($bad)); }, 'modified layout asset'); }
+ finally { file_put_contents($gzip_file, $gzip_bytes); }
+ expect(!$store->writes && !$store->backups, 'Incorrect original image passed integrity checks');
+};
+$tests['gzip decompression is bounded by the declared original length'] = function () use ($new, $gzip_package, $sha) {
+ list($store, $engine) = $new(); $bad = $gzip_package; $bad['assets'][$sha]['bytes'] = 1;
+ rejects(function () use ($engine, $bad) { $engine->apply(seal($bad)); }, 'modified layout asset');
+ expect(!$store->writes && !$store->backups, 'An oversized decompressed image reached metadata writes');
+};
+$tests['missing compressed files and invalid gzip headers are refused'] = function () use ($new, $gzip_package, $gzip_file, $gzip_bytes, $sha) {
+ list($store, $engine) = $new(); $bad = $gzip_package; $bad['assets'][$sha]['file'] = $sha . '.webp';
+ rejects(function () use ($engine, $bad) { $engine->apply(seal($bad)); }, 'modified layout asset');
+ $bad = $gzip_package; file_put_contents($gzip_file, 'not a gzip archive'); $bad['assets'][$sha]['payload_sha256'] = hash('sha256', 'not a gzip archive');
+ try { rejects(function () use ($engine, $bad) { $engine->apply(seal($bad)); }, 'modified layout asset'); }
+ finally { file_put_contents($gzip_file, $gzip_bytes); }
+};
+$tests['public error details expose identifiers but never private exception text'] = function () use ($sha) {
+ expect(LK_Layout_Package::public_error('Missing or modified layout asset: ' . $sha) === array('error_code' => 'asset_integrity', 'asset' => $sha), 'Asset diagnostic missing');
+ expect(LK_Layout_Package::public_error('Missing or unexpected layout document: header') === array('error_code' => 'document_mapping', 'document' => 'header'), 'Mapping diagnostic missing');
+ $private = LK_Layout_Package::json(LK_Layout_Package::public_error('SQL error: password=SECRET; /private/database.sql; post body'));
+ expect(strpos($private, 'SECRET') === false && strpos($private, 'database.sql') === false && strpos($private, 'post body') === false, 'Public status leaked exception details');
+};
 $tests['portable JSON hashes ignore host float precision and preserve its setting'] = function () {
  $original = ini_get('serialize_precision'); $value = array('opacity' => 0.7, 'small' => 0.0000001, 'nested' => array(0.9, 1.23456789012345));
  try {
@@ -212,6 +263,6 @@ try {
   try { $test(); echo "PASS $name\n"; }
   catch (Throwable $error) { ++$failed; fwrite(STDERR, "FAIL $name: {$error->getMessage()}\n"); }
  }
-} finally { unlink($image); rmdir($directory . '/assets'); rmdir($directory); }
+} finally { unlink($image); unlink($gzip_file); rmdir($directory . '/assets'); rmdir($directory); }
 echo (count($tests) - $failed) . '/' . count($tests) . " layout tests passed.\n";
 exit($failed ? 1 : 0);

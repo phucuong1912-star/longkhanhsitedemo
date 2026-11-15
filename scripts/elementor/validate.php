@@ -10,7 +10,7 @@ try {
  if (preg_match('~https?://(?:localhost|127\.0\.0\.1|\[::1\])\b~i', LK_Layout_Package::json($package))) throw new RuntimeException('A localhost URL escaped the exporter.');
  if (in_array('--git', $argv, true)) {
   $paths = array('wp-content/lk-layouts/manifest.json', 'wp-content/mu-plugins/lk-layout-sync/scopes.json');
-  foreach ($package['assets'] as $asset) $paths[] = 'wp-content/lk-layouts/assets/' . $asset['file'];
+  foreach ($package['assets'] as $asset) $paths[] = 'wp-content/lk-layouts/assets/' . LK_Layout_Package::asset_filename($package, $asset);
   foreach ($paths as $path) {
    $process = proc_open(array('git', 'show', 'HEAD:' . $path), array(1 => array('pipe', 'w'), 2 => array('pipe', 'w')), $pipes, $root);
    if (!is_resource($process)) throw new RuntimeException('Cannot verify the Git package.');

@@ -63,6 +63,18 @@ def parse_status(payload):
     return state
 
 
+def import_error(state):
+    # Public diagnostics are bounded identifiers, never raw PHP/SQL messages.
+    details = []
+    for key, pattern in [('error_code', r'[a-z_]{1,40}'), ('asset', r'[a-f0-9]{64}'),
+                         ('document', r'[a-z0-9-]{1,64}'), ('meta', r'_[a-z0-9_]{1,64}')]:
+        value = state.get(key)
+        if isinstance(value, str) and re.fullmatch(pattern, value):
+            details.append(f'{key}={value}')
+    context = ' [' + ', '.join(details) + ']' if details else ''
+    return 'Layout import refused' + context + '. Inspect WordPress Tools > Layout Sync; do not bypass conflicts.'
+
+
 class HttpClient:
     def __init__(self, origin):
         self.origin = origin
@@ -166,7 +178,7 @@ def verify(client, origin, package, args):
             exact = (state.get('release') == package['release'] and state.get('commit') == args.commit
                      and state.get('environment') == args.environment)
             if exact and state.get('status') == 'error':
-                raise SystemExit('Layout import refused. Inspect WordPress Tools > Layout Sync; do not bypass conflicts.')
+                raise SystemExit(import_error(state))
             if exact and state.get('status') == 'applied':
                 print(f"Verified {args.environment}: layout {package['release']} applied at commit {args.commit}.")
                 return 0

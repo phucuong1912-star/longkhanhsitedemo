@@ -65,6 +65,20 @@ riêng trong `uploads/lk-layouts/` và attachment riêng của môi trường đ
 Không ghi đè/xóa uploads hoặc attachment đã có. Gói dùng ảnh gốc; không mang
 theo thumbnail/cache từ local và không tự tái tạo toàn bộ thư viện ảnh.
 
+Manifest v2 chuyển từng ảnh bằng payload `.png.gz`, `.jpeg.gz`… trong
+`assets/`; không chuyển ảnh PNG/JPEG trần làm nguồn import. Đã có trường hợp
+ảnh sau deploy khác byte với bản Git dù cùng kích thước, khiến kiểm tra ảnh
+chặn import. Payload gzip giữ nguyên ảnh gốc, không re-encode hay đổi chất
+lượng. Mỗi ảnh là một payload riêng để tránh một archive lớn vượt giới hạn
+file của hosting master.
+
+Mỗi payload có SHA-256 riêng; importer kiểm tra cả checksum gzip lẫn số byte
+và SHA-256 của ảnh sau giải nén, trước khi bắt đầu cập nhật layout. Ảnh gốc
+được đọc qua stream gzip rồi ghi thành file ảnh bình thường trong thư mục
+media quản lý riêng. Không chấp nhận ảnh sai hash, không đổi hash theo ảnh
+đã bị biến đổi và không sửa ảnh/uploads đang có trên server. Các bản PNG/JPEG
+trần của gói v1 được thay bằng gzip trong Git; thư viện uploads gốc giữ nguyên.
+
 Muốn đồng bộ một page/template mới hoặc một dạng tham chiếu mới, phải bổ sung
 scope/ánh xạ và kiểm thử ở local. Exporter từ chối tham chiếu template chưa
 được khai báo; không mở rộng sang `post`, `listing`, orders hoặc users.
@@ -140,6 +154,11 @@ Prod dùng HTTP như hiện có. Cả hai chế độ vẫn bắt buộc khớp 
 environment và `status=applied`; HTML/404, bản cũ hoặc importer lỗi đều làm
 job thất bại. Log lỗi nêu endpoint, HTTP status và loại phản hồi. Không bỏ
 bước xác minh chỉ để làm workflow xanh.
+
+Trạng thái lỗi công khai bổ sung mã cố định và khóa asset/document được kiểm
+tra định dạng để Actions hiển thị nguyên nhân (ví dụ `asset_integrity`).
+Không đưa exception PHP/SQL thô, đường dẫn server, mật khẩu hoặc nội dung bài
+viết vào file JSON/log Actions. Chi tiết nội bộ vẫn nằm ở Tools → Layout Sync.
 
 Checksum JSON dùng `serialize_precision=-1` trong đúng lúc encode, sau đó
 khôi phục setting PHP ban đầu. Không phụ thuộc precision mặc định của local,

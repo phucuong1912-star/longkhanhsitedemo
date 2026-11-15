@@ -42,7 +42,7 @@ function lk_layout_apply_ready() {
  } catch (Throwable $error) {
   update_option('lk_layout_sync_error', array('message' => $error->getMessage(), 'release' => $ready['release'] ?? '', 'time' => time()), false);
   // Public status contains no database details, document data, or backup.
-  try { lk_layout_publish_status(array('status' => 'error', 'release' => $ready['release'] ?? '', 'commit' => $ready['commit'] ?? '', 'environment' => $ready['environment'] ?? '', 'message' => 'Layout sync stopped; see Tools > Layout Sync in WordPress.')); } catch (Throwable $ignored) {}
+  try { lk_layout_publish_status(array_merge(array('status' => 'error', 'release' => $ready['release'] ?? '', 'commit' => $ready['commit'] ?? '', 'environment' => $ready['environment'] ?? '', 'message' => 'Layout sync stopped; see Tools > Layout Sync in WordPress.'), LK_Layout_Package::public_error($error->getMessage()))); } catch (Throwable $ignored) {}
  }
 }
 add_action('wp_loaded', 'lk_layout_apply_ready', 9999);

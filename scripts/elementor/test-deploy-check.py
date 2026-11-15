@@ -63,6 +63,16 @@ class DeploymentCheckTest(unittest.TestCase):
     def test_import_error_fails_the_job(self):
         self.assertIn('refused', self.run_check([self.status(status='error')]))
 
+    def test_import_error_includes_safe_code_and_asset_identifier(self):
+        error = self.run_check([self.status(status='error', error_code='asset_integrity', asset='b' * 64)])
+        self.assertIn('error_code=asset_integrity', error)
+        self.assertIn('asset=' + 'b' * 64, error)
+
+    def test_private_exception_message_is_not_echoed_to_actions(self):
+        error = self.run_check([self.status(status='error', message='password=SECRET; /private/database.sql', error_code='bad\nSECRET')])
+        self.assertNotIn('SECRET', error)
+        self.assertNotIn('database.sql', error)
+
     def test_transient_http_error_retries(self):
         self.assertEqual(self.run_check([URLError('temporary'), self.status()]), 0)
 
