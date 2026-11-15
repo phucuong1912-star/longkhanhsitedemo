@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "production_origin": "https://thodiatienhai.com",
+  "master_origin": "https://longkhanhsites.site.je",
+  "documents": {
+    "header": {"option": "lk_template_header", "type": "elementor_library", "managed": true},
+    "footer": {"option": "lk_template_footer", "type": "elementor_library", "managed": true},
+    "menu": {"option": "lk_template_menu", "type": "elementor_library", "managed": true},
+    "login": {"option": "lk_template_login", "type": "elementor_library", "managed": true},
+    "listing-template": {"option": "lk_template_listing", "type": "elementor_library", "managed": true},
+    "gallery-template": {"option": "lk_template_listing_gallery", "type": "elementor_library", "managed": true},
+    "kit": {"option": "elementor_active_kit", "type": "elementor_library", "managed": false},
+    "home": {"option": "lk_page_map", "key": "home", "type": "page", "managed": true},
+    "search": {"option": "lk_page_map", "key": "search", "type": "page", "managed": true},
+    "blog": {"option": "lk_page_map", "key": "blog", "type": "page", "managed": true},
+    "explore": {"option": "lk_page_map", "key": "explore", "type": "page", "managed": true},
+    "promo": {"option": "lk_page_map", "key": "promo", "type": "page", "managed": true},
+    "profile": {"option": "lk_page_map", "key": "profile", "type": "page", "managed": true},
+    "contact": {"option": "lk_page_map", "key": "contact", "type": "page", "managed": true},
+    "add-place": {"option": "lk_page_map", "key": "add-place", "type": "page", "managed": true},
+    "about": {"option": "lk_page_map", "key": "about", "type": "page", "managed": true},
+    "privacy": {"option": "lk_page_map", "key": "privacy", "type": "page", "managed": true},
+    "terms": {"option": "lk_page_map", "key": "termsofuse", "type": "page", "managed": true},
+    "download": {"option": "lk_page_map", "key": "download", "type": "page", "managed": true},
+    "new-review": {"option": "lk_page_map", "key": "new-review", "type": "page", "managed": true}
+  }
+}

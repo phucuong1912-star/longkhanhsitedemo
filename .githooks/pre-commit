@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+set -eu
+layout_root=$(git rev-parse --show-toplevel)
+cd "$layout_root"
+layout_php=$(git config --local --get lk.phpBinary || printf php)
+layout_branch=$(git symbolic-ref --quiet --short HEAD || true)
+if [ "$layout_branch" != prod ]; then
+ "$layout_php" scripts/elementor/export.php
+ git add -- wp-content/lk-layouts/manifest.json wp-content/lk-layouts/assets/
+fi
+"$layout_php" scripts/elementor/validate.php

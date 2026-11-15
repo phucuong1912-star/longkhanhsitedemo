@@ -16,6 +16,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.ref == 'refs/heads/master'
     name: Deploy to FTP Hosting
     runs-on: ubuntu-latest
 
@@ -23,6 +24,15 @@ jobs:
       # 1. Lấy source code từ GitHub
       - name: Checkout source code
         uses: actions/checkout@v6
+
+      - name: Validate committed Elementor package
+        run: php scripts/elementor/validate.php --git
+
+      - name: Test layout data preservation
+        run: php scripts/elementor/test.php
+
+      - name: Test deployment status verification
+        run: python3 scripts/elementor/test-deploy-check.py
 
       # 2. Deploy qua FTP
       - name: Deploy to FTP Hosting
@@ -43,15 +53,33 @@ jobs:
             **/.git*
             **/.git*/**
             **/.github/**
+            **/.githooks/**
+            **/.layout-ready/**
             **/.env
             **/.env.*
             **/node_modules/**
             **/.htaccess
+            **/.user.ini
+            **/.well-known/**
+            **/.maintenance
+            **/.vscode/**
             **/wp-config.php
             **/.codex-tools/**
             **/wp-content/cache/**
             **/wp-content/debug.log
-            **/wp-content/uploads/elementor/css/**
+            **/wp-content/uploads/**
+            **/wp-content/upgrade/**
+            **/wp-content/upgrade-temp-backup/**
+            **/wp-content/duplicator-backups/**
+            **/wp-content/updraft/**
+            **/wp-content/ai1wm-backups/**
+            **/wp-content/lk-layouts/ready.json
+            **/wp-content/lk-layouts/applied.json
+            **/wp-content/lk-layouts/*.tmp*
+            **/.lk-layout-ftp-state.json
+            **/*.sql
+            **/*.sql.gz
+            **/*.lnk
 
           # WordPress React and Elementor PHP dependencies live in vendor/.
           # They are part of the installed release and must be uploaded.
@@ -63,3 +91,24 @@ jobs:
           timeout: 60000000
 
           log-level: verbose
+
+      # Publish readiness only AFTER code, manifest and images finish uploading.
+      - name: Prepare master layout release marker
+        run: php scripts/elementor/ready.php --environment=master --commit="$GITHUB_SHA" --output=.layout-ready/ready.json
+
+      - name: Publish master layout release marker last
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          local-dir: ./.layout-ready/
+          server-dir: /htdocs/wp-content/lk-layouts/
+          state-name: .lk-layout-ftp-state.json
+          dangerous-clean-slate: false
+          timeout: 60000000
+
+      - name: Apply and verify master Elementor release
+        run: python3 scripts/elementor/check-deploy.py --environment master --commit "$GITHUB_SHA"

@@ -1,0 +1,41 @@
+name: Deploy prod to VPS
+
+on:
+  push:
+    branches: [prod]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: thodiatienhai-prod-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/prod'
+    runs-on: ubuntu-latest
+    environment: prod
+    timeout-minutes: 30
+    env:
+      PROD_SSH_HOST: ${{ vars.PROD_SSH_HOST || '45.76.161.17' }}
+      PROD_SSH_PORT: ${{ vars.PROD_SSH_PORT || '22' }}
+      PROD_SSH_USER: ${{ vars.PROD_SSH_USER || 'root' }}
+      PROD_WEB_ROOT: ${{ vars.PROD_WEB_ROOT || '/var/www/html' }}
+      PROD_SITE_URL: ${{ vars.PROD_SITE_URL || 'https://thodiatienhai.com' }}
+      PROD_SSH_PRIVATE_KEY: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
+      PROD_SSH_KNOWN_HOSTS: ${{ secrets.PROD_SSH_KNOWN_HOSTS }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate committed Elementor package
+        run: php scripts/elementor/validate.php --git
+      - name: Test layout data preservation
+        run: php scripts/elementor/test.php
+      - name: Test deployment status verification
+        run: python3 scripts/elementor/test-deploy-check.py
+      - name: Back up and deploy code over SSH
+        shell: bash
+        run: bash .github/scripts/deploy-prod.sh
+      - name: Apply and verify prod Elementor release
+        run: python3 scripts/elementor/check-deploy.py --environment prod --commit "$GITHUB_SHA"

@@ -1,0 +1,8 @@
+.githooks/* text eol=lf
+.github/scripts/*.sh text eol=lf
+scripts/**/*.php text eol=lf
+scripts/**/*.py text eol=lf
+wp-content/mu-plugins/lk-layout-sync*.php text eol=lf
+wp-content/mu-plugins/lk-layout-sync/*.php text eol=lf
+wp-content/mu-plugins/lk-layout-sync/scopes.json text eol=lf
+wp-content/lk-layouts/manifest.json text eol=lf

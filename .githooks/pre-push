@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+set -eu
+cd "$(git rev-parse --show-toplevel)"
+layout_php=$(git config --local --get lk.phpBinary || printf php)
+layout_branch=$(git symbolic-ref --quiet --short HEAD || true)
+while read -r layout_local_ref layout_local_sha layout_remote_ref layout_remote_sha; do
+ case "$layout_remote_ref" in
+  refs/heads/master|refs/heads/prod)
+   if [ "$layout_local_ref" != "$layout_remote_ref" ] || [ "$layout_local_sha" != "$(git rev-parse HEAD)" ] || [ "refs/heads/$layout_branch" != "$layout_remote_ref" ]; then
+    printf '%s\n' 'Push master/prod from its checked-out, committed branch; do not push an unverified source ref.' >&2
+    exit 1
+   fi
+   if [ "$layout_branch" = prod ] && ! git merge-base --is-ancestor master HEAD; then
+    printf '%s\n' 'Merge the verified local master into prod before pushing prod.' >&2
+    exit 1
+   fi
+   ;;
+ esac
+done
+"$layout_php" scripts/elementor/validate.php --git
+if [ "$layout_branch" = master ]; then
+ "$layout_php" scripts/elementor/export.php --check
+fi

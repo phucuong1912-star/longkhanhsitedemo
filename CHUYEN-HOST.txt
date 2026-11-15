@@ -1,5 +1,12 @@
 CHUYỂN HOST / ĐỔI DOMAIN — ĐỊA ĐIỂM LONG KHÁNH
 
+QUY TRÌNH HẰNG NGÀY: đọc AGENTS.md và docs/deployment-spec.md trước.
+Chỉ sửa local → push master và chờ workflow thành công → merge master vào
+prod rồi push prod. Không SSH/FTP thủ công. Đồng bộ Elementor dùng gói
+versioned và importer giới hạn metadata; không import DB local lên server.
+Các hướng dẫn full database bên dưới chỉ dành cho một tác vụ chuyển host
+mới được yêu cầu riêng, không phải quy trình cập nhật code/giao diện.
+
 Lưu ý quan trọng
 - Git/FTP chỉ chuyển file. Nội dung, bố cục Elementor, template chung địa điểm,
   menu, media attachment ID và cài đặt nằm trong database. Luôn chuyển cả hai.
@@ -73,8 +80,9 @@ search-replace toàn database trước đó.
 - Khi đổi host, cập nhật FTP_SERVER / FTP_USERNAME / FTP_PASSWORD trong
   GitHub repository secrets; kiểm tra server-dir đúng thư mục public mới.
   Không ghi mật khẩu trực tiếp vào workflow. Giữ dangerous-clean-slate:false.
-- Deploy code không tự đồng bộ các thay đổi Elementor từ database local lên
-  hosting. Chỉnh Elementor trên đúng môi trường hoặc export/import dữ liệu.
+- Các thay đổi Elementor hằng ngày chỉ sửa tại local; Git hooks xuất gói giới
+  hạn vào wp-content/lk-layouts và workflows tự đồng bộ đúng môi trường.
+  Xem docs/deployment-spec.md; không chỉnh Elementor trực tiếp trên server.
 
 Lần sửa hosting ngày 12/11/2026
 - Đã khôi phục file cùng phiên bản WP 7.1.4 / Elementor 4.4.0, không nâng cấp.

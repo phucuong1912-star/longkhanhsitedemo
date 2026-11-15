@@ -21,3 +21,9 @@ feedback-2.rtf
 
 # Local maintenance scripts and generated reports
 /.codex-tools/
+
+# Deployment readiness/status are generated per environment, never committed.
+/.layout-ready/
+/wp-content/lk-layouts/ready.json
+/wp-content/lk-layouts/applied.json
+/wp-content/lk-layouts/*.tmp*
