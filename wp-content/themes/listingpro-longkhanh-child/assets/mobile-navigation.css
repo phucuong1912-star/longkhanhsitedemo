@@ -1,0 +1,32 @@
+/* Five existing destinations, with a smooth cradle for the nearby action. */
+@media(max-width:991px){
+ body.lk-site{padding-bottom:calc(102px + env(safe-area-inset-bottom,0px))}
+ body.lk-site .lk-bottom-nav{height:calc(82px + env(safe-area-inset-bottom,0px));overflow:visible}
+ body.lk-site .lk-bottom-nav>.elementor-container{position:relative;isolation:isolate;max-width:none;height:100%;min-height:0;padding:0;margin:0;background:transparent;border-radius:0;box-shadow:none;overflow:visible}
+ body.lk-site .lk-bottom-nav>.elementor-container:before{content:"";position:absolute;inset:0 0 auto;height:82px;z-index:-1;border-radius:0;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='82' viewBox='0 0 400 82' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M0 17Q0 0 17 0H144C156 0 158 8 163 20C169 35 181 43 200 43S231 35 237 20C242 8 244 0 256 0H383Q400 0 400 17V82H0Z'/%3E%3C/svg%3E") center top/100% 82px no-repeat;filter:drop-shadow(0 -3px 10px #244d3810)}
+ body.lk-site .lk-bottom-nav>.elementor-container:after{content:"";position:absolute;inset:81px 0 0;background:#fff;z-index:-1;pointer-events:none}
+ body.lk-site .lk-bottom-nav .elementor-column,body.lk-site .lk-bottom-nav .elementor-widget-wrap,body.lk-site .lk-bottom-nav .elementor-widget-icon-list{width:100%;padding:0;margin:0;overflow:visible}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-items{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:start;gap:0;padding:0 3px;margin:0}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-item{display:block;width:auto;min-width:0;margin:0;padding:0}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-item a{position:relative;display:grid;grid-template-rows:28px 20px;justify-items:center;align-content:start;align-items:center;gap:6px;width:100%;height:82px;min-height:44px;padding:17px 0 0;color:#758079;-webkit-tap-highlight-color:transparent;transition:color .2s ease}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-icon{display:grid;place-items:center;width:38px;height:32px;margin:0;border:0;border-radius:12px;background:transparent;color:inherit;animation:none;transition:background .2s ease,transform .25s ease}
+ body.lk-site .lk-bottom-nav .lk-tab-icon{width:24px;height:24px;fill:none;color:inherit}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-text{padding:0;margin:0;font-size:11.5px;font-weight:500;line-height:20px;white-space:nowrap;color:inherit;letter-spacing:0}
+ body.lk-site .lk-bottom-nav a[aria-current=page]{color:#357c3d}
+ body.lk-site .lk-bottom-nav a[aria-current=page] .elementor-icon-list-icon{background:#edf6ee}
+ body.lk-site .lk-bottom-nav a[aria-current=page] .elementor-icon-list-text{font-weight:700}
+ body.lk-site .lk-bottom-nav a:focus-visible{outline:2px solid #357c3d;outline-offset:-4px;border-radius:14px}
+ body.lk-site .lk-bottom-nav a:active .elementor-icon-list-icon{transform:scale(.92)}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-item:nth-child(3) a{transform:none}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-item:nth-child(3) .elementor-icon-list-icon{position:absolute;inset:-25px 0 auto;width:62px;height:62px;margin:0 auto;border:1px solid #ffffffb3;border-radius:50%;background:var(--lk-accent,#52ab5c);color:#fff;box-shadow:0 5px 14px #357c3d26;animation:none;isolation:isolate}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-item:nth-child(3) .elementor-icon-list-icon:before{content:"";position:absolute;inset:-5px;z-index:-1;border:1px solid #52ab5c80;border-radius:inherit;pointer-events:none;animation:lk-nearby-beacon 3.6s ease-out infinite}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-item:nth-child(3) .elementor-icon-list-icon:after{content:"";position:absolute;inset:5px;border:1px solid #ffffff38;border-radius:inherit;pointer-events:none}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-item:nth-child(3) .lk-tab-icon{width:28px;height:28px;animation:lk-nearby-float 3.6s ease-in-out infinite}
+ body.lk-site .lk-bottom-nav .elementor-icon-list-item:nth-child(3) .elementor-icon-list-text{grid-row:2;align-self:center;padding:1px 10px;border-radius:20px;background:#274e39;color:#fff;font-size:11px;line-height:20px;font-weight:600}
+ body.lk-site .lk-top{bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+}
+@keyframes lk-nearby-beacon{0%{transform:scale(.94);opacity:.45}65%,100%{transform:scale(1.2);opacity:0}}
+@keyframes lk-nearby-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@media(prefers-reduced-motion:reduce){
+ body.lk-site .lk-bottom-nav *,body.lk-site .lk-bottom-nav .elementor-icon-list-item:nth-child(3) .lk-tab-icon,body.lk-site .lk-bottom-nav .elementor-icon-list-item:nth-child(3) .elementor-icon-list-icon:before{animation:none;transition:none}
+}

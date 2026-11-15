@@ -94,6 +94,8 @@ add_action('wp_enqueue_scripts',function(){
  if(is_page_template('template-dashboard.php')&&($_GET['dashboard']??'')==='menus')wp_enqueue_script('lk-dashboard-menu',get_stylesheet_directory_uri().'/assets/dashboard-menu.js',array(),filemtime(__DIR__.'/../assets/dashboard-menu.js'),true);
  if(!lk_is_site())return;
  wp_enqueue_style('lk-feedback2',get_stylesheet_directory_uri().'/assets/feedback2.css',array('lk-elementor-controls'),filemtime(__DIR__.'/../assets/feedback2.css'));
+ wp_enqueue_style('lk-mobile-navigation',get_stylesheet_directory_uri().'/assets/mobile-navigation.css',array('lk-feedback2'),filemtime(__DIR__.'/../assets/mobile-navigation.css'));
+ wp_enqueue_style('lk-map-view',get_stylesheet_directory_uri().'/assets/map-view.css',array('lk-feedback2'),filemtime(__DIR__.'/../assets/map-view.css'));
  wp_enqueue_style('lk-location-map');
  wp_enqueue_script('lk-location-leaflet');
  wp_enqueue_script('lk-feedback2',get_stylesheet_directory_uri().'/assets/feedback2.js',array('lk-results','lk-location-leaflet'),filemtime(__DIR__.'/../assets/feedback2.js'),true);

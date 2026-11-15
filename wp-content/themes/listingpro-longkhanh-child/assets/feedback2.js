@@ -5,9 +5,20 @@
  const config=window.LK_SITE||{}, places=config.places||[], api=window.LK_DIRECTORY;
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const base=new URL(config.base||location.href), url=path=>new URL(path,base).href;
+ const navIcons=[
+  '<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/>',
+  '<path d="M4 4a16 16 0 0 1 16 16M4 10a10 10 0 0 1 10 10"/><circle cx="5" cy="19" r="1.5"/>',
+  '<path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+  '<path d="m5 20 14-16"/><circle cx="6.5" cy="6.5" r="3"/><circle cx="17.5" cy="17.5" r="3"/>',
+  '<circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>'
+ ];
  $$('.lk-bottom-nav a').forEach((a,i)=>{
+  const icon=$('.elementor-icon-list-icon',a);
+  if(icon&&navIcons[i])icon.innerHTML=`<svg class="lk-tab-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${navIcons[i]}</svg>`;
   if(i===4){a.classList.toggle('lk-login-open',!config.loggedIn);a.href=url(config.loggedIn?'listing-author/':'profile/');}
-  if(new URL(a.href).pathname===location.pathname)a.setAttribute('aria-current','page');
+  const target=new URL(a.href),path=location.pathname.replace(/\/$/,''),destination=target.pathname.replace(/\/$/,'');
+  const selected=i===0?path===destination:i===2?path===destination&&new URL(location.href).searchParams.get('nearby')==='me':path===destination||path.startsWith(destination+'/');
+  if(selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
  });
  $$('.lk-login-open').forEach(a=>{if(config.loggedIn&&a.tagName==='A')a.href=url('listing-author/');});
  $$('a[href]').forEach(a=>{const destination=new URL(a.href,base);if(destination.origin===base.origin&&destination.pathname===new URL('profile/',base).pathname&&!destination.search){a.classList.add('lk-login-open');if(config.loggedIn)a.href=url('listing-author/');}});
@@ -47,19 +58,42 @@
   if(!shareDialog.dataset.initialized){shareDialog.dataset.initialized='1';shareDialog.addEventListener('close',()=>{if(!$('dialog[open]'))document.documentElement.classList.remove('lk-dialog-open');shareOpener?.focus();});shareDialog.addEventListener('click',event=>{if(event.target===shareDialog)shareDialog.close();});}
   shareDialog.showModal();document.documentElement.classList.add('lk-dialog-open');
  });
- let map,canvas,mapOpener,markers=new Map();
+ let map,canvas,mapOpener,activeMapId=null,markers=new Map();
  $('#lk-map')?.addEventListener('close',()=>mapOpener?.focus());
  function stars(p){return `<span class="lk-star-track" aria-label="${Number(p.rating)||0} trên 5">☆☆☆☆☆<span style="width:${Math.max(0,Math.min(5,Number(p.rating)||0))*20}%">★★★★★</span></span>`;}
- function mapCard(p){return `<button type="button" class="lk-suggestion" data-map-place="${p.id}"><span><strong>${esc(p.title)}</strong><small>${stars(p)} · ${p.reviews?`${p.reviews} đánh giá`:'chưa có đánh giá'}</small><small class="lk-map-card-address">${esc(p.address)}</small><small><span class="${p.opened?'lk-map-open':'lk-map-closed'}">${p.opened?'Đang mở cửa':'Đang đóng cửa'}</span> · ${esc(p.hoursLabel||'')}</small></span><img src="${esc(p.image)}" alt=""></button>`;}
- function scrollMapCard(card){const list=card?.closest('.lk-map-list');if(!list)return;list.scrollTo({left:list.scrollLeft+card.getBoundingClientRect().left-list.getBoundingClientRect().left-(list.clientWidth-card.clientWidth)/2,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});}
- function activate(id,pan=true){const marker=markers.get(Number(id));if(!marker)return;if(pan)map.panTo(marker.getLatLng());marker.openPopup();$$('#lk-map [data-map-place]').forEach(card=>card.classList.toggle('is-active',Number(card.dataset.mapPlace)===Number(id)));}
+ function mapCard(p){return `<article class="lk-map-card" data-map-card="${p.id}"><button type="button" class="lk-suggestion" data-map-place="${p.id}" aria-pressed="false"><span><strong>${esc(p.title)}</strong><small>${stars(p)} · ${p.reviews?`${p.reviews} đánh giá`:'chưa có đánh giá'}</small><small class="lk-map-card-address">${esc(p.address)}</small><small><span class="${p.opened?'lk-map-open':'lk-map-closed'}">${p.opened?'Đang mở cửa':'Đang đóng cửa'}</span> · ${esc(p.hoursLabel||'')}</small></span><img src="${esc(p.image)}" alt="" loading="lazy"></button><div class="lk-map-card-footer"><span class="lk-map-selected-label">Đang chọn</span><a href="${esc(p.url)}">Xem địa điểm <span aria-hidden="true">→</span></a></div></article>`;}
+ function scrollMapCard(card){
+  const list=card?.closest('.lk-map-list');if(!list)return;
+  const horizontal=getComputedStyle(list).flexDirection==='row',a=card.getBoundingClientRect(),b=list.getBoundingClientRect();
+  list.scrollTo({[horizontal?'left':'top']:horizontal?list.scrollLeft+a.left-b.left-(list.clientWidth-card.clientWidth)/2:list.scrollTop+a.top-b.top-(list.clientHeight-card.clientHeight)/2,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+ }
+ function activate(id,animate=true){
+  id=Number(id);const marker=markers.get(id);if(!marker)return;
+  activeMapId=id;
+  markers.forEach((pin,pinId)=>{
+   const selected=pinId===id,button=$(`#lk-map [data-map-pin="${pinId}"]`),element=button?.closest('.lk-map-pin');
+   pin.setZIndexOffset(selected?1000:0);
+   element?.classList.toggle('is-selected',selected);
+   button?.setAttribute('aria-pressed',String(selected));
+  });
+  $$('#lk-map [data-map-card]').forEach(card=>{
+   const selected=Number(card.dataset.mapCard)===id;
+   card.classList.toggle('is-active',selected);$('[data-map-place]',card)?.setAttribute('aria-pressed',String(selected));
+  });
+  const motion=animate&&!matchMedia('(prefers-reduced-motion:reduce)').matches,center=marker.getLatLng(),zoom=Math.max(map.getZoom(),14);
+  if(typeof map.stop==='function')map.stop();
+  if(motion&&typeof map.flyTo==='function')map.flyTo(center,zoom,{animate:true,duration:.65,easeLinearity:.25});
+  else if(motion&&map.getZoom()===zoom)map.panTo(center,{animate:true,duration:.55,easeLinearity:.25});
+  else map.setView(center,zoom,{animate:motion,pan:{duration:.55,easeLinearity:.25}});
+ }
  function showMap(id){
   const dialog=$('#lk-map');if(!dialog)return;
   if(!dialog.open)dialog.showModal();document.documentElement.classList.add('lk-dialog-open');
   const layout=$('.lk-results-layout');let ids=null;try{ids=layout?JSON.parse(layout.dataset.mapIds||layout.dataset.resultIds):null;}catch{}
   const ordered=ids?ids.map(id=>places.find(p=>p.id===Number(id))).filter(Boolean):places;
   const list=ordered.filter(p=>api.hasCoordinates(p));
-  $('.lk-map-list',dialog).innerHTML=list.length?list.map(mapCard).join(''):'<p>Chưa có địa điểm có tọa độ trong kết quả này.</p>';
+  const cards=$('.lk-map-list',dialog);cards.setAttribute('aria-label','Các địa điểm trên bản đồ');
+  cards.innerHTML=list.length?list.map(mapCard).join(''):'<p class="lk-map-empty">Chưa có địa điểm có tọa độ trong kết quả này.</p>';
   if(!window.L){$('.lk-map-list',dialog).insertAdjacentHTML('afterbegin','<p role="alert">Chưa tải được bản đồ. Vui lòng thử lại.</p>');return;}
   if(!map){
    canvas=document.createElement('div');canvas.className='lk-map-canvas';canvas.setAttribute('aria-label','Bản đồ các địa điểm');$('.lk-map-layout',dialog).append(canvas);
@@ -69,10 +103,14 @@
    const Locate=L.Control.extend({options:{position:'topleft'},onAdd(){const button=L.DomUtil.create('button','lk-map-locate leaflet-bar');button.type='button';button.setAttribute('aria-label','Vị trí của tôi');button.title='Vị trí của tôi';button.innerHTML='<i class="fas fa-crosshairs" aria-hidden="true"></i>';L.DomEvent.disableClickPropagation(button);L.DomEvent.on(button,'click',async e=>{L.DomEvent.preventDefault(e);button.disabled=true;try{const origin=await api.locate();if(userMarker)map.removeLayer(userMarker);userMarker=L.circleMarker([origin.lat,origin.lng],{radius:7,color:'#fff',weight:2,fillColor:'#2979d5',fillOpacity:1}).addTo(map);map.setView([origin.lat,origin.lng],15);feedback.hidden=true;}catch(error){feedback.textContent=error.message;feedback.hidden=false;}finally{button.disabled=false;}});return button;}});
    new Locate().addTo(map);L.control.zoom({position:'topleft'}).addTo(map);
   }
-  markers.forEach(marker=>map.removeLayer(marker));markers.clear();
-  list.forEach(p=>{const marker=L.marker([p.lat,p.lng],{title:p.title,keyboard:false,icon:L.divIcon({className:'lk-map-pin',html:`<button type="button" class="lk-map-pin-button" data-map-pin="${p.id}" aria-label="${esc(p.title)}"><svg width="24" height="32" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12c0 8 12 20 12 20s12-12 12-20C24 5.4 18.6 0 12 0z" fill="currentColor"/><circle cx="12" cy="12" r="4" fill="white"/></svg></button>`,iconSize:[44,44],iconAnchor:[22,40]})}).addTo(map);marker.bindPopup(`<div class="lk-map-popup"><a class="lk-map-popup-photo" href="${esc(p.url)}"><img src="${esc(p.image)}" alt=""></a><div><a href="${esc(p.url)}"><strong>${esc(p.title)}</strong></a><p>${esc(p.address)}</p><p>${stars(p)} ${p.reviews?`${p.reviews} đánh giá`:'chưa có đánh giá'}</p></div></div>`);marker.on('click',()=>{$$('#lk-map [data-map-place]').forEach(card=>{const active=Number(card.dataset.mapPlace)===p.id;card.classList.toggle('is-active',active);if(active)scrollMapCard(card);});});markers.set(p.id,marker);});
-  requestAnimationFrame(()=>{map.invalidateSize();if(list.length)map.fitBounds(L.latLngBounds(list.map(p=>[p.lat,p.lng])),{padding:[35,35],maxZoom:16,animate:false});if(list.length)activate(id||list[0].id,false);});
+  markers.forEach(marker=>map.removeLayer(marker));markers.clear();activeMapId=null;
+  list.forEach(p=>{const marker=L.marker([p.lat,p.lng],{title:p.title,keyboard:false,icon:L.divIcon({className:'lk-map-pin',html:`<button type="button" class="lk-map-pin-button" data-map-pin="${p.id}" aria-label="${esc(p.title)}" aria-pressed="false"><svg width="26" height="34" viewBox="-1 -1 26 34" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12c0 8 12 20 12 20s12-12 12-20C24 5.4 18.6 0 12 0z" fill="currentColor" stroke="white" stroke-width="1.4"/><circle cx="12" cy="12" r="4" fill="white"/></svg></button>`,iconSize:[44,44],iconAnchor:[22,40]})}).addTo(map);marker.on('click',()=>{activate(p.id);scrollMapCard($(`#lk-map [data-map-card="${p.id}"]`));});markers.set(p.id,marker);});
+  requestAnimationFrame(()=>{
+   map.invalidateSize();
+   if(list.length){const first=list.find(p=>p.id===Number(id))||list[0];activate(first.id,false);scrollMapCard($(`#lk-map [data-map-card="${first.id}"]`));}
+   else map.setView([10.9398,107.2446],13,{animate:false});
+  });
  }
  // Capture before the original single-pin iframe handler.
- document.addEventListener('click',e=>{const trigger=e.target.closest('[data-map], [data-map-place], [data-map-pin]');if(!trigger)return;e.preventDefault();e.stopImmediatePropagation();if(trigger.hasAttribute('data-map-pin')&&map){activate(trigger.dataset.mapPin);scrollMapCard($('#lk-map [data-map-place].is-active'));}else if(trigger.hasAttribute('data-map-place')&&map)activate(trigger.dataset.mapPlace);else{mapOpener=trigger;showMap(trigger.dataset.map);}},true);
+ document.addEventListener('click',e=>{const trigger=e.target.closest('[data-map], [data-map-place], [data-map-pin]');if(!trigger)return;e.preventDefault();e.stopImmediatePropagation();if((trigger.hasAttribute('data-map-pin')||trigger.hasAttribute('data-map-place'))&&map){activate(trigger.dataset.mapPin||trigger.dataset.mapPlace);if(trigger.hasAttribute('data-map-pin'))scrollMapCard($(`#lk-map [data-map-card="${activeMapId}"]`));}else{mapOpener=trigger;showMap(trigger.dataset.map);}},true);
 })();

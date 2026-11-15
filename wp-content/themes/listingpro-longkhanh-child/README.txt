@@ -11,6 +11,12 @@ ListingPro Tiền Hải Child
 FEEDBACK 2
 
 Giao dien va hieu ung moi: assets/feedback2.css va assets/feedback2.js.
+Menu điện thoại dùng assets/mobile-navigation.css: giữ 5 nhãn và liên kết,
+icon nét đồng bộ, phần lõm SVG ôm nút Gần tôi, hiệu ứng nhẹ có hỗ trợ giảm
+chuyển động. Bản đồ dùng assets/map-view.css; thông tin nằm ngoài canvas,
+ghim đang chọn chuyển đỏ, đưa về giữa và đồng bộ với thẻ địa điểm.
+Các thao tác bản đồ tương thích Mapbox/Leaflet 0.7 đang có sẵn trong theme.
+Kiểm tra: node --test .codex-tools/test-mobile-map.mjs .codex-tools/test-feedback.mjs
 Tich hop va migration Elementor: includes/feedback2.php. Migration chay mot
 lan khi quan tri vien mo website hoac WP-CLI khoi dong WordPress. Moi document
 duoc luu ban truoc sua trong post meta _lk_feedback2_backup. Khong nhap lai DB
