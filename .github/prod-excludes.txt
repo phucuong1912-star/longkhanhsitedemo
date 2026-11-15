@@ -7,6 +7,8 @@
 .env
 .env.*
 node_modules/
+__pycache__/
+*.pyc
 wp-config.php
 .htaccess
 .user.ini

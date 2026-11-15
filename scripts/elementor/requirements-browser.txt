@@ -1,0 +1,2 @@
+# The matching Chromium headless shell is installed by the master workflow.
+playwright==1.65.2

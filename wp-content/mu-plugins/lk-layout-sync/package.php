@@ -9,7 +9,16 @@ final class LK_Layout_Package {
   }
   return $value;
  }
- static function json($value) { return json_encode(self::canonical($value), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR); }
+ static function json($value) {
+  // PHP hosts can serialize the same float differently (e.g. 0.7 versus
+  // 0.69999999999999996). A portable checksum must not depend on php.ini.
+  // Keep the host's setting intact outside this one encoding operation.
+  $precision = ini_get('serialize_precision');
+  $changed = $precision !== '-1';
+  if ($changed && (!function_exists('ini_set') || ini_set('serialize_precision', '-1') === false)) throw new RuntimeException('Deterministic JSON encoding requires serialize_precision=-1.');
+  try { return json_encode(self::canonical($value), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR); }
+  finally { if ($changed) ini_set('serialize_precision', $precision); }
+ }
  static function hash($value) { return hash('sha256', self::json($value)); }
  static function value_hash($key, $value) {
   if ($key === '_elementor_data' && is_string($value)) $value = json_decode($value ?: '[]', true, 512, JSON_THROW_ON_ERROR);

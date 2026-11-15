@@ -68,6 +68,25 @@ $package = seal(array('version' => 1, 'documents' => array(
  'assets' => array($sha => array('file' => $sha . '.png', 'title' => 'Logo', 'alt' => 'Owner logo', 'width' => 1, 'height' => 1))));
 $new = function () use ($policy, $directory) { $store = new Layout_Test_Store(); return array($store, new LK_Layout_Engine($store, $policy, $directory)); };
 $tests = array();
+$tests['portable JSON hashes ignore host float precision and preserve its setting'] = function () {
+ $original = ini_get('serialize_precision'); $value = array('opacity' => 0.7, 'small' => 0.0000001, 'nested' => array(0.9, 1.23456789012345));
+ try {
+  ini_set('serialize_precision', '-1'); $expected = LK_Layout_Package::hash($value);
+  foreach (array('17', '100', '14', '-1') as $precision) {
+   ini_set('serialize_precision', $precision);
+   expect(LK_Layout_Package::hash($value) === $expected, 'Checksum depends on PHP serialize_precision=' . $precision);
+   expect(ini_get('serialize_precision') === $precision, 'Encoding leaked an INI change into WordPress');
+  }
+ } finally { ini_set('serialize_precision', $original); }
+};
+$tests['JSON encoding failures also restore the host precision'] = function () {
+ $original = ini_get('serialize_precision');
+ try {
+  ini_set('serialize_precision', '17');
+  rejects(function () { LK_Layout_Package::json(array(INF)); }, 'Inf and NaN');
+  expect(ini_get('serialize_precision') === '17', 'A failed JSON encoding leaked its INI setting');
+ } finally { ini_set('serialize_precision', $original); }
+};
 $tests['portable IDs, URLs, first backup, article preservation and idempotence'] = function () use ($new, $package, $sha) {
  list($store, $engine) = $new(); $before = $store->protected; $initial = $store->meta;
  $plan = $engine->plan($package); expect($store->meta === $initial && !$store->backups, 'A dry run wrote data');

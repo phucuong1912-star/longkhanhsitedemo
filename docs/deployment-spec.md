@@ -128,6 +128,33 @@ Phải commit sau mỗi lần sửa Elementor. Push lại một commit cũ khôn
    đăng nhập và kiểm tra `applied.json` phải khớp **release + commit + nhánh**.
    Job thất bại nếu importer báo lỗi hoặc không xác minh được đúng bản.
 
+Hosting master có lớp kiểm tra JavaScript/cookie: HTTP thuần có thể nhận
+`200 text/html` chứa `/aes.js` thay cho JSON. Vì vậy workflow master cài
+Playwright theo `requirements-browser.txt`, kiểm thử với fixture local, rồi
+chạy `check-deploy.py --browser`. Chromium thực thi kiểm tra của host như
+trình duyệt bình thường và giữ cùng phiên cookie từ warmup tới status. Đọc
+JSON từ phản hồi mạng cuối cùng sau chuyển trang; không đọc trang HTML
+challenge như JSON, không tự tính/chèn cookie và không tắt bảo vệ của host.
+
+Prod dùng HTTP như hiện có. Cả hai chế độ vẫn bắt buộc khớp release, commit,
+environment và `status=applied`; HTML/404, bản cũ hoặc importer lỗi đều làm
+job thất bại. Log lỗi nêu endpoint, HTTP status và loại phản hồi. Không bỏ
+bước xác minh chỉ để làm workflow xanh.
+
+Checksum JSON dùng `serialize_precision=-1` trong đúng lúc encode, sau đó
+khôi phục setting PHP ban đầu. Không phụ thuộc precision mặc định của local,
+runner hay hosting; cùng một số thập phân phải tạo cùng checksum. Không bỏ
+checksum hoặc sửa tay release để vượt lỗi `Layout package checksum mismatch`.
+
+Kiểm thử browser ở local dùng fixture HTTP trong bộ test, không gọi WordPress
+hay môi trường xa:
+
+```powershell
+python -m pip install -r scripts/elementor/requirements-browser.txt
+python -m playwright install --only-shell chromium
+python -B scripts/elementor/test-browser-check.py
+```
+
 Không thêm credential mới. FTP/SSH chỉ được sử dụng **bên trong Actions**;
 script kiểm tra HTTP cũng chỉ được chạy cho môi trường xa bởi workflow.
 Không chạy script deploy ở máy agent để thay thế pipeline.

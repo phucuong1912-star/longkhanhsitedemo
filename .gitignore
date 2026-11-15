@@ -27,3 +27,7 @@ feedback-2.rtf
 /wp-content/lk-layouts/ready.json
 /wp-content/lk-layouts/applied.json
 /wp-content/lk-layouts/*.tmp*
+
+# Local verification bytecode is never a deployment artifact.
+__pycache__/
+*.pyc
