@@ -25,7 +25,7 @@ function lk_input($name,$label,$type='text',$required=false,$placeholder='',$pre
 }
 function lk_account($mode='page',$s=array()){
  if(is_user_logged_in()&&$mode!=='login'){
-  $u=wp_get_current_user();echo '<h2>'.esc_html($s['title']??'Tài khoản của bạn').'</h2><p>Xin chào, <strong>'.esc_html($u->display_name).'</strong>.</p><p><a href="'.esc_url(lk_link('add-place')).'" class="lk-button">Đóng góp địa điểm</a> <a href="'.esc_url(wp_logout_url(lk_link('profile'))).'">Đăng xuất</a></p><h3>Địa điểm đã lưu</h3><div class="lk-saved-places"></div>';return;
+  $u=wp_get_current_user();echo '<h2>'.esc_html($s['title']??'Tài khoản của bạn').'</h2><p>Xin chào, <strong>'.esc_html($u->display_name).'</strong>.</p><p><a href="'.esc_url(lk_link('add-place')).'" class="lk-button">Đóng góp địa điểm</a> <a href="'.esc_url(wp_logout_url(lk_link('profile'))).'">Đăng xuất</a></p><h3>Địa điểm đã lưu</h3><div class="lk-saved-places" id="saved-places"></div>';return;
  }
  $register=$mode==='page'&&isset($_GET['register']);
  echo '<h2 class="lk-login-heading" id="'.($mode==='login'?'lk-login-title':'lk-account-title').'">'.esc_html($register?'Tạo tài khoản':($s['login_title']??'Đăng nhập tài khoản')).'</h2>';
@@ -38,7 +38,7 @@ function lk_account($mode='page',$s=array()){
  echo '<label>Mật khẩu<div class="lk-password"><input type="password" name="password" required '.($register?'minlength="8" autocomplete="new-password"':'autocomplete="current-password"').'><button type="button" class="lk-toggle-password" aria-label="Hiện mật khẩu">'.lk_icon('eye').'</button></div></label><input type="hidden" name="redirect_to" value="'.esc_url(home_url('/')).'"><button type="submit" class="lk-button">'.($register?'Tạo tài khoản':'Đăng nhập').'</button></form>';
  if(!$register&&($s['show_social']??'yes')==='yes')echo '<div class="lk-social-signin"><div class="lk-social-divider">'.esc_html($s['social_divider']??'hoặc tiếp tục với').'</div><div class="lk-socials"><button type="button" data-social="Facebook"><i class="fab fa-facebook" style="color:#4267b2" aria-hidden="true"></i>'.esc_html($s['facebook_label']??'Facebook').'</button><button type="button" data-social="Google"><i class="fab fa-google" style="color:#db4437" aria-hidden="true"></i>'.esc_html($s['google_label']??'Google').'</button></div><p class="lk-social-status" role="status" hidden></p></div>';
  echo '<p class="lk-center"><a href="'.esc_url(wp_lostpassword_url(lk_link('profile'))).'">Quên mật khẩu?</a></p><p class="lk-center">'.($register?'Bạn đã có tài khoản? <a href="'.esc_url(lk_link('profile')).'">Đăng nhập</a>':'Bạn chưa có tài khoản? <a href="'.esc_url(add_query_arg('register',1,lk_link('profile'))).'">Tạo tài khoản</a>').'</p>';
- if($mode==='page')echo '<h3>Địa điểm đã lưu trên thiết bị</h3><div class="lk-saved-places"></div>';
+ if($mode==='page')echo '<h3>Địa điểm đã lưu trên thiết bị</h3><div class="lk-saved-places" id="saved-places"></div>';
 }
 function lk_post_value($name){return isset($_POST[$name])?sanitize_text_field(wp_unslash($_POST[$name])):'';}
 function lk_require_nonce($action){if(empty($_POST['lk_nonce'])||!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['lk_nonce'])),$action))wp_die('Phiên làm việc đã hết hạn. Vui lòng tải lại trang và thử lại.','Không thể gửi',array('response'=>403));}

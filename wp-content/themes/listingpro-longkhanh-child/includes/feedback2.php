@@ -67,9 +67,7 @@ function lk_f2_features($category){
 add_action('lk_add_place_taxonomies',function($settings=array()){
  echo '<fieldset class="lk-submission-features"><legend>'.esc_html($settings['features_title']??'Tiện ích').'</legend>';
  foreach(lk_directory_terms('listing-category') as $category){echo '<div data-amenity-category="'.(int)$category->term_id.'" hidden>';foreach(lk_f2_features($category->term_id) as $term)echo '<label class="lk-inline"><input type="checkbox" name="features[]" value="'.(int)$term->term_id.'" disabled> '.esc_html($term->name).'</label>';echo '</div>';}
- echo '<p class="lk-amenity-hint">Chọn danh mục để xem tiện ích phù hợp.</p></fieldset><fieldset><legend>'.esc_html($settings['collections_title']??'Bộ sưu tập').'</legend>';
- foreach(get_terms(array('taxonomy'=>'lk_collection','hide_empty'=>false)) as $t)echo '<label class="lk-inline"><input type="checkbox" name="collections[]" value="'.(int)$t->term_id.'"> '.esc_html($t->name).'</label>';
- echo '</fieldset>';
+ echo '<p class="lk-amenity-hint">Chọn danh mục để xem tiện ích phù hợp.</p></fieldset>';
 });
 add_action('lk_add_place_media_before',function($settings=array()){
  lk_input('video',$settings['video_title']??'Video giới thiệu (không bắt buộc)','url',false,'https://youtu.be/...');
@@ -80,7 +78,7 @@ add_action('lk_add_place_fields',function($settings=array()){
 add_action('lk_place_created',function($id){
  $allowed=wp_list_pluck(lk_f2_features(absint($_POST['category']??0)),'term_id');
  wp_set_object_terms($id,array_values(array_intersect($allowed,array_map('absint',(array)($_POST['features']??array())))),'features');
- $terms=array_filter(array_map('absint',(array)($_POST['collections']??array())),function($t){return term_exists($t,'lk_collection');});wp_set_object_terms($id,array_values($terms),'lk_collection');
+
  $options=get_post_meta($id,'lp_listingpro_options',true);$options['video']=esc_url_raw(wp_unslash($_POST['video']??''));update_post_meta($id,'lp_listingpro_options',$options);
  if(!empty($_FILES['featured_photo']['name'])){require_once ABSPATH.'wp-admin/includes/file.php';require_once ABSPATH.'wp-admin/includes/media.php';require_once ABSPATH.'wp-admin/includes/image.php';$photo=media_handle_upload('featured_photo',$id);if(!is_wp_error($photo))set_post_thumbnail($id,$photo);}
 });

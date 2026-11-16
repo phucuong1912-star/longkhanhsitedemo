@@ -4,6 +4,12 @@ function lk_link($slug=''){return home_url('/'.trim($slug,'/').'/');}
 function lk_asset($key){static $m; if($m===null)$m=json_decode(file_get_contents(LK_DIR.'assets/images/manifest.json'),true);return isset($m[$key])?LK_URL.'assets/images/'.$m[$key]['filename']:'';}
 function lk_money($amount){return number_format_i18n((float)$amount,0).'đ';}
 function lk_criteria_labels(){return array('position'=>'Vị trí','space'=>'Không gian','quality'=>'Chất lượng','service'=>'Phục vụ','price'=>'Giá cả');}
+// Public wording follows the same five levels as the review composer.
+function lk_final_rating_label($rating, $reviews) {
+ if (!$reviews) return 'Chưa có đánh giá';
+ $labels=array(1=>'Rất tệ',2=>'Chưa tốt',3=>'Bình thường',4=>'Hài lòng',5=>'Tuyệt vời');
+ return $labels[max(1,min(5,(int)round($rating)))];
+}
 function lk_rating_criteria($id){
  if(isset($GLOBALS['lk_criteria_cache'][$id]))return $GLOBALS['lk_criteria_cache'][$id];
  $totals=array_fill_keys(array_keys(lk_criteria_labels()),0);$counts=$totals;
@@ -71,7 +77,12 @@ function lk_results($s=array()){lk_render_results($s);}
 function lk_reviews($s=array()){
  $id=lk_context_id()?:get_the_ID();$comments=get_comments(array('post_id'=>$id,'type'=>'lk_review','status'=>'approve'));echo '<div class="lk-reviews"><div class="lk-review-heading"><h2>'.esc_html($s['title']??'Đánh giá từ cộng đồng').' <span>('.count($comments).')</span></h2>'.'<button type="button" class="lk-button lk-review-open">Viết đánh giá</button>'.'</div>';
  if(!$comments){$image=$s['invite_image']['url']??lk_asset('review-illustration');echo '<div class="lk-review-invite">'.($image?'<img src="'.esc_url($image).'" alt="" loading="lazy">':'').'<div><h3>'.esc_html($s['invite_title']??'Bạn đã từng đến đây?').'</h3><p>'.esc_html($s['invite_copy']??'Chia sẻ trải nghiệm và cảm nhận của bạn cho mọi người cùng biết.').'</p><p>Những review chất lượng sẽ được xuất hiện ở bảng tin đấy!</p></div></div><p class="lk-review-empty">Chưa có đánh giá nào cho '.esc_html(get_the_title($id)).'. Hãy là người đầu tiên chia sẻ trải nghiệm!</p>';}
- foreach($comments as $c){echo '<article class="lk-review"><strong>'.esc_html(lk_review_public_name($c)).'</strong><span class="lk-stars"> '.esc_html(get_comment_meta($c->comment_ID,'lk_rating',true)).'/5 ★</span><time>'.esc_html(get_comment_date('d/m/Y',$c)).'</time>';lk_render_review_body($c);echo '</article>';}
+ foreach($comments as $c){
+  $name=lk_review_public_name($c);$anonymous=(bool)get_comment_meta($c->comment_ID,'lk_anonymous',true);
+  $avatar=$anonymous?lk_icon('user-secret') : esc_html(lk_author_initials($name));
+  echo '<article class="lk-review" id="review-'.(int)$c->comment_ID.'"><header class="lk-review-author"><span class="lk-review-avatar" aria-hidden="true">'.$avatar.'</span><div><strong>'.esc_html($name).'</strong><time datetime="'.esc_attr(get_comment_date('c',$c)).'">Đã đánh giá '.esc_html(human_time_diff(strtotime($c->comment_date_gmt.' UTC'),time())).' trước</time></div><span class="lk-review-score" aria-label="'.esc_attr(get_comment_meta($c->comment_ID,'lk_rating',true).' trên 5').'">'.esc_html(number_format((float)get_comment_meta($c->comment_ID,'lk_rating',true),1)).'</span></header>';
+  lk_render_review_body($c);echo '</article>';
+ }
  echo '<dialog id="lk-review-dialog" class="lk-review-dialog" aria-labelledby="lk-review-dialog-title"><div class="lk-review-dialog-header"><h2 id="lk-review-dialog-title">'.esc_html($s['modal_title']??'Đánh giá').' '.esc_html(get_the_title($id)).'</h2><button type="button" class="lk-close" data-close aria-label="Đóng đánh giá">&times;</button></div>';
  lk_review_composer(array_merge($s,array('fixed_place'=>$id,'button'=>$s['review_button']??'Gửi đánh giá')));
  echo '</dialog>';

@@ -21,7 +21,7 @@
   if(selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
  });
  $$('.lk-login-open').forEach(a=>{if(config.loggedIn&&a.tagName==='A')a.href=url('listing-author/');});
- $$('a[href]').forEach(a=>{const destination=new URL(a.href,base);if(destination.origin===base.origin&&destination.pathname===new URL('profile/',base).pathname&&!destination.search){a.classList.add('lk-login-open');if(config.loggedIn)a.href=url('listing-author/');}});
+ $$('a[href]').forEach(a=>{const destination=new URL(a.href,base);if(!a.classList.contains('lk-member-saved')&&destination.origin===base.origin&&destination.pathname===new URL('profile/',base).pathname&&!destination.search){a.classList.add('lk-login-open');if(config.loggedIn)a.href=url('listing-author/');}});
  const current=places.find(p=>p.id===Number(config.page));
  document.addEventListener('keydown',e=>{const save=e.target.closest('a[data-save]');if(save&&e.key===' '){e.preventDefault();save.click();}});
  if(current&&$('.lk-detail-top h1')&&!$('.lk-heading-save')){

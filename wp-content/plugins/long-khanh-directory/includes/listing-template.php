@@ -35,7 +35,7 @@ function lk_bindings_for($type) {
   'image'=>array('featured'=>'Ảnh đại diện'),
   'video'=>array('listing-video'=>'Video giới thiệu địa điểm'),
   'image-gallery'=>array('gallery'=>'Ảnh địa điểm','view-gallery'=>'Album / menu đang xem'),
-  'icon-list'=>array('links'=>'Địa chỉ và liên kết nhanh','info'=>'Giá, giờ, điện thoại','benefits'=>'Tiện ích','directions'=>'Liên kết chỉ đường'),
+  'icon-list'=>array('links'=>'Địa chỉ và liên kết nhanh','info'=>'Giá, giờ, điện thoại','benefits'=>'Tiện ích','directions'=>'Liên kết chỉ đường','directions-address'=>'Địa chỉ và chỉ đường'),
   'google_maps'=>array('map'=>'Vị trí địa điểm'),
   'button'=>array('photos-button'=>'Xem tất cả ảnh','back-button'=>'Về địa điểm','menu-button'=>'Xem menu','directions-button'=>'Xem đường đi','save-button'=>'Lưu địa điểm'),
   'progress'=>array('criteria-position'=>'Điểm vị trí','criteria-space'=>'Điểm không gian','criteria-quality'=>'Điểm chất lượng','criteria-service'=>'Điểm phục vụ','criteria-price'=>'Điểm giá cả'),
@@ -81,7 +81,7 @@ function lk_resolve_listing_settings($type,$settings,$id) {
   if($binding==='address')$content='<p>'.esc_html($d['address']).'</p>';
   if($binding==='gallery-status'&&!lk_listing_media($id,get_query_var('lk_view','photo')))$content='<p class="lk-gallery-empty">'.(get_query_var('lk_view')==='menu'?'Menu đang được cập nhật. Bạn có thể liên hệ địa điểm để hỏi thêm.':'Hình ảnh đang được cập nhật.').'</p>';
   if($binding==='score')$content='<p class="lk-score">'.($d['rating']?esc_html($d['rating']):'0').'</p>';
-  if($binding==='rating-message')$content='<div class="lk-rating-summary"><span class="lk-score">'.esc_html($d['rating']).'</span><div><strong class="lk-rating-message">'.($d['rating']?'Đánh giá từ cộng đồng':'Chưa có đánh giá').'</strong><small>/5 ('.(int)$d['reviews'].' đánh giá)</small></div></div>';
+  if($binding==='rating-message')$content='<div class="lk-rating-summary"><span class="lk-score">'.esc_html(number_format((float)$d['rating'],1)).'</span><div><strong class="lk-rating-message">'.lk_final_rating_label($d['rating'],$d['reviews']).'</strong><small>/5 ('.(int)$d['reviews'].' đánh giá)</small></div></div>';
   $settings['editor']=$content;
  }
  if($type==='image')$settings['image']=array('id'=>get_post_thumbnail_id($id),'url'=>$d['image']);
@@ -93,7 +93,18 @@ function lk_resolve_listing_settings($type,$settings,$id) {
   $items=array();
   if($binding==='links')$items=array($item($d['address'],'','map-marker-alt',0),$item('Hiển thị bản đồ','#location','map-marked-alt',1),$item('Xem đường đi',$directions,'directions',2),$item('Xem menu',$d['url'].'menu/','utensils',3));
   if($binding==='info')$items=array($item(lk_money($d['min']).' - '.lk_money($d['max']).($d['priceStatus']&&$d['priceStatus']!=='notsay'?' · '.$d['priceLabel']:''),'','dollar-sign',0),$item(($d['opened']?'Đang mở cửa':'Đang đóng cửa').' · '.$d['hoursLabel'],'','clock',1),$item($d['phone']?:'Đang cập nhật',$d['phone']?'tel:'.$d['phone']:'','phone-alt',2));
+  if($binding==='info'){
+   $contact=get_post_meta($id,'lp_listingpro_options',true);
+   foreach(array('facebook'=>array('Facebook','facebook-f'),'website'=>array('Website','globe')) as $key=>$label){
+    $url=esc_url_raw(is_array($contact)?($contact[$key]??''):'',array('http','https'));
+    if(!$url)continue;
+    $entry=$item($label[0],$url,$label[1],count($items));
+    if($key==='facebook')$entry['selected_icon']=array('value'=>'fab fa-facebook-f','library'=>'fa-brands');
+    $entry['link']['is_external']='on';$items[]=$entry;
+   }
+  }
   if($binding==='benefits')foreach(wp_get_post_terms($id,'features') as $i=>$term){$icon=get_term_meta($term->term_id,'_lk_icon',true)?:'check';$icon=strtr($icon,array('hand-holding-box'=>'shopping-bag'));$items[]=$item($term->name,'',$icon,$i);}
+  if($binding==='directions-address')$items=array($item($d['address'],$directions,'directions',0));
   if($binding==='directions')$items=array($item('Xem đường đi',$directions,'directions',0));
   $settings['icon_list']=$items;
  }

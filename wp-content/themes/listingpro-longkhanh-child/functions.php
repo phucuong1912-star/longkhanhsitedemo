@@ -5,6 +5,7 @@ if (!defined('ABSPATH')) exit;
 add_action('after_setup_theme', function () {
  if (defined('LK_DIR')) require_once __DIR__ . '/includes/presentation.php';
  if (defined('LK_DIR')) require_once __DIR__ . '/includes/feedback2.php';
+ if (defined('LK_DIR')) require_once __DIR__ . '/includes/feedback-final.php';
 }, 20);
 
 // Keep public typography consistent across ListingPro and Elementor templates.
