@@ -43,7 +43,7 @@ Elementor lưu bố cục trong database; chỉ push file PHP/CSS không mang c�
 `wp-content/lk-layouts/manifest.json` và `wp-content/lk-layouts/assets/`.
 
 Exporter chỉ đọc các tài liệu trong allowlist `scopes.json`: header, footer,
-menu mobile, popup đăng nhập, template địa điểm/album, active kit và 12 trang
+menu mobile, popup đăng nhập, template địa điểm/album, active kit và 10 trang
 chức năng hiện có. Nó không xuất các bài blog, địa điểm hay toàn bộ database.
 
 Ngày 16/11/2026, chủ dự án xác nhận đã chủ động xóa trang Liên hệ trên prod
@@ -53,6 +53,16 @@ local theo quyết định này. Deploy không khôi phục/tạo lại trang, s
 scope. Trang Liên hệ còn lưu ở local/master (nếu có) được giữ nguyên nhưng
 không còn đồng bộ. Các trang khác vẫn phải vượt qua đầy đủ kiểm tra ánh xạ
 và xung đột; không tự bỏ scope khi gặp trang thiếu trong các lần deploy sau.
+
+Cùng ngày, chủ dự án xác nhận bỏ Tải app và yêu cầu đọc danh sách trang trong
+thùng rác prod để xác định các trang khác đã xóa. Đối chiếu đủ 15 trang trong
+thùng rác với 12 trang đang xuất bản cho thấy Tải ứng dụng (`download`) và
+Tài khoản (`profile`) đã bị xóa, không có trang cùng tên trong danh sách
+page đang xuất bản. Hai khóa này cũng được rút khỏi scope và gói local.
+Chính sách bảo mật và Thêm địa điểm trong thùng rác là các bản cũ; bản đang
+xuất bản vẫn tồn tại nên giữ nguyên scope `privacy` và `add-place`. Các trang
+demo/thanh toán/ưu đãi cũ khác trong thùng rác vốn không thuộc scope.
+Việc rút scope không đổi các liên kết/menu hoặc luồng tài khoản trên prod.
 
 Đổi slug trang không có nghĩa là bỏ trang khỏi scope. Ví dụ khóa logic
 `add-place` vẫn ánh xạ tới trang Thêm địa điểm dù permalink trên prod là

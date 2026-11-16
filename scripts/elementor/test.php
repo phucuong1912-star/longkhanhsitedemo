@@ -226,20 +226,28 @@ $tests['allowlist excludes articles, non-layout metadata and duplicate mappings'
  $duplicate_engine = new LK_Layout_Engine($store, $duplicate_policy, $directory);
  rejects(function () use ($duplicate_engine, $duplicate) { $duplicate_engine->apply(seal($duplicate)); }, 'same document');
 };
-$tests['explicitly retiring a deleted document preserves destination edits and other mapping guards'] = function () use ($policy, $package, $directory) {
- $old_policy = $policy; $old_policy['documents']['contact'] = array('type' => 'page');
- $old_package = $package; $old_package['documents']['contact'] = array('type' => 'page', 'meta' => array('_elementor_data' => array(array('text' => 'Contact'))));
- $store = new Layout_Test_Store(); $store->ids['contact'] = 4998; $store->types[4998] = 'page';
+$tests['explicitly retiring deleted documents preserves destination edits and other mapping guards'] = function () use ($policy, $package, $directory) {
+ $old_policy = $policy; $old_package = $package; $store = new Layout_Test_Store();
+ $retired = array('contact' => 4996, 'download' => 4997, 'profile' => 4998);
+ foreach ($retired as $key => $id) {
+  $old_policy['documents'][$key] = array('type' => 'page');
+  $old_package['documents'][$key] = array('type' => 'page', 'meta' => array('_elementor_data' => array(array('text' => $key))));
+  $store->ids[$key] = $id; $store->types[$id] = 'page';
+ }
  (new LK_Layout_Engine($store, $old_policy, $directory))->apply(seal($old_package));
- // The owner deleted contact and edited a shared layout on the destination.
- unset($store->ids['contact'], $store->types[4998], $store->meta[4998]);
+ // The owner deleted three pages and edited a shared layout on the destination.
+ foreach ($retired as $key => $id) unset($store->ids[$key], $store->types[$id], $store->meta[$id]);
  $store->meta[4101]['_elementor_data'] = '[{"text":"Production logo and layout edits"}]';
  $before = $store->meta; $protected = $store->protected; $writes = $store->writes;
- $old_engine = new LK_Layout_Engine($store, $old_policy, $directory);
- rejects(function () use ($old_engine, $old_package) { $old_engine->apply(seal($old_package)); }, 'unexpected layout document: contact');
+ // Retiring one page must still expose the next missing active scope.
+ foreach ($retired as $key => $id) {
+  $old_engine = new LK_Layout_Engine($store, $old_policy, $directory);
+  rejects(function () use ($old_engine, $old_package) { $old_engine->apply(seal($old_package)); }, 'unexpected layout document: ' . $key);
+  unset($old_policy['documents'][$key], $old_package['documents'][$key]);
+ }
  $engine = new LK_Layout_Engine($store, $policy, $directory);
  $plan = $engine->plan($package);
- expect(!$plan['changes'] && !isset($plan['ids']['contact']), 'Retired document is still planned or surviving metadata changed');
+ expect(!$plan['changes'] && !array_intersect_key($plan['ids'], $retired), 'Retired documents are still planned or surviving metadata changed');
  $engine->apply($package);
  expect($store->writes === $writes && $store->meta === $before && $store->protected === $protected, 'Scope retirement changed destination content');
  expect($store->data['release'] === $package['release'], 'Retired scope release was not recorded');
