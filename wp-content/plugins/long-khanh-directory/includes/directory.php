@@ -61,6 +61,7 @@ function lk_search($s=array()){
  echo '<form class="lk-search lk-search-'.esc_attr($s['mode']).'" action="'.esc_url(lk_link('search')).'" method="get" role="search"><label class="lk-sr" for="lk-query-'.esc_attr($s['mode']).'">Tìm kiếm địa điểm</label><div class="lk-search-field">'.lk_icon('search').'<input id="lk-query-'.esc_attr($s['mode']).'" name="q" type="search" autocomplete="off" placeholder="'.esc_attr($s['placeholder']).'" value="'.esc_attr($q).'"><div class="lk-suggest" hidden></div></div><button type="submit">'.lk_icon('search').' '.esc_html($s['button']).'</button></form>';
 }
 function lk_listing_grid($s){
+ if(($s['listing_selection']??'legacy')==='curated'){lk_render_curated_listings($s);return;}
  $limit=max(1,(int)($s['limit']??8));$posts=lk_posts();
  if(!empty($s['nearby'])&&lk_context_id()){
   $current=lk_place_data(lk_context_id());

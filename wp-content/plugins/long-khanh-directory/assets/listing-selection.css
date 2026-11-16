@@ -1,0 +1,3 @@
+.lk-curated-list .lk-curated-group-title{font-size:20px;margin:0 0 12px}
+.lk-curated-list--groups>.lk-curated-panel+.lk-curated-panel{margin-top:24px}
+.lk-curated-list>[role=tabpanel]:focus-visible{outline:2px solid var(--lk-accent,#52ab5c);outline-offset:4px}

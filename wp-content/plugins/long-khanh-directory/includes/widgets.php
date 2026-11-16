@@ -43,15 +43,27 @@ class LK_Widget_Listings extends LK_Widget {
  public function get_name(){return 'lk-listings';} public function get_title(){return 'Danh sách địa điểm động';}
  protected function register_controls(){
   $this->start_controls_section('content',array('label'=>'Danh sách địa điểm'));
+  $this->add_control('listing_selection',array('label'=>'Nguồn danh sách','type'=>'select','label_block'=>true,'options'=>array('legacy'=>'Tự động (cấu hình cũ)','curated'=>'Chọn theo từng danh mục'),'default'=>'legacy','description'=>'Chế độ mới chỉ áp dụng khi bạn chủ động chọn; không thay đổi cấu hình đã lưu.'));
   $this->add_control('limit',array('label'=>'Số địa điểm','type'=>'number','default'=>8,'min'=>1,'max'=>50));
   $this->add_control('columns',array('label'=>'Số cột desktop','type'=>'select','options'=>array(2=>'2',3=>'3',4=>'4'),'default'=>4));
-  $this->add_control('category',array('label'=>'Slug danh mục (để trống = tất cả)','type'=>'text'));
-  $this->add_control('nearby',array('label'=>'Địa điểm lân cận bài đang xem','type'=>'switcher','return_value'=>'yes','default'=>''));
+  $this->add_control('category',array('label'=>'Slug danh mục (để trống = tất cả)','type'=>'text','condition'=>array('listing_selection'=>'legacy')));
+  $this->add_control('nearby',array('label'=>'Địa điểm lân cận bài đang xem','type'=>'switcher','return_value'=>'yes','default'=>'','condition'=>array('listing_selection'=>'legacy')));
   $this->add_control('tabs',array('label'=>'Hiện tab danh mục','type'=>'switcher','return_value'=>'yes','default'=>'yes'));
   $this->add_control('more',array('label'=>'Chữ liên kết xem thêm','type'=>'text','default'=>'Xem thêm'));
+
+  $categories=array(''=>'Chọn danh mục');foreach(lk_directory_terms('listing-category') as $term)$categories[$term->slug]=$term->name;
+  $choices=array();foreach(lk_posts() as $post)$choices[$post->post_name]=lk_listing_picker_title($post);
+  $row=new \Elementor\Repeater();
+  $row->add_control('tab_title',array('label'=>'Tên tab (có thể để trống)','type'=>'text'));
+  $row->add_control('tab_category',array('label'=>'Danh mục','type'=>'select2','options'=>$categories,'label_block'=>true));
+  $row->add_control('selection_mode',array('label'=>'Địa điểm hiển thị','type'=>'select','options'=>array('auto'=>'Tự động trong danh mục','manual'=>'Chọn thủ công'),'default'=>'auto'));
+  $row->add_control('listing_slugs',array('label'=>'Chọn địa điểm trong danh mục','type'=>'select2','multiple'=>true,'options'=>$choices,'label_block'=>true,'condition'=>array('selection_mode'=>'manual'),'description'=>'Chọn danh mục trước. Địa điểm hiển thị theo thứ tự chọn; bỏ chọn rồi chọn lại để đưa xuống cuối.'));
+  $this->add_control('category_groups',array('label'=>'Danh mục và địa điểm','type'=>'repeater','fields'=>$row->get_controls(),'default'=>array(),'title_field'=>'{{{ tab_title || tab_category || "Chọn danh mục" }}}','condition'=>array('listing_selection'=>'curated'),'description'=>'Thêm và kéo thả để đổi thứ tự danh mục. Danh mục/bài đã xóa, chưa xuất bản hoặc không còn thuộc danh mục sẽ không được hiển thị.'));
   $this->end_controls_section();$this->appearance();
  }
- protected function render(){lk_listing_grid($this->get_settings_for_display());}
+ public function get_script_depends(){return array('lk-listing-selection');}
+ public function get_style_depends(){return array_merge(parent::get_style_depends(),array('lk-listing-selection'));}
+ protected function render(){$settings=$this->get_settings_for_display();$settings['lk_widget_id']=$this->get_id();lk_listing_grid($settings);}
 }
 class LK_Widget_Results extends LK_Widget {
  public function get_name(){return 'lk-results';} public function get_title(){return 'Kết quả và bộ lọc địa điểm';}
