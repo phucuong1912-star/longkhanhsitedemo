@@ -53,3 +53,22 @@ body.lk-site .lk-menu-signout{display:block;text-align:center;width:100%;margin-
  body.lk-site .lk-detail-info .lk-map-column{padding:0}
  body.lk-site .lk-map-column>.elementor-widget-wrap{padding:0}
 }
+
+/* Search cards keep a fixed thumbnail ratio even when names or addresses wrap. */
+@media(max-width:991px){
+ body.lk-site .lk-results .lk-place--list{--lk-result-photo:clamp(96px,28vw,112px);display:grid;grid-template-columns:var(--lk-result-photo) minmax(0,1fr);align-items:center;gap:8px;padding:0;min-height:0}
+ body.lk-site .lk-results .lk-place--list .lk-price-level{display:none}
+ body.lk-site .lk-results .lk-place--list .lk-place-photo{display:block;align-self:start;width:100%;height:auto;aspect-ratio:4/5;min-height:0;overflow:hidden;border-radius:8px;flex:none}
+ body.lk-site .lk-results .lk-place--list .lk-place-photo img{display:block;width:100%;height:100%;min-height:0;max-height:none;object-fit:cover;object-position:center}
+ body.lk-site .lk-results .lk-place--list .lk-place-copy{display:flex;flex-direction:column;gap:3px;min-width:0;padding:6px 8px 6px 0}
+ body.lk-site .lk-results .lk-place--list .lk-place-copy h3{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere;font-size:14px;line-height:1.3;font-weight:700;margin:0;padding:0}
+ body.lk-site .lk-results .lk-place--list .lk-list-rating{display:flex;align-items:center;flex-wrap:wrap;gap:2px 5px;font-size:11px;line-height:16px;margin:0}
+ body.lk-site .lk-results .lk-place--list .lk-stars{font-size:13px;line-height:16px;white-space:nowrap}
+ body.lk-site .lk-results .lk-place--list .lk-star-track{letter-spacing:.5px}
+ body.lk-site .lk-results .lk-place--list .lk-place-copy p{font-size:12px;line-height:1.4;margin:0}
+ body.lk-site .lk-results .lk-place--list .lk-price{white-space:normal;overflow-wrap:anywhere}
+ body.lk-site .lk-results .lk-place--list .lk-address{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere}
+ body.lk-site .lk-results .lk-place--list .lk-place-meta{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 3px;font-size:11px;line-height:16px;margin:0}
+ body.lk-site .lk-results .lk-place--list .lk-region{display:none}
+ body.lk-site .lk-results .lk-place--list :is(.lk-status,.lk-hours,.lk-distance){font-size:11px;line-height:16px}
+}
