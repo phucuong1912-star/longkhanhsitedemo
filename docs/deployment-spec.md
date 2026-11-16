@@ -54,6 +54,13 @@ scope. Trang Liên hệ còn lưu ở local/master (nếu có) được giữ ng
 không còn đồng bộ. Các trang khác vẫn phải vượt qua đầy đủ kiểm tra ánh xạ
 và xung đột; không tự bỏ scope khi gặp trang thiếu trong các lần deploy sau.
 
+Đổi slug trang không có nghĩa là bỏ trang khỏi scope. Ví dụ khóa logic
+`add-place` vẫn ánh xạ tới trang Thêm địa điểm dù permalink trên prod là
+`/them-dia-diem/`. Chuyển hướng sau gửi form và nút đóng góp trong tài khoản
+lấy permalink từ `lk_page_map` của môi trường đích, không ép slug local lên
+prod và không cập nhật option/slug khi deploy. Kiểm thử luồng này ở local:
+`php scripts/test-form-redirects.php` (các lần ghi thử được rollback).
+
 Các trường được đồng bộ giới hạn ở `_elementor_data`,
 `_elementor_page_settings`, `_elementor_edit_mode`, `_wp_page_template` và
 `_elementor_template_type`. Việc bỏ một trường trong local cũng được đồng bộ

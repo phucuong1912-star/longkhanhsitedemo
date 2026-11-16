@@ -25,7 +25,7 @@ function lk_input($name,$label,$type='text',$required=false,$placeholder='',$pre
 }
 function lk_account($mode='page',$s=array()){
  if(is_user_logged_in()&&$mode!=='login'){
-  $u=wp_get_current_user();echo '<h2>'.esc_html($s['title']??'Tài khoản của bạn').'</h2><p>Xin chào, <strong>'.esc_html($u->display_name).'</strong>.</p><p><a href="'.esc_url(lk_link('add-place')).'" class="lk-button">Đóng góp địa điểm</a> <a href="'.esc_url(wp_logout_url(lk_link('profile'))).'">Đăng xuất</a></p><h3>Địa điểm đã lưu</h3><div class="lk-saved-places" id="saved-places"></div>';return;
+  $u=wp_get_current_user();echo '<h2>'.esc_html($s['title']??'Tài khoản của bạn').'</h2><p>Xin chào, <strong>'.esc_html($u->display_name).'</strong>.</p><p><a href="'.esc_url(lk_form_page_url('add-place')).'" class="lk-button">Đóng góp địa điểm</a> <a href="'.esc_url(wp_logout_url(lk_link('profile'))).'">Đăng xuất</a></p><h3>Địa điểm đã lưu</h3><div class="lk-saved-places" id="saved-places"></div>';return;
  }
  $register=$mode==='page'&&isset($_GET['register']);
  echo '<h2 class="lk-login-heading" id="'.($mode==='login'?'lk-login-title':'lk-account-title').'">'.esc_html($register?'Tạo tài khoản':($s['login_title']??'Đăng nhập tài khoản')).'</h2>';
@@ -42,7 +42,15 @@ function lk_account($mode='page',$s=array()){
 }
 function lk_post_value($name){return isset($_POST[$name])?sanitize_text_field(wp_unslash($_POST[$name])):'';}
 function lk_require_nonce($action){if(empty($_POST['lk_nonce'])||!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['lk_nonce'])),$action))wp_die('Phiên làm việc đã hết hạn. Vui lòng tải lại trang và thử lại.','Không thể gửi',array('response'=>403));}
-function lk_redirect_form($slug,$args){wp_safe_redirect(add_query_arg($args,lk_link($slug)));exit;}
+function lk_form_page_url($slug){
+ // Page keys identify a function; their public slugs can differ per environment.
+ $pages=get_option('lk_page_map',array());$id=is_array($pages)?absint($pages[$slug]??0):0;
+ if($id&&get_post_type($id)==='page'&&get_post_status($id)==='publish'){
+  $url=get_permalink($id);if($url)return $url;
+ }
+ return lk_link($slug);
+}
+function lk_redirect_form($slug,$args){wp_safe_redirect(add_query_arg($args,lk_form_page_url($slug)));exit;}
 function lk_handle_contact(){
  lk_require_nonce('lk_contact');$name=lk_post_value('name');$email=sanitize_email(lk_post_value('email'));$message=isset($_POST['message'])?sanitize_textarea_field(wp_unslash($_POST['message'])):'';
  if(!$name||!is_email($email)||!$message||lk_post_value('company_url'))lk_redirect_form('contact',array('lk_error'=>'invalid'));
