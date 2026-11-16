@@ -71,6 +71,17 @@ lấy permalink từ `lk_page_map` của môi trường đích, không ép slug 
 prod và không cập nhật option/slug khi deploy. Kiểm thử luồng này ở local:
 `php scripts/test-form-redirects.php` (các lần ghi thử được rollback).
 
+Thẻ khu vực (`lk-region-card`) lấy bộ lọc từ liên kết tìm kiếm ở tiêu đề để
+đếm bằng cùng hàm lọc với trang kết quả, kể cả khi giá trị `lk_region` cũ chưa
+được đổi. Việc ghép nguồn số đếm chỉ diễn ra trên bản dữ liệu dùng để render;
+không ghi lại `_elementor_data`, slug, tên, ảnh hoặc liên kết đã sửa trên đích.
+Trang có thẻ khu vực bỏ cache HTML document của Elementor trong lúc render
+để không tái dùng cấu hình đếm cũ. Các document khác giữ chính sách cache cũ.
+Link phủ thẻ được thêm ở frontend, theo đúng link/target/rel của tiêu đề;
+giữ link tiêu đề cho bàn phím và không phủ vùng chọn trong trình sửa Elementor.
+Kiểm thử local: `php scripts/test-region-cards.php`; thêm `--fixture` để xuất
+bộ 8 thẻ thử vào `.codex-tools/region-cards-fixture.json` cho kiểm tra browser.
+
 Các trường được đồng bộ giới hạn ở `_elementor_data`,
 `_elementor_page_settings`, `_elementor_edit_mode`, `_wp_page_template` và
 `_elementor_template_type`. Việc bỏ một trường trong local cũng được đồng bộ

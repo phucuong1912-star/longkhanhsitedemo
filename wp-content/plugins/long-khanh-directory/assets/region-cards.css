@@ -1,0 +1,3 @@
+body.lk-site .lk-region-card>.lk-region-card-link{position:absolute;inset:0;z-index:3;border-radius:inherit;display:block;cursor:pointer}
+body.lk-site .lk-region-card:focus-within{outline:3px solid var(--lk-dark,#357c3d);outline-offset:3px}
+body.elementor-editor-active .lk-region-card>.lk-region-card-link{display:none}

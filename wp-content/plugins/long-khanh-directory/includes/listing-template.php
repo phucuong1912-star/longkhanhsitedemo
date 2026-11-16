@@ -49,7 +49,7 @@ add_action('elementor/element/after_section_end',function($element,$section){
  $element->start_controls_section('lk_binding_section',array('label'=>'Dữ liệu địa điểm Tiền Hải','tab'=>\Elementor\Controls_Manager::TAB_CONTENT));
  $element->add_control('lk_binding',array('label'=>'Nguồn nội dung','type'=>\Elementor\Controls_Manager::SELECT,'options'=>lk_bindings_for($type),'default'=>'','description'=>'Trong template chung, nội dung tự lấy từ bài địa điểm đang xem. Kiểu chữ, màu và bố cục vẫn sửa bằng Elementor.'));
  if($type==='heading')$element->add_control('lk_typewriter_lines',array('label'=>'Câu chuyển động (mỗi dòng một câu)','type'=>\Elementor\Controls_Manager::TEXTAREA,'description'=>'Để trống để dùng tiêu đề tĩnh. Câu đầu lấy từ ô Tiêu đề; các dòng dưới là câu tiếp theo.'));
- if($type==='text-editor'){$regions=array();$terms=lk_directory_terms('location');if(!is_wp_error($terms))foreach($terms as $term)$regions[$term->slug]=$term->name;$element->add_control('lk_region',array('label'=>'Khu vực cần đếm','type'=>\Elementor\Controls_Manager::SELECT,'options'=>$regions,'condition'=>array('lk_binding'=>'region-count')));}
+ if($type==='text-editor'){$regions=array();$terms=lk_directory_terms('location');if(!is_wp_error($terms))foreach($terms as $term)$regions[$term->slug]=$term->name;$element->add_control('lk_region',array('label'=>'Khu vực cần đếm','type'=>\Elementor\Controls_Manager::SELECT,'options'=>$regions,'condition'=>array('lk_binding'=>'region-count'),'description'=>'Trong thẻ khu vực, số đếm tự theo liên kết ở tiêu đề. Lựa chọn này dùng cho ô đếm đứng riêng.'));}
  $element->end_controls_section();
 },10,2);
 // Bound native widgets must be rendered for each listing, never cached as one
@@ -68,7 +68,11 @@ add_filter('option_elementor_element_cache_ttl','lk_listing_cache_ttl');
 add_filter('default_option_elementor_element_cache_ttl','lk_listing_cache_ttl');
 function lk_resolve_listing_settings($type,$settings,$id) {
  $binding=$settings['lk_binding']??'';
- if($type==='text-editor'&&$binding==='region-count'){$region=$settings['lk_region']??'';$count=count(array_filter(lk_directory_index(),function($place)use($region){return $place['regionSlug']===$region;}));$settings['editor']='<p>'.$count.' địa điểm</p>';return $settings;}
+ if($type==='text-editor'&&$binding==='region-count'){
+  if(isset($settings['_lk_region_link_query']))$count=lk_region_card_count($settings['_lk_region_link_query']);
+  else{$region=$settings['lk_region']??'';$count=count(array_filter(lk_directory_index(),function($place)use($region){return $place['regionSlug']===$region;}));}
+  $settings['editor']='<p>'.$count.' địa điểm</p>';return $settings;
+ }
  if(!$binding||!$id)return $settings;
  $d=lk_place_data($id);
  $item=function($text,$url,$icon,$i){return array('_id'=>'lk-field-'.$i,'text'=>$text,'link'=>array('url'=>$url),'selected_icon'=>array('value'=>'fas fa-'.$icon,'library'=>'fa-solid'));};

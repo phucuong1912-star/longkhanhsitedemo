@@ -16,6 +16,7 @@ require_once LK_DIR . 'includes/review-composer.php';
 require_once LK_DIR . 'includes/forms.php';
 require_once LK_DIR . 'includes/community.php';
 require_once LK_DIR . 'includes/listing-template.php';
+require_once LK_DIR . 'includes/region-cards.php';
 require_once LK_DIR . 'includes/admin-listing.php';
 require_once LK_DIR . 'includes/blog.php';
 
