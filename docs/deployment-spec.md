@@ -43,8 +43,16 @@ Elementor lưu bố cục trong database; chỉ push file PHP/CSS không mang c�
 `wp-content/lk-layouts/manifest.json` và `wp-content/lk-layouts/assets/`.
 
 Exporter chỉ đọc các tài liệu trong allowlist `scopes.json`: header, footer,
-menu mobile, popup đăng nhập, template địa điểm/album, active kit và 13 trang
+menu mobile, popup đăng nhập, template địa điểm/album, active kit và 12 trang
 chức năng hiện có. Nó không xuất các bài blog, địa điểm hay toàn bộ database.
+
+Ngày 16/11/2026, chủ dự án xác nhận đã chủ động xóa trang Liên hệ trên prod
+và không dùng nữa. Khóa `contact` được rút khỏi `scopes.json` và gói xuất ở
+local theo quyết định này. Deploy không khôi phục/tạo lại trang, sửa ánh xạ
+`lk_page_map`, xóa metadata cũ hay thay đổi các layout còn lại vì việc rút
+scope. Trang Liên hệ còn lưu ở local/master (nếu có) được giữ nguyên nhưng
+không còn đồng bộ. Các trang khác vẫn phải vượt qua đầy đủ kiểm tra ánh xạ
+và xung đột; không tự bỏ scope khi gặp trang thiếu trong các lần deploy sau.
 
 Các trường được đồng bộ giới hạn ở `_elementor_data`,
 `_elementor_page_settings`, `_elementor_edit_mode`, `_wp_page_template` và

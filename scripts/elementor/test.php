@@ -226,6 +226,28 @@ $tests['allowlist excludes articles, non-layout metadata and duplicate mappings'
  $duplicate_engine = new LK_Layout_Engine($store, $duplicate_policy, $directory);
  rejects(function () use ($duplicate_engine, $duplicate) { $duplicate_engine->apply(seal($duplicate)); }, 'same document');
 };
+$tests['explicitly retiring a deleted document preserves destination edits and other mapping guards'] = function () use ($policy, $package, $directory) {
+ $old_policy = $policy; $old_policy['documents']['contact'] = array('type' => 'page');
+ $old_package = $package; $old_package['documents']['contact'] = array('type' => 'page', 'meta' => array('_elementor_data' => array(array('text' => 'Contact'))));
+ $store = new Layout_Test_Store(); $store->ids['contact'] = 4998; $store->types[4998] = 'page';
+ (new LK_Layout_Engine($store, $old_policy, $directory))->apply(seal($old_package));
+ // The owner deleted contact and edited a shared layout on the destination.
+ unset($store->ids['contact'], $store->types[4998], $store->meta[4998]);
+ $store->meta[4101]['_elementor_data'] = '[{"text":"Production logo and layout edits"}]';
+ $before = $store->meta; $protected = $store->protected; $writes = $store->writes;
+ $old_engine = new LK_Layout_Engine($store, $old_policy, $directory);
+ rejects(function () use ($old_engine, $old_package) { $old_engine->apply(seal($old_package)); }, 'unexpected layout document: contact');
+ $engine = new LK_Layout_Engine($store, $policy, $directory);
+ $plan = $engine->plan($package);
+ expect(!$plan['changes'] && !isset($plan['ids']['contact']), 'Retired document is still planned or surviving metadata changed');
+ $engine->apply($package);
+ expect($store->writes === $writes && $store->meta === $before && $store->protected === $protected, 'Scope retirement changed destination content');
+ expect($store->data['release'] === $package['release'], 'Retired scope release was not recorded');
+ $engine->refresh($package);
+ unset($store->ids['blog']);
+ rejects(function () use ($engine, $package) { $engine->plan($package); }, 'unexpected layout document: blog');
+ expect($store->writes === $writes && $store->meta === $before, 'Missing active scope wrote metadata');
+};
 $tests['destination document replacement cannot reuse a previous baseline'] = function () use ($new, $package) {
  list($store, $engine) = $new(); $engine->apply($package); $store->ids['blog'] = 4999; $store->types[4999] = 'page';
  $next = $package; $next['documents']['blog']['meta']['_elementor_edit_mode'] = 'new';

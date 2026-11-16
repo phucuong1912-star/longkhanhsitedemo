@@ -16,7 +16,6 @@
     "explore": {"option": "lk_page_map", "key": "explore", "type": "page", "managed": true},
     "promo": {"option": "lk_page_map", "key": "promo", "type": "page", "managed": true},
     "profile": {"option": "lk_page_map", "key": "profile", "type": "page", "managed": true},
-    "contact": {"option": "lk_page_map", "key": "contact", "type": "page", "managed": true},
     "add-place": {"option": "lk_page_map", "key": "add-place", "type": "page", "managed": true},
     "about": {"option": "lk_page_map", "key": "about", "type": "page", "managed": true},
     "privacy": {"option": "lk_page_map", "key": "privacy", "type": "page", "managed": true},
