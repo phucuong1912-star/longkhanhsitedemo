@@ -10,6 +10,7 @@ define('LK_URL', plugin_dir_url(__FILE__));
 require_once LK_DIR . 'includes/listing-fields.php';
 require_once LK_DIR . 'includes/location-picker.php';
 require_once LK_DIR . 'includes/directory.php';
+require_once LK_DIR . 'includes/saved-places.php';
 require_once LK_DIR . 'includes/listing-selection.php';
 require_once LK_DIR . 'includes/search-results.php';
 require_once LK_DIR . 'includes/social-login.php';

@@ -90,3 +90,5 @@ body.lk-site .lk-social-oauth>.nsl-container{flex:1 1 132px;min-width:0;padding:
 body.lk-site .lk-social-oauth .nsl-container-buttons{width:100%;padding:0!important;display:block!important}
 body.lk-site .lk-social-oauth .nsl-container-buttons>a{margin:0!important;max-width:none!important;display:block}
 body.lk-site .lk-social-oauth>button:disabled{opacity:.55;cursor:not-allowed}
+body.lk-site [data-save][aria-disabled="true"]{opacity:.6;cursor:wait}
+body.lk-site .lk-saved-dialog [data-saved-import] button{max-width:100%;white-space:normal;border:1px solid #357c3d;border-radius:6px;background:#fff;color:#357c3d;padding:8px 12px}

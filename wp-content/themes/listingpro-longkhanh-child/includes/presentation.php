@@ -56,7 +56,7 @@ add_action('wp_enqueue_scripts', function() {
  wp_enqueue_script('lk-listing-fields',LK_URL.'assets/listing-fields.js',array(),(string)filemtime(LK_DIR.'assets/listing-fields.js'),true);
  wp_enqueue_style('lk-elementor-controls',LK_URL.'assets/elementor-controls.css',array('lk-feedback','lk-listing-fields'),(string)filemtime(LK_DIR.'assets/elementor-controls.css'));
  $places=lk_directory_index();
- wp_add_inline_script('lk-site', 'window.LK_SITE=' . wp_json_encode(array('base'=>home_url('/'),'search'=>lk_link('search'),'profile'=>lk_link('profile'),'places'=>$places,'page'=>get_queried_object_id(),'loggedIn'=>is_user_logged_in()),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) . ';','before');
+ wp_add_inline_script('lk-site', 'window.LK_SITE=' . wp_json_encode(array('base'=>home_url('/'),'search'=>lk_link('search'),'profile'=>lk_link('profile'),'places'=>$places,'page'=>get_queried_object_id(),'loggedIn'=>is_user_logged_in(),'saved'=>lk_saved_client_config()),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) . ';','before');
 });
 
 function lk_template($key) {
@@ -77,7 +77,7 @@ add_action('elementor/page_templates/canvas/after_content', function() {
  lk_template('menu');
  if(!is_user_logged_in())echo '<a class="lk-saved-open lk-menu-saved-link" href="'.esc_url(add_query_arg('lk_saved',1,home_url('/'))).'">'.lk_icon('bookmark').' Địa điểm đã lưu</a>';
  echo '</dialog>';
- echo '<dialog id="lk-saved-dialog" class="lk-saved-dialog" aria-labelledby="lk-saved-title"><button class="lk-close" data-close aria-label="Đóng danh sách đã lưu">&times;</button><h2 id="lk-saved-title">Địa điểm đã lưu</h2><p>Danh sách lưu trên trình duyệt này.</p><div class="lk-saved-places"></div></dialog>';
+ echo '<dialog id="lk-saved-dialog" class="lk-saved-dialog" aria-labelledby="lk-saved-title"><button class="lk-close" data-close aria-label="Đóng danh sách đã lưu">&times;</button><h2 id="lk-saved-title">Địa điểm đã lưu</h2><p data-saved-description>Danh sách lưu trên trình duyệt này.</p><p data-saved-account-link hidden></p><p data-saved-import hidden></p><p data-saved-error role="alert" hidden></p><div class="lk-saved-places"></div></dialog>';
  echo '<dialog id="lk-login" class="lk-login" aria-labelledby="lk-login-title"><button class="lk-close" data-close aria-label="Đóng đăng nhập">&times;</button><div class="lk-login-body">';
  if(get_option('lk_template_login'))lk_template('login');else lk_account('login');
  echo '</div><div class="lk-login-art"><img src="'.esc_url(lk_asset('login-illustration')).'" alt="Khám phá địa điểm Tiền Hải"><h2>Địa Điểm Tiền Hải</h2></div></dialog>';

@@ -12,6 +12,42 @@
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const read = key => { try { return JSON.parse(localStorage.getItem(key) || '[]'); } catch { return []; } };
   const write = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} };
+  const browserSaved = () => {const ids=read('lk-saved');return Array.isArray(ids)?[...new Set(ids.map(Number).filter(id=>Number.isSafeInteger(id)&&id>0))]:[];};
+  let accountSaved=[],savedReady=!config.loggedIn,savedPending=false,savedError='';
+  const savedIds = () => config.loggedIn ? accountSaved : browserSaved();
+  async function savedRequest(operation,ids=[]) {
+    if(!config.saved?.url||!config.saved?.nonce)throw new Error('Chưa kết nối được danh sách tài khoản. Vui lòng tải lại trang.');
+    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
+    try{
+      const response=await fetch(config.saved.url,{method:'POST',credentials:'same-origin',signal:controller.signal,body:new URLSearchParams({action:'lk_saved_places',nonce:config.saved.nonce,operation,ids:JSON.stringify(ids)})});
+      const result=await response.json();
+      if(!response.ok||!result.success||!Array.isArray(result.data?.ids))throw new Error(result.data?.message||'Chưa cập nhật được danh sách. Vui lòng thử lại.');
+      return result.data;
+    }finally{clearTimeout(timer);}
+  }
+  function applyAccountSaved(data){
+    accountSaved=data.ids.map(Number);savedReady=true;savedError='';
+    (data.places||[]).forEach(place=>{if(!places.some(p=>p.id===place.id))places.push(place);});
+  }
+  async function refreshAccountSaved(){
+    if(!config.loggedIn||savedPending)return;
+    savedPending=true;savedState();
+    try{applyAccountSaved(await savedRequest('list'));}
+    catch(error){savedReady=false;accountSaved=[];savedError=error.message;toast('Chưa tải được danh sách tài khoản. Vui lòng tải lại trang.');}
+    finally{savedPending=false;savedState();}
+  }
+  async function changeAccountSaved(operation,ids){
+    if(!savedReady||savedPending)return;
+    savedPending=true;savedState();
+    try{
+      applyAccountSaved(await savedRequest(operation,ids));
+      if(operation==='import')write('lk-saved',browserSaved().filter(id=>!ids.includes(id)||!accountSaved.includes(id)));
+      // Notify other tabs without putting account IDs into shared browser storage.
+      try{localStorage.setItem('lk-saved-account-change',String(Date.now()));}catch{}
+      toast(operation==='remove'?'Đã bỏ lưu địa điểm':operation==='import'?'Đã chuyển địa điểm vào tài khoản':'Đã lưu địa điểm');
+    }catch(error){savedReady=false;accountSaved=[];savedError=error.message;toast('Chưa xác nhận được thay đổi. Vui lòng mở lại danh sách hoặc tải lại trang.');}
+    finally{savedPending=false;savedState();}
+  }
   const normalize = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/\b(coffee|cafe)\b/g,'ca phe');
   const money = n => new Intl.NumberFormat('vi-VN').format(n) + 'đ';
   let lastFocus,restoringFocus=false;
@@ -39,17 +75,22 @@
     clearTimeout(el.lkTimer); el.lkTimer = setTimeout(() => el.classList.remove('is-visible'), 2800);
   }
   function savedState() {
-    const saved = read('lk-saved');
+    const saved = savedIds();
     $$('[data-save]').forEach(b => {
       const active = saved.includes(Number(b.dataset.save)),place=places.find(p=>p.id===Number(b.dataset.save));
       b.setAttribute('aria-pressed', String(active));
+      const disabled=config.loggedIn&&(!savedReady||savedPending);b.setAttribute('aria-disabled',String(disabled));b.setAttribute('aria-busy',String(savedPending));if(b.tagName==='BUTTON')b.disabled=disabled;
       b.setAttribute('aria-label',(active?'Bỏ lưu ':'Lưu ')+(place?.title||'địa điểm'));b.title=active?'Đã lưu — bấm để bỏ lưu':'Lưu địa điểm';
       b.querySelectorAll('i.fa-bookmark').forEach(icon=>{icon.classList.toggle('fas',active);icon.classList.toggle('far',!active);});
     });
     $$('.lk-saved-places').forEach(el => {
       const list = places.filter(p => saved.includes(p.id));
-      el.innerHTML = list.length ? list.map(p => `<div class="lk-saved-row">${suggestion(p)}<button type="button" data-save="${p.id}" aria-pressed="true" aria-label="Bỏ lưu ${escape(p.title)}">Bỏ lưu</button></div>`).join('') : '<p>Chưa có địa điểm đã lưu. Bấm biểu tượng đánh dấu ở địa điểm để lưu vào danh sách của bạn.</p>';
+      el.innerHTML = config.loggedIn&&!savedReady?`<p>${savedError?'Chưa tải được danh sách tài khoản. Vui lòng mở lại hoặc tải lại trang.':'Đang tải danh sách tài khoản…'}</p>`:list.length ? list.map(p => `<div class="lk-saved-row">${suggestion(p)}<button type="button" data-save="${p.id}" aria-pressed="true" ${savedPending?'disabled':''} aria-label="Bỏ lưu ${escape(p.title)}">Bỏ lưu</button></div>`).join('') : '<p>Chưa có địa điểm đã lưu. Bấm biểu tượng đánh dấu ở địa điểm để lưu vào danh sách của bạn.</p>';
     });
+    const description=$('[data-saved-description]');if(description)description.textContent=config.loggedIn?'Danh sách lưu trong tài khoản, dùng chung với mục Đã lưu ở bảng điều khiển.':'Danh sách lưu trên trình duyệt này.';
+    const error=$('[data-saved-error]');if(error){error.hidden=!savedError;error.textContent=savedError;}
+    const dashboard=$('[data-saved-account-link]');if(dashboard){dashboard.hidden=!config.loggedIn||!config.saved?.dashboard;dashboard.replaceChildren();if(!dashboard.hidden){const link=document.createElement('a');link.href=config.saved.dashboard;link.textContent='Xem trong bảng điều khiển';dashboard.append(link);}}
+    const importer=$('[data-saved-import]');if(importer){const candidates=browserSaved().filter(id=>!saved.includes(id)&&places.some(p=>p.id===id));importer.hidden=!config.loggedIn||!savedReady||!candidates.length;importer.replaceChildren();if(!importer.hidden){const button=document.createElement('button');button.type='button';button.dataset.savedImport='';button.disabled=savedPending;button.textContent=`Chuyển ${candidates.length} địa điểm từ trình duyệt vào tài khoản`;importer.append(button,document.createTextNode(' Chỉ chuyển nếu đây là danh sách của bạn.'));}}
   }
   function suggestion(p) { return `<a class="lk-suggestion" href="${escape(p.url)}"><img src="${escape(p.image)}" alt=""><span><strong>${escape(p.title)}</strong><small>${escape(p.address)}</small></span></a>`; }
   function suggestions(input) {
@@ -111,7 +152,8 @@
     if (selected && hasCoordinates(selected)) $('#lk-map iframe').src = `https://maps.google.com/maps?q=${selected.lat},${selected.lng}&z=14&output=embed`;
   }
   document.addEventListener('click', e => {
-    if(e.target.closest('.lk-saved-open')){e.preventDefault();savedState();openDialog('#lk-saved-dialog');return;}
+    if(e.target.closest('.lk-saved-open')){e.preventDefault();savedState();openDialog('#lk-saved-dialog');refreshAccountSaved();return;}
+    if(e.target.closest('[data-saved-import]')){e.preventDefault();const ids=browserSaved().filter(id=>!accountSaved.includes(id)&&places.some(p=>p.id===id));changeAccountSaved('import',ids);return;}
     if (e.target.closest('[data-close]')) { e.preventDefault(); closeDialog(e.target.closest('dialog')); }
     if (e.target.closest('.lk-open-menu')) { e.preventDefault(); openDialog('#lk-menu'); }
     if (e.target.closest('.lk-review-open, .lk-review-cta a, a[href="#lk-review-form"]') && $('#lk-review-dialog')) { e.preventDefault(); openDialog('#lk-review-dialog'); }
@@ -121,7 +163,7 @@
     if (e.target.closest('.lk-dismiss-app')) { e.preventDefault(); const banner = $('.lk-app-bar'); if (banner) banner.hidden = true; sessionStorage.setItem('lk-app-dismissed','1'); }
     const save = e.target.closest('[data-save]');
     const removeRecent=e.target.closest('[data-recent-remove]');if(removeRecent){e.preventDefault();write('lk-recent',read('lk-recent').filter(id=>id!==Number(removeRecent.dataset.recentRemove)));suggestions($('#lk-search-modal input'));$('#lk-search-modal input').focus();}
-    if (save) { e.preventDefault(); const id = Number(save.dataset.save), saved = read('lk-saved'); const next = saved.includes(id) ? saved.filter(v => v !== id) : [...saved,id]; write('lk-saved',next); savedState(); toast(next.includes(id) ? 'Đã lưu địa điểm' : 'Đã bỏ lưu địa điểm'); }
+    if (save) { e.preventDefault(); const id = Number(save.dataset.save), saved = savedIds();if(config.loggedIn){changeAccountSaved(saved.includes(id)?'remove':'save',[id]);return;} const next = saved.includes(id) ? saved.filter(v => v !== id) : [...saved,id]; write('lk-saved',next); savedState(); toast(next.includes(id) ? 'Đã lưu địa điểm' : 'Đã bỏ lưu địa điểm'); }
     const tab = e.target.closest('[data-category]');
     if (tab) { const wrapper = tab.closest('.elementor-widget-container') || tab.parentElement.parentElement; const grid = $('.lk-place-grid', wrapper); const list = places.filter(p => !tab.dataset.category || p.category === tab.dataset.category || (p.categories || []).includes(tab.dataset.category)).slice(0, Number(grid.dataset.limit) || 8); grid.innerHTML = list.length ? list.map(card).join('') : '<p class="lk-empty">Chưa có địa điểm trong danh mục này.</p>'; $$('[role="tab"]',wrapper).forEach(b => b.setAttribute('aria-selected',String(b===tab))); savedState(); }
     if (e.target.closest('.lk-filter-open')) { const wrap = $('.lk-filter-wrap'); wrap.classList.add('is-open'); document.documentElement.classList.add('lk-filter-opened'); $('.lk-filter-close').focus(); }
@@ -155,6 +197,8 @@
   const path=new URL(location.href).pathname.replace(/\/$/,'');$$('.lk-header-nav a,.lk-bottom-nav a,.lk-drawer a').forEach(a=>{if(new URL(a.href,location.href).pathname.replace(/\/$/,'')===path)a.setAttribute('aria-current','page');});
   try {if(sessionStorage.getItem('lk-app-dismissed')==='1'&&$('.lk-app-bar'))$('.lk-app-bar').hidden=true;}catch{}
   savedState();
-  window.addEventListener('storage',event=>{if(event.key==='lk-saved')savedState();});
+  window.addEventListener('storage',event=>{if(event.key==='lk-saved')savedState();if(event.key==='lk-saved-account-change')refreshAccountSaved();});
+  window.addEventListener('focus',()=>refreshAccountSaved());
+  refreshAccountSaved();
   if(new URL(location.href).searchParams.get('lk_saved')==='1')openDialog('#lk-saved-dialog');
 })();

@@ -94,19 +94,31 @@ Frontend giữ nguyên href của Elementor khi đã đăng nhập, không ép v
 popup và trả focus về nút mở menu sau khi đóng popup. Với button có class
 `lk-menu-account`, mục Elementor “Liên kết tài khoản trong menu” cung cấp hai
 URL “Chỉnh sửa hồ sơ” và “Danh sách đã lưu”. Nếu để trống, hồ sơ lấy link chính
-của button làm gốc; danh sách đã lưu mở cửa sổ lưu trên trình duyệt. Các URL
+của button làm gốc; danh sách đã lưu mở cửa sổ danh sách đã lưu. Các URL
 tùy chỉnh và các widget menu khác giữ nguyên HTML/link của Elementor.
 Không cần chạy migration hoặc ghi lại header/menu/homepage trên đích.
 Kiểm thử local: `php scripts/test-new-day.php`; dữ liệu tag/icon thử rollback.
 
-Địa điểm đã lưu dùng `localStorage` khóa `lk-saved` của đúng origin/trình
-duyệt, chưa đồng bộ vào tài khoản WordPress hay favorites của ListingPro.
-Đường dẫn `/?lk_saved=1` trên trang chủ mở danh sách ở cả trạng thái đăng nhập
-và chưa đăng nhập; có thể vào từ menu mobile hoặc “Xem danh sách” sau khi lưu.
-Danh sách chỉ hiện các địa điểm công khai còn tồn tại và cho phép bỏ lưu.
+Khi chưa đăng nhập, địa điểm đã lưu dùng `localStorage` khóa `lk-saved` của
+đúng origin/trình duyệt. Khi đã đăng nhập (kể cả bằng Google/Facebook), nút
+Lưu/Bỏ lưu đọc và cập nhật usermeta `lp_saved_user_posts` của tài khoản hiện
+tại, dùng chung với mục “Đã lưu” trong dashboard ListingPro. AJAX yêu cầu
+phiên đăng nhập và nonce hợp lệ; thao tác không nhận user ID từ trình duyệt.
+Chỉ thêm địa điểm công khai, giữ các mục đã có trong tài khoản, không chạy
+migration hay ghi favorites trong deploy. Lỗi mạng/phiên hết hạn không báo
+lưu thành công hoặc chuyển sang lưu trình duyệt một cách ngầm định.
+Đường dẫn `/?lk_saved=1` trên trang chủ mở danh sách ở cả hai trạng thái;
+có thể vào từ menu mobile hoặc “Xem danh sách” sau khi lưu. Nếu còn danh sách
+cũ của trình duyệt, người đã đăng nhập có nút “Chuyển … địa điểm từ trình
+duyệt vào tài khoản”; chỉ hợp nhất khi người dùng bấm, không tự nhập dữ liệu
+của máy dùng chung. Chỉ bỏ các ID đã chuyển thành công khỏi danh sách cũ.
+Link tới dashboard lấy option `listing-author` của môi trường đích, không ép
+slug local hay thay đổi link Elementor đã tùy chỉnh. Danh sách chỉ hiện các
+địa điểm công khai còn tồn tại và cho phép bỏ lưu.
 Button chi tiết đổi nền trắng/viền xanh sang nền xanh/chữ trắng theo
 `aria-pressed`; trạng thái và nhãn hỗ trợ truy cập cập nhật cùng dữ liệu lưu.
 Các thay đổi này không yêu cầu xuất lại bố cục Elementor hay tạo page mới.
+Kiểm thử local: `php scripts/test-saved-places.php` (fixture được rollback).
 
 Nút Google/Facebook dùng API render chính thức của Nextend Social Login;
 không còn handler giả chỉ hiện thông báo. Nhà cung cấp chưa cấu hình/xác minh/
