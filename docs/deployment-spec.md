@@ -108,6 +108,13 @@ Button chi tiết đổi nền trắng/viền xanh sang nền xanh/chữ trắng
 `aria-pressed`; trạng thái và nhãn hỗ trợ truy cập cập nhật cùng dữ liệu lưu.
 Các thay đổi này không yêu cầu xuất lại bố cục Elementor hay tạo page mới.
 
+Nút Google/Facebook dùng API render chính thức của Nextend Social Login;
+không còn handler giả chỉ hiện thông báo. Nhà cung cấp chưa cấu hình/xác minh/
+bật thì không có link OAuth khả dụng. Client Secret/App Secret chỉ nằm trong
+cấu hình Nextend của từng môi trường, không xuất vào Git hay gói Elementor.
+Không bật provider, tạo key, đổi đăng ký/liên kết tài khoản hay sửa cấu hình
+prod tự động. Hướng dẫn chủ site: `docs/social-login-setup.md`.
+
 Các trường được đồng bộ giới hạn ở `_elementor_data`,
 `_elementor_page_settings`, `_elementor_edit_mode`, `_wp_page_template` và
 `_elementor_template_type`. Việc bỏ một trường trong local cũng được đồng bộ

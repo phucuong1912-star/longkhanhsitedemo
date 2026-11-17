@@ -12,6 +12,7 @@ require_once LK_DIR . 'includes/location-picker.php';
 require_once LK_DIR . 'includes/directory.php';
 require_once LK_DIR . 'includes/listing-selection.php';
 require_once LK_DIR . 'includes/search-results.php';
+require_once LK_DIR . 'includes/social-login.php';
 require_once LK_DIR . 'includes/review-composer.php';
 require_once LK_DIR . 'includes/forms.php';
 require_once LK_DIR . 'includes/community.php';
@@ -49,7 +50,9 @@ add_filter('page_link',function($url,$id){static $routes; if($routes===null)$rou
 add_action('admin_menu',function(){ add_menu_page('Địa Điểm Tiền Hải','Tiền Hải','edit_pages','lk-directory','lk_admin_page','dashicons-location-alt',28); });
 function lk_admin_page(){
  if(!current_user_can('edit_pages'))return;
- echo '<div class="wrap"><h1>Địa Điểm Tiền Hải</h1><p>Theme ListingPro vẫn đang hoạt động. Các trang và bản mẫu bên dưới được dựng bằng Elementor Free.</p><h2>Bản mẫu dùng chung</h2><ul>';
+ echo '<div class="wrap"><h1>Địa Điểm Tiền Hải</h1><p>Theme ListingPro vẫn đang hoạt động. Các trang và bản mẫu bên dưới được dựng bằng Elementor Free.</p>';
+ lk_social_admin_status();
+ echo '<h2>Bản mẫu dùng chung</h2><ul>';
  foreach(array('header'=>'Header và thanh điều hướng mobile','footer'=>'Footer','menu'=>'Menu mobile','login'=>'Popup đăng nhập','listing'=>'Template chung chi tiết địa điểm','listing_gallery'=>'Template chung album và menu') as $key=>$name){$id=get_option('lk_template_'.$key);if($id)echo '<li><a href="'.esc_url(admin_url('post.php?post='.$id.'&action=elementor')).'">Sửa '.$name.' bằng Elementor</a></li>';}
  echo '</ul><form method="post" action="'.esc_url(admin_url('admin-post.php')).'"><input type="hidden" name="action" value="lk_template_preview">';wp_nonce_field('lk_template_preview');
  echo '<label for="lk-preview-listing"><strong>Địa điểm dùng để xem trước khi sửa template</strong></label> <select id="lk-preview-listing" name="listing_id">';

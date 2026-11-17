@@ -85,3 +85,8 @@ body.lk-site .lk-saved-row>button{flex:none;border:1px solid #357c3d;border-radi
 body.lk-site .lk-menu-saved-link{display:block;margin:12px 24px;padding:12px 0}
 body.lk-site .lk-toast a{color:inherit;text-decoration:underline}
 body.lk-site .lk-toast.is-visible a{pointer-events:auto}
+body.lk-site .lk-social-oauth{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px}
+body.lk-site .lk-social-oauth>.nsl-container{flex:1 1 132px;min-width:0;padding:0!important}
+body.lk-site .lk-social-oauth .nsl-container-buttons{width:100%;padding:0!important;display:block!important}
+body.lk-site .lk-social-oauth .nsl-container-buttons>a{margin:0!important;max-width:none!important;display:block}
+body.lk-site .lk-social-oauth>button:disabled{opacity:.55;cursor:not-allowed}
