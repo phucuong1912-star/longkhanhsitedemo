@@ -79,15 +79,19 @@ function lk_ads_card_html($html,$ad){
  if($tags->next_tag('article')){$tags->add_class('lk-place--ad');$tags->set_attribute('data-ad-id',$ad['id']);}
  return str_replace('<h3>','<span class="lk-ad-label">Được tài trợ</span><h3>',$tags->get_updated_html());
 }
-function lk_render_ads($placement,$limit=3,$eligible_ids=null,$exclude=0){
- $ads=lk_ads_select($placement,$limit,$eligible_ids,$exclude);if(!$ads)return;
+function lk_render_ads($placement,$limit=3,$eligible_ids=null,$exclude=0,$settings=array()){
+ $ads=lk_ads_select($placement,$limit,$eligible_ids,$exclude);
+ $title=is_scalar($settings['title']??null)?(string)$settings['title']:'Được tài trợ';
+ if(!$ads){if(lk_ads_editor_context())echo '<div class="lk-ads-editor-placeholder"><strong>'.esc_html($title?:'Địa điểm được tài trợ').'</strong><p>Chưa có Ads đang hiệu lực cho vị trí này. Bạn vẫn có thể chỉnh sửa, di chuyển hoặc xóa widget.</p></div>';return;}
  $kind=array_search($placement,array('spotlight'=>'lp_random_ads','search'=>'lp_top_in_search_page_ads','detail'=>'lp_detail_page_ads'),true);
- echo '<section class="lk-ads lk-ads--'.esc_attr($kind).'" aria-label="Địa điểm được tài trợ" data-ad-placement="'.esc_attr($placement).'"><h2 class="lk-ads-title">Được tài trợ</h2><div class="lk-ads-grid">';
+ echo '<section class="lk-ads lk-ads--'.esc_attr($kind).'" aria-label="Địa điểm được tài trợ" data-ad-placement="'.esc_attr($placement).'">';
+ if(($settings['show_title']??'yes')==='yes'&&$title!=='')echo '<h2 class="lk-ads-title">'.esc_html($title).'</h2>';
+ echo '<div class="lk-ads-grid">';
  foreach($ads as $ad)lk_card($ad['listing'],$kind==='search'?'list':'grid',$ad);
  echo '</div></section>';
 }
 function lk_ads_spotlight($settings){
- if(!is_front_page()||!empty($settings['nearby'])||!empty($GLOBALS['lk_ads_spotlight_rendered'])||!empty($GLOBALS['lk_ads_manual']['lp_random_ads']))return;
+ if(!is_front_page()||!lk_ads_auto_enabled()||!empty($settings['nearby'])||!empty($GLOBALS['lk_ads_spotlight_rendered'])||!empty($GLOBALS['lk_ads_manual']['lp_random_ads']))return;
  $GLOBALS['lk_ads_spotlight_rendered']=true;lk_render_ads('lp_random_ads');
 }
 
@@ -146,6 +150,7 @@ function lk_ads_detail_nodes($nodes,&$inserted){
 }
 add_filter('elementor/frontend/builder_content_data',function($nodes,$document_id){
  $GLOBALS['lk_ads_manual']=($GLOBALS['lk_ads_manual']??array())+lk_ads_manual_nodes($nodes);
+ if(!lk_ads_auto_enabled($document_id))return $nodes;
  if((int)$document_id!==(int)get_option('lk_template_listing')||get_query_var('lk_view'))return $nodes;
  if(!empty($GLOBALS['lk_ads_manual']['lp_detail_page_ads']))return $nodes;
  $inserted=false;return lk_ads_detail_nodes($nodes,$inserted);
@@ -159,7 +164,7 @@ function lk_ads_cache_ttl($value){
 }
 add_filter('option_elementor_element_cache_ttl','lk_ads_cache_ttl',25);add_filter('default_option_elementor_element_cache_ttl','lk_ads_cache_ttl',25);
 add_action('elementor/page_templates/canvas/after_content',function(){
- if(is_singular('listing')&&!get_query_var('lk_view')&&lk_is_directory_listing(get_queried_object_id())&&!post_password_required()&&empty($GLOBALS['lk_ads_detail_rendered']))lk_render_ads('lp_detail_page_ads',2,null,get_queried_object_id());
+ if(is_singular('listing')&&!get_query_var('lk_view')&&lk_is_directory_listing(get_queried_object_id())&&!post_password_required()&&lk_ads_auto_enabled((int)get_option('lk_template_listing'))&&empty($GLOBALS['lk_ads_detail_rendered']))lk_render_ads('lp_detail_page_ads',2,null,get_queried_object_id());
 },5);
 add_action('wp_enqueue_scripts',function(){
  if(function_exists('lk_is_site')&&lk_is_site())wp_enqueue_style('lk-ads',LK_URL.'assets/ads.css',array('lk-site'),filemtime(LK_DIR.'assets/ads.css'));

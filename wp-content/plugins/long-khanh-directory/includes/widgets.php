@@ -70,15 +70,24 @@ class LK_Widget_Ads extends LK_Widget {
  protected function register_controls(){
   $this->start_controls_section('content',array('label'=>'Quảng cáo ListingPro'));
   $this->add_control('placement',array('label'=>'Vị trí quảng cáo','type'=>'select','options'=>lk_ads_placements(),'default'=>'lp_random_ads'));
+  $this->add_control('title',array('label'=>'Tiêu đề','type'=>'text','default'=>'Được tài trợ'));
+  $this->add_control('show_title',array('label'=>'Hiện tiêu đề','type'=>'switcher','return_value'=>'yes','default'=>'yes'));
   $this->add_control('limit',array('label'=>'Số quảng cáo tối đa','type'=>'number','default'=>3,'min'=>1,'max'=>6));
-  $this->add_control('ads_note',array('type'=>'raw_html','raw'=>'Chỉ hiển thị chiến dịch Ads đang hiệu lực. Thêm widget này để tự chọn vị trí; phần Ads tự động tương ứng sẽ được thay thế, giữ nguyên danh sách địa điểm đã chọn.'));
+  $this->add_control('ads_note',array('type'=>'raw_html','raw'=>'Nội dung địa điểm lấy từ các chiến dịch Ads đang hiệu lực. Bạn có thể kéo thả hoặc xóa widget này như các khối Elementor khác.'));
   $this->end_controls_section();$this->appearance();
+  $this->start_controls_section('ads_style',array('label'=>'Tiêu đề và thẻ quảng cáo','tab'=>\Elementor\Controls_Manager::TAB_STYLE));
+  $this->add_control('ads_title_color',array('label'=>'Màu tiêu đề','type'=>'color','selectors'=>array('{{WRAPPER}}'=>'--lk-ads-title-color: {{VALUE}};')));
+  $this->add_group_control(\Elementor\Group_Control_Typography::get_type(),array('name'=>'ads_heading_type','label'=>'Chữ tiêu đề khối','selector'=>'{{WRAPPER}} .lk-ads-title'));
+  $this->add_group_control(\Elementor\Group_Control_Typography::get_type(),array('name'=>'ads_card_type','label'=>'Chữ tên địa điểm','selector'=>'{{WRAPPER}} .lk-place h3'));
+  $this->add_control('ads_columns',array('label'=>'Số cột Spotlight trên PC','type'=>'select','options'=>array(1=>'1',2=>'2',3=>'3',4=>'4'),'selectors'=>array('{{WRAPPER}}'=>'--lk-ads-columns: {{VALUE}};')));
+  $this->add_responsive_control('ads_gap',array('label'=>'Khoảng cách thẻ','type'=>'slider','range'=>array('px'=>array('min'=>0,'max'=>60)),'selectors'=>array('{{WRAPPER}}'=>'--lk-ads-gap: {{SIZE}}{{UNIT}};')));
+  $this->end_controls_section();
  }
  protected function render(){
   $settings=$this->get_settings_for_display();$placement=$settings['placement']??'lp_random_ads';$ids=null;$exclude=0;
   if($placement==='lp_top_in_search_page_ads'){$state=lk_search_state();$ids=lk_ads_search_ids(lk_filtered_posts($state),$state);}
   if($placement==='lp_detail_page_ads'){$exclude=lk_context_id();$GLOBALS['lk_ads_detail_rendered']=true;}
-  lk_render_ads($placement,$settings['limit']??3,$ids,$exclude);
+  lk_render_ads($placement,$settings['limit']??3,$ids,$exclude,$settings);
  }
 }
 class LK_Widget_Results extends LK_Widget {

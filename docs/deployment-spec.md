@@ -144,6 +144,26 @@ nhận một widget động trong bản sao dữ liệu lúc render; cache Eleme
 document chứa các vị trí động được tắt lúc đọc, không ghi option hoặc layout.
 Gói Elementor/allowlist giữ nguyên, nên giữ các chỉnh sửa bố cục trên đích.
 
+Từ bản hỗ trợ chỉnh sửa Ads độc lập trong Elementor, khi người có quyền mở
+trang/template cũ trong editor, khối tự động được đưa vào mô hình editor dưới
+dạng widget `lk-ads` riêng, trước danh sách trang chủ/kết quả hoặc trong cột
+chi tiết. Editor và iframe preview dùng cùng ID widget ổn định. Chuyển đổi
+chỉ đọc dữ liệu hiện tại của document trên chính môi trường đó, giữ nguyên
+ID/thứ tự/nội dung/ảnh/liên kết/cấu hình của các node còn lại. Không ghi metadata
+trong lúc mở editor, render frontend hay deploy; không chép homepage local
+lên prod để thực hiện chuyển đổi này.
+
+Widget có tiêu đề, bật/tắt tiêu đề, số lượng, vị trí và điều khiển kiểu chữ,
+màu, số cột PC và khoảng cách. Khi chưa có chiến dịch hợp lệ, chỉ editor hiện
+khung giữ chỗ để vẫn chọn/kéo thả/xóa được; khách không thấy khung này. Khi
+người dùng lưu, Elementor lưu widget cùng page setting `lk_ads_layout_mode`
+bằng `widgets`. Chế độ này tắt mọi fallback tự động của document, kể cả khi
+đã xóa hết widget Ads, nên khối đã xóa không xuất hiện lại sau tải trang.
+Document chưa lưu giữ cách hiển thị tự động cũ. Cài đặt trang → Quảng cáo
+cho phép chọn lại chế độ; không sửa trạng thái/giá/ngân sách của chiến dịch.
+Kiểm thử: `php scripts/test-ads-editor.php`; các lần lưu thử dùng bản sao và
+rollback, gói Elementor gốc giữ nguyên.
+
 Chiến dịch chỉ hiện khi Published, liên kết đúng địa điểm công khai, trạng
 thái/vị trí còn active và công tắc vị trí trong Theme Options → Ads đang bật.
 PPD cần số ngày còn lại > 0; ngày kết thúc native (`campain_expire_date`) nếu

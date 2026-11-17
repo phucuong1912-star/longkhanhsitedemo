@@ -14,6 +14,7 @@ require_once LK_DIR . 'includes/saved-places.php';
 require_once LK_DIR . 'includes/listing-selection.php';
 require_once LK_DIR . 'includes/search-results.php';
 require_once LK_DIR . 'includes/ads.php';
+require_once LK_DIR . 'includes/ads-editor.php';
 require_once LK_DIR . 'includes/social-login.php';
 require_once LK_DIR . 'includes/review-composer.php';
 require_once LK_DIR . 'includes/forms.php';
