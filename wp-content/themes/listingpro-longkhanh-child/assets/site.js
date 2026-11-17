@@ -35,14 +35,20 @@
   function toast(message) {
     const el = $('.lk-toast'); if (!el) return;
     el.textContent = message; el.classList.add('is-visible');
+    if(message==='Đã lưu địa điểm'){const link=document.createElement('a');link.href=new URL('?lk_saved=1',config.base).href;link.className='lk-saved-open';link.textContent=' Xem danh sách';el.append(link);}
     clearTimeout(el.lkTimer); el.lkTimer = setTimeout(() => el.classList.remove('is-visible'), 2800);
   }
   function savedState() {
     const saved = read('lk-saved');
-    $$('[data-save]').forEach(b => { const active = saved.includes(Number(b.dataset.save)); b.setAttribute('aria-pressed', String(active)); });
+    $$('[data-save]').forEach(b => {
+      const active = saved.includes(Number(b.dataset.save)),place=places.find(p=>p.id===Number(b.dataset.save));
+      b.setAttribute('aria-pressed', String(active));
+      b.setAttribute('aria-label',(active?'Bỏ lưu ':'Lưu ')+(place?.title||'địa điểm'));b.title=active?'Đã lưu — bấm để bỏ lưu':'Lưu địa điểm';
+      b.querySelectorAll('i.fa-bookmark').forEach(icon=>{icon.classList.toggle('fas',active);icon.classList.toggle('far',!active);});
+    });
     $$('.lk-saved-places').forEach(el => {
       const list = places.filter(p => saved.includes(p.id));
-      el.innerHTML = list.length ? list.map(p => suggestion(p)).join('') : '<p>Bấm biểu tượng đánh dấu ở địa điểm để lưu vào danh sách của bạn.</p>';
+      el.innerHTML = list.length ? list.map(p => `<div class="lk-saved-row">${suggestion(p)}<button type="button" data-save="${p.id}" aria-pressed="true" aria-label="Bỏ lưu ${escape(p.title)}">Bỏ lưu</button></div>`).join('') : '<p>Chưa có địa điểm đã lưu. Bấm biểu tượng đánh dấu ở địa điểm để lưu vào danh sách của bạn.</p>';
     });
   }
   function suggestion(p) { return `<a class="lk-suggestion" href="${escape(p.url)}"><img src="${escape(p.image)}" alt=""><span><strong>${escape(p.title)}</strong><small>${escape(p.address)}</small></span></a>`; }
@@ -105,6 +111,7 @@
     if (selected && hasCoordinates(selected)) $('#lk-map iframe').src = `https://maps.google.com/maps?q=${selected.lat},${selected.lng}&z=14&output=embed`;
   }
   document.addEventListener('click', e => {
+    if(e.target.closest('.lk-saved-open')){e.preventDefault();savedState();openDialog('#lk-saved-dialog');return;}
     if (e.target.closest('[data-close]')) { e.preventDefault(); closeDialog(e.target.closest('dialog')); }
     if (e.target.closest('.lk-open-menu')) { e.preventDefault(); openDialog('#lk-menu'); }
     if (e.target.closest('.lk-review-open, .lk-review-cta a, a[href="#lk-review-form"]') && $('#lk-review-dialog')) { e.preventDefault(); openDialog('#lk-review-dialog'); }
@@ -148,4 +155,6 @@
   const path=new URL(location.href).pathname.replace(/\/$/,'');$$('.lk-header-nav a,.lk-bottom-nav a,.lk-drawer a').forEach(a=>{if(new URL(a.href,location.href).pathname.replace(/\/$/,'')===path)a.setAttribute('aria-current','page');});
   try {if(sessionStorage.getItem('lk-app-dismissed')==='1'&&$('.lk-app-bar'))$('.lk-app-bar').hidden=true;}catch{}
   savedState();
+  window.addEventListener('storage',event=>{if(event.key==='lk-saved')savedState();});
+  if(new URL(location.href).searchParams.get('lk_saved')==='1')openDialog('#lk-saved-dialog');
 })();

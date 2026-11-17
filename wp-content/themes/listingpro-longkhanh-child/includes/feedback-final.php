@@ -29,13 +29,13 @@ add_filter('elementor/frontend/widget/should_render',function($render,$widget){
 // This widget stays editable in the menu document; account data is never exported.
 add_action('elementor/element/button/section_button/after_section_end',function($element){
  $element->start_controls_section('lk_member_links',array('label'=>'Liên kết tài khoản trong menu'));
- foreach(array('lk_member_profile_link'=>'Chỉnh sửa hồ sơ','lk_member_saved_link'=>'Danh sách đã lưu') as $key=>$label)$element->add_control($key,array('label'=>$label,'type'=>\Elementor\Controls_Manager::URL,'description'=>'Dùng cho nút có class lk-menu-account. Để trống để lấy từ liên kết chính của nút.'));
+ foreach(array('lk_member_profile_link'=>'Chỉnh sửa hồ sơ','lk_member_saved_link'=>'Danh sách đã lưu') as $key=>$label)$element->add_control($key,array('label'=>$label,'type'=>\Elementor\Controls_Manager::URL,'description'=>$key==='lk_member_saved_link'?'Để trống để mở danh sách địa điểm lưu trên trình duyệt.':'Để trống để lấy từ liên kết chính của nút.'));
  $element->end_controls_section();
 });
 function lk_menu_member_links($settings){
  $options=get_option('listingpro_options',array());
  $base=esc_url_raw($settings['link']['url']??'',array('http','https'))?:esc_url_raw($options['listing-author']??'',array('http','https'))?:lk_form_page_url('profile');
- return array('profile'=>esc_url_raw($settings['lk_member_profile_link']['url']??'',array('http','https'))?:add_query_arg('dashboard','update-profile',$base),'saved'=>esc_url_raw($settings['lk_member_saved_link']['url']??'',array('http','https'))?:preg_replace('/#.*$/','',$base).'#saved-places');
+ return array('profile'=>esc_url_raw($settings['lk_member_profile_link']['url']??'',array('http','https'))?:add_query_arg('dashboard','update-profile',$base),'saved'=>esc_url_raw($settings['lk_member_saved_link']['url']??'',array('http','https'))?:add_query_arg('lk_saved',1,home_url('/')));
 }
 add_filter('elementor/element/is_dynamic_content',function($dynamic,$raw){
  return $dynamic || str_contains($raw['settings']['_css_classes']??'','lk-menu-account');
@@ -44,7 +44,8 @@ add_filter('elementor/widget/render_content',function($html,$widget){
  if($widget->get_name()!=='button'||!str_contains((string)$widget->get_settings('_css_classes'),'lk-menu-account')||!is_user_logged_in())return $html;
  $user=wp_get_current_user();
  $links=lk_menu_member_links($widget->get_settings_for_display());
- return '<div class="lk-menu-member"><div class="lk-menu-member-header"><span class="lk-member-avatar" aria-hidden="true">'.esc_html(lk_author_initials($user->display_name)).'</span><strong>'.esc_html($user->display_name).'</strong></div><a href="'.esc_url($links['profile']).'">'.lk_icon('user-edit').' Chỉnh sửa hồ sơ</a><a class="lk-member-saved" href="'.esc_url($links['saved']).'">'.lk_icon('bookmark').' Danh sách đã lưu</a></div>';
+ $saved_class=empty($widget->get_settings_for_display('lk_member_saved_link')['url'])?' lk-saved-open':'';
+ return '<div class="lk-menu-member"><div class="lk-menu-member-header"><span class="lk-member-avatar" aria-hidden="true">'.esc_html(lk_author_initials($user->display_name)).'</span><strong>'.esc_html($user->display_name).'</strong></div><a href="'.esc_url($links['profile']).'">'.lk_icon('user-edit').' Chỉnh sửa hồ sơ</a><a class="lk-member-saved'.$saved_class.'" href="'.esc_url($links['saved']).'">'.lk_icon('bookmark').' Danh sách đã lưu</a></div>';
 },40,2);
 // A template's HTML cache cannot be shared between signed-in and guest menus.
 function lk_final_menu_cache($value){

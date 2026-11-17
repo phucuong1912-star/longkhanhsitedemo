@@ -93,10 +93,20 @@ Frontend giữ nguyên href của Elementor khi đã đăng nhập, không ép v
 `listing-author/`. Nút đăng nhập trong menu mobile đóng drawer trước khi mở
 popup và trả focus về nút mở menu sau khi đóng popup. Với button có class
 `lk-menu-account`, mục Elementor “Liên kết tài khoản trong menu” cung cấp hai
-URL “Chỉnh sửa hồ sơ” và “Danh sách đã lưu”. Nếu để trống, chúng lấy link chính
-của button làm gốc; các widget menu khác giữ nguyên HTML/link của Elementor.
+URL “Chỉnh sửa hồ sơ” và “Danh sách đã lưu”. Nếu để trống, hồ sơ lấy link chính
+của button làm gốc; danh sách đã lưu mở cửa sổ lưu trên trình duyệt. Các URL
+tùy chỉnh và các widget menu khác giữ nguyên HTML/link của Elementor.
 Không cần chạy migration hoặc ghi lại header/menu/homepage trên đích.
 Kiểm thử local: `php scripts/test-new-day.php`; dữ liệu tag/icon thử rollback.
+
+Địa điểm đã lưu dùng `localStorage` khóa `lk-saved` của đúng origin/trình
+duyệt, chưa đồng bộ vào tài khoản WordPress hay favorites của ListingPro.
+Đường dẫn `/?lk_saved=1` trên trang chủ mở danh sách ở cả trạng thái đăng nhập
+và chưa đăng nhập; có thể vào từ menu mobile hoặc “Xem danh sách” sau khi lưu.
+Danh sách chỉ hiện các địa điểm công khai còn tồn tại và cho phép bỏ lưu.
+Button chi tiết đổi nền trắng/viền xanh sang nền xanh/chữ trắng theo
+`aria-pressed`; trạng thái và nhãn hỗ trợ truy cập cập nhật cùng dữ liệu lưu.
+Các thay đổi này không yêu cầu xuất lại bố cục Elementor hay tạo page mới.
 
 Các trường được đồng bộ giới hạn ở `_elementor_data`,
 `_elementor_page_settings`, `_elementor_edit_mode`, `_wp_page_template` và

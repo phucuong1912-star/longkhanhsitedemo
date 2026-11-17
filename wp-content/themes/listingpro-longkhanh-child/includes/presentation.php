@@ -74,7 +74,10 @@ add_action('elementor/page_templates/canvas/after_content', function() {
  if (!lk_is_site() || get_post_type()==='elementor_library') return;
  echo '</main><footer class="lk-site-footer">'; lk_template('footer'); echo '</footer>';
  echo '<dialog id="lk-menu" class="lk-drawer" aria-label="Menu điều hướng"><button class="lk-close" data-close aria-label="Đóng menu">&times;</button>';
- lk_template('menu'); echo '</dialog>';
+ lk_template('menu');
+ if(!is_user_logged_in())echo '<a class="lk-saved-open lk-menu-saved-link" href="'.esc_url(add_query_arg('lk_saved',1,home_url('/'))).'">'.lk_icon('bookmark').' Địa điểm đã lưu</a>';
+ echo '</dialog>';
+ echo '<dialog id="lk-saved-dialog" class="lk-saved-dialog" aria-labelledby="lk-saved-title"><button class="lk-close" data-close aria-label="Đóng danh sách đã lưu">&times;</button><h2 id="lk-saved-title">Địa điểm đã lưu</h2><p>Danh sách lưu trên trình duyệt này.</p><div class="lk-saved-places"></div></dialog>';
  echo '<dialog id="lk-login" class="lk-login" aria-labelledby="lk-login-title"><button class="lk-close" data-close aria-label="Đóng đăng nhập">&times;</button><div class="lk-login-body">';
  if(get_option('lk_template_login'))lk_template('login');else lk_account('login');
  echo '</div><div class="lk-login-art"><img src="'.esc_url(lk_asset('login-illustration')).'" alt="Khám phá địa điểm Tiền Hải"><h2>Địa Điểm Tiền Hải</h2></div></dialog>';

@@ -72,3 +72,16 @@ body.lk-site .lk-menu-signout{display:block;text-align:center;width:100%;margin-
  body.lk-site .lk-results .lk-place--list .lk-region{display:none}
  body.lk-site .lk-results .lk-place--list :is(.lk-status,.lk-hours,.lk-distance){font-size:11px;line-height:16px}
 }
+/* Distinguish saved state for native Elementor buttons, including SVG icons. */
+body.lk-site .lk-heading-save .elementor-button[aria-pressed="false"],body.lk-site button.lk-heading-save[aria-pressed="false"]{background:#fff!important;color:#357c3d!important;border:2px solid #357c3d!important}
+body.lk-site .lk-heading-save .elementor-button[aria-pressed="true"],body.lk-site button.lk-heading-save[aria-pressed="true"]{background:#357c3d!important;color:#fff!important;border:2px solid #357c3d!important}
+body.lk-site .lk-heading-save [data-save] svg{fill:currentColor}
+body.lk-site .lk-heading-save [data-save][aria-pressed="true"] svg,body.lk-site button.lk-heading-save[aria-pressed="true"] svg{filter:drop-shadow(0 0 1px currentColor)}
+body.lk-site .lk-saved-dialog{width:min(660px,calc(100% - 24px));max-height:80dvh;padding:36px 24px 24px;border:0;border-radius:12px;overflow:auto}
+body.lk-site .lk-saved-dialog::backdrop{background:#0007}
+body.lk-site .lk-saved-row{display:flex;align-items:center;gap:12px;border-bottom:1px solid #e5e9e5;padding:10px 0}
+body.lk-site .lk-saved-row .lk-suggestion{flex:1;min-width:0}
+body.lk-site .lk-saved-row>button{flex:none;border:1px solid #357c3d;border-radius:6px;background:#fff;color:#357c3d;padding:6px 10px}
+body.lk-site .lk-menu-saved-link{display:block;margin:12px 24px;padding:12px 0}
+body.lk-site .lk-toast a{color:inherit;text-decoration:underline}
+body.lk-site .lk-toast.is-visible a{pointer-events:auto}

@@ -28,7 +28,7 @@ try{
 day_check($before===$fingerprint(),'Tag and icon fixtures rolled back; existing content preserved');
 $settings=array('link'=>array('url'=>home_url('/bang-dieu-khien/')),'lk_member_profile_link'=>array('url'=>home_url('/ho-so-moi/')),'lk_member_saved_link'=>array('url'=>home_url('/da-luu-moi/')));
 $links=lk_menu_member_links($settings);day_check($links['profile']===home_url('/ho-so-moi/')&&$links['saved']===home_url('/da-luu-moi/'),'Menu honors both Elementor URL controls');
-unset($settings['lk_member_profile_link'],$settings['lk_member_saved_link']);$links=lk_menu_member_links($settings);day_check(str_starts_with($links['profile'],home_url('/bang-dieu-khien/'))&&$links['saved']===home_url('/bang-dieu-khien/').'#saved-places','Menu defaults follow the configured button URL');
+unset($settings['lk_member_profile_link'],$settings['lk_member_saved_link']);$links=lk_menu_member_links($settings);day_check(str_starts_with($links['profile'],home_url('/bang-dieu-khien/'))&&$links['saved']===add_query_arg('lk_saved',1,home_url('/')),'Menu profile follows the button; saved list has a working default destination');
 $term=wp_get_post_terms($post->ID,'listing-category')[0];$settings=array('tabs'=>'yes','limit'=>3,'category_groups'=>array(array('tab_category'=>$term->slug,'selection_mode'=>'manual','listing_slugs'=>array($post->post_name),'tab_title'=>'Danh mục giữ nguyên')));
 ob_start();lk_render_curated_listings($settings);$html=ob_get_clean();day_check(str_contains($html,'>Mới</button>')&&str_contains($html,'>Danh mục giữ nguyên</button>'),'New tab is restored ahead of unchanged category tabs');
 file_put_contents(dirname(__DIR__).'/.codex-tools/new-day-tabs.html',$html);
