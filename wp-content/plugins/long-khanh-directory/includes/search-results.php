@@ -96,7 +96,9 @@ function lk_render_results($settings = array()) {
  }
  foreach($state['price_status'] as $value){$label=lk_price_status_labels()[$value];$args=$_GET;unset($args['pg']);$args['price_status']=array_values(array_diff($state['price_status'],array($value)));if(!$args['price_status'])unset($args['price_status']);echo '<a href="'.esc_url(add_query_arg($args,lk_link('search'))).'" aria-label="'.esc_attr('Bỏ lọc '.$label).'">'.esc_html($label).' <span aria-hidden="true">×</span></a>';}
  if ($state['nearby']) echo '<span class="lk-nearby-chip">'.lk_icon('location-arrow').' '.esc_html($state['origin']?'Gần '.$state['origin']['title']:'Gần tôi').'</span>';
- echo '</div><div class="lk-results-cards">';
+ echo '</div>';
+ if(empty($GLOBALS['lk_ads_manual']['lp_top_in_search_page_ads']))lk_render_ads('lp_top_in_search_page_ads',3,lk_ads_search_ids($posts,$state));
+ echo '<div class="lk-results-cards">';
  if (!$count) echo '<div class="lk-empty"><i class="fas fa-search" aria-hidden="true"></i><h2>Chưa tìm thấy địa điểm phù hợp</h2><p>Thử đổi từ khóa hoặc bỏ bớt bộ lọc để xem thêm địa điểm.</p><a class="lk-button" href="'.esc_url(lk_link('search')).'">Xem tất cả địa điểm</a></div>';
  foreach (array_slice($posts, ($page - 1) * $per, $per) as $post) lk_card($post, 'list');
  echo '</div><nav class="lk-pagination" aria-label="Trang kết quả"'.($count <= $per ? ' hidden' : '').'>';

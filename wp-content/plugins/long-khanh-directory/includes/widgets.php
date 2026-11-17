@@ -65,6 +65,22 @@ class LK_Widget_Listings extends LK_Widget {
  public function get_style_depends(){return array_merge(parent::get_style_depends(),array('lk-listing-selection'));}
  protected function render(){$settings=$this->get_settings_for_display();$settings['lk_widget_id']=$this->get_id();lk_listing_grid($settings);}
 }
+class LK_Widget_Ads extends LK_Widget {
+ public function get_name(){return 'lk-ads';} public function get_title(){return 'Địa điểm được tài trợ (Ads)';}
+ protected function register_controls(){
+  $this->start_controls_section('content',array('label'=>'Quảng cáo ListingPro'));
+  $this->add_control('placement',array('label'=>'Vị trí quảng cáo','type'=>'select','options'=>lk_ads_placements(),'default'=>'lp_random_ads'));
+  $this->add_control('limit',array('label'=>'Số quảng cáo tối đa','type'=>'number','default'=>3,'min'=>1,'max'=>6));
+  $this->add_control('ads_note',array('type'=>'raw_html','raw'=>'Chỉ hiển thị chiến dịch Ads đang hiệu lực. Thêm widget này để tự chọn vị trí; phần Ads tự động tương ứng sẽ được thay thế, giữ nguyên danh sách địa điểm đã chọn.'));
+  $this->end_controls_section();$this->appearance();
+ }
+ protected function render(){
+  $settings=$this->get_settings_for_display();$placement=$settings['placement']??'lp_random_ads';$ids=null;$exclude=0;
+  if($placement==='lp_top_in_search_page_ads'){$state=lk_search_state();$ids=lk_ads_search_ids(lk_filtered_posts($state),$state);}
+  if($placement==='lp_detail_page_ads'){$exclude=lk_context_id();$GLOBALS['lk_ads_detail_rendered']=true;}
+  lk_render_ads($placement,$settings['limit']??3,$ids,$exclude);
+ }
+}
 class LK_Widget_Results extends LK_Widget {
  public function get_name(){return 'lk-results';} public function get_title(){return 'Kết quả và bộ lọc địa điểm';}
  protected function register_controls(){

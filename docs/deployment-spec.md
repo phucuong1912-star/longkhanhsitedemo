@@ -127,6 +127,47 @@ cấu hình Nextend của từng môi trường, không xuất vào Git hay gói
 Không bật provider, tạo key, đổi đăng ký/liên kết tài khoản hay sửa cấu hình
 prod tự động. Hướng dẫn chủ site: `docs/social-login-setup.md`.
 
+Ads dùng chiến dịch `lp-ads` và metadata native ListingPro của từng môi trường.
+Code tự thêm Spotlight trước danh sách động đầu tiên ở trang chủ, Top of
+Search trước kết quả thường và Side of Listing dưới nội dung của cột
+`lk-map-column` trên chi tiết (mobile xếp theo cột thông tin hiện có). Nếu cột
+đã bị bỏ khỏi template, phần chi tiết đặt cuối nội dung. Không hiện quảng cáo
+trên trang album/menu hoặc địa điểm có mật khẩu. Các thẻ có nhãn “Được tài trợ”;
+kết quả quảng cáo tuân theo bộ lọc tìm kiếm, không đổi số đếm/phân trang thường
+hay các danh mục/địa điểm chọn thủ công trong Elementor. Spotlight trên mobile
+vuốt ngang để tránh kéo dài trang chủ.
+
+Widget mới “Địa điểm được tài trợ (Ads)” cho phép chọn vị trí và số lượng
+1–6 khi muốn tự đặt trong Elementor; widget tường minh thay vị trí tự động
+tương ứng. Mặc định không cần lưu lại bất kỳ document nào. Cột chi tiết chỉ
+nhận một widget động trong bản sao dữ liệu lúc render; cache Elementor của
+document chứa các vị trí động được tắt lúc đọc, không ghi option hoặc layout.
+Gói Elementor/allowlist giữ nguyên, nên giữ các chỉnh sửa bố cục trên đích.
+
+Chiến dịch chỉ hiện khi Published, liên kết đúng địa điểm công khai, trạng
+thái/vị trí còn active và công tắc vị trí trong Theme Options → Ads đang bật.
+PPD cần số ngày còn lại > 0; ngày kết thúc native (`campain_expire_date`) nếu
+có được kiểm tra thêm, kể cả cron chưa chạy. PPC cần giá lượt nhấp dương và
+số dư đủ cho đúng vị trí. Không tự kích hoạt, tạo, sửa hay đồng bộ chiến dịch,
+giá, gói thanh toán hoặc dữ liệu kinh doanh trong deploy.
+
+Link thẻ quảng cáo qua endpoint frontend có chữ ký, hạn 24 giờ và mỗi vé ghi
+nhận tối đa một lần trên mỗi tài khoản/trình duyệt. Cookie first-party có chữ
+ký chỉ nhận diện trình duyệt khách để chống đếm lặp; không lưu IP. Vì vậy các
+khách khác nhau vẫn được ghi nhận khi dùng cùng HTML cache. HEAD/prefetch,
+chữ ký sai, replay trong cùng trình duyệt, chủ địa điểm và quản trị viên
+không bị tính phí. Endpoint kiểm tra lại chiến dịch dưới khóa MySQL trước
+khi gọi hàm PPC native `lp_count_clicks_for_campaigns`; thống kê/số dư giữ
+trong `lp_listingpro_options`, dùng chung dashboard ListingPro. PPD chỉ tăng
+`click_performed`, không trừ tiền/ngày. Link sau chuyển hướng dùng permalink
+hiện tại của môi trường, không hardcode slug hay URL local. Nút Lưu, link
+địa điểm thường và danh sách dựng lại bằng JavaScript không mang tham số
+thu phí native. Vé không phải hệ thống chống gian lận hoàn chỉnh: lượt mở từ
+các lần render khác có vé khác. Full-page cache ngoài Elementor cần giữ quy
+tắc bỏ qua query theo cấu hình WordPress hiện có; link quá hạn vẫn dẫn tới
+địa điểm nhưng không thu phí.
+Kiểm thử local: `php scripts/test-ads.php` (mọi fixture và lượt trừ thử rollback).
+
 Các trường được đồng bộ giới hạn ở `_elementor_data`,
 `_elementor_page_settings`, `_elementor_edit_mode`, `_wp_page_template` và
 `_elementor_template_type`. Việc bỏ một trường trong local cũng được đồng bộ

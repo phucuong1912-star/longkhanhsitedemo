@@ -13,6 +13,7 @@ require_once LK_DIR . 'includes/directory.php';
 require_once LK_DIR . 'includes/saved-places.php';
 require_once LK_DIR . 'includes/listing-selection.php';
 require_once LK_DIR . 'includes/search-results.php';
+require_once LK_DIR . 'includes/ads.php';
 require_once LK_DIR . 'includes/social-login.php';
 require_once LK_DIR . 'includes/review-composer.php';
 require_once LK_DIR . 'includes/forms.php';
@@ -27,7 +28,7 @@ add_action('elementor/widgets/register', function($manager) {
  // Elementor gallery for the editable documents created by this integration.
  if(class_exists('Elementor\\Widget_Image_Gallery'))$manager->register(new \Elementor\Widget_Image_Gallery());
  require_once LK_DIR . 'includes/widgets.php';
- foreach (array('Search','Listings','Results','Reviews','Form','Account','Feed') as $name) {
+ foreach (array('Search','Listings','Ads','Results','Reviews','Form','Account','Feed') as $name) {
   $class = 'LK_Widget_' . $name; $manager->register(new $class());
  }
 },100);
