@@ -31,6 +31,7 @@ function lk_render_curated_listings($settings){
  $groups=lk_curated_listing_groups($settings);
  if(!$groups){echo '<p class="lk-empty">Chưa chọn danh mục hiển thị.</p>';return;}
  $tabs=!empty($settings['tabs']);$uid=wp_unique_id('lk-curated-'.sanitize_html_class($settings['lk_widget_id']??'list').'-');$columns=max(2,min(4,(int)($settings['columns']??4)));
+ if($tabs){$recent=lk_posts();usort($recent,function($a,$b){return strcmp($b->post_date,$a->post_date)?:($b->ID<=>$a->ID);});array_unshift($groups,array('category'=>'','title'=>'Mới','posts'=>array_slice($recent,0,max(1,min(50,(int)($settings['limit']??8))))));}
  echo '<div class="lk-curated-list'.($tabs?'':' lk-curated-list--groups').'" data-lk-curated-list>';
  if($tabs){echo '<div class="lk-tabs" role="tablist" aria-label="Danh mục địa điểm">';foreach($groups as $i=>$group)echo '<button type="button" role="tab" id="'.$uid.'tab-'.$i.'" aria-controls="'.$uid.'panel-'.$i.'" aria-selected="'.($i===0?'true':'false').'" tabindex="'.($i===0?'0':'-1').'" data-lk-curated-tab>'.esc_html($group['title']).'</button>';echo '</div>';}
  foreach($groups as $i=>$group){
@@ -40,7 +41,7 @@ function lk_render_curated_listings($settings){
   foreach($group['posts'] as $post)lk_card($post);
   echo '</div>';
   if(!$group['posts'])echo '<p class="lk-empty">Chưa có địa điểm phù hợp trong danh mục này.</p>';
-  if(!empty($settings['more']))echo '<div class="lk-center"><a class="lk-button lk-outline" href="'.esc_url(add_query_arg('categories',array($group['category']),lk_link('search'))).'">'.esc_html($settings['more']).'</a></div>';
+  if(!empty($settings['more']))echo '<div class="lk-center"><a class="lk-button lk-outline" href="'.esc_url($group['category']?add_query_arg('categories',array($group['category']),lk_link('search')):lk_link('search')).'">'.esc_html($settings['more']).'</a></div>';
   echo '</div>';
  }
  echo '</div>';

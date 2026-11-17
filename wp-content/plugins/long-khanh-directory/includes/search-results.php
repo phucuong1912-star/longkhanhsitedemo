@@ -29,7 +29,7 @@ function lk_filtered_posts($state) {
   $data = lk_place_data($post);
   if(!empty($state['origin'])&&$post->ID===$state['origin']['id'])return false;
   if(!empty($state['collections'])&&!has_term($state['collections'],'lk_collection',$post))return false;
-  $haystack = lk_normalize_search($data['title'].' '.$data['address'].' '.$data['region'].' '.$data['categoryNames'].' '.wp_strip_all_tags($post->post_content));
+  $haystack = lk_normalize_search($data['title'].' '.$data['address'].' '.$data['region'].' '.$data['categoryNames'].' '.lk_listing_tag_names($post->ID).' '.wp_strip_all_tags($post->post_content));
   if ($needle !== '' && mb_strpos($haystack, $needle) === false) return false;
   if ($state['categories'] && !array_intersect($state['categories'], $data['categories'])) return false;
   if ($state['regions'] && !in_array($data['regionSlug'], $state['regions'], true)) return false;
@@ -80,9 +80,8 @@ function lk_render_results($settings = array()) {
   $terms = lk_filter_terms($config[1], $state);
   if (is_wp_error($terms)) $terms = array();
   foreach ($terms as $term) {
-   $icon = $name === 'features' ? get_term_meta($term->term_id, '_lk_icon', true) : '';
-   if (!$icon && $name === 'features' && function_exists('listingpro_get_term_meta')) $icon = preg_replace('/^(?:fa[srlb]?\s+)?fa-/', '', (string) listingpro_get_term_meta($term->term_id, 'lp_features_icon'));
-   echo '<label><input type="checkbox" name="'.esc_attr($name).'[]" value="'.esc_attr($term->slug).'" '.checked(in_array($term->slug, $state[$name], true), true, false).'>'.($name === 'features' ? lk_icon($icon ?: 'check') : '').'<span>'.esc_html($term->name).'</span></label>';
+   $icon=$name==='features'?lk_feature_icon($term->term_id):null;
+   echo '<label><input type="checkbox" name="'.esc_attr($name).'[]" value="'.esc_attr($term->slug).'" '.checked(in_array($term->slug, $state[$name], true), true, false).'>'.($name === 'features' ? '<i class="'.esc_attr($icon['value']).'" aria-hidden="true"></i>' : '').'<span>'.esc_html($term->name).'</span></label>';
   }
   if (!$terms) echo '<p class="lk-filter-empty">Chưa có tiện ích cho danh mục này.</p>';
   echo '</div></fieldset>';

@@ -15,13 +15,12 @@
  $$('.lk-bottom-nav a').forEach((a,i)=>{
   const icon=$('.elementor-icon-list-icon',a);
   if(icon&&navIcons[i])icon.innerHTML=`<svg class="lk-tab-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${navIcons[i]}</svg>`;
-  if(i===4){a.classList.toggle('lk-login-open',!config.loggedIn);a.href=url(config.loggedIn?'listing-author/':'profile/');}
+  if(i===4){a.classList.toggle('lk-login-open',!config.loggedIn);}
   const target=new URL(a.href),path=location.pathname.replace(/\/$/,''),destination=target.pathname.replace(/\/$/,'');
   const selected=i===0?path===destination:i===2?path===destination&&new URL(location.href).searchParams.get('nearby')==='me':path===destination||path.startsWith(destination+'/');
   if(selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
  });
- $$('.lk-login-open').forEach(a=>{if(config.loggedIn&&a.tagName==='A')a.href=url('listing-author/');});
- $$('a[href]').forEach(a=>{const destination=new URL(a.href,base);if(!a.classList.contains('lk-member-saved')&&destination.origin===base.origin&&destination.pathname===new URL('profile/',base).pathname&&!destination.search){a.classList.add('lk-login-open');if(config.loggedIn)a.href=url('listing-author/');}});
+ $$('a[href]').forEach(a=>{const destination=new URL(a.href,base);if(!config.loggedIn&&!a.classList.contains('lk-member-saved')&&destination.origin===base.origin&&destination.pathname===new URL('profile/',base).pathname&&!destination.search){a.classList.add('lk-login-open');}});
  const current=places.find(p=>p.id===Number(config.page));
  document.addEventListener('keydown',e=>{const save=e.target.closest('a[data-save]');if(save&&e.key===' '){e.preventDefault();save.click();}});
  if(current&&$('.lk-detail-top h1')&&!$('.lk-heading-save')){

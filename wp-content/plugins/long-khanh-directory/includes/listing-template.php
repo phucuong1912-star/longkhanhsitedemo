@@ -42,6 +42,16 @@ function lk_bindings_for($type) {
  );
  return $options+($sources[$type]??array());
 }
+function lk_feature_icon($id){
+ $raw=function_exists('listingpro_get_term_meta')?listingpro_get_term_meta($id,'lp_features_icon'):'';
+ if(!$raw)$raw=get_term_meta($id,'_lk_icon',true);
+ $raw=is_scalar($raw)?trim((string)$raw):'';$family='fas';
+ if(preg_match('/^(fa[srlb]?)\s+fa-([a-z0-9-]+)$/D',$raw,$m)){$family=$m[1]==='fa'?'fas':$m[1];$raw=$m[2];}
+ else $raw=preg_replace('/^fa-/','',$raw);
+ if(!preg_match('/^[a-z0-9-]+$/D',$raw))$raw='check';
+ $raw=strtr($raw,array('hand-holding-box'=>'shopping-bag','cutlery'=>'utensils','clock-o'=>'clock','money'=>'money-bill-alt','calendar-check-o'=>'calendar-check','snowflake-o'=>'snowflake'));
+ return array('value'=>$family.' fa-'.$raw,'library'=>$family==='fab'?'fa-brands':($family==='far'?'fa-regular':'fa-solid'));
+}
 add_action('elementor/element/after_section_end',function($element,$section){
  $sections=array('heading'=>'section_title','text-editor'=>'section_editor','image'=>'section_image','video'=>'section_video','image-gallery'=>'section_gallery','icon-list'=>'section_icon','google_maps'=>'section_map','button'=>'section_button','progress'=>'section_progress');
  $type=$element->get_name();
@@ -107,7 +117,7 @@ function lk_resolve_listing_settings($type,$settings,$id) {
     $entry['link']['is_external']='on';$items[]=$entry;
    }
   }
-  if($binding==='benefits')foreach(wp_get_post_terms($id,'features') as $i=>$term){$icon=get_term_meta($term->term_id,'_lk_icon',true)?:'check';$icon=strtr($icon,array('hand-holding-box'=>'shopping-bag'));$items[]=$item($term->name,'',$icon,$i);}
+  if($binding==='benefits')foreach(wp_get_post_terms($id,'features') as $i=>$term){$entry=$item($term->name,'','check',$i);$entry['selected_icon']=lk_feature_icon($term->term_id);$items[]=$entry;}
   if($binding==='directions-address')$items=array($item($d['address'],$directions,'directions',0));
   if($binding==='directions')$items=array($item('Xem đường đi',$directions,'directions',0));
   $settings['icon_list']=$items;

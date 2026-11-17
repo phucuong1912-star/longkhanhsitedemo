@@ -17,7 +17,8 @@
   let lastFocus,restoringFocus=false;
   function openDialog(selector) {
     const dialog = $(selector); if (!dialog) return;
-    lastFocus = document.activeElement;
+    $$('dialog[open]').filter(other=>other!==dialog).forEach(other=>{other.close();other.classList.remove('is-closing');});
+    if (!$('dialog[open]')) lastFocus = document.activeElement;
     dialog.showModal(); document.documentElement.classList.add('lk-dialog-open');
     const first = $('input:not([type="hidden"]),textarea,button,a[href]', dialog); if (first) first.focus();
   }
@@ -50,7 +51,7 @@
     const inModal = input.closest('#lk-search-modal');
     const result = inModal ? $('.lk-search-suggestions', inModal) : $('.lk-suggest', input.closest('form'));
     if (!result) return;
-    const found = term ? places.filter(p => normalize(p.title + ' ' + p.address + ' ' + (p.categoryNames || '')).includes(term)).slice(0,5) : places.filter(p => read('lk-recent').includes(p.id)).slice(0,4);
+    const found = term ? places.filter(p => normalize(p.title + ' ' + p.address + ' ' + (p.categoryNames || '') + ' ' + (p.tagNames || '')).includes(term)).slice(0,5) : places.filter(p => read('lk-recent').includes(p.id)).slice(0,4);
     const nearby = '<button type="button" class="lk-nearby"><i class="far fa-compass" aria-hidden="true"></i> Tìm quanh đây</button>';
     const items=found.map(p=>term?suggestion(p):`<div class="lk-recent-row">${suggestion(p)}<button type="button" data-recent-remove="${p.id}" aria-label="Xóa ${escape(p.title)} khỏi lịch sử">×</button></div>`).join('');
     result.innerHTML = (!term ? nearby + '<p class="lk-suggestion-label">Đã xem gần đây</p>' : '') + items + (term ? `<a class="lk-all-results" href="${escape(config.search)}?q=${encodeURIComponent(input.value)}">Xem tất cả tìm kiếm cho “${escape(input.value)}”</a>` : (!found.length ? '<p class="lk-recent-hint">Địa điểm bạn vừa xem sẽ xuất hiện tại đây.</p>' : ''));
@@ -107,7 +108,7 @@
     if (e.target.closest('[data-close]')) { e.preventDefault(); closeDialog(e.target.closest('dialog')); }
     if (e.target.closest('.lk-open-menu')) { e.preventDefault(); openDialog('#lk-menu'); }
     if (e.target.closest('.lk-review-open, .lk-review-cta a, a[href="#lk-review-form"]') && $('#lk-review-dialog')) { e.preventDefault(); openDialog('#lk-review-dialog'); }
-    if (e.target.closest('.lk-login-open')) { e.preventDefault(); if(config.loggedIn){location.href=new URL('listing-author/',config.base).href;return;} openDialog('#lk-login'); }
+    if (!config.loggedIn && e.target.closest('.lk-login-open, .lk-menu-account')) { e.preventDefault(); openDialog('#lk-login'); }
     if (e.target.closest('.lk-open-search')) { e.preventDefault(); openDialog('#lk-search-modal'); suggestions($('#lk-search-modal input')); }
     if (e.target.closest('.lk-detail-links a[href$="/menu/"]')&&$('#lk-place-menu')){e.preventDefault();openDialog('#lk-place-menu');}
     if (e.target.closest('.lk-dismiss-app')) { e.preventDefault(); const banner = $('.lk-app-bar'); if (banner) banner.hidden = true; sessionStorage.setItem('lk-app-dismissed','1'); }

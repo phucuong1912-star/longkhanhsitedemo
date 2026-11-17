@@ -82,6 +82,22 @@ giữ link tiêu đề cho bàn phím và không phủ vùng chọn trong trình
 Kiểm thử local: `php scripts/test-region-cards.php`; thêm `--fixture` để xuất
 bộ 8 thẻ thử vào `.codex-tools/region-cards-fixture.json` cho kiểm tra browser.
 
+Feedback `new-day.rtf` (17/11/2026) được xử lý bằng code, không sửa gói layout:
+tìm kiếm và gợi ý đọc taxonomy `list-tags`; icon tiện ích ưu tiên trường
+`lp_features_icon` mà quản trị ListingPro đang sử dụng. Chế độ danh mục chọn
+riêng khôi phục tab Mới ở đầu, lấy địa điểm công khai mới nhất theo ngày đăng
+(ID để phân định khi cùng ngày), theo giới hạn số lượng của widget; các nhóm
+danh mục và thứ tự chọn riêng giữ nguyên.
+
+Frontend giữ nguyên href của Elementor khi đã đăng nhập, không ép về
+`listing-author/`. Nút đăng nhập trong menu mobile đóng drawer trước khi mở
+popup và trả focus về nút mở menu sau khi đóng popup. Với button có class
+`lk-menu-account`, mục Elementor “Liên kết tài khoản trong menu” cung cấp hai
+URL “Chỉnh sửa hồ sơ” và “Danh sách đã lưu”. Nếu để trống, chúng lấy link chính
+của button làm gốc; các widget menu khác giữ nguyên HTML/link của Elementor.
+Không cần chạy migration hoặc ghi lại header/menu/homepage trên đích.
+Kiểm thử local: `php scripts/test-new-day.php`; dữ liệu tag/icon thử rollback.
+
 Các trường được đồng bộ giới hạn ở `_elementor_data`,
 `_elementor_page_settings`, `_elementor_edit_mode`, `_wp_page_template` và
 `_elementor_template_type`. Việc bỏ một trường trong local cũng được đồng bộ
