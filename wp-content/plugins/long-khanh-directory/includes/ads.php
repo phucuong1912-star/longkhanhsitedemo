@@ -4,32 +4,53 @@ if(!defined('ABSPATH'))exit;
 /** Read native ListingPro campaigns; rendering never activates or repairs one. */
 function lk_ads_placements(){return array('lp_random_ads'=>'Spotlight','lp_top_in_search_page_ads'=>'Đầu kết quả tìm kiếm','lp_detail_page_ads'=>'Trang chi tiết');}
 function lk_ads_mode($meta,$options){return ($meta['ads_mode']??'') ?: (($options['listingpro_ads_campaign_style']??'adsperduration')==='adsperclick'?'perclick':'byduration');}
-function lk_ads_eligible($ad_id,$placement){
- if(!isset(lk_ads_placements()[$placement]))return false;
- $options=get_option('listingpro_options',array());if(!is_array($options))return false;
- if(array_key_exists($placement.'_switch',$options)&&empty($options[$placement.'_switch']))return false;
- $post=get_post($ad_id);if(!$post||$post->post_type!=='lp-ads'||$post->post_status!=='publish'||$post->post_password)return false;
- $meta=get_post_meta($ad_id,'lp_listingpro_options',true);if(!is_array($meta))return false;
- if(!is_array($meta['ad_type']??null)||!in_array($placement,$meta['ad_type'],true))return false;
- if(!empty($meta['ad_status'])&&(!is_string($meta['ad_status'])||strtolower($meta['ad_status'])!=='active'))return false;
- if(!is_scalar($meta['ads_listing']??null)||!ctype_digit((string)$meta['ads_listing']))return false;
+function lk_ads_unavailable($explain,$code,$message){return $explain?new WP_Error($code,$message):false;}
+function lk_ads_eligible($ad_id,$placement,$explain=false){
+ if(!isset(lk_ads_placements()[$placement]))return lk_ads_unavailable($explain,'placement','Vị trí quảng cáo không hợp lệ.');
+ $options=get_option('listingpro_options',array());if(!is_array($options))return lk_ads_unavailable($explain,'options','Theme Options chưa đúng định dạng.');
+ if(array_key_exists($placement.'_switch',$options)&&empty($options[$placement.'_switch']))return lk_ads_unavailable($explain,'placement_disabled','Công tắc vị trí này đang tắt trong Theme Options → Ads.');
+ $post=get_post($ad_id);if(!$post||$post->post_type!=='lp-ads'||$post->post_status!=='publish'||$post->post_password)return lk_ads_unavailable($explain,'publication','Ads chưa xuất bản công khai hoặc đang Inactive.');
+ $meta=get_post_meta($ad_id,'lp_listingpro_options',true);if(!is_array($meta))return lk_ads_unavailable($explain,'metadata','Dữ liệu Ads chưa đúng định dạng.');
+ if(!is_array($meta['ad_type']??null)||!in_array($placement,$meta['ad_type'],true))return lk_ads_unavailable($explain,'not_selected','Chưa chọn vị trí này trong Loại quảng cáo.');
+ if(!empty($meta['ad_status'])&&(!is_string($meta['ad_status'])||strtolower($meta['ad_status'])!=='active'))return lk_ads_unavailable($explain,'ad_status','Trạng thái nội bộ ad_status của Ads chưa active.');
+ if(!is_scalar($meta['ads_listing']??null)||!ctype_digit((string)$meta['ads_listing']))return lk_ads_unavailable($explain,'listing_reference','Chưa lưu được ID địa điểm cho Ads.');
  $id=absint($meta['ads_listing']);$listing=get_post($id);
- if(!$listing||$listing->post_type!=='listing'||$listing->post_status!=='publish'||$listing->post_password)return false;
+ if(!$listing||$listing->post_type!=='listing'||$listing->post_status!=='publish'||$listing->post_password)return lk_ads_unavailable($explain,'listing_publication','Địa điểm đã xóa, chưa xuất bản công khai hoặc có mật khẩu.');
  $listing_meta=get_post_meta($id,'lp_listingpro_options',true);
- if(!is_array($listing_meta)||!is_scalar($listing_meta['campaign_id']??null)||(int)$listing_meta['campaign_id']!==(int)$ad_id||get_post_meta($id,'campaign_status',true)!=='active'||get_post_meta($id,$placement,true)!=='active')return false;
+ if(!is_array($listing_meta)||!is_scalar($listing_meta['campaign_id']??null)||(int)$listing_meta['campaign_id']!==(int)$ad_id)return lk_ads_unavailable($explain,'campaign_mapping','Địa điểm chưa liên kết về Ads này: campaign_id thiếu hoặc trỏ sang Ads khác.');
+ if(get_post_meta($id,'campaign_status',true)!=='active')return lk_ads_unavailable($explain,'listing_status','campaign_status của địa điểm chưa active.');
+ if(get_post_meta($id,$placement,true)!=='active')return lk_ads_unavailable($explain,'listing_placement','Cờ quảng cáo của vị trí này trên địa điểm chưa active.');
  $mode=lk_ads_mode($meta,$options);
  if($mode==='perclick'){
   $price=$options[$placement.'_pc']??null;$balance=$meta['remaining_balance']??null;
-  if(!is_numeric($price)||!is_finite((float)$price)||(float)$price<=0||!is_numeric($balance)||!is_finite((float)$balance)||(float)$balance<(float)$price)return false;
+  if(!is_numeric($price)||!is_finite((float)$price)||(float)$price<=0)return lk_ads_unavailable($explain,'price','Giá PPC của vị trí này phải là số lớn hơn 0 trong Theme Options → Ads.');
+  if(!is_numeric($balance)||!is_finite((float)$balance)||(float)$balance<(float)$price)return lk_ads_unavailable($explain,'balance','Số dư còn lại chưa đủ chi trả một lượt nhấp ở vị trí này.');
  }elseif($mode==='byduration'){
-  if(!is_numeric($meta['duration']??null)||!is_finite((float)$meta['duration'])||(float)$meta['duration']<=0)return false;
+  if(!is_numeric($meta['duration']??null)||!is_finite((float)$meta['duration'])||(float)$meta['duration']<=0)return lk_ads_unavailable($explain,'duration','PPD cần Tổng thời gian là số ngày lớn hơn 0.');
   // Native payments record an explicit end date; admin-created campaigns may not.
   $end=get_post_meta($ad_id,'campain_expire_date',true);
-  if($end){if(!is_string($end))return false;$date=DateTimeImmutable::createFromFormat('!d-m-Y',$end,wp_timezone());if(!$date||$date->format('d-m-Y')!==$end||$date->getTimestamp()<=current_datetime()->getTimestamp())return false;}
- }else return false;
- if(!empty($meta['ad_date'])){if(!is_string($meta['ad_date']))return false;$start=DateTimeImmutable::createFromFormat('!d-m-Y',$meta['ad_date'],wp_timezone());if(!$start||$start->format('d-m-Y')!==$meta['ad_date']||$start->getTimestamp()>current_datetime()->getTimestamp())return false;}
+  if($end){if(!is_string($end))return lk_ads_unavailable($explain,'end_date','Ngày hết hạn chưa đúng định dạng d-m-Y.');$date=DateTimeImmutable::createFromFormat('!d-m-Y',$end,wp_timezone());if(!$date||$date->format('d-m-Y')!==$end)return lk_ads_unavailable($explain,'end_date','Ngày hết hạn chưa đúng định dạng d-m-Y.');if($date->getTimestamp()<=current_datetime()->getTimestamp())return lk_ads_unavailable($explain,'expired','Ngày hết hạn cũ đã qua. Nhập số ngày PPD còn muốn chạy và bấm Cập nhật.');}
+ }else return lk_ads_unavailable($explain,'mode','Chế độ quảng cáo chưa hợp lệ.');
+ if(!empty($meta['ad_date'])){if(!is_string($meta['ad_date']))return lk_ads_unavailable($explain,'start_date','Ngày bắt đầu chưa đúng định dạng d-m-Y.');$start=DateTimeImmutable::createFromFormat('!d-m-Y',$meta['ad_date'],wp_timezone());if(!$start||$start->format('d-m-Y')!==$meta['ad_date'])return lk_ads_unavailable($explain,'start_date','Ngày bắt đầu chưa đúng định dạng d-m-Y.');if($start->getTimestamp()>current_datetime()->getTimestamp())return lk_ads_unavailable($explain,'future','Chưa đến ngày bắt đầu quảng cáo.');}
  return array('id'=>(int)$ad_id,'listing'=>$listing,'placement'=>$placement,'mode'=>$mode);
 }
+// ListingPro reactivates the flags when an admin saves Ads, but leaves a former
+// campain_expire_date behind. Renew only on an authorized, explicit PPD save.
+add_action('save_post_lp-ads',function($id,$post){
+ if(!is_admin()||wp_is_post_revision($id)||wp_is_post_autosave($id)||$post->post_status!=='publish'||($_POST['post_type']??'')!=='lp-ads'||!current_user_can('edit_post',$id))return;
+ $nonce=$_POST['lp_meta_box_nonce']??null;$days=$_POST['duration']??null;
+ if(!is_string($nonce)||!wp_verify_nonce(wp_unslash($nonce),'post-type.php')||($_POST['ads_mode']??'')!=='byduration'||!is_scalar($days)||!ctype_digit((string)$days)||(int)$days<1||(int)$days>36500)return;
+ $end=get_post_meta($id,'campain_expire_date',true);if(!is_string($end)||!$end)return;
+ $date=DateTimeImmutable::createFromFormat('!d-m-Y',$end,wp_timezone());
+ if($date&&$date->format('d-m-Y')===$end&&$date->getTimestamp()<=current_datetime()->getTimestamp())update_post_meta($id,'campain_expire_date',current_datetime()->setTime(0,0)->modify('+'.(int)$days.' days')->format('d-m-Y'));
+},30,2);
+function lk_ads_admin_diagnostics($post){
+ if(!current_user_can('edit_post',$post->ID))return;
+ echo '<p>Kiểm tra trực tiếp dữ liệu đang lưu, không tự bật chiến dịch hoặc sửa liên kết.</p><table class="widefat striped"><thead><tr><th>Vị trí</th><th>Điều kiện hiển thị</th></tr></thead><tbody>';
+ foreach(lk_ads_placements() as $placement=>$label){$result=lk_ads_eligible($post->ID,$placement,true);echo '<tr><td>'.esc_html($label).'</td><td>'.(is_wp_error($result)?'<strong>Chưa hiển thị</strong> — '.esc_html($result->get_error_message()).' <code>'.esc_html($result->get_error_code()).'</code>':'<strong>Đủ điều kiện dữ liệu</strong>').'</td></tr>';}
+ echo '</tbody></table><p>Ngày website: '.esc_html(current_datetime()->format('d/m/Y H:i T')).'. Ngày hết hạn đang lưu: '.esc_html(is_scalar(get_post_meta($post->ID,'campain_expire_date',true))?(get_post_meta($post->ID,'campain_expire_date',true)?:'chưa có'):'sai định dạng').'.</p><p>Khi đủ điều kiện, quảng cáo vẫn theo giới hạn số thẻ, bộ lọc tìm kiếm và không hiện trên chính trang địa điểm được quảng cáo.</p>';
+}
+add_action('add_meta_boxes_lp-ads',function(){add_meta_box('lk-ads-diagnostics','Kiểm tra hiển thị trên giao diện','lk_ads_admin_diagnostics','lp-ads','normal','high');});
 function lk_ads_select($placement,$limit=3,$eligible_ids=null,$exclude=0){
  if(!isset(lk_ads_placements()[$placement])||$eligible_ids===array())return array();
  $campaigns=get_posts(array('post_type'=>'lp-ads','post_status'=>'publish','posts_per_page'=>-1,'orderby'=>'rand','update_post_term_cache'=>false));

@@ -168,6 +168,22 @@ tắc bỏ qua query theo cấu hình WordPress hiện có; link quá hạn vẫ
 địa điểm nhưng không thu phí.
 Kiểm thử local: `php scripts/test-ads.php` (mọi fixture và lượt trừ thử rollback).
 
+Màn hình sửa Ads có hộp “Kiểm tra hiển thị trên giao diện”, trả lý do chặn
+cho từng vị trí bằng cùng hàm kiểm tra frontend (công tắc, trạng thái, liên
+kết campaign_id, số ngày, ngày hết hạn và số dư). Chỉ người có quyền sửa Ads
+được xem; không có endpoint chẩn đoán công khai, không sửa dữ liệu khi đọc.
+Ảnh chụp các checkbox và số ngày không đủ xác định hết các trạng thái này.
+
+ListingPro giữ `campain_expire_date` cũ khi quản trị viên xuất bản/cập nhật
+lại một Ads PPD. Nếu ngày đó đã qua, bản tích hợp vẫn chặn dù duration mới
+là 10. Khi người có quyền chủ động lưu form Ads Published với nonce native
+hợp lệ, Mode PPD và số ngày nguyên dương, code gia hạn riêng ngày cũ đã hết
+theo số ngày vừa nhập, tính theo múi giờ WordPress. Không thay ngày đang còn
+hạn, không gia hạn PPC/cron/request thiếu nonce, không sửa cờ hoặc liên kết
+chiến dịch và không chạy migration/repair khi deploy hoặc đọc trang.
+Kiểm thử các hook lưu quản trị thật: `php scripts/test-native-ads-save.php`;
+mọi account, bài và metadata thử đều rollback, không tạo hóa đơn thử.
+
 Các trường được đồng bộ giới hạn ở `_elementor_data`,
 `_elementor_page_settings`, `_elementor_edit_mode`, `_wp_page_template` và
 `_elementor_template_type`. Việc bỏ một trường trong local cũng được đồng bộ
