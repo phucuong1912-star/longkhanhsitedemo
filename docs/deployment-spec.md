@@ -127,6 +127,24 @@ cấu hình Nextend của từng môi trường, không xuất vào Git hay gói
 Không bật provider, tạo key, đổi đăng ký/liên kết tài khoản hay sửa cấu hình
 prod tự động. Hướng dẫn chủ site: `docs/social-login-setup.md`.
 
+Đăng ký, đăng nhập và quên/đặt lại mật khẩu dùng endpoint frontend
+`/?lk_account=login|register|lost|reset`, không phụ thuộc trang `profile` đã
+bị xóa trên prod. Không tạo lại page hoặc thay `_elementor_data`. Đăng ký
+giữ vai trò subscriber; các form POST yêu cầu nonce. Quên mật khẩu dùng API
+email/key native WordPress, có giới hạn số lần yêu cầu, thông báo gửi mail
+và lỗi gửi. Khóa email được kiểm tra rồi chuyển sang cookie HttpOnly/SameSite
+trước khi render form mật khẩu mới; trang bỏ cache và không gửi referrer.
+Đặt lại thành công vô hiệu hóa khóa như WordPress, không tự đăng nhập.
+Code không cấu hình SMTP hoặc đảm bảo thư đã đến hộp thư trên server đích.
+
+Các CTA cộng đồng lấy permalink hiện tại từ `lk_page_map`. Link Elementor
+cũ cùng site `/new-review/`, `/explore/` (kể cả `lk_feed=following`) và
+`/profile/` được sửa trên HTML render; giữ query/anchor, chữ, ảnh, style,
+target/rel và mọi URL tùy chỉnh khác. Document có các link động này bỏ cache
+Elementor lúc đọc. Không ghi lại bố cục, slug, mapping hay gói local lên prod.
+Kiểm thử `php scripts/test-account-links.php` dùng tài khoản thử rollback và
+chặn gửi thư thật. Kiểm tra browser local dùng các bản sao page riêng.
+
 Ads dùng chiến dịch `lp-ads` và metadata native ListingPro của từng môi trường.
 Code tự thêm Spotlight trước danh sách động đầu tiên ở trang chủ, Top of
 Search trước kết quả thường và Side of Listing dưới nội dung của cột

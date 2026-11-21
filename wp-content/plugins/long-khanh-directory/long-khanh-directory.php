@@ -17,6 +17,7 @@ require_once LK_DIR . 'includes/ads.php';
 require_once LK_DIR . 'includes/ads-editor.php';
 require_once LK_DIR . 'includes/social-login.php';
 require_once LK_DIR . 'includes/review-composer.php';
+require_once LK_DIR . 'includes/account.php';
 require_once LK_DIR . 'includes/forms.php';
 require_once LK_DIR . 'includes/community.php';
 require_once LK_DIR . 'includes/listing-template.php';

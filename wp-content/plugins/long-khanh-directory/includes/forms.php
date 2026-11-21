@@ -25,24 +25,15 @@ function lk_input($name,$label,$type='text',$required=false,$placeholder='',$pre
 }
 function lk_account($mode='page',$s=array()){
  if(is_user_logged_in()&&$mode!=='login'){
-  $u=wp_get_current_user();echo '<h2>'.esc_html($s['title']??'Tài khoản của bạn').'</h2><p>Xin chào, <strong>'.esc_html($u->display_name).'</strong>.</p><p><a href="'.esc_url(lk_form_page_url('add-place')).'" class="lk-button">Đóng góp địa điểm</a> <a href="'.esc_url(wp_logout_url(lk_link('profile'))).'">Đăng xuất</a></p><h3>Địa điểm đã lưu</h3><div class="lk-saved-places" id="saved-places"></div>';return;
+  $u=wp_get_current_user();echo '<h2>'.esc_html($s['title']??'Tài khoản của bạn').'</h2><p>Xin chào, <strong>'.esc_html($u->display_name).'</strong>.</p><p><a href="'.esc_url(lk_form_page_url('add-place')).'" class="lk-button">Đóng góp địa điểm</a> <a href="'.esc_url(wp_logout_url(lk_auth_url())).'">Đăng xuất</a></p><h3>Địa điểm đã lưu</h3><div class="lk-saved-places" id="saved-places"></div>';return;
  }
- $register=$mode==='page'&&isset($_GET['register']);
- echo '<h2 class="lk-login-heading" id="'.($mode==='login'?'lk-login-title':'lk-account-title').'">'.esc_html($register?'Tạo tài khoản':($s['login_title']??'Đăng nhập tài khoản')).'</h2>';
- if(isset($_GET['login_error']))echo '<p class="lk-error" role="alert">Tên đăng nhập hoặc mật khẩu chưa đúng. Vui lòng thử lại.</p>';
- if(isset($_GET['registered']))echo '<p class="lk-notice" role="status">Đã tạo tài khoản. Bạn có thể đăng nhập ngay.</p>';
- if(isset($_GET['register_error']))echo '<p class="lk-error" role="alert">Tên đăng nhập hoặc email đã được sử dụng, hoặc mật khẩu chưa đủ 8 ký tự.</p>';
- echo '<form class="lk-form" action="'.esc_url(admin_url('admin-post.php')).'" method="post"><input type="hidden" name="action" value="'.($register?'lk_register':'lk_login').'">';wp_nonce_field($register?'lk_register':'lk_login','lk_nonce');
- lk_input('username',$register?'Tên người dùng':($s['username_label']??'Email hoặc tên người dùng'),'text',true,'',$mode==='login'?'lk-login-field-':'lk-account-field-');
- if($register)lk_input('email','Email','email',true);
- echo '<label>Mật khẩu<div class="lk-password"><input type="password" name="password" required '.($register?'minlength="8" autocomplete="new-password"':'autocomplete="current-password"').'><button type="button" class="lk-toggle-password" aria-label="Hiện mật khẩu">'.lk_icon('eye').'</button></div></label><input type="hidden" name="redirect_to" value="'.esc_url(home_url('/')).'"><button type="submit" class="lk-button">'.($register?'Tạo tài khoản':'Đăng nhập').'</button></form>';
- if(!$register&&($s['show_social']??'yes')==='yes')lk_social_signin($s);
- echo '<p class="lk-center"><a href="'.esc_url(wp_lostpassword_url(lk_link('profile'))).'">Quên mật khẩu?</a></p><p class="lk-center">'.($register?'Bạn đã có tài khoản? <a href="'.esc_url(lk_link('profile')).'">Đăng nhập</a>':'Bạn chưa có tài khoản? <a href="'.esc_url(add_query_arg('register',1,lk_link('profile'))).'">Tạo tài khoản</a>').'</p>';
+ lk_auth_form($mode==='login'?'login':(lk_auth_mode()?: (isset($_GET['register'])?'register':'login')),$s,$mode==='login'?'lk-login-title':'lk-account-title');
  if($mode==='page')echo '<h3>Địa điểm đã lưu trên thiết bị</h3><div class="lk-saved-places" id="saved-places"></div>';
 }
 function lk_post_value($name){return isset($_POST[$name])?sanitize_text_field(wp_unslash($_POST[$name])):'';}
 function lk_require_nonce($action){if(empty($_POST['lk_nonce'])||!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['lk_nonce'])),$action))wp_die('Phiên làm việc đã hết hạn. Vui lòng tải lại trang và thử lại.','Không thể gửi',array('response'=>403));}
 function lk_form_page_url($slug){
+ if($slug==='profile')return lk_auth_url();
  // Page keys identify a function; their public slugs can differ per environment.
  $pages=get_option('lk_page_map',array());$id=is_array($pages)?absint($pages[$slug]??0):0;
  if($id&&get_post_type($id)==='page'&&get_post_status($id)==='publish'){
@@ -61,16 +52,17 @@ function lk_handle_contact(){
 }
 add_action('admin_post_nopriv_lk_contact','lk_handle_contact');add_action('admin_post_lk_contact','lk_handle_contact');
 function lk_handle_login(){
- lk_require_nonce('lk_login');$result=wp_signon(array('user_login'=>lk_post_value('username'),'user_password'=>isset($_POST['password'])?wp_unslash($_POST['password']):'','remember'=>true),is_ssl());
- if(is_wp_error($result))lk_redirect_form('profile',array('login_error'=>1));
- wp_safe_redirect(home_url('/'));exit;
+ lk_require_nonce('lk_login');$result=wp_signon(array('user_login'=>lk_post_value('username'),'user_password'=>isset($_POST['password'])&&is_string($_POST['password'])?wp_unslash($_POST['password']):'','remember'=>true),is_ssl());
+ if(is_wp_error($result))lk_auth_redirect('login',array('auth_error'=>'login','redirect_to'=>lk_auth_return_url()));
+ wp_safe_redirect(lk_auth_return_url());exit;
 }
 add_action('admin_post_nopriv_lk_login','lk_handle_login');add_action('admin_post_lk_login','lk_handle_login');
 function lk_handle_register(){
- lk_require_nonce('lk_register');$username=sanitize_user(lk_post_value('username'),true);$email=sanitize_email(lk_post_value('email'));$password=isset($_POST['password'])?wp_unslash($_POST['password']):'';
- if(!$username||!is_email($email)||strlen($password)<8||username_exists($username)||email_exists($email))lk_redirect_form('profile',array('register'=>1,'register_error'=>1));
- $id=wp_insert_user(array('user_login'=>$username,'user_email'=>$email,'user_pass'=>$password,'role'=>'subscriber'));
- if(is_wp_error($id))lk_redirect_form('profile',array('register'=>1,'register_error'=>1));lk_redirect_form('profile',array('registered'=>1));
+ lk_require_nonce('lk_register');
+ if(!lk_auth_rate_limit('register',$_SERVER['REMOTE_ADDR']??'local'))lk_auth_redirect('register',array('auth_error'=>'wait'));
+ $id=lk_register_account(lk_post_value('username'),lk_post_value('email'),isset($_POST['password'])?wp_unslash($_POST['password']):'');
+ if(is_wp_error($id))lk_auth_redirect('register',array('auth_error'=>$id->get_error_code()));
+ lk_auth_redirect('login',array('registered'=>1,'redirect_to'=>lk_auth_return_url()));
 }
 add_action('admin_post_nopriv_lk_register','lk_handle_register');
 function lk_handle_review(){

@@ -14,7 +14,7 @@ add_filter('elementor/widget/render_content',function($content,$widget){
  return $content;
 },10,2);
 function lk_is_site() {
- return is_singular() && ((bool)get_post_meta(get_queried_object_id(), '_lk_managed', true)||lk_is_directory_listing(get_queried_object_id())||(function_exists('lk_is_blog_view')&&lk_is_blog_view()));
+ return lk_auth_mode() || (is_singular() && ((bool)get_post_meta(get_queried_object_id(), '_lk_managed', true)||lk_is_directory_listing(get_queried_object_id())||(function_exists('lk_is_blog_view')&&lk_is_blog_view())));
 }
 // The legacy shortcode injects ID-based widths and borders. Elementor's native
 // gallery controls and this child theme provide the layout on managed pages.
@@ -26,7 +26,7 @@ add_filter('template_include',function($template){
  return $template;
 },100);
 add_filter('body_class', function($classes) {
- if (lk_is_site()) { $classes[]='lk-site'; if(is_front_page()) $classes[]='lk-home'; }
+ if (lk_is_site()) { $classes[]='lk-site'; if(is_front_page()&&!lk_auth_mode()) $classes[]='lk-home'; }
  return $classes;
 });
 add_action('wp_enqueue_scripts', function() {
@@ -56,7 +56,7 @@ add_action('wp_enqueue_scripts', function() {
  wp_enqueue_script('lk-listing-fields',LK_URL.'assets/listing-fields.js',array(),(string)filemtime(LK_DIR.'assets/listing-fields.js'),true);
  wp_enqueue_style('lk-elementor-controls',LK_URL.'assets/elementor-controls.css',array('lk-feedback','lk-listing-fields'),(string)filemtime(LK_DIR.'assets/elementor-controls.css'));
  $places=lk_directory_index();
- wp_add_inline_script('lk-site', 'window.LK_SITE=' . wp_json_encode(array('base'=>home_url('/'),'search'=>lk_link('search'),'profile'=>lk_link('profile'),'places'=>$places,'page'=>get_queried_object_id(),'loggedIn'=>is_user_logged_in(),'saved'=>lk_saved_client_config()),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) . ';','before');
+ wp_add_inline_script('lk-site', 'window.LK_SITE=' . wp_json_encode(array('base'=>home_url('/'),'search'=>lk_link('search'),'profile'=>lk_auth_url(),'places'=>$places,'page'=>get_queried_object_id(),'loggedIn'=>is_user_logged_in(),'saved'=>lk_saved_client_config()),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) . ';','before');
 });
 
 function lk_template($key) {

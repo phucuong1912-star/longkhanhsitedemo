@@ -17,7 +17,8 @@
   if(icon&&navIcons[i])icon.innerHTML=`<svg class="lk-tab-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${navIcons[i]}</svg>`;
   if(i===4){a.classList.toggle('lk-login-open',!config.loggedIn);}
   const target=new URL(a.href),path=location.pathname.replace(/\/$/,''),destination=target.pathname.replace(/\/$/,'');
-  const selected=i===0?path===destination:i===2?path===destination&&new URL(location.href).searchParams.get('nearby')==='me':path===destination||path.startsWith(destination+'/');
+  const accountPage=new URL(location.href).searchParams.has('lk_account');
+  const selected=accountPage?i===4:i===0?path===destination:i===2?path===destination&&new URL(location.href).searchParams.get('nearby')==='me':path===destination||path.startsWith(destination+'/');
   if(selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
  });
  $$('a[href]').forEach(a=>{const destination=new URL(a.href,base);if(!config.loggedIn&&!a.classList.contains('lk-member-saved')&&destination.origin===base.origin&&destination.pathname===new URL('profile/',base).pathname&&!destination.search){a.classList.add('lk-login-open');}});
