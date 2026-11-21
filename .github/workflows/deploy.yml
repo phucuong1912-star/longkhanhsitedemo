@@ -49,6 +49,9 @@ jobs:
       - name: Test deployment status verification
         run: python3 scripts/elementor/test-deploy-check.py
 
+      - name: Test fail-closed core version guard
+        run: python3 scripts/test-prod-core-guard.py
+
       - name: Test browser challenge and cookie verification
         run: python3 -B scripts/elementor/test-browser-check.py
 

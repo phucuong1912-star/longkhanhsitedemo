@@ -300,6 +300,23 @@ Phải commit sau mỗi lần sửa Elementor. Push lại một commit cũ khôn
 
 ## Điều gì xảy ra trong Actions
 
+Ngày 21/11/2026, source core 7.1.4 lệch với phiên bản 7.1.5 được prod công
+khai qua HTML. Script kiểm tra core trước khi chuyển file; bản cũ dùng
+`test` im lặng nên chỉ thấy exit 1 sau khi gói Elementor đã hợp lệ. Giữ nguyên
+yêu cầu core hai đầu phải khớp: cập nhật core ở local/master bằng bản phát
+hành WordPress chính thức, kiểm tra rồi mới đi theo luồng master → prod.
+Không sửa riêng số version, hạ core trên prod, bỏ guard hoặc chạy cập nhật
+trực tiếp trên server để vượt lỗi. Core local được đồng bộ lên bản bảo mật
+7.1.5, giữ locale `vi`; DB schema version vẫn là 61833. Không đổi database,
+uploads, plugin, theme hoặc gói bố cục trong thao tác cập nhật core này.
+
+Preflight hiện in rõ version nguồn/đích khi lệch, và lý do thiếu marker,
+công cụ hoặc staging bị trùng. Các lỗi khác nêu phase/dòng/exit code của
+runner hoặc đoạn shell từ xa. Không bật `set -x`, không in BASH_COMMAND,
+biến môi trường hay key để chẩn đoán. Kiểm thử offline
+`python scripts/test-prod-core-guard.py` chỉ trích hàm kiểm tra version thuần
+để chạy với dữ liệu giả; không chạy entrypoint deploy hay kết nối SSH.
+
 1. Xác thực checksum, allowlist và các ảnh trong gói đã commit.
 2. Chuyển code/gói tới đúng môi trường bằng job hiện có. Hai job loại trừ
    toàn bộ uploads, `wp-config.php`, `.htaccess`, SQL, backups và cache.

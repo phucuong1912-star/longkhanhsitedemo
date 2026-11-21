@@ -36,6 +36,8 @@ jobs:
         run: php scripts/test-compat.php
       - name: Test deployment status verification
         run: python3 scripts/elementor/test-deploy-check.py
+      - name: Test fail-closed core version guard
+        run: python3 scripts/test-prod-core-guard.py
       - name: Back up and deploy code over SSH
         shell: bash
         run: bash .github/scripts/deploy-prod.sh

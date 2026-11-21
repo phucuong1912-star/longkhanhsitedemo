@@ -4,6 +4,9 @@ set -Eeuo pipefail
 umask 077
 
 fail() { printf 'Deployment stopped: %s\n' "$*" >&2; exit 1; }
+prod_phase='validating runner configuration'
+# Do not print BASH_COMMAND or enable xtrace: commands can contain credentials.
+trap 'prod_status=$?; printf "Deployment failed during %s (runner line %s, exit %s).\n" "$prod_phase" "$LINENO" "$prod_status" >&2; exit "$prod_status"' ERR
 [[ ${GITHUB_REF:-} == refs/heads/prod ]] || fail 'Only the prod branch can deploy to this VPS.'
 [[ ${PROD_SSH_HOST:-} =~ ^[a-zA-Z0-9.-]+$ ]] || fail 'Invalid SSH host.'
 [[ ${PROD_SSH_PORT:-} =~ ^[0-9]+$ ]] && (( PROD_SSH_PORT > 0 && PROD_SSH_PORT < 65536 )) || fail 'Invalid SSH port.'
@@ -14,10 +17,12 @@ fail() { printf 'Deployment stopped: %s\n' "$*" >&2; exit 1; }
 [[ ${GITHUB_SHA:-} =~ ^[0-9a-f]{40}$ ]] || fail 'Missing commit SHA.'
 php scripts/elementor/validate.php --git
 [[ ${GITHUB_RUN_ID:-} =~ ^[0-9]+$ && ${GITHUB_RUN_ATTEMPT:-} =~ ^[0-9]+$ ]] || fail 'Missing Actions run identifiers.'
+prod_phase='reading source WordPress version'
 prod_wp_version=$(awk -F "'" '$1 ~ /^\$wp_version = / { print $2; exit }' wp-includes/version.php)
 [[ $prod_wp_version =~ ^[0-9.]+$ ]] || fail 'Could not read the source WordPress version.'
 [[ -n ${PROD_SSH_PRIVATE_KEY:-} && -n ${PROD_SSH_KNOWN_HOSTS:-} ]] || fail 'Configure PROD_SSH_PRIVATE_KEY and PROD_SSH_KNOWN_HOSTS in GitHub secrets.'
 
+prod_phase='preparing SSH configuration'
 prod_temp=$(mktemp -d "${RUNNER_TEMP:?}/lk-prod.XXXXXX")
 trap 'rm -f -- "$prod_temp/id_ed25519" "$prod_temp/known_hosts" "$prod_temp/ssh_config"; rmdir -- "$prod_temp" 2>/dev/null || true' EXIT
 printf '%s\n' "$PROD_SSH_PRIVATE_KEY" | tr -d '\r' > "$prod_temp/id_ed25519"
@@ -37,26 +42,39 @@ CONFIG
 unset PROD_SSH_PRIVATE_KEY PROD_SSH_KNOWN_HOSTS
 
 prod_stage="/var/tmp/lk-prod-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+prod_phase='remote preflight before any code transfer'
 ssh -T -F "$prod_temp/ssh_config" prod-vps bash -s -- "$PROD_WEB_ROOT" "$PROD_SITE_URL" "$prod_stage" "$prod_wp_version" <<'REMOTE'
 set -Eeuo pipefail
+fail() { printf 'Deployment stopped: %s\n' "$*" >&2; exit 1; }
+trap 'prod_status=$?; printf "Remote preflight failed at line %s (exit %s); code has not been transferred.\n" "$LINENO" "$prod_status" >&2; exit "$prod_status"' ERR
+require_core_version() {
+ local installed=$1 expected=$2
+ [[ $installed =~ ^[0-9]+\.[0-9]+(\.[0-9]+)?$ && $expected =~ ^[0-9]+\.[0-9]+(\.[0-9]+)?$ ]] || fail 'Could not read valid WordPress core versions.'
+ [[ $installed == "$expected" ]] || fail "WordPress core version mismatch: source=$expected; destination=$installed. Update and test local core on master before deploying; refusing to overwrite a different core version."
+}
 prod_root=$1; prod_site=$2; prod_stage=$3; prod_version=$4
-test "$(readlink -f "$prod_root")" = "$prod_root"
-test -f "$prod_root/wp-config.php"
-test "$(head -n 1 "$prod_root/.lk-prod-deploy")" = "$prod_site"
-test "$(wp --allow-root --path="$prod_root" core version)" = "$prod_version"
-command -v rsync >/dev/null
-command -v php >/dev/null
-test ! -e "$prod_stage"
+test "$(readlink -f "$prod_root")" = "$prod_root" || fail 'Destination root does not match its resolved path.'
+test -f "$prod_root/wp-config.php" || fail 'Destination wp-config.php is missing.'
+test "$(head -n 1 "$prod_root/.lk-prod-deploy")" = "$prod_site" || fail 'Destination deployment marker does not match the configured site.'
+for prod_tool in wp rsync php; do command -v "$prod_tool" >/dev/null || fail "Required destination command is missing: $prod_tool"; done
+prod_installed_version=$(wp --allow-root --path="$prod_root" core version)
+require_core_version "$prod_installed_version" "$prod_version"
+printf 'Destination preflight passed; WordPress core %s matches source.\n' "$prod_version"
+test ! -e "$prod_stage" || fail 'The staging directory already exists; inspect the previous attempt before retrying.'
 install -d -m 700 "$prod_stage"
 REMOTE
 
 # No vendor exclusion: WordPress React and Elementor vendor are required.
+prod_phase='uploading code to staging'
 rsync -az --safe-links --exclude-from=.github/prod-excludes.txt \
   -e "ssh -F $prod_temp/ssh_config" ./ "prod-vps:$prod_stage/"
 
+prod_phase='validating staging, backing up and activating code'
 ssh -T -F "$prod_temp/ssh_config" prod-vps bash -s -- "$PROD_WEB_ROOT" "$PROD_SITE_URL" "$prod_stage" "$GITHUB_SHA" <<'REMOTE'
 set -Eeuo pipefail
 umask 077
+prod_phase='validating destination and staged code'
+trap 'prod_status=$?; printf "Remote deploy failed during %s (line %s, exit %s).\n" "$prod_phase" "$LINENO" "$prod_status" >&2; exit "$prod_status"' ERR
 prod_root=$1; prod_site=$2; prod_stage=$3; prod_sha=$4
 test "$(readlink -f "$prod_root")" = "$prod_root"
 test "$(head -n 1 "$prod_root/.lk-prod-deploy")" = "$prod_site"
@@ -68,6 +86,7 @@ find "$prod_stage/wp-content/mu-plugins" "$prod_stage/scripts/elementor" \
   -name '*.php' -type f -print0 | while IFS= read -r -d '' prod_file; do php -l "$prod_file" >/dev/null; done
 php "$prod_stage/scripts/elementor/validate.php"
 
+prod_phase='creating database and code backups'
 prod_backup="/root/longkhanh-prod-backups/code-$(date -u +%Y%m%dT%H%M%SZ)-${prod_sha:0:12}"
 install -d -m 700 "$prod_backup"
 wp --allow-root --path="$prod_root" db export "$prod_backup/database.sql" --add-drop-table
@@ -78,6 +97,7 @@ printf 'Backup: %s\n' "$prod_backup"
 
 # Preserve database configuration, uploads and server-generated files.
 # No --delete: runtime/server files are never removed by a code push.
+prod_phase='activating staged code and publishing the release marker'
 rsync -a --chown=www-data:www-data --delay-updates "$prod_stage/" "$prod_root/"
 # The old marker is preserved during transfer; a new manifest cannot apply early.
 php "$prod_root/scripts/elementor/ready.php" --environment=prod --commit="$prod_sha" \
@@ -85,13 +105,16 @@ php "$prod_root/scripts/elementor/ready.php" --environment=prod --commit="$prod_
 chown www-data:www-data "$prod_root/wp-content/lk-layouts/ready.json"
 # Nextend's version migration redirects and exits during plugins_loaded. Keep
 # it out of CLI maintenance while leaving social login active for web requests.
+prod_phase='flushing WordPress and Elementor caches'
 prod_wp=(wp --allow-root --path="$prod_root" --url="$prod_site" --skip-plugins=nextend-facebook-connect,nextend-social-login-pro)
 "${prod_wp[@]}" cache flush
 "${prod_wp[@]}" eval 'if (function_exists("lk_invalidate_public_index")) { lk_invalidate_public_index(); }'
 "${prod_wp[@]}" elementor flush-css --regenerate
 chown -R www-data:www-data "$prod_root/wp-content/uploads/elementor"
 printf '%s\n' "$prod_sha" > "$prod_root/.lk-prod-commit"
+prod_phase='warming the public homepage'
 curl --fail --location --max-redirs 5 --silent --show-error --retry 3 --output /dev/null "$prod_site/?lk_deploy=$prod_sha"
+prod_phase='cleaning the staging directory'
 case "$prod_stage" in /var/tmp/lk-prod-[0-9]*-[0-9]*) rm -rf -- "$prod_stage";; *) exit 1;; esac
 printf 'Code uploaded: %s (%s); the workflow must verify layout status next.\n' "$prod_site" "$prod_sha"
 REMOTE
