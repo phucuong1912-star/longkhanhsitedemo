@@ -274,6 +274,29 @@ Muốn đồng bộ một page/template mới hoặc một dạng tham chiếu m
 scope/ánh xạ và kiểm thử ở local. Exporter từ chối tham chiếu template chưa
 được khai báo; không mở rộng sang `post`, `listing`, orders hoặc users.
 
+## Lịch sử đánh giá trong bảng điều khiển
+
+Form Elementor lưu đánh giá dưới dạng comment `lk_review`, còn template
+dashboard ListingPro gốc chỉ truy vấn bài `lp-reviews`. Module
+`long-khanh-directory/includes/dashboard-reviews.php` bổ sung lịch sử comment
+vào hai template part `reviews` và `reviews-submited`, dùng tài khoản đang
+đăng nhập. Không sao chép/chuyển comment sang post, không ghi metadata khi
+đọc, không tạo migration và không sửa template/vendor của ListingPro.
+
+Người viết thấy đánh giá đã đăng và chờ duyệt của chính mình, kể cả ẩn danh;
+chủ địa điểm thấy đánh giá đã duyệt trên các địa điểm công khai của họ.
+Spam/thùng rác, comment thường và địa điểm private/password không được đưa
+vào danh sách. Mỗi nhóm có phân trang 10 đánh giá. Tên ẩn danh vẫn được che
+ở nhóm đánh giá nhận được; không đưa ID comment vào nút sửa/xóa post native.
+Danh sách, nút sửa/xóa/phản hồi của đánh giá ListingPro cũ giữ nguyên; chỉ
+ẩn phần trống của template cũ khi cả hai nguồn native đều rỗng.
+
+Kiểm thử local: `php scripts/test-dashboard-reviews.php` gửi form thật bằng
+tài khoản thử, chặn gửi email/HTTP ngoài, rồi rollback toàn bộ fixture.
+Kiểm tra fingerprint các hàng dữ liệu và gói Elementor trước/sau không đổi.
+Thay đổi này dùng quy trình deploy thường master → prod, không dùng workflow
+khôi phục tài khoản giới hạn 7 file và không mở rộng gói khôi phục đó.
+
 ## Git hooks ở máy local
 
 Đã cài hook cho checkout hiện tại bằng local Git config, không đổi remote.
