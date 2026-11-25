@@ -25,6 +25,7 @@ require_once LK_DIR . 'includes/listing-template.php';
 require_once LK_DIR . 'includes/region-cards.php';
 require_once LK_DIR . 'includes/admin-listing.php';
 require_once LK_DIR . 'includes/blog.php';
+require_once LK_DIR . 'includes/seo-title.php';
 
 add_action('elementor/widgets/register', function($manager) {
  // ListingPro registers its own widget with the same name. Keep the native
