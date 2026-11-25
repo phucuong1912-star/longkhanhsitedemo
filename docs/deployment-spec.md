@@ -357,7 +357,11 @@ biến môi trường hay key để chẩn đoán. Kiểm thử offline
 
 1. Xác thực checksum, allowlist và các ảnh trong gói đã commit.
 2. Chuyển code/gói tới đúng môi trường bằng job hiện có. Hai job loại trừ
-   toàn bộ uploads, `wp-config.php`, `.htaccess`, SQL, backups và cache.
+   toàn bộ uploads, `wp-config.php`, `.htaccess`, SQL dump, backups và cache.
+   Sáu file schema chính thức trong `litespeed-cache/src/data_structure/`
+   là source cần thiết của plugin, được cho phép theo từng đường dẫn cụ thể;
+   không chạy/import SQL trong deploy. Hai job kiểm thử bộ lọc FTP/rsync trước
+   khi chuyển file để tránh loại nhầm schema hoặc đưa SQL dump lên hosting.
    Prod giữ bước backup database/code ngoài webroot và rsync không `--delete`.
    Master giữ `dangerous-clean-slate: false`; không dọn hosting.
 3. **Sau khi chuyển xong**, workflow tạo/publish `ready.json` chứa release,

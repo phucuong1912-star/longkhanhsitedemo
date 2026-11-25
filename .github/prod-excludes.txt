@@ -33,6 +33,13 @@ wp-content/lk-layouts/ready.json
 wp-content/lk-layouts/applied.json
 wp-content/lk-layouts/*.tmp*
 wp-content/themes/listingpro/assets/css/dynamic-css.css
+# Bundled plugin schemas are source, not database dumps (first match wins).
++ /wp-content/plugins/litespeed-cache/src/data_structure/avatar.sql
++ /wp-content/plugins/litespeed-cache/src/data_structure/crawler.sql
++ /wp-content/plugins/litespeed-cache/src/data_structure/crawler_blacklist.sql
++ /wp-content/plugins/litespeed-cache/src/data_structure/img_optming.sql
++ /wp-content/plugins/litespeed-cache/src/data_structure/url.sql
++ /wp-content/plugins/litespeed-cache/src/data_structure/url_file.sql
 *.sql
 *.sql.gz
 *.lnk

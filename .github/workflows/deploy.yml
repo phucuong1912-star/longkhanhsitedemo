@@ -57,6 +57,11 @@ jobs:
       - name: Test fail-closed core version guard
         run: python3 scripts/test-prod-core-guard.py
 
+      - name: Test plugin schemas and private-file transfer exclusions
+        run: |
+          npm install --prefix "$RUNNER_TEMP/lk-cache-filter-tests" --ignore-scripts --no-audit --no-fund multimatch@5.0.0
+          node scripts/test-cache-deploy.cjs "$RUNNER_TEMP/lk-cache-filter-tests/node_modules/multimatch"
+
       - name: Test browser challenge and cookie verification
         run: python3 -B scripts/elementor/test-browser-check.py
 
@@ -75,6 +80,7 @@ jobs:
           server-dir: /htdocs/
 
           # Không upload các file không cần thiết
+          # SQL dumps stay excluded; only six bundled LiteSpeed schemas are included.
           exclude: |
             **/.git*
             **/.git*/**
@@ -113,6 +119,12 @@ jobs:
             **/.lk-layout-ftp-state.json
             **/*.sql
             **/*.sql.gz
+            !wp-content/plugins/litespeed-cache/src/data_structure/avatar.sql
+            !wp-content/plugins/litespeed-cache/src/data_structure/crawler.sql
+            !wp-content/plugins/litespeed-cache/src/data_structure/crawler_blacklist.sql
+            !wp-content/plugins/litespeed-cache/src/data_structure/img_optming.sql
+            !wp-content/plugins/litespeed-cache/src/data_structure/url.sql
+            !wp-content/plugins/litespeed-cache/src/data_structure/url_file.sql
             **/*.lnk
 
           # WordPress React and Elementor PHP dependencies live in vendor/.

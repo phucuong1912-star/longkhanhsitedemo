@@ -116,6 +116,32 @@ thay đổi các container khác, database WordPress local gốc hay VPS/prod.
 
 ## Triển khai sau này
 
+### Sửa lỗi thiếu schema khi deploy (25/11/2026)
+
+Thông báo tạo `wp_litespeed_url` hoặc `wp_litespeed_url_file` với phần cột
+trống `()` khớp việc thiếu file `src/data_structure/url.sql` và `url_file.sql`.
+Plugin đọc định nghĩa cột từ các file này; bộ lọc `*.sql` trước đây loại nhầm
+chúng dù Git có đủ source. Local/Docker không đi qua bộ lọc nên không phát
+hiện lỗi này trong kiểm thử chức năng ban đầu.
+
+FTP và rsync giữ quy tắc chặn SQL dump, chỉ cho phép đúng sáu schema vendor:
+`avatar`, `crawler`, `crawler_blacklist`, `img_optming`, `url`, `url_file`.
+Không sửa plugin vendor, tạo bảng thủ công hoặc import database. Hai workflow
+chạy `test-cache-deploy.cjs` với multimatch 5.0.0 (cùng bản FTP Action v4.4.0)
+và rsync dry-run giữa các thư mục fixture local trước khi chuyển file. Test
+xác nhận schema đi qua, còn SQL dump, uploads, cache và cấu hình máy vẫn bị chặn.
+Kiểm thử local đạt trên cả multimatch lấy trực tiếp từ bundle FTP Action và
+gói npm 5.0.0; rsync dry-run trong container local cũng đạt (7 file source
+được truyền, 22 trường hợp dump/config/cache bị loại). Elementor export/check,
+validate, 24 test engine và 19 test xác minh deploy đều đạt sau bản sửa.
+
+Sau khi chủ site push và master deploy thành công, tải lại WP Admin để kiểm
+tra. Nếu plugin chưa thử tạo bảng lại, chủ site có thể lưu lại cấu hình
+LiteSpeed Cache để plugin kiểm tra các bảng còn thiếu. Không chạy SQL từ
+thông báo lỗi; không dùng thao tác xóa/reset bảng hay database.
+
+### Luồng triển khai
+
 Commit này chỉ chuẩn bị source/cấu hình và kiểm thử local. Theo
 `deployment-spec.md`, khi được yêu cầu triển khai: master thành công và kiểm
 tra trước, rồi merge master vào prod. Git không tự đồng bộ trạng thái kích

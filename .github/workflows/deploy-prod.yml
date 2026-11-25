@@ -42,6 +42,10 @@ jobs:
         run: python3 scripts/elementor/test-deploy-check.py
       - name: Test fail-closed core version guard
         run: python3 scripts/test-prod-core-guard.py
+      - name: Test plugin schemas and private-file transfer exclusions
+        run: |
+          npm install --prefix "$RUNNER_TEMP/lk-cache-filter-tests" --ignore-scripts --no-audit --no-fund multimatch@5.0.0
+          node scripts/test-cache-deploy.cjs "$RUNNER_TEMP/lk-cache-filter-tests/node_modules/multimatch"
       - name: Back up and deploy code over SSH
         shell: bash
         run: bash .github/scripts/deploy-prod.sh
