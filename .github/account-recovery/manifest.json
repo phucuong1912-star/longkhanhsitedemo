@@ -1,0 +1,57 @@
+{
+  "base_commit": "7fcd371f145711a1471f59c3cc537e1c4079ec2f",
+  "source_commit": "4777131e0da1aa8bb9640e6bb725666293e69705",
+  "scope": "Account forms, password help and account navigation only; no community link fixes or WordPress core",
+  "files": [
+    {
+      "path": "wp-content/plugins/long-khanh-directory/includes/account.php",
+      "before_sha256": null,
+      "after_sha256": "fdc8ff6ab0a4ff6f163e8809b87cb1ffa8b91ee3c7208734ad26d7c884eeab00",
+      "preserve_sha256": "38ca319500ef20e14514dea251e7855750f96171bed710a37f2f255c4d5d0da1"
+    },
+    {
+      "path": "wp-content/plugins/long-khanh-directory/templates/account.php",
+      "before_sha256": null,
+      "after_sha256": "7b04d63fb6f0de6fc1d87e88ef32856b571b789cc8ccc4262030d18ba1d69026",
+      "preserve_sha256": "7b04d63fb6f0de6fc1d87e88ef32856b571b789cc8ccc4262030d18ba1d69026"
+    },
+    {
+      "path": "wp-content/plugins/long-khanh-directory/assets/account.css",
+      "before_sha256": null,
+      "after_sha256": "ca6a0a3bf29886269a9363ddb6ae1cb6e3cf857ece687ad296164fe30cd666b8",
+      "preserve_sha256": "ca6a0a3bf29886269a9363ddb6ae1cb6e3cf857ece687ad296164fe30cd666b8"
+    },
+    {
+      "path": "wp-content/plugins/long-khanh-directory/long-khanh-directory.php",
+      "before_sha256": "906b2ae0850b1cd7607492da69f48435891a129dd8137371831326b7fce1323a",
+      "after_sha256": "ed0c1b37ba19528c267a029b657182f58f5d72f803ce768208694069cea49437",
+      "preserve_sha256": "ed0c1b37ba19528c267a029b657182f58f5d72f803ce768208694069cea49437"
+    },
+    {
+      "path": "wp-content/plugins/long-khanh-directory/includes/forms.php",
+      "before_sha256": "4d89ec20e1250628b6d22ceb91c91040f8f01220ab2abeda218f36f7c741d5c0",
+      "after_sha256": "514a40df341834dd3de7aa77a729c5152d6188866f513047e4601a3fe7eb8ff8",
+      "preserve_sha256": "514a40df341834dd3de7aa77a729c5152d6188866f513047e4601a3fe7eb8ff8"
+    },
+    {
+      "path": "wp-content/themes/listingpro-longkhanh-child/assets/feedback2.js",
+      "before_sha256": "20b35039e410ba56c043e82e576d7d1e79d8eccc8ee48dd79798eaef79ef6833",
+      "after_sha256": "110f49ef64d9a13faec0500ca44b36a8ebfdae51f09a2e1d0d7607fcb66fe2e3",
+      "preserve_sha256": "110f49ef64d9a13faec0500ca44b36a8ebfdae51f09a2e1d0d7607fcb66fe2e3"
+    },
+    {
+      "path": "wp-content/themes/listingpro-longkhanh-child/includes/presentation.php",
+      "before_sha256": "2bdcf4b779cc6984027419740f5e069b0aa7a85695f68a60054967b94d069ea4",
+      "after_sha256": "22109ba907c0b2dc15d12fcdea2fb476db62a4b702a4a6cf494d4fc3f1fc22bb",
+      "preserve_sha256": "6f11fcab93d308c15288769336d6b944a08ac95de6a300415d9a9df5e4f97bb1"
+    }
+  ],
+  "verification": [
+    "PHP syntax: 5 files passed",
+    "Patch applies to the last commit before 20 November",
+    "Applied files match payload SHA-256",
+    "Exactly 7 paths affected",
+    "Reverse patch validates"
+  ],
+  "recovery_id": "account-2026-11-25"
+}

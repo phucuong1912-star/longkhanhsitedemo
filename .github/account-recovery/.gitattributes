@@ -1,0 +1,2 @@
+# Payload checksums must survive Windows checkouts byte for byte.
+files/** -text

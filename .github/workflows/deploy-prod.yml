@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.ref == 'refs/heads/prod'
+    if: github.ref == 'refs/heads/prod' && !startsWith(github.event.head_commit.message, 'recover-account-only:')
     runs-on: ubuntu-latest
     environment: prod
     timeout-minutes: 30
@@ -28,6 +28,10 @@ jobs:
       PROD_SSH_KNOWN_HOSTS: ${{ secrets.PROD_SSH_KNOWN_HOSTS }}
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+      - name: Prevent full deploy of an account recovery commit
+        run: python3 .github/scripts/recover-account.py --guard-full-deploy
       - name: Validate committed Elementor package
         run: php scripts/elementor/validate.php --git
       - name: Test layout data preservation

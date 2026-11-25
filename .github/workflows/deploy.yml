@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' && !startsWith(github.event.head_commit.message, 'recover-account-only:')
     name: Deploy to FTP Hosting
     runs-on: ubuntu-latest
 
@@ -24,6 +24,11 @@ jobs:
       # 1. Lấy source code từ GitHub
       - name: Checkout source code
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+
+      - name: Prevent full deploy of an account recovery commit
+        run: python3 .github/scripts/recover-account.py --guard-full-deploy
 
       - name: Set up deployment verification Python
         uses: actions/setup-python@v6

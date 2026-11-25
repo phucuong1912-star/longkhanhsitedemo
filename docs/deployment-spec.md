@@ -24,6 +24,21 @@ Luồng duy nhất:
 Cả hai workflow chỉ chạy job deploy khi nhánh tương ứng khớp tuyệt đối.
 Việc có commit local không có nghĩa là website đã được deploy thành công.
 
+### Khôi phục tài khoản giới hạn sau restore file 20/11
+
+Theo yêu cầu ngày 25/11/2026, lần khôi phục này chỉ chuyển 7 file tài khoản
+đã tách từ commit `4777131e`, không triển khai lại core hoặc layout. Commit
+có tiền tố `recover-account-only:` dùng `.github/workflows/recover-account.yml`;
+hai workflow deploy toàn bộ bỏ qua push đó và chặn full deploy thủ công của
+commit khôi phục. Script chỉ chạy trong Actions, kiểm tra checksum/baseline,
+backup trước khi thay file và giữ bản đầy đủ 21/11 nếu đã tồn tại.
+
+Luồng vẫn là master thành công rồi merge master vào prod. Job prod yêu cầu
+master hiện tại đã merge và có run master thành công của cùng gói. Không
+chuyển database/Elementor marker hoặc gọi importer trong bước khôi phục này;
+guard core của deploy toàn bộ không đổi. Chi tiết phạm vi, kiểm thử và cách
+push: [Khôi phục tài khoản 25/11](recovery-account-2026-11-25.md).
+
 | Nhánh | Workflow | Đích đã được cấu hình trong dự án |
 | --- | --- | --- |
 | `master` | `deploy.yml` | FTP secrets hiện có, thư mục `/htdocs/`, URL `https://longkhanhsites.site.je` |
