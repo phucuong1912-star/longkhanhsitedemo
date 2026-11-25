@@ -35,3 +35,11 @@ __pycache__/
 *.pyc
 VPS-Note.MD
 VPS-Note.md
+
+# LiteSpeed runtime data and environment-specific configuration are not source.
+/wp-content/litespeed/
+/wp-content/.litespeed_conf.php
+/wp-content/.litespeed_conf.dat
+/wp-content/object-cache.php
+/wp-content/advanced-cache.php
+/.htaccess.bk

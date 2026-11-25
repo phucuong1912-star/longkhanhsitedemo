@@ -94,6 +94,12 @@ jobs:
             **/wp-config.php
             **/.codex-tools/**
             **/wp-content/cache/**
+            **/wp-content/litespeed/**
+            **/wp-content/.litespeed_conf.php
+            **/wp-content/.litespeed_conf.dat
+            **/wp-content/object-cache.php
+            **/wp-content/advanced-cache.php
+            **/.htaccess.bk
             **/wp-content/debug.log
             **/wp-content/uploads/**
             **/wp-content/upgrade/**
