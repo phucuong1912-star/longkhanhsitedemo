@@ -53,6 +53,10 @@ Prod yêu cầu origin/master là tổ tiên của HEAD và có run khôi phục
 thành công chứa **cùng manifest** trong lịch sử đã merge. Cả hai môi trường
 kiểm tra trang chủ, đăng nhập, đăng ký và quên mật khẩu qua GET sau chuyển
 file. Master dùng Chromium để đi qua challenge của host như workflow cũ.
+Challenge master thêm đúng một `i=1` vào query sau khi thực thi JavaScript;
+bộ kiểm tra chấp nhận riêng dấu này, giữ nguyên origin/path và toàn bộ tham
+số chức năng. Thay `lk_account`, mất tham số, thêm query khác hoặc chuyển
+domain/trang vẫn bị từ chối. Prod không bật ngoại lệ challenge này.
 Form POST và tài khoản thật không được thử trên prod. Nếu HTTP kiểm tra
 thất bại sau khi chuyển file, workflow thất bại và giữ backup; không restore
 database hay tự ghi đè thay đổi phát sinh sau đó.
@@ -68,6 +72,11 @@ database hay tự ghi đè thay đổi phát sinh sau đó.
 - `python scripts/test-account-recovery.py`: filesystem và FTP giả kiểm tra
   phạm vi, backup, rollback, xung đột, thay đổi đồng thời, checksum, lặp lại,
   bảo toàn bản mới đã có và gate master → prod; không kết nối server.
+- `python scripts/test-account-recovery.py --browser RecoveryBrowserTests`:
+  Chromium chỉ truy cập fixture localhost, thực thi JS/cookie và thêm `i=1`
+  giống host; xác nhận đủ ba mode tài khoản, giữ session và từ chối chuyển
+  hướng làm mất mode, trang thiếu biểu mẫu hoặc HTTP 500. Workflow master chạy bộ này
+  sau bước cài browser, trước khi kết nối FTP.
 - `php scripts/elementor/export.php --check`, validate, engine tests.
 
 Test symlink chỉ chạy trên Linux trong Actions; Windows có thể skip do yêu

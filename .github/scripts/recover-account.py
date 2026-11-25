@@ -3,6 +3,7 @@
 No core transfer, WordPress bootstrap, layout marker or database import.
 """
 import argparse
+from collections import Counter
 import ftplib
 import hashlib
 import io
@@ -96,7 +97,23 @@ def successful_master_required():
     raise RuntimeError('Prod requires a successful master recovery of the identical package, merged into prod')
 
 
-def verify_http(origin, browser=False):
+def require_public_url(actual, expected, allow_host_challenge=False):
+    current, target = urllib.parse.urlsplit(actual), urllib.parse.urlsplit(expected)
+    if (current.scheme, current.netloc, current.path, current.fragment) != (target.scheme, target.netloc, target.path, target.fragment):
+        raise RuntimeError('Unexpected public redirect (origin, path or fragment changed)')
+    current_query = Counter(urllib.parse.parse_qsl(current.query, keep_blank_values=True))
+    target_query = Counter(urllib.parse.parse_qsl(target.query, keep_blank_values=True))
+    if current_query == target_query:
+        return
+    # The master's observed JS/cookie challenge appends exactly one i=1.
+    # Preserve every functional query parameter and reject any other addition.
+    if allow_host_challenge and not any(key == 'i' for key, value in target_query):
+        if current_query == target_query + Counter({('i', '1'): 1}):
+            return
+    raise RuntimeError('Unexpected public redirect (functional query parameters changed)')
+
+
+def verify_http(origin, browser=False, allow_host_challenge=False):
     def check(html, mode):
         if any(s in html.lower() for s in ('there has been a critical error', 'fatal error:', 'error establishing a database connection')):
             raise RuntimeError('Public page contains a WordPress error')
@@ -112,7 +129,7 @@ def verify_http(origin, browser=False):
             try:
                 page = chromium.new_page()
                 documents = []
-                page.on('response', lambda response: documents.append(response) if response.request.resource_type == 'document' else None)
+                page.on('response', lambda response: documents.append(response) if response.request.is_navigation_request() and response.frame == page.main_frame else None)
                 for mode in ('', 'login', 'register', 'lost'):
                     documents.clear()
                     url = origin + ('/?lk_account=' + mode if mode else '/')
@@ -120,10 +137,7 @@ def verify_http(origin, browser=False):
                     page.wait_for_selector('body.lk-auth-page' if mode else 'body.lk-site', timeout=60000)
                     if not documents or documents[-1].status != 200 or 'text/html' not in documents[-1].headers.get('content-type', ''):
                         raise RuntimeError('Unexpected public browser HTTP response')
-                    current = urllib.parse.urlsplit(page.url)
-                    expected = urllib.parse.urlsplit(url)
-                    if (current.scheme, current.netloc, current.path, current.query) != (expected.scheme, expected.netloc, expected.path, expected.query):
-                        raise RuntimeError('Unexpected public redirect')
+                    require_public_url(page.url, url, allow_host_challenge=allow_host_challenge)
                     check(page.content(), mode)
             finally:
                 chromium.close()
@@ -292,7 +306,7 @@ def main():
     manifest = validate_package()
     if args.environment == 'master':
         recover_master(manifest)
-        verify_http('https://longkhanhsites.site.je', browser=True)
+        verify_http('https://longkhanhsites.site.je', browser=True, allow_host_challenge=True)
     else:
         successful_master_required()
         recover_prod(manifest)

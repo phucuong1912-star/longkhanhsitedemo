@@ -1,6 +1,7 @@
 """Offline recovery tests: disposable filesystem/FTP fixtures, never a server."""
 from contextlib import redirect_stdout, contextmanager
 import ftplib
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import importlib.util
 import io
 import json
@@ -8,7 +9,9 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import tempfile
+import threading
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
@@ -20,6 +23,9 @@ spec.loader.exec_module(recovery)
 PACKAGE = recovery.PACKAGE
 UPDATER = ROOT / '.github/scripts/recover-account-update.php'
 MANIFEST = recovery.validate_package()
+BROWSER_TESTS = '--browser' in sys.argv
+if BROWSER_TESTS:
+    sys.argv.remove('--browser')
 
 
 @contextmanager
@@ -255,6 +261,103 @@ function rename($before,$after){static $count=0;if(++$count===6)return false;ret
         self.assertIn('environment: prod', scoped)
         self.assertIn('actions: read', scoped)
         self.assertIn('include-hidden-files: true', scoped)
+
+    def test_public_url_accepts_only_the_observed_master_challenge_marker(self):
+        for query in ('', '?lk_account=login', '?lk_account=register', '?lk_account=lost'):
+            expected = 'https://fixture.invalid/' + query
+            actual = expected + ('&i=1' if query else '?i=1')
+            with self.subTest(query=query):
+                recovery.require_public_url(actual, expected, allow_host_challenge=True)
+                with self.assertRaisesRegex(RuntimeError, 'query parameters changed'):
+                    recovery.require_public_url(actual, expected)
+
+    def test_public_url_rejects_lost_mode_extra_parameters_and_other_destinations(self):
+        expected = 'https://fixture.invalid/?lk_account=register'
+        invalid = (
+            'https://fixture.invalid/?i=1',
+            'https://fixture.invalid/?lk_account=login&i=1',
+            expected + '&i=2',
+            expected + '&i=1&i=1',
+            expected + '&i=1&redirect_to=elsewhere',
+            expected + '&i=1&lk_account=login',
+            expected + '#another-page',
+            'https://other.invalid/?lk_account=register&i=1',
+            'http://fixture.invalid/?lk_account=register&i=1',
+            'https://fixture.invalid/profile/?lk_account=register&i=1',
+        )
+        for actual in invalid:
+            with self.subTest(actual=actual), self.assertRaisesRegex(RuntimeError, 'Unexpected public redirect'):
+                recovery.require_public_url(actual, expected, allow_host_challenge=True)
+
+
+class RecoveryBrowserFixture(BaseHTTPRequestHandler):
+    def log_message(self, *args):
+        pass
+
+    def do_GET(self):
+        self.server.requests.append((self.path, self.headers.get('Cookie', '')))
+        parts = recovery.urllib.parse.urlsplit(self.path)
+        query = dict(recovery.urllib.parse.parse_qsl(parts.query))
+        self.send_response(self.server.status_code if query.get('i') == '1' else 200)
+        self.send_header('Content-Type', 'text/html; charset=utf-8')
+        self.end_headers()
+        if query.get('i') != '1':
+            # Reproduce the host by executing JS and setting the cookie normally.
+            target = self.path + ('&i=1' if parts.query else '?i=1')
+            if self.server.drop_mode and 'lk_account' in query:
+                target = '/?i=1'
+            html = '<script>document.cookie="recovery_fixture=ready; path=/"; location.replace(' + json.dumps(target) + ');</script>'
+        elif 'lk_account' in query or self.server.drop_mode:
+            mode = query.get('lk_account', 'login')
+            body = 'Fixture missing form' if self.server.missing_form else '<form><input name="action" value="lk_' + mode + '"></form>'
+            html = '<html><body class="lk-site lk-auth-page">' + body + '</body></html>'
+        else:
+            html = '<html><body class="lk-site">Fixture homepage</body></html>'
+        self.wfile.write(html.encode())
+
+
+@unittest.skipUnless(BROWSER_TESTS, 'Run --browser RecoveryBrowserTests after installing Playwright')
+class RecoveryBrowserTests(unittest.TestCase):
+    def setUp(self):
+        self.server = ThreadingHTTPServer(('127.0.0.1', 0), RecoveryBrowserFixture)
+        self.server.requests = []
+        self.server.drop_mode = False
+        self.server.missing_form = False
+        self.server.status_code = 200
+        self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
+        self.thread.start()
+        self.origin = 'http://127.0.0.1:' + str(self.server.server_port)
+        self.addCleanup(self.stop_server)
+
+    def stop_server(self):
+        self.server.shutdown()
+        self.server.server_close()
+        self.thread.join()
+
+    def verify(self):
+        with redirect_stdout(io.StringIO()):
+            recovery.verify_http(self.origin, browser=True, allow_host_challenge=True)
+
+    def test_js_challenge_retains_account_modes_and_session_cookie(self):
+        self.verify()
+        visited = [path for path, cookie in self.server.requests if 'i=1' in path and 'recovery_fixture=ready' in cookie]
+        for mode in ('login', 'register', 'lost'):
+            self.assertIn('/?lk_account=' + mode + '&i=1', visited)
+
+    def test_a_redirect_dropping_account_mode_still_fails(self):
+        self.server.drop_mode = True
+        with self.assertRaisesRegex(RuntimeError, 'functional query parameters changed'):
+            self.verify()
+
+    def test_missing_form_still_fails_after_a_valid_host_challenge(self):
+        self.server.missing_form = True
+        with self.assertRaisesRegex(RuntimeError, 'form is missing'):
+            self.verify()
+
+    def test_http_500_still_fails_with_valid_site_markup(self):
+        self.server.status_code = 500
+        with self.assertRaisesRegex(RuntimeError, 'HTTP response'):
+            self.verify()
 
 
 if __name__ == '__main__':

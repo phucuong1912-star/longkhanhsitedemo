@@ -33,6 +33,8 @@ jobs:
         run: |
           python3 -m pip install --disable-pip-version-check -r scripts/elementor/requirements-browser.txt
           python3 -m playwright install --with-deps --only-shell chromium
+      - name: Test account verification against a local JS and cookie challenge
+        run: python3 scripts/test-account-recovery.py --browser RecoveryBrowserTests
       - name: Recover master account files and verify public forms
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
