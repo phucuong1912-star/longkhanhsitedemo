@@ -1,5 +1,6 @@
 <?php
 if (!defined('ABSPATH')) exit;
+require_once __DIR__ . '/includes/fonts.php';
 // ListingPro loads its parent functions automatically. Keep overrides here;
 // never copy these files into the parent theme when updating ListingPro.
 add_action('after_setup_theme', function () {
@@ -10,12 +11,19 @@ add_action('after_setup_theme', function () {
 
 // Keep public typography consistent across ListingPro and Elementor templates.
 add_action('wp_enqueue_scripts', function () {
- wp_enqueue_style('th-quicksand', 'https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap', array(), null);
+ $fonts = get_stylesheet_directory() . '/assets/fonts/quicksand.css';
+ wp_enqueue_style('th-quicksand', get_stylesheet_directory_uri() . '/assets/fonts/quicksand.css', array(), (string) filemtime($fonts));
  $path = get_stylesheet_directory() . '/assets/branding.css';
  wp_enqueue_style('th-branding', get_stylesheet_directory_uri() . '/assets/branding.css', array('th-quicksand'), (string) filemtime($path));
 }, 100);
 
 add_filter('wp_resource_hints', function ($urls, $relation) {
+ if (lk_use_local_site_fonts()) {
+  return array_values(array_filter($urls, function ($entry) {
+   $host = wp_parse_url(is_array($entry) ? ($entry['href'] ?? '') : $entry, PHP_URL_HOST);
+   return !in_array($host, array('fonts.googleapis.com', 'fonts.gstatic.com'), true);
+  }));
+ }
  if ($relation === 'preconnect') {
   $urls[] = 'https://fonts.googleapis.com';
   $urls[] = array('href' => 'https://fonts.gstatic.com', 'crossorigin' => 'anonymous');

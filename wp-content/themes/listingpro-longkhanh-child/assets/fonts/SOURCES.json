@@ -1,0 +1,27 @@
+{
+  "family": "Quicksand",
+  "weights": "300-700",
+  "css_api": "https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap",
+  "retrieved": "2026-11-26",
+  "license_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/quicksand/OFL.txt",
+  "files": [
+    {
+      "file": "quicksand-vietnamese.woff2",
+      "source": "https://fonts.gstatic.com/s/quicksand/v37/6xKtdSZaM9iE8KbpRA_hJFQNcOM.woff2",
+      "sha256": "602d23d1e2cb8d416e336f184720c07d06497674c2876d05821f7839bba3e6c8",
+      "bytes": 8840
+    },
+    {
+      "file": "quicksand-latin-ext.woff2",
+      "source": "https://fonts.gstatic.com/s/quicksand/v37/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2",
+      "sha256": "b5a37861949c4489894ff1e76d3657819830e91316b40effa16c5a6923bc0928",
+      "bytes": 26616
+    },
+    {
+      "file": "quicksand-latin.woff2",
+      "source": "https://fonts.gstatic.com/s/quicksand/v37/6xKtdSZaM9iE8KbpRA_hK1QN.woff2",
+      "sha256": "2add7d60b1cd2ab84c9967e23d5ec08eb3fc9635c46855b17d59404dec6b410e",
+      "bytes": 28244
+    }
+  ]
+}
