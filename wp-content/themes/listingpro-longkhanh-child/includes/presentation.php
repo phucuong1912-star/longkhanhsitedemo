@@ -16,6 +16,14 @@ add_filter('elementor/widget/render_content',function($content,$widget){
 function lk_is_site() {
  return lk_auth_mode() || (is_singular() && ((bool)get_post_meta(get_queried_object_id(), '_lk_managed', true)||lk_is_directory_listing(get_queried_object_id())||(function_exists('lk_is_blog_view')&&lk_is_blog_view())));
 }
+// ListingPro's legacy dashboard locale is served from an unavailable sandbox
+// host. Managed canvas pages use native form controls, not that datepicker;
+// never let its synchronous head script hold up their entire HTML parser.
+function lk_dequeue_unused_legacy_scripts() {
+ if (!is_admin() && lk_is_site()) wp_dequeue_script('datelocale');
+}
+add_action('wp_enqueue_scripts', 'lk_dequeue_unused_legacy_scripts', PHP_INT_MAX);
+add_action('wp_print_scripts', 'lk_dequeue_unused_legacy_scripts', PHP_INT_MAX);
 // The legacy shortcode injects ID-based widths and borders. Elementor's native
 // gallery controls and this child theme provide the layout on managed pages.
 add_filter('use_default_gallery_style',function($enabled){return lk_is_site()?false:$enabled;});
